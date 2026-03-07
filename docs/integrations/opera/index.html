@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/opera" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Full Opera Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/opera"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Full Opera Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="This document describes the current opera integration implementation in this repository."><meta data-rh="true" property="og:description" content="This document describes the current opera integration implementation in this repository."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/opera"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Full Opera Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/opera"}]}</script><link rel="stylesheet" href="/assets/css/styles.e3794e44.css">
+<script src="/assets/js/runtime~main.950c7bfd.js" defer="defer"></script>
+<script src="/assets/js/main.99544524.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","dark"),document.documentElement.setAttribute("data-theme-choice","dark"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration" class="linkLabel_WmDU">GoHighLevel Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration" class="linkLabel_WmDU">Monday.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/opera"><span title="Full Opera Integration Guide" class="linkLabel_WmDU">Full Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Full Opera Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Full Opera Integration Guide</h1></header>
+<p>This document describes the current <code>opera</code> integration implementation in this repository.
+It is based on the templates and flow definitions under:
+<code>opera/OperaIntegration/agents/OperaAgent/flows/*</code></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-overview">1. Overview<a href="#1-overview" class="hash-link" aria-label="Direct link to 1. Overview" title="Direct link to 1. Overview" translate="no">​</a></h2>
+<p>The Opera integration provides hotel-focused automation for:</p>
+<ul>
+<li class="">Availability lookup</li>
+<li class="">Reservation creation</li>
+<li class="">Reservation cancellation</li>
+<li class="">Reservation rescheduling</li>
+<li class="">Runtime request orchestration and token refresh</li>
+<li class="">Optional canvas scenario bootstrap</li>
+<li class="">Optional static data refresh (room types)</li>
+</ul>
+<p>Primary agent:</p>
+<ul>
+<li class=""><code>OperaAgent</code></li>
+</ul>
+<p>Primary integration idn:</p>
+<ul>
+<li class=""><code>opera_integration</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-setup-and-authorization">2. Setup and Authorization<a href="#2-setup-and-authorization" class="hash-link" aria-label="Direct link to 2. Setup and Authorization" title="Direct link to 2. Setup and Authorization" translate="no">​</a></h2>
+<p>The setup entrypoint is <code>SetupFlow</code> via event:</p>
+<ul>
+<li class=""><code>project_publish_finish</code> -&gt; <code>SetupSkill</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-what-setup-does">2.1 What setup does<a href="#21-what-setup-does" class="hash-link" aria-label="Direct link to 2.1 What setup does" title="Direct link to 2.1 What setup does" translate="no">​</a></h3>
+<p><code>SetupSkill</code>:</p>
+<ol>
+<li class="">Validates target integration idn (<code>opera_integration</code>)</li>
+<li class="">Initializes project attributes and metadata</li>
+<li class="">Ensures HTTP connectors exist:<!-- -->
+<ul>
+<li class=""><code>opera_connector</code></li>
+<li class=""><code>opera_token_connector</code></li>
+</ul>
+</li>
+<li class="">Ensures a setup persona exists (<code>setup_persona_id</code>)</li>
+<li class="">Injects booking/availability payload schema attributes</li>
+<li class="">Requests OAuth client-credentials token</li>
+<li class="">Registers Newo tool definitions for availability/booking/reschedule</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-token-flow">2.2 Token flow<a href="#22-token-flow" class="hash-link" aria-label="Direct link to 2.2 Token flow" title="Direct link to 2.2 Token flow" translate="no">​</a></h3>
+<p><code>_getTokensSkill</code> sends:</p>
+<ul>
+<li class=""><code>POST {opera_base_url}/oauth/v1/tokens</code></li>
+<li class="">headers include:<!-- -->
+<ul>
+<li class=""><code>x-app-key</code></li>
+<li class=""><code>enterpriseId</code></li>
+<li class=""><code>Authorization: Basic base64(client_id:client_secret)</code></li>
+</ul>
+</li>
+<li class="">body:<!-- -->
+<ul>
+<li class=""><code>grant_type=client_credentials</code></li>
+<li class=""><code>scope={opera_scope}</code></li>
+</ul>
+</li>
+</ul>
+<p><code>_getTokensSuccessSkill</code> stores:</p>
+<ul>
+<li class=""><code>opera_access_token</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-key-attributes">3. Key Attributes<a href="#3-key-attributes" class="hash-link" aria-label="Direct link to 3. Key Attributes" title="Direct link to 3. Key Attributes" translate="no">​</a></h2>
+<p>Main project attributes created by setup:</p>
+<ul>
+<li class=""><code>opera_base_url</code></li>
+<li class=""><code>opera_app_key</code></li>
+<li class=""><code>opera_client_id</code></li>
+<li class=""><code>opera_client_secret</code></li>
+<li class=""><code>opera_enterprise_id</code></li>
+<li class=""><code>opera_hotel_id</code></li>
+<li class=""><code>opera_scope</code></li>
+<li class=""><code>opera_access_token</code></li>
+<li class=""><code>opera_override_agent_attributes</code></li>
+<li class=""><code>opera_enable_slot_check</code></li>
+<li class=""><code>opera_enable_booking</code></li>
+<li class=""><code>opera_enable_cancellation</code></li>
+<li class=""><code>opera_setup_scenarios</code></li>
+<li class=""><code>opera_static_data_updated_at</code></li>
+<li class=""><code>opera_static_data_update_interval</code></li>
+<li class=""><code>setup_persona_id</code></li>
+</ul>
+<p>Runtime persona attributes used by flows:</p>
+<ul>
+<li class=""><code>opera_availability_status</code></li>
+<li class=""><code>opera_availability_result</code></li>
+<li class=""><code>opera_booking_status</code></li>
+<li class=""><code>bookings</code> (used by reschedule extraction)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-flow-capabilities">4. Flow Capabilities<a href="#4-flow-capabilities" class="hash-link" aria-label="Direct link to 4. Flow Capabilities" title="Direct link to 4. Flow Capabilities" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-availabilityflow">4.1 AvailabilityFlow<a href="#41-availabilityflow" class="hash-link" aria-label="Direct link to 4.1 AvailabilityFlow" title="Direct link to 4.1 AvailabilityFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>opera_custom_availability_event</code></li>
+</ul>
+<p>Behavior:</p>
+<ol>
+<li class="">Guard by <code>opera_enable_slot_check</code></li>
+<li class="">Prevent parallel execution when <code>opera_availability_status == in_progress</code></li>
+<li class="">Mark status <code>in_progress</code></li>
+<li class="">Extract payload from <code>arguments.memory</code> via <code>_extractPayload</code></li>
+<li class="">Call Opera availability API via <code>_checkAvailabilitySkill</code></li>
+<li class="">Normalize returned offers into a simplified list</li>
+<li class="">Publish offers into prompt section:<!-- -->
+<ul>
+<li class=""><code>AvailabilitySlots role=&quot;context&quot;</code></li>
+</ul>
+</li>
+<li class="">Save simplified offers into persona:<!-- -->
+<ul>
+<li class=""><code>opera_availability_result</code></li>
+</ul>
+</li>
+<li class="">Send <code>urgent_message</code> instruction for user-facing response</li>
+</ol>
+<p>Availability API call:</p>
+<ul>
+<li class=""><code>GET /par/v1/hotels/{hotel_id}/availability</code></li>
+<li class="">query includes:<!-- -->
+<ul>
+<li class=""><code>roomStayStartDate</code></li>
+<li class=""><code>roomStayEndDate</code></li>
+<li class=""><code>roomStayQuantity</code></li>
+<li class=""><code>adults</code></li>
+<li class=""><code>children</code></li>
+<li class=""><code>includeClosedRates=True</code></li>
+<li class=""><code>includeLocalRates=True</code></li>
+<li class=""><code>limit=10</code></li>
+</ul>
+</li>
+</ul>
+<p>Error behavior:</p>
+<ul>
+<li class=""><code>ExecuteResultErrorSkill</code> sets status <code>error</code></li>
+<li class="">pushes prompt context <code>There are no available slots.</code></li>
+<li class="">emits <code>result_error</code> with <code>targetAction=check_availability</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-bookingflow">4.2 BookingFlow<a href="#42-bookingflow" class="hash-link" aria-label="Direct link to 4.2 BookingFlow" title="Direct link to 4.2 BookingFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>opera_custom_booking_event</code></li>
+</ul>
+<p>Behavior:</p>
+<ol>
+<li class="">Guard by <code>opera_enable_booking</code></li>
+<li class="">Prevent parallel execution when <code>opera_booking_status == in_progress</code></li>
+<li class="">Mark status <code>in_progress</code></li>
+<li class="">Extract payload from <code>arguments.memory</code> via <code>_extractPayload</code>
+<ul>
+<li class="">Extraction uses <code>opera_availability_result</code> as slot source</li>
+</ul>
+</li>
+<li class="">Build Opera reservation payload via <code>_getBookingPayload</code></li>
+<li class="">Send reservation request</li>
+<li class="">On success, parse reservation id from returned links</li>
+<li class="">Push booking context section:<!-- -->
+<ul>
+<li class=""><code>BookingSlots role=&quot;context&quot;</code></li>
+</ul>
+</li>
+<li class="">Emit <code>result_success</code> with:<!-- -->
+<ul>
+<li class=""><code>targetAction=book_slot</code></li>
+<li class=""><code>output.success=true</code></li>
+<li class=""><code>output.booking_id</code></li>
+</ul>
+</li>
+</ol>
+<p>Booking API call:</p>
+<ul>
+<li class=""><code>POST /rsv/v1/hotels/{hotel_id}/reservations</code></li>
+</ul>
+<p>Error behavior:</p>
+<ul>
+<li class=""><code>ExecuteResultErrorSkill</code>:<!-- -->
+<ul>
+<li class="">sets <code>opera_booking_status=error</code></li>
+<li class="">pushes <code>Booking was unsuccessful.</code></li>
+<li class="">emits <code>result_success</code> with <code>success=false</code> for <code>book_slot</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-cancellationflow">4.3 CancellationFlow<a href="#43-cancellationflow" class="hash-link" aria-label="Direct link to 4.3 CancellationFlow" title="Direct link to 4.3 CancellationFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>convo_agent_cancel_booking</code></li>
+</ul>
+<p>Behavior:</p>
+<ol>
+<li class="">Guard by <code>opera_enable_cancellation</code></li>
+<li class="">Reads booking id from payload (<code>parameters.meta.booking_id</code>)</li>
+<li class="">Sends cancellation request</li>
+<li class=""><code>_cancelAppointmentSuccess</code> returns <code>success=true/false</code> based on reservation status</li>
+</ol>
+<p>Cancellation API call:</p>
+<ul>
+<li class=""><code>POST /rsv/v1/hotels/{hotel_id}/reservations/{reservation_id}/cancellations</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-rescheduleflow">4.4 RescheduleFlow<a href="#44-rescheduleflow" class="hash-link" aria-label="Direct link to 4.4 RescheduleFlow" title="Direct link to 4.4 RescheduleFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>opera_custom_reschedule_event</code></li>
+</ul>
+<p>Behavior:</p>
+<ol>
+<li class="">Reads <code>arguments.memory</code></li>
+<li class="">Reads existing persona <code>bookings</code></li>
+<li class="">Extracts target booking/date changes via <code>_extractPayload</code></li>
+<li class="">Builds payload and sends reservation update request</li>
+<li class="">On success, emits <code>result_success</code> with <code>targetAction=reschedule_slot</code></li>
+</ol>
+<p>Reschedule API call:</p>
+<ul>
+<li class=""><code>PUT /rsv/v1/hotels/{hotel_id}/reservations/{reservation_id}</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-utilsflow-request-router">4.5 UtilsFlow (Request Router)<a href="#45-utilsflow-request-router" class="hash-link" aria-label="Direct link to 4.5 UtilsFlow (Request Router)" title="Direct link to 4.5 UtilsFlow (Request Router)" translate="no">​</a></h2>
+<p>System event entrypoint:</p>
+<ul>
+<li class=""><code>opera_execute_request</code></li>
+</ul>
+<p>Responsibilities:</p>
+<ul>
+<li class="">Attach Opera headers to outgoing requests</li>
+<li class="">Route HTTP success/error to integration-level events</li>
+<li class="">Refresh access token on HTTP 401</li>
+<li class="">Retry original request (up to attempt limit)</li>
+</ul>
+<p>Key events dispatched:</p>
+<ul>
+<li class=""><code>opera_result_success</code></li>
+<li class=""><code>opera_result_error</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="46-canvassetupflow">4.6 CanvasSetupFlow<a href="#46-canvassetupflow" class="hash-link" aria-label="Direct link to 4.6 CanvasSetupFlow" title="Direct link to 4.6 CanvasSetupFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>gm_workflow_builder_canvas_built</code></li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li class="">Optionally auto-seed booking/cancellation canvas artifacts when <code>opera_setup_scenarios=True</code></li>
+</ul>
+<p>Main operations:</p>
+<ul>
+<li class=""><code>SetupLibrary</code> ensures default library items exist</li>
+<li class=""><code>SetupCanvas</code> inserts default canvas items if not already cloned</li>
+<li class="">emits system events:<!-- -->
+<ul>
+<li class=""><code>gm_canvas_add_library_item_batch</code></li>
+<li class=""><code>gm_canvas_delete_item_batch</code></li>
+<li class=""><code>gm_canvas_add_item_batch</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="47-staticdataflow">4.7 StaticDataFlow<a href="#47-staticdataflow" class="hash-link" aria-label="Direct link to 4.7 StaticDataFlow" title="Direct link to 4.7 StaticDataFlow" translate="no">​</a></h2>
+<p>Trigger event:</p>
+<ul>
+<li class=""><code>session_started</code></li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li class="">Refresh cached static data by interval</li>
+</ul>
+<p>Implemented pieces:</p>
+<ul>
+<li class="">stale check via <code>opera_static_data_updated_at</code> + <code>opera_static_data_update_interval</code></li>
+<li class="">room type refresh endpoint:<!-- -->
+<ul>
+<li class=""><code>GET /rm/config/v1/hotels/{hotel_id}/roomTypes?limit=1000</code></li>
+</ul>
+</li>
+<li class="">saves filtered accessible room types into:<!-- -->
+<ul>
+<li class=""><code>opera_room_types</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-event-map-operational">5. Event Map (Operational)<a href="#5-event-map-operational" class="hash-link" aria-label="Direct link to 5. Event Map (Operational)" title="Direct link to 5. Event Map (Operational)" translate="no">​</a></h2>
+<p>Customer-facing tool events:</p>
+<ul>
+<li class=""><code>opera_custom_availability_event</code></li>
+<li class=""><code>opera_custom_booking_event</code></li>
+<li class=""><code>opera_custom_reschedule_event</code></li>
+</ul>
+<p>Internal system bridge events:</p>
+<ul>
+<li class=""><code>opera_execute_request</code></li>
+<li class=""><code>opera_result_success</code></li>
+<li class=""><code>opera_result_error</code></li>
+</ul>
+<p>Legacy HTTP callbacks used in Utils/Setup:</p>
+<ul>
+<li class=""><code>result_success</code></li>
+<li class=""><code>result_error</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-connectors">6. Connectors<a href="#6-connectors" class="hash-link" aria-label="Direct link to 6. Connectors" title="Direct link to 6. Connectors" translate="no">​</a></h2>
+<p>Defined by setup:</p>
+<ul>
+<li class=""><code>opera_connector</code> (HTTP requests to Opera APIs)</li>
+<li class=""><code>opera_token_connector</code> (token refresh/acquisition path)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-pre-launch-checklist">7. Pre-launch Checklist<a href="#7-pre-launch-checklist" class="hash-link" aria-label="Direct link to 7. Pre-launch Checklist" title="Direct link to 7. Pre-launch Checklist" translate="no">​</a></h2>
+<ol>
+<li class="">Confirm credentials and tenant fields:</li>
+</ol>
+<ul>
+<li class=""><code>opera_base_url</code></li>
+<li class=""><code>opera_client_id</code></li>
+<li class=""><code>opera_client_secret</code></li>
+<li class=""><code>opera_app_key</code></li>
+<li class=""><code>opera_enterprise_id</code></li>
+<li class=""><code>opera_hotel_id</code></li>
+<li class=""><code>opera_scope</code></li>
+</ul>
+<ol start="2">
+<li class="">Run setup and verify:</li>
+</ol>
+<ul>
+<li class=""><code>opera_access_token</code> is populated</li>
+<li class=""><code>setup_persona_id</code> exists</li>
+</ul>
+<ol start="3">
+<li class="">Confirm capability toggles:</li>
+</ol>
+<ul>
+<li class=""><code>opera_enable_slot_check</code></li>
+<li class=""><code>opera_enable_booking</code></li>
+<li class=""><code>opera_enable_cancellation</code></li>
+</ul>
+<ol start="4">
+<li class="">If using canvas bootstrap:</li>
+</ol>
+<ul>
+<li class="">set <code>opera_setup_scenarios=True</code></li>
+</ul>
+<ol start="5">
+<li class="">Validate end-to-end in test suite:</li>
+</ol>
+<ul>
+<li class=""><code>pytest -q test/opera</code></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/mozrest"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Mozrest Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/pipedrive"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Pipedrive Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a></li><li><a href="#2-setup-and-authorization" class="table-of-contents__link toc-highlight">2. Setup and Authorization</a><ul><li><a href="#21-what-setup-does" class="table-of-contents__link toc-highlight">2.1 What setup does</a></li><li><a href="#22-token-flow" class="table-of-contents__link toc-highlight">2.2 Token flow</a></li></ul></li><li><a href="#3-key-attributes" class="table-of-contents__link toc-highlight">3. Key Attributes</a></li><li><a href="#4-flow-capabilities" class="table-of-contents__link toc-highlight">4. Flow Capabilities</a></li><li><a href="#41-availabilityflow" class="table-of-contents__link toc-highlight">4.1 AvailabilityFlow</a></li><li><a href="#42-bookingflow" class="table-of-contents__link toc-highlight">4.2 BookingFlow</a></li><li><a href="#43-cancellationflow" class="table-of-contents__link toc-highlight">4.3 CancellationFlow</a></li><li><a href="#44-rescheduleflow" class="table-of-contents__link toc-highlight">4.4 RescheduleFlow</a></li><li><a href="#45-utilsflow-request-router" class="table-of-contents__link toc-highlight">4.5 UtilsFlow (Request Router)</a></li><li><a href="#46-canvassetupflow" class="table-of-contents__link toc-highlight">4.6 CanvasSetupFlow</a></li><li><a href="#47-staticdataflow" class="table-of-contents__link toc-highlight">4.7 StaticDataFlow</a></li><li><a href="#5-event-map-operational" class="table-of-contents__link toc-highlight">5. Event Map (Operational)</a></li><li><a href="#6-connectors" class="table-of-contents__link toc-highlight">6. Connectors</a></li><li><a href="#7-pre-launch-checklist" class="table-of-contents__link toc-highlight">7. Pre-launch Checklist</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>
