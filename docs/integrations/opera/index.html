@@ -3,364 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Full Opera Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/opera"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Full Opera Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="This document describes the current opera integration implementation in this repository."><meta data-rh="true" property="og:description" content="This document describes the current opera integration implementation in this repository."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/opera"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Full Opera Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/opera"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.e458a494.js" defer="defer"></script>
+<title data-rh="true">Opera Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/opera"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Opera Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. What This Integration Does"><meta data-rh="true" property="og:description" content="1. What This Integration Does"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/opera"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/opera" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Opera Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/opera"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.7b8b780d.js" defer="defer"></script>
 <script src="/assets/js/main.d6408574.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration" class="linkLabel_WmDU">Monday.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/opera"><span title="Full Opera Integration Guide" class="linkLabel_WmDU">Full Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Full Opera Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Full Opera Integration Guide</h1></header>
-<p>This document describes the current <code>opera</code> integration implementation in this repository.
-It is based on the templates and flow definitions under:
-<code>opera/OperaIntegration/agents/OperaAgent/flows/*</code></p>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-overview">1. Overview<a href="#1-overview" class="hash-link" aria-label="Direct link to 1. Overview" title="Direct link to 1. Overview" translate="no">​</a></h2>
-<p>The Opera integration provides hotel-focused automation for:</p>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration" class="linkLabel_WmDU">Monday.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Opera Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Opera Integration Guide</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-what-this-integration-does">1. What This Integration Does<a href="#1-what-this-integration-does" class="hash-link" aria-label="Direct link to 1. What This Integration Does" title="Direct link to 1. What This Integration Does" translate="no">​</a></h2>
+<p>The Newo AI Agent integrates with Opera so your AI can act as a hotel reservation assistant for your property.</p>
+<p>Once connected, the AI agent can:</p>
 <ul>
-<li class="">Availability lookup</li>
-<li class="">Reservation creation</li>
-<li class="">Reservation cancellation</li>
-<li class="">Reservation rescheduling</li>
-<li class="">Runtime request orchestration and token refresh</li>
-<li class="">Optional canvas scenario bootstrap</li>
-<li class="">Optional static data refresh (room types)</li>
+<li class="">check room availability for requested stay dates and guest counts</li>
+<li class="">create hotel reservations</li>
+<li class="">cancel reservations</li>
+<li class="">reschedule reservations</li>
+<li class="">securely retrieve an existing reservation when the guest provides the confirmation number and last name</li>
+<li class="">auto-add default Opera booking scenarios to Canvas</li>
+<li class="">refresh static room type data in the background</li>
 </ul>
-<p>Primary agent:</p>
+<p><strong>In plain terms:</strong> the AI can talk to guests about room availability and bookings while Opera acts as the hotel reservation backend.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="manager-quick-view">Manager Quick View<a href="#manager-quick-view" class="hash-link" aria-label="Direct link to Manager Quick View" title="Direct link to Manager Quick View" translate="no">​</a></h3>
+<table><thead><tr><th>Question</th><th>Short answer</th></tr></thead><tbody><tr><td><strong>What business problem does this solve?</strong></td><td>Lets the AI handle hotel availability, booking, cancellation, reschedule, and secure booking lookup without a human agent doing those actions manually.</td></tr><tr><td><strong>Who is this for?</strong></td><td>Hotels and hospitality teams already using Opera as the reservation system.</td></tr><tr><td><strong>What is needed before setup?</strong></td><td>Opera API credentials plus the exact hotel/property ID.</td></tr><tr><td><strong>How long does setup usually take?</strong></td><td>Usually 10-20 minutes if all credentials are already prepared.</td></tr><tr><td><strong>How do we know it worked?</strong></td><td><code>Publish All</code> completes successfully and <code>opera_access_token</code> is populated.</td></tr><tr><td><strong>What should we test first?</strong></td><td>Availability, then booking, then secure retrieval.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-fit--not-a-fit">Best Fit / Not a Fit<a href="#best-fit--not-a-fit" class="hash-link" aria-label="Direct link to Best Fit / Not a Fit" title="Direct link to Best Fit / Not a Fit" translate="no">​</a></h3>
+<p><strong>Best fit:</strong></p>
 <ul>
-<li class=""><code>OperaAgent</code></li>
+<li class="">hotel reservation operations in Opera</li>
+<li class="">AI-led guest conversations about room availability and reservations</li>
+<li class="">teams that want one Newo project per hotel/property</li>
 </ul>
-<p>Primary integration idn:</p>
+<p><strong>Not a fit:</strong></p>
 <ul>
-<li class=""><code>opera_integration</code></li>
+<li class="">CRM-heavy workflows</li>
+<li class="">lead pipeline automation</li>
+<li class="">caller recognition based only on phone number</li>
+<li class="">multi-property routing inside one single Opera setup</li>
 </ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-setup-and-authorization">2. Setup and Authorization<a href="#2-setup-and-authorization" class="hash-link" aria-label="Direct link to 2. Setup and Authorization" title="Direct link to 2. Setup and Authorization" translate="no">​</a></h2>
-<p>The setup entrypoint is <code>SetupFlow</code> via event:</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-before-you-start">2. Before You Start<a href="#2-before-you-start" class="hash-link" aria-label="Direct link to 2. Before You Start" title="Direct link to 2. Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
 <ul>
-<li class=""><code>project_publish_finish</code> -&gt; <code>SetupSkill</code></li>
+<li class="">access to the Newo project builder for your project</li>
+<li class="">permission to edit project settings and publish</li>
+<li class="">Opera API credentials from your Opera / Oracle Hospitality administrator</li>
+<li class="">the exact hotel ID you want this project to use</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-what-setup-does">2.1 What setup does<a href="#21-what-setup-does" class="hash-link" aria-label="Direct link to 2.1 What setup does" title="Direct link to 2.1 What setup does" translate="no">​</a></h3>
-<p><code>SetupSkill</code>:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="who-usually-provides-what">Who Usually Provides What<a href="#who-usually-provides-what" class="hash-link" aria-label="Direct link to Who Usually Provides What" title="Direct link to Who Usually Provides What" translate="no">​</a></h3>
+<table><thead><tr><th>Role</th><th>Usually provides</th></tr></thead><tbody><tr><td><strong>Hotel / client team</strong></td><td>Opera access approval, hotel ID, operational testing help</td></tr><tr><td><strong>Opera / Oracle Hospitality admin</strong></td><td>Base URL, App Key, Client ID, Client Secret, Enterprise ID, Scope</td></tr><tr><td><strong>Newo implementer / PM</strong></td><td>Newo setup, feature toggles, publish, test plan, go-live validation</td></tr></tbody></table>
+<p>You will need these values before setup:</p>
+<ul>
+<li class=""><strong>Base URL</strong></li>
+<li class=""><strong>App Key</strong></li>
+<li class=""><strong>Client ID</strong></li>
+<li class=""><strong>Client Secret</strong></li>
+<li class=""><strong>Enterprise ID</strong></li>
+<li class=""><strong>Hotel ID</strong></li>
+<li class=""><strong>Scope</strong></li>
+</ul>
+<blockquote>
+<p><strong>Good news:</strong> this repository now includes field-level Opera setup screenshots for the core credential fields in Newo, so the guide below can show exactly where each required value goes.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-connecting-for-the-first-time">3. Connecting for the First Time<a href="#3-connecting-for-the-first-time" class="hash-link" aria-label="Direct link to 3. Connecting for the First Time" title="Direct link to 3. Connecting for the First Time" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-collect-the-required-opera-credentials">3.1 Collect the Required Opera Credentials<a href="#31-collect-the-required-opera-credentials" class="hash-link" aria-label="Direct link to 3.1 Collect the Required Opera Credentials" title="Direct link to 3.1 Collect the Required Opera Credentials" translate="no">​</a></h3>
+<p>Ask your Opera or Oracle Hospitality API administrator for:</p>
+<table><thead><tr><th>Value</th><th>Why it is needed</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td>The root URL for your Opera API environment</td></tr><tr><td><strong>App Key</strong></td><td>Used in request headers for API access</td></tr><tr><td><strong>Client ID</strong></td><td>Used to obtain the OAuth access token</td></tr><tr><td><strong>Client Secret</strong></td><td>Used to obtain the OAuth access token</td></tr><tr><td><strong>Enterprise ID</strong></td><td>Required request header for Opera authentication</td></tr><tr><td><strong>Hotel ID</strong></td><td>The property the AI will query and update</td></tr><tr><td><strong>Scope</strong></td><td>OAuth scope used during token acquisition</td></tr></tbody></table>
+<blockquote>
+<p><strong>One property per setup:</strong> this implementation is currently designed around a single <code>opera_hotel_id</code> per Newo project. If you manage multiple hotels, plan one Newo project per hotel unless you intentionally customize the integration.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-configure-opera-in-newo">3.2 Configure Opera in Newo<a href="#32-configure-opera-in-newo" class="hash-link" aria-label="Direct link to 3.2 Configure Opera in Newo" title="Direct link to 3.2 Configure Opera in Newo" translate="no">​</a></h3>
 <ol>
-<li class="">Validates target integration idn (<code>opera_integration</code>)</li>
-<li class="">Initializes project attributes and metadata</li>
-<li class="">Ensures HTTP connectors exist:<!-- -->
+<li class="">Open your project in Newo.</li>
+<li class="">Go to <strong>Builder → Attributes</strong>.</li>
+<li class="">Find the <strong>Opera</strong> section.</li>
+<li class="">Fill in:<!-- -->
+<ul>
+<li class=""><strong>Base URL</strong></li>
+<li class=""><strong>App Key</strong></li>
+<li class=""><strong>Client ID</strong></li>
+<li class=""><strong>Client Secret</strong></li>
+<li class=""><strong>Enterprise ID</strong></li>
+<li class=""><strong>Hotel ID</strong></li>
+<li class=""><strong>Scope</strong></li>
+</ul>
+</li>
+<li class="">Review the feature toggles:<!-- -->
+<ul>
+<li class=""><strong>Enable Availability Check</strong></li>
+<li class=""><strong>Enable Booking</strong></li>
+<li class=""><strong>Enable Cancellation</strong></li>
+<li class=""><strong>Enable Secure Retrieval</strong></li>
+<li class=""><strong>Automatically Add Default Scenarios to Canvas</strong></li>
+</ul>
+</li>
+<li class="">Click <strong>Save</strong>.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-what-happens-after-publish">3.3 What Happens After Publish<a href="#33-what-happens-after-publish" class="hash-link" aria-label="Direct link to 3.3 What Happens After Publish" title="Direct link to 3.3 What Happens After Publish" translate="no">​</a></h3>
+<p>When you publish:</p>
+<ul>
+<li class="">Newo validates the target integration ID</li>
+<li class="">creates or updates HTTP connectors:<!-- -->
 <ul>
 <li class=""><code>opera_connector</code></li>
 <li class=""><code>opera_token_connector</code></li>
 </ul>
 </li>
-<li class="">Ensures a setup persona exists (<code>setup_persona_id</code>)</li>
-<li class="">Injects booking/availability payload schema attributes</li>
-<li class="">Requests OAuth client-credentials token</li>
-<li class="">Registers Newo tool definitions for availability/booking/reschedule</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-token-flow">2.2 Token flow<a href="#22-token-flow" class="hash-link" aria-label="Direct link to 2.2 Token flow" title="Direct link to 2.2 Token flow" translate="no">​</a></h3>
-<p><code>_getTokensSkill</code> sends:</p>
-<ul>
-<li class=""><code>POST {opera_base_url}/oauth/v1/tokens</code></li>
-<li class="">headers include:<!-- -->
-<ul>
-<li class=""><code>x-app-key</code></li>
-<li class=""><code>enterpriseId</code></li>
-<li class=""><code>Authorization: Basic base64(client_id:client_secret)</code></li>
+<li class="">creates or refreshes the setup persona</li>
+<li class="">injects booking and availability payload schemas into the project</li>
+<li class="">requests an OAuth access token from Opera</li>
+<li class="">stores the token in <code>opera_access_token</code></li>
+<li class="">registers Opera tools for booking-related actions inside the agent</li>
+<li class="">optionally auto-adds default Opera scenarios to Canvas</li>
 </ul>
-</li>
-<li class="">body:<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-what-successful-setup-looks-like">3.4 What “Successful Setup” Looks Like<a href="#34-what-successful-setup-looks-like" class="hash-link" aria-label="Direct link to 3.4 What “Successful Setup” Looks Like" title="Direct link to 3.4 What “Successful Setup” Looks Like" translate="no">​</a></h3>
+<p>After setup is complete, you should expect all of the following:</p>
 <ul>
-<li class=""><code>grant_type=client_credentials</code></li>
-<li class=""><code>scope={opera_scope}</code></li>
+<li class=""><code>opera_access_token</code> has a non-empty value</li>
+<li class="">the project can run an availability check without authentication errors</li>
+<li class="">the Opera settings stay saved after refresh</li>
+<li class="">the booking-related tools are available to the agent</li>
+<li class="">if Canvas auto-setup is enabled, Opera items are inserted automatically</li>
 </ul>
-</li>
-</ul>
-<p><code>_getTokensSuccessSkill</code> stores:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="35-setup-screenshots">3.5 Setup Screenshots<a href="#35-setup-screenshots" class="hash-link" aria-label="Direct link to 3.5 Setup Screenshots" title="Direct link to 3.5 Setup Screenshots" translate="no">​</a></h3>
+<p>Below are the currently available Opera setup screenshots from this repository.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-settings-reference">4. Settings Reference<a href="#4-settings-reference" class="hash-link" aria-label="Direct link to 4. Settings Reference" title="Direct link to 4. Settings Reference" translate="no">​</a></h2>
+<p>You can find all settings in <strong>Builder → Attributes → Opera</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-connection-settings">4.1 Connection Settings<a href="#41-connection-settings" class="hash-link" aria-label="Direct link to 4.1 Connection Settings" title="Direct link to 4.1 Connection Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td>Root URL for the Opera API environment</td><td>Yes</td></tr><tr><td><strong>App Key</strong></td><td>Sent in Opera request headers</td><td>Yes</td></tr><tr><td><strong>Client ID</strong></td><td>Used to obtain the OAuth token</td><td>Yes</td></tr><tr><td><strong>Client Secret</strong></td><td>Used to obtain the OAuth token</td><td>Yes</td></tr><tr><td><strong>Enterprise ID</strong></td><td>Sent in Opera request headers</td><td>Yes</td></tr><tr><td><strong>Hotel ID</strong></td><td>Target property for availability and reservation requests</td><td>Yes</td></tr><tr><td><strong>Scope</strong></td><td>OAuth scope for token acquisition</td><td>Yes</td></tr><tr><td><strong>Access Token</strong></td><td>Temporary OAuth token stored after setup</td><td>Auto-filled</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="field-by-field-visual-reference">Field-by-Field Visual Reference<a href="#field-by-field-visual-reference" class="hash-link" aria-label="Direct link to Field-by-Field Visual Reference" title="Direct link to Field-by-Field Visual Reference" translate="no">​</a></h4>
+<p>Use these screenshots if you want to match each credential field visually while filling the setup form:</p>
+<p><img decoding="async" loading="lazy" alt="Opera Base URL visual reference" src="/assets/images/S01_opera_settings_block_base_url-62b7d4d45ecd8d1c31cddf9cda8cccc6.png" width="1288" height="384" class="img_ev3q"></p>
+<p><em>Figure S02-A. Visual reference for the <strong>Base URL</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera App Key visual reference" src="/assets/images/S01_opera_settings_block_app_key-e88247804a8336b0cb28a0fc4d10a7a9.png" width="1478" height="364" class="img_ev3q"></p>
+<p><em>Figure S02-B. Visual reference for the <strong>App Key</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera Client ID visual reference" src="/assets/images/S01_opera_settings_block_client_id-9cf58feb3a61238896a2c6ca89cd4386.png" width="800" height="354" class="img_ev3q"></p>
+<p><em>Figure S02-C. Visual reference for the <strong>Client ID</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera Client Secret visual reference" src="/assets/images/S01_opera_settings_block_client_secret-5ccb6159260407ee7109d5a560e282cc.png" width="1240" height="374" class="img_ev3q"></p>
+<p><em>Figure S02-D. Visual reference for the <strong>Client Secret</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera Enterprise ID visual reference" src="/assets/images/S01_opera_settings_block_enterprise_id-516d0d0b30da18121e84234db5d7f4bf.png" width="1146" height="368" class="img_ev3q"></p>
+<p><em>Figure S02-E. Visual reference for the <strong>Enterprise ID</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera Hotel ID visual reference" src="/assets/images/S01_opera_settings_block_hotel_id-1f402890f7411e1d834c885b23a78c4e.png" width="1662" height="378" class="img_ev3q"></p>
+<p><em>Figure S02-F. Visual reference for the <strong>Hotel ID</strong> field.</em></p>
+<p><img decoding="async" loading="lazy" alt="Opera Scope visual reference" src="/assets/images/S01_opera_settings_block_scope-33cd595dfdc4b9a2ae582b92369d7160.png" width="1652" height="360" class="img_ev3q"></p>
+<p><em>Figure S02-G. Visual reference for the <strong>Scope</strong> field.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-feature-toggles">4.2 Feature Toggles<a href="#42-feature-toggles" class="hash-link" aria-label="Direct link to 4.2 Feature Toggles" title="Direct link to 4.2 Feature Toggles" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>Enable Availability Check</strong></td><td>On</td><td>Allows the agent to check room availability</td></tr><tr><td><strong>Enable Booking</strong></td><td>On</td><td>Allows the agent to create reservations</td></tr><tr><td><strong>Enable Cancellation</strong></td><td>On</td><td>Allows the agent to cancel reservations</td></tr><tr><td><strong>Enable Secure Retrieval</strong></td><td>On</td><td>Allows the agent to retrieve an existing booking after confirmation number + last name verification</td></tr><tr><td><strong>Automatically Add Default Scenarios to Canvas</strong></td><td>On</td><td>Adds default Opera conversation building blocks to Canvas</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-technical--advanced-settings">4.3 Technical / Advanced Settings<a href="#43-technical--advanced-settings" class="hash-link" aria-label="Direct link to 4.3 Technical / Advanced Settings" title="Direct link to 4.3 Technical / Advanced Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Override SA attributes</strong></td><td>On</td><td>Re-syncs integration-managed project/superagent metadata during setup</td></tr><tr><td><strong>Static Data Update Interval</strong></td><td><code>86400</code></td><td>Refresh interval for cached static Opera data in seconds</td></tr><tr><td><strong>Static Data Updated At</strong></td><td>Auto</td><td>Timestamp of the most recent static data refresh</td></tr><tr><td><strong>Setup Persona ID</strong></td><td>Auto</td><td>Persona used during setup and connector-related operations</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-what-the-ai-agent-can-do">5. What the AI Agent Can Do<a href="#5-what-the-ai-agent-can-do" class="hash-link" aria-label="Direct link to 5. What the AI Agent Can Do" title="Direct link to 5. What the AI Agent Can Do" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-check-availability">5.1 Check Availability<a href="#51-check-availability" class="hash-link" aria-label="Direct link to 5.1 Check Availability" title="Direct link to 5.1 Check Availability" translate="no">​</a></h3>
+<p>The AI checks Opera availability for:</p>
 <ul>
-<li class=""><code>opera_access_token</code></li>
+<li class="">check-in date</li>
+<li class="">check-out date</li>
+<li class="">adult count</li>
+<li class="">child count</li>
 </ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-key-attributes">3. Key Attributes<a href="#3-key-attributes" class="hash-link" aria-label="Direct link to 3. Key Attributes" title="Direct link to 3. Key Attributes" translate="no">​</a></h2>
-<p>Main project attributes created by setup:</p>
-<ul>
-<li class=""><code>opera_base_url</code></li>
-<li class=""><code>opera_app_key</code></li>
-<li class=""><code>opera_client_id</code></li>
-<li class=""><code>opera_client_secret</code></li>
-<li class=""><code>opera_enterprise_id</code></li>
-<li class=""><code>opera_hotel_id</code></li>
-<li class=""><code>opera_scope</code></li>
-<li class=""><code>opera_access_token</code></li>
-<li class=""><code>opera_override_agent_attributes</code></li>
-<li class=""><code>opera_enable_slot_check</code></li>
-<li class=""><code>opera_enable_booking</code></li>
-<li class=""><code>opera_enable_cancellation</code></li>
-<li class=""><code>opera_setup_scenarios</code></li>
-<li class=""><code>opera_static_data_updated_at</code></li>
-<li class=""><code>opera_static_data_update_interval</code></li>
-<li class=""><code>setup_persona_id</code></li>
-</ul>
-<p>Runtime persona attributes used by flows:</p>
-<ul>
-<li class=""><code>opera_availability_status</code></li>
-<li class=""><code>opera_availability_result</code></li>
-<li class=""><code>opera_booking_status</code></li>
-<li class=""><code>bookings</code> (used by reschedule extraction)</li>
-</ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-flow-capabilities">4. Flow Capabilities<a href="#4-flow-capabilities" class="hash-link" aria-label="Direct link to 4. Flow Capabilities" title="Direct link to 4. Flow Capabilities" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-availabilityflow">4.1 AvailabilityFlow<a href="#41-availabilityflow" class="hash-link" aria-label="Direct link to 4.1 AvailabilityFlow" title="Direct link to 4.1 AvailabilityFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
-<ul>
-<li class=""><code>opera_custom_availability_event</code></li>
-</ul>
-<p>Behavior:</p>
-<ol>
-<li class="">Guard by <code>opera_enable_slot_check</code></li>
-<li class="">Prevent parallel execution when <code>opera_availability_status == in_progress</code></li>
-<li class="">Mark status <code>in_progress</code></li>
-<li class="">Extract payload from <code>arguments.memory</code> via <code>_extractPayload</code></li>
-<li class="">Call Opera availability API via <code>_checkAvailabilitySkill</code></li>
-<li class="">Normalize returned offers into a simplified list</li>
-<li class="">Publish offers into prompt section:<!-- -->
-<ul>
-<li class=""><code>AvailabilitySlots role=&quot;context&quot;</code></li>
-</ul>
-</li>
-<li class="">Save simplified offers into persona:<!-- -->
-<ul>
-<li class=""><code>opera_availability_result</code></li>
-</ul>
-</li>
-<li class="">Send <code>urgent_message</code> instruction for user-facing response</li>
-</ol>
-<p>Availability API call:</p>
+<p>The integration calls:</p>
 <ul>
 <li class=""><code>GET /par/v1/hotels/{hotel_id}/availability</code></li>
-<li class="">query includes:<!-- -->
+</ul>
+<p>What the agent receives:</p>
 <ul>
-<li class=""><code>roomStayStartDate</code></li>
-<li class=""><code>roomStayEndDate</code></li>
-<li class=""><code>roomStayQuantity</code></li>
-<li class=""><code>adults</code></li>
-<li class=""><code>children</code></li>
-<li class=""><code>includeClosedRates=True</code></li>
-<li class=""><code>includeLocalRates=True</code></li>
-<li class=""><code>limit=10</code></li>
+<li class="">simplified room/rate options</li>
+<li class="">dates</li>
+<li class="">rate plan code</li>
+<li class="">market code</li>
+<li class="">total pricing information</li>
 </ul>
-</li>
-</ul>
-<p>Error behavior:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-create-a-reservation">5.2 Create a Reservation<a href="#52-create-a-reservation" class="hash-link" aria-label="Direct link to 5.2 Create a Reservation" title="Direct link to 5.2 Create a Reservation" translate="no">​</a></h3>
+<p>The AI can create a reservation after it has:</p>
 <ul>
-<li class=""><code>ExecuteResultErrorSkill</code> sets status <code>error</code></li>
-<li class="">pushes prompt context <code>There are no available slots.</code></li>
-<li class="">emits <code>result_error</code> with <code>targetAction=check_availability</code></li>
+<li class="">stay dates</li>
+<li class="">adult count</li>
+<li class="">child count</li>
+<li class="">guest first name</li>
+<li class="">guest last name</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-bookingflow">4.2 BookingFlow<a href="#42-bookingflow" class="hash-link" aria-label="Direct link to 4.2 BookingFlow" title="Direct link to 4.2 BookingFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
-<ul>
-<li class=""><code>opera_custom_booking_event</code></li>
-</ul>
-<p>Behavior:</p>
-<ol>
-<li class="">Guard by <code>opera_enable_booking</code></li>
-<li class="">Prevent parallel execution when <code>opera_booking_status == in_progress</code></li>
-<li class="">Mark status <code>in_progress</code></li>
-<li class="">Extract payload from <code>arguments.memory</code> via <code>_extractPayload</code>
-<ul>
-<li class="">Extraction uses <code>opera_availability_result</code> as slot source</li>
-</ul>
-</li>
-<li class="">Build Opera reservation payload via <code>_getBookingPayload</code></li>
-<li class="">Send reservation request</li>
-<li class="">On success, parse reservation id from returned links</li>
-<li class="">Push booking context section:<!-- -->
-<ul>
-<li class=""><code>BookingSlots role=&quot;context&quot;</code></li>
-</ul>
-</li>
-<li class="">Emit <code>result_success</code> with:<!-- -->
-<ul>
-<li class=""><code>targetAction=book_slot</code></li>
-<li class=""><code>output.success=true</code></li>
-<li class=""><code>output.booking_id</code></li>
-</ul>
-</li>
-</ol>
-<p>Booking API call:</p>
+<p>The integration calls:</p>
 <ul>
 <li class=""><code>POST /rsv/v1/hotels/{hotel_id}/reservations</code></li>
 </ul>
-<p>Error behavior:</p>
+<p>On success, the agent:</p>
 <ul>
-<li class=""><code>ExecuteResultErrorSkill</code>:<!-- -->
+<li class="">stores booking metadata in the persona <code>bookings</code></li>
+<li class="">updates the <code>BookingSlots</code> prompt section</li>
+<li class="">sends a confirmation SMS event</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-securely-retrieve-an-existing-reservation">5.3 Securely Retrieve an Existing Reservation<a href="#53-securely-retrieve-an-existing-reservation" class="hash-link" aria-label="Direct link to 5.3 Securely Retrieve an Existing Reservation" title="Direct link to 5.3 Securely Retrieve an Existing Reservation" translate="no">​</a></h3>
+<p>Opera does <strong>not</strong> expose a generic “find guest by phone” flow in this implementation.</p>
+<p>Instead, the AI can retrieve an existing reservation only when the guest provides:</p>
 <ul>
-<li class="">sets <code>opera_booking_status=error</code></li>
-<li class="">pushes <code>Booking was unsuccessful.</code></li>
-<li class="">emits <code>result_success</code> with <code>success=false</code> for <code>book_slot</code></li>
+<li class=""><strong>Confirmation Number</strong></li>
+<li class=""><strong>Last Name</strong></li>
 </ul>
-</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-cancellationflow">4.3 CancellationFlow<a href="#43-cancellationflow" class="hash-link" aria-label="Direct link to 4.3 CancellationFlow" title="Direct link to 4.3 CancellationFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
-<ul>
-<li class=""><code>convo_agent_cancel_booking</code></li>
-</ul>
-<p>Behavior:</p>
+<p>The integration:</p>
 <ol>
-<li class="">Guard by <code>opera_enable_cancellation</code></li>
-<li class="">Reads booking id from payload (<code>parameters.meta.booking_id</code>)</li>
-<li class="">Sends cancellation request</li>
-<li class=""><code>_cancelAppointmentSuccess</code> returns <code>success=true/false</code> based on reservation status</li>
+<li class="">extracts those values from the conversation</li>
+<li class="">calls Opera reservations lookup</li>
+<li class="">validates the response against the provided confirmation number and last name</li>
+<li class="">returns booking details to the conversation</li>
 </ol>
-<p>Cancellation API call:</p>
+<p>This is handled through:</p>
+<ul>
+<li class=""><code>opera_custom_secure_retrieval_event</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-cancel-a-reservation">5.4 Cancel a Reservation<a href="#54-cancel-a-reservation" class="hash-link" aria-label="Direct link to 5.4 Cancel a Reservation" title="Direct link to 5.4 Cancel a Reservation" translate="no">​</a></h3>
+<p>The AI can cancel a reservation when it already has the target reservation ID from context.</p>
+<p>The integration calls:</p>
 <ul>
 <li class=""><code>POST /rsv/v1/hotels/{hotel_id}/reservations/{reservation_id}/cancellations</code></li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-rescheduleflow">4.4 RescheduleFlow<a href="#44-rescheduleflow" class="hash-link" aria-label="Direct link to 4.4 RescheduleFlow" title="Direct link to 4.4 RescheduleFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
-<ul>
-<li class=""><code>opera_custom_reschedule_event</code></li>
-</ul>
-<p>Behavior:</p>
-<ol>
-<li class="">Reads <code>arguments.memory</code></li>
-<li class="">Reads existing persona <code>bookings</code></li>
-<li class="">Extracts target booking/date changes via <code>_extractPayload</code></li>
-<li class="">Builds payload and sends reservation update request</li>
-<li class="">On success, emits <code>result_success</code> with <code>targetAction=reschedule_slot</code></li>
-</ol>
-<p>Reschedule API call:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="55-reschedule-a-reservation">5.5 Reschedule a Reservation<a href="#55-reschedule-a-reservation" class="hash-link" aria-label="Direct link to 5.5 Reschedule a Reservation" title="Direct link to 5.5 Reschedule a Reservation" translate="no">​</a></h3>
+<p>The AI can update an existing reservation by changing the stay dates for a known reservation.</p>
+<p>The integration calls:</p>
 <ul>
 <li class=""><code>PUT /rsv/v1/hotels/{hotel_id}/reservations/{reservation_id}</code></li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-utilsflow-request-router">4.5 UtilsFlow (Request Router)<a href="#45-utilsflow-request-router" class="hash-link" aria-label="Direct link to 4.5 UtilsFlow (Request Router)" title="Direct link to 4.5 UtilsFlow (Request Router)" translate="no">​</a></h2>
-<p>System event entrypoint:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="56-auto-setup-canvas-scenarios">5.6 Auto-Setup Canvas Scenarios<a href="#56-auto-setup-canvas-scenarios" class="hash-link" aria-label="Direct link to 5.6 Auto-Setup Canvas Scenarios" title="Direct link to 5.6 Auto-Setup Canvas Scenarios" translate="no">​</a></h3>
+<p>If Canvas auto-setup is enabled, Opera inserts default items such as:</p>
 <ul>
-<li class=""><code>opera_execute_request</code></li>
+<li class="">cancellation intent</li>
+<li class="">cancellation scenario</li>
+<li class="">secure retrieval intent</li>
+<li class="">secure retrieval scenario</li>
+<li class="">regular reservation intent</li>
+<li class="">large group reservation intent</li>
+<li class="">booking scenario</li>
+<li class="">supporting procedures for name gathering and date collection</li>
 </ul>
-<p>Responsibilities:</p>
+<p>This happens through:</p>
 <ul>
-<li class="">Attach Opera headers to outgoing requests</li>
-<li class="">Route HTTP success/error to integration-level events</li>
-<li class="">Refresh access token on HTTP 401</li>
-<li class="">Retry original request (up to attempt limit)</li>
+<li class=""><code>CanvasSetupFlow</code></li>
+<li class=""><code>SetupLibrary</code></li>
+<li class=""><code>SetupCanvas</code></li>
 </ul>
-<p>Key events dispatched:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="57-refresh-static-data">5.7 Refresh Static Data<a href="#57-refresh-static-data" class="hash-link" aria-label="Direct link to 5.7 Refresh Static Data" title="Direct link to 5.7 Refresh Static Data" translate="no">​</a></h3>
+<p>Opera currently refreshes:</p>
 <ul>
-<li class=""><code>opera_result_success</code></li>
-<li class=""><code>opera_result_error</code></li>
+<li class="">room types</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="46-canvassetupflow">4.6 CanvasSetupFlow<a href="#46-canvassetupflow" class="hash-link" aria-label="Direct link to 4.6 CanvasSetupFlow" title="Direct link to 4.6 CanvasSetupFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
+<p>This happens through:</p>
 <ul>
-<li class=""><code>gm_workflow_builder_canvas_built</code></li>
+<li class=""><code>StaticDataFlow</code></li>
 </ul>
-<p>Purpose:</p>
-<ul>
-<li class="">Optionally auto-seed booking/cancellation canvas artifacts when <code>opera_setup_scenarios=True</code></li>
-</ul>
-<p>Main operations:</p>
-<ul>
-<li class=""><code>SetupLibrary</code> ensures default library items exist</li>
-<li class=""><code>SetupCanvas</code> inserts default canvas items if not already cloned</li>
-<li class="">emits system events:<!-- -->
-<ul>
-<li class=""><code>gm_canvas_add_library_item_batch</code></li>
-<li class=""><code>gm_canvas_delete_item_batch</code></li>
-<li class=""><code>gm_canvas_add_item_batch</code></li>
-</ul>
-</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="47-staticdataflow">4.7 StaticDataFlow<a href="#47-staticdataflow" class="hash-link" aria-label="Direct link to 4.7 StaticDataFlow" title="Direct link to 4.7 StaticDataFlow" translate="no">​</a></h2>
-<p>Trigger event:</p>
-<ul>
-<li class=""><code>session_started</code></li>
-</ul>
-<p>Purpose:</p>
-<ul>
-<li class="">Refresh cached static data by interval</li>
-</ul>
-<p>Implemented pieces:</p>
-<ul>
-<li class="">stale check via <code>opera_static_data_updated_at</code> + <code>opera_static_data_update_interval</code></li>
-<li class="">room type refresh endpoint:<!-- -->
-<ul>
-<li class=""><code>GET /rm/config/v1/hotels/{hotel_id}/roomTypes?limit=1000</code></li>
-</ul>
-</li>
-<li class="">saves filtered accessible room types into:<!-- -->
-<ul>
-<li class=""><code>opera_room_types</code></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-event-map-operational">5. Event Map (Operational)<a href="#5-event-map-operational" class="hash-link" aria-label="Direct link to 5. Event Map (Operational)" title="Direct link to 5. Event Map (Operational)" translate="no">​</a></h2>
-<p>Customer-facing tool events:</p>
-<ul>
-<li class=""><code>opera_custom_availability_event</code></li>
-<li class=""><code>opera_custom_booking_event</code></li>
-<li class=""><code>opera_custom_reschedule_event</code></li>
-</ul>
-<p>Internal system bridge events:</p>
-<ul>
-<li class=""><code>opera_execute_request</code></li>
-<li class=""><code>opera_result_success</code></li>
-<li class=""><code>opera_result_error</code></li>
-</ul>
-<p>Legacy HTTP callbacks used in Utils/Setup:</p>
-<ul>
-<li class=""><code>result_success</code></li>
-<li class=""><code>result_error</code></li>
-</ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-connectors">6. Connectors<a href="#6-connectors" class="hash-link" aria-label="Direct link to 6. Connectors" title="Direct link to 6. Connectors" translate="no">​</a></h2>
-<p>Defined by setup:</p>
-<ul>
-<li class=""><code>opera_connector</code> (HTTP requests to Opera APIs)</li>
-<li class=""><code>opera_token_connector</code> (token refresh/acquisition path)</li>
-</ul>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-pre-launch-checklist">7. Pre-launch Checklist<a href="#7-pre-launch-checklist" class="hash-link" aria-label="Direct link to 7. Pre-launch Checklist" title="Direct link to 7. Pre-launch Checklist" translate="no">​</a></h2>
+<p>It does <strong>not</strong> currently provide a full static-data catalog sync for every possible Opera entity.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-supported-features">6. Supported Features<a href="#6-supported-features" class="hash-link" aria-label="Direct link to 6. Supported Features" title="Direct link to 6. Supported Features" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Supported</th><th>Notes</th></tr></thead><tbody><tr><td>Check availability</td><td>Yes</td><td>Uses Opera availability endpoint</td></tr><tr><td>Create reservation</td><td>Yes</td><td>Creates reservation in Opera</td></tr><tr><td>Cancel reservation</td><td>Yes</td><td>Requires reservation context</td></tr><tr><td>Reschedule reservation</td><td>Yes</td><td>Requires reservation context</td></tr><tr><td>Retrieve existing reservation securely</td><td>Yes</td><td>Requires confirmation number + last name</td></tr><tr><td>Recognize returning guests by phone number alone</td><td>No</td><td>Not implemented in current code</td></tr><tr><td>CRM sync / lead sync</td><td>No</td><td>Opera integration is reservation-focused</td></tr><tr><td>Canvas auto-setup</td><td>Yes</td><td>Inserts Opera-specific starter scenarios</td></tr><tr><td>Static room type refresh</td><td>Yes</td><td>Background refresh supported</td></tr><tr><td>Multi-property switching in one project</td><td>No</td><td>One <code>opera_hotel_id</code> per project</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-technical-architecture">7. Technical Architecture<a href="#7-technical-architecture" class="hash-link" aria-label="Direct link to 7. Technical Architecture" title="Direct link to 7. Technical Architecture" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="71-trigger-events">7.1 Trigger Events<a href="#71-trigger-events" class="hash-link" aria-label="Direct link to 7.1 Trigger Events" title="Direct link to 7.1 Trigger Events" translate="no">​</a></h3>
+<table><thead><tr><th>User-facing event</th><th>Purpose</th></tr></thead><tbody><tr><td><code>opera_custom_availability_event</code></td><td>Check room availability</td></tr><tr><td><code>opera_custom_booking_event</code></td><td>Create reservation</td></tr><tr><td><code>opera_custom_secure_retrieval_event</code></td><td>Retrieve an existing reservation securely</td></tr><tr><td><code>opera_custom_reschedule_event</code></td><td>Reschedule reservation</td></tr><tr><td><code>convo_agent_cancel_booking</code></td><td>Cancel reservation</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="72-internal-bridge-events">7.2 Internal Bridge Events<a href="#72-internal-bridge-events" class="hash-link" aria-label="Direct link to 7.2 Internal Bridge Events" title="Direct link to 7.2 Internal Bridge Events" translate="no">​</a></h3>
+<table><thead><tr><th>Internal event</th><th>Purpose</th></tr></thead><tbody><tr><td><code>opera_execute_request</code></td><td>Send an authenticated HTTP request through the router</td></tr><tr><td><code>opera_result_success</code></td><td>Route successful Opera responses back into the active flow</td></tr><tr><td><code>opera_result_error</code></td><td>Route failed Opera responses back into the active flow</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="73-high-level-sequence">7.3 High-Level Sequence<a href="#73-high-level-sequence" class="hash-link" aria-label="Direct link to 7.3 High-Level Sequence" title="Direct link to 7.3 High-Level Sequence" translate="no">​</a></h3>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-how-to-test-that-everything-works">8. How to Test That Everything Works<a href="#8-how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to 8. How to Test That Everything Works" title="Direct link to 8. How to Test That Everything Works" translate="no">​</a></h2>
+<p>Before going live, run through this checklist on a demo property or test reservation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-test-order-for-managers">Recommended Test Order for Managers<a href="#recommended-test-order-for-managers" class="hash-link" aria-label="Direct link to Recommended Test Order for Managers" title="Direct link to Recommended Test Order for Managers" translate="no">​</a></h3>
+<p>If you only have time for a short acceptance pass, test in this order:</p>
 <ol>
-<li class="">Confirm credentials and tenant fields:</li>
+<li class=""><strong>Availability</strong>: proves authentication and hotel targeting work</li>
+<li class=""><strong>Booking</strong>: proves write access works</li>
+<li class=""><strong>Secure Retrieval</strong>: proves existing reservation lookup works</li>
+<li class=""><strong>Cancellation / Reschedule</strong>: proves post-booking lifecycle flows work</li>
 </ol>
-<ul>
-<li class=""><code>opera_base_url</code></li>
-<li class=""><code>opera_client_id</code></li>
-<li class=""><code>opera_client_secret</code></li>
-<li class=""><code>opera_app_key</code></li>
-<li class=""><code>opera_enterprise_id</code></li>
-<li class=""><code>opera_hotel_id</code></li>
-<li class=""><code>opera_scope</code></li>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="81-after-setup">8.1 After Setup<a href="#81-after-setup" class="hash-link" aria-label="Direct link to 8.1 After Setup" title="Direct link to 8.1 After Setup" translate="no">​</a></h3>
+<p>After clicking <strong>Publish All</strong>, confirm:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>opera_access_token</code> is populated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->no publish errors appear</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>setup_persona_id</code> exists</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->feature toggles have the intended values</li>
 </ul>
-<ol start="2">
-<li class="">Run setup and verify:</li>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="82-test-availability">8.2 Test Availability<a href="#82-test-availability" class="hash-link" aria-label="Direct link to 8.2 Test Availability" title="Direct link to 8.2 Test Availability" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test conversation.</li>
+<li class="">Ask for availability for specific stay dates.</li>
+<li class="">Confirm the agent returns room options.</li>
+<li class="">Confirm <code>AvailabilitySlots</code> is populated.</li>
 </ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="83-test-booking">8.3 Test Booking<a href="#83-test-booking" class="hash-link" aria-label="Direct link to 8.3 Test Booking" title="Direct link to 8.3 Test Booking" translate="no">​</a></h3>
+<ol>
+<li class="">Ask the agent to make a reservation.</li>
+<li class="">Provide stay dates, name, and guest counts.</li>
+<li class="">Confirm the booking is created in Opera.</li>
+<li class="">Confirm the persona <code>bookings</code> list is updated.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="84-test-secure-retrieval">8.4 Test Secure Retrieval<a href="#84-test-secure-retrieval" class="hash-link" aria-label="Direct link to 8.4 Test Secure Retrieval" title="Direct link to 8.4 Test Secure Retrieval" translate="no">​</a></h3>
+<ol>
+<li class="">Ask about an existing reservation.</li>
+<li class="">Provide the <strong>confirmation number</strong> and <strong>last name</strong>.</li>
+<li class="">Confirm the agent can return the reservation details.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="85-test-cancellation">8.5 Test Cancellation<a href="#85-test-cancellation" class="hash-link" aria-label="Direct link to 8.5 Test Cancellation" title="Direct link to 8.5 Test Cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">Use an existing reservation in context.</li>
+<li class="">Ask the agent to cancel it.</li>
+<li class="">Confirm the cancellation is reflected in Opera.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="86-test-reschedule">8.6 Test Reschedule<a href="#86-test-reschedule" class="hash-link" aria-label="Direct link to 8.6 Test Reschedule" title="Direct link to 8.6 Test Reschedule" translate="no">​</a></h3>
+<ol>
+<li class="">Use an existing reservation in context.</li>
+<li class="">Ask the agent to move it to new dates.</li>
+<li class="">Confirm the reservation is updated in Opera.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="87-test-canvas-auto-setup">8.7 Test Canvas Auto-Setup<a href="#87-test-canvas-auto-setup" class="hash-link" aria-label="Direct link to 8.7 Test Canvas Auto-Setup" title="Direct link to 8.7 Test Canvas Auto-Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Keep <strong>Automatically Add Default Scenarios to Canvas</strong> enabled.</li>
+<li class="">Publish the project.</li>
+<li class="">Confirm Opera scenarios and intents appear in Canvas.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-faq-and-troubleshooting">9. FAQ and Troubleshooting<a href="#9-faq-and-troubleshooting" class="hash-link" aria-label="Direct link to 9. FAQ and Troubleshooting" title="Direct link to 9. FAQ and Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-does-the-agent-ask-for-both-confirmation-number-and-last-name">Why does the agent ask for both confirmation number and last name?<a href="#why-does-the-agent-ask-for-both-confirmation-number-and-last-name" class="hash-link" aria-label="Direct link to Why does the agent ask for both confirmation number and last name?" title="Direct link to Why does the agent ask for both confirmation number and last name?" translate="no">​</a></h3>
+<p>Because secure retrieval in this integration is designed around those two fields. The current code does not support “find reservation by phone number only”.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-is-availability-working-but-booking-not-creating-a-reservation">Why is availability working but booking not creating a reservation?<a href="#why-is-availability-working-but-booking-not-creating-a-reservation" class="hash-link" aria-label="Direct link to Why is availability working but booking not creating a reservation?" title="Direct link to Why is availability working but booking not creating a reservation?" translate="no">​</a></h3>
+<p>Check:</p>
 <ul>
-<li class=""><code>opera_access_token</code> is populated</li>
-<li class=""><code>setup_persona_id</code> exists</li>
+<li class=""><strong>Enable Booking</strong> is turned on</li>
+<li class="">required booking fields are actually present in the conversation</li>
+<li class="">the Opera API credentials are still valid</li>
 </ul>
-<ol start="3">
-<li class="">Confirm capability toggles:</li>
-</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-cant-the-agent-find-an-existing-reservation">Why can’t the agent find an existing reservation?<a href="#why-cant-the-agent-find-an-existing-reservation" class="hash-link" aria-label="Direct link to Why can’t the agent find an existing reservation?" title="Direct link to Why can’t the agent find an existing reservation?" translate="no">​</a></h3>
+<p>Most commonly:</p>
 <ul>
-<li class=""><code>opera_enable_slot_check</code></li>
-<li class=""><code>opera_enable_booking</code></li>
-<li class=""><code>opera_enable_cancellation</code></li>
+<li class="">the confirmation number is wrong</li>
+<li class="">the last name does not match Opera exactly</li>
+<li class="">secure retrieval is disabled</li>
 </ul>
-<ol start="4">
-<li class="">If using canvas bootstrap:</li>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-i-need-to-reconnect-if-credentials-change">Do I need to reconnect if credentials change?<a href="#do-i-need-to-reconnect-if-credentials-change" class="hash-link" aria-label="Direct link to Do I need to reconnect if credentials change?" title="Direct link to Do I need to reconnect if credentials change?" translate="no">​</a></h3>
+<p>Yes. Any time you change Opera credentials:</p>
+<ol>
+<li class="">update the attributes</li>
+<li class="">click <strong>Save</strong></li>
+<li class="">click <strong>Publish All</strong></li>
+<li class="">run at least one live test</li>
 </ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-this-integration-support-multiple-hotels-in-one-setup">Does this integration support multiple hotels in one setup?<a href="#does-this-integration-support-multiple-hotels-in-one-setup" class="hash-link" aria-label="Direct link to Does this integration support multiple hotels in one setup?" title="Direct link to Does this integration support multiple hotels in one setup?" translate="no">​</a></h3>
+<p>Not in the current implementation. One project is configured around one <code>opera_hotel_id</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-opera-auto-sync-every-roomrateconfiguration-object">Does Opera auto-sync every room/rate/configuration object?<a href="#does-opera-auto-sync-every-roomrateconfiguration-object" class="hash-link" aria-label="Direct link to Does Opera auto-sync every room/rate/configuration object?" title="Direct link to Does Opera auto-sync every room/rate/configuration object?" translate="no">​</a></h3>
+<p>No. The current static-data refresh is limited and primarily refreshes room types.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-manager-rollout-summary">10. Manager Rollout Summary<a href="#10-manager-rollout-summary" class="hash-link" aria-label="Direct link to 10. Manager Rollout Summary" title="Direct link to 10. Manager Rollout Summary" translate="no">​</a></h2>
+<p>This integration is a good fit if you want the AI to handle:</p>
 <ul>
-<li class="">set <code>opera_setup_scenarios=True</code></li>
+<li class="">stay-date availability questions</li>
+<li class="">hotel reservation creation</li>
+<li class="">reservation changes and cancellations</li>
+<li class="">secure reservation lookup when the guest knows their confirmation number</li>
 </ul>
-<ol start="5">
-<li class="">Validate end-to-end in test suite:</li>
-</ol>
+<p>This integration is <strong>not</strong> currently positioned as:</p>
 <ul>
-<li class=""><code>pytest -q test/opera</code></li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/openemr"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">OpenEMR Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/pipedrive"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Pipedrive Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a></li><li><a href="#2-setup-and-authorization" class="table-of-contents__link toc-highlight">2. Setup and Authorization</a><ul><li><a href="#21-what-setup-does" class="table-of-contents__link toc-highlight">2.1 What setup does</a></li><li><a href="#22-token-flow" class="table-of-contents__link toc-highlight">2.2 Token flow</a></li></ul></li><li><a href="#3-key-attributes" class="table-of-contents__link toc-highlight">3. Key Attributes</a></li><li><a href="#4-flow-capabilities" class="table-of-contents__link toc-highlight">4. Flow Capabilities</a></li><li><a href="#41-availabilityflow" class="table-of-contents__link toc-highlight">4.1 AvailabilityFlow</a></li><li><a href="#42-bookingflow" class="table-of-contents__link toc-highlight">4.2 BookingFlow</a></li><li><a href="#43-cancellationflow" class="table-of-contents__link toc-highlight">4.3 CancellationFlow</a></li><li><a href="#44-rescheduleflow" class="table-of-contents__link toc-highlight">4.4 RescheduleFlow</a></li><li><a href="#45-utilsflow-request-router" class="table-of-contents__link toc-highlight">4.5 UtilsFlow (Request Router)</a></li><li><a href="#46-canvassetupflow" class="table-of-contents__link toc-highlight">4.6 CanvasSetupFlow</a></li><li><a href="#47-staticdataflow" class="table-of-contents__link toc-highlight">4.7 StaticDataFlow</a></li><li><a href="#5-event-map-operational" class="table-of-contents__link toc-highlight">5. Event Map (Operational)</a></li><li><a href="#6-connectors" class="table-of-contents__link toc-highlight">6. Connectors</a></li><li><a href="#7-pre-launch-checklist" class="table-of-contents__link toc-highlight">7. Pre-launch Checklist</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/opera.pdf" download="opera.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+<li class="">a CRM replacement</li>
+<li class="">a lead pipeline system</li>
+<li class="">a guest recognition system based only on caller ID</li>
+</ul>
+<p><strong>Recommended rollout order:</strong></p>
+<ol>
+<li class="">Connect Opera credentials</li>
+<li class="">Test availability</li>
+<li class="">Test booking</li>
+<li class="">Test secure retrieval</li>
+<li class="">Test cancellation and reschedule</li>
+<li class="">Review Canvas auto-setup items</li>
+<li class="">Go live on one hotel first</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="go-live-recommendation">Go-Live Recommendation<a href="#go-live-recommendation" class="hash-link" aria-label="Direct link to Go-Live Recommendation" title="Direct link to Go-Live Recommendation" translate="no">​</a></h3>
+<p>For the cleanest launch:</p>
+<ul>
+<li class="">start with one hotel only</li>
+<li class="">keep all core features enabled unless there is a clear business reason not to</li>
+<li class="">run at least one real booking and one real secure retrieval before launch day</li>
+<li class="">have a fallback human process ready for the first live shift</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/openemr"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">OpenEMR Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/pipedrive"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Pipedrive Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-what-this-integration-does" class="table-of-contents__link toc-highlight">1. What This Integration Does</a><ul><li><a href="#manager-quick-view" class="table-of-contents__link toc-highlight">Manager Quick View</a></li><li><a href="#best-fit--not-a-fit" class="table-of-contents__link toc-highlight">Best Fit / Not a Fit</a></li></ul></li><li><a href="#2-before-you-start" class="table-of-contents__link toc-highlight">2. Before You Start</a><ul><li><a href="#who-usually-provides-what" class="table-of-contents__link toc-highlight">Who Usually Provides What</a></li></ul></li><li><a href="#3-connecting-for-the-first-time" class="table-of-contents__link toc-highlight">3. Connecting for the First Time</a><ul><li><a href="#31-collect-the-required-opera-credentials" class="table-of-contents__link toc-highlight">3.1 Collect the Required Opera Credentials</a></li><li><a href="#32-configure-opera-in-newo" class="table-of-contents__link toc-highlight">3.2 Configure Opera in Newo</a></li><li><a href="#33-what-happens-after-publish" class="table-of-contents__link toc-highlight">3.3 What Happens After Publish</a></li><li><a href="#34-what-successful-setup-looks-like" class="table-of-contents__link toc-highlight">3.4 What “Successful Setup” Looks Like</a></li><li><a href="#35-setup-screenshots" class="table-of-contents__link toc-highlight">3.5 Setup Screenshots</a></li></ul></li><li><a href="#4-settings-reference" class="table-of-contents__link toc-highlight">4. Settings Reference</a><ul><li><a href="#41-connection-settings" class="table-of-contents__link toc-highlight">4.1 Connection Settings</a></li><li><a href="#42-feature-toggles" class="table-of-contents__link toc-highlight">4.2 Feature Toggles</a></li><li><a href="#43-technical--advanced-settings" class="table-of-contents__link toc-highlight">4.3 Technical / Advanced Settings</a></li></ul></li><li><a href="#5-what-the-ai-agent-can-do" class="table-of-contents__link toc-highlight">5. What the AI Agent Can Do</a><ul><li><a href="#51-check-availability" class="table-of-contents__link toc-highlight">5.1 Check Availability</a></li><li><a href="#52-create-a-reservation" class="table-of-contents__link toc-highlight">5.2 Create a Reservation</a></li><li><a href="#53-securely-retrieve-an-existing-reservation" class="table-of-contents__link toc-highlight">5.3 Securely Retrieve an Existing Reservation</a></li><li><a href="#54-cancel-a-reservation" class="table-of-contents__link toc-highlight">5.4 Cancel a Reservation</a></li><li><a href="#55-reschedule-a-reservation" class="table-of-contents__link toc-highlight">5.5 Reschedule a Reservation</a></li><li><a href="#56-auto-setup-canvas-scenarios" class="table-of-contents__link toc-highlight">5.6 Auto-Setup Canvas Scenarios</a></li><li><a href="#57-refresh-static-data" class="table-of-contents__link toc-highlight">5.7 Refresh Static Data</a></li></ul></li><li><a href="#6-supported-features" class="table-of-contents__link toc-highlight">6. Supported Features</a></li><li><a href="#7-technical-architecture" class="table-of-contents__link toc-highlight">7. Technical Architecture</a><ul><li><a href="#71-trigger-events" class="table-of-contents__link toc-highlight">7.1 Trigger Events</a></li><li><a href="#72-internal-bridge-events" class="table-of-contents__link toc-highlight">7.2 Internal Bridge Events</a></li><li><a href="#73-high-level-sequence" class="table-of-contents__link toc-highlight">7.3 High-Level Sequence</a></li></ul></li><li><a href="#8-how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">8. How to Test That Everything Works</a><ul><li><a href="#recommended-test-order-for-managers" class="table-of-contents__link toc-highlight">Recommended Test Order for Managers</a></li><li><a href="#81-after-setup" class="table-of-contents__link toc-highlight">8.1 After Setup</a></li><li><a href="#82-test-availability" class="table-of-contents__link toc-highlight">8.2 Test Availability</a></li><li><a href="#83-test-booking" class="table-of-contents__link toc-highlight">8.3 Test Booking</a></li><li><a href="#84-test-secure-retrieval" class="table-of-contents__link toc-highlight">8.4 Test Secure Retrieval</a></li><li><a href="#85-test-cancellation" class="table-of-contents__link toc-highlight">8.5 Test Cancellation</a></li><li><a href="#86-test-reschedule" class="table-of-contents__link toc-highlight">8.6 Test Reschedule</a></li><li><a href="#87-test-canvas-auto-setup" class="table-of-contents__link toc-highlight">8.7 Test Canvas Auto-Setup</a></li></ul></li><li><a href="#9-faq-and-troubleshooting" class="table-of-contents__link toc-highlight">9. FAQ and Troubleshooting</a><ul><li><a href="#why-does-the-agent-ask-for-both-confirmation-number-and-last-name" class="table-of-contents__link toc-highlight">Why does the agent ask for both confirmation number and last name?</a></li><li><a href="#why-is-availability-working-but-booking-not-creating-a-reservation" class="table-of-contents__link toc-highlight">Why is availability working but booking not creating a reservation?</a></li><li><a href="#why-cant-the-agent-find-an-existing-reservation" class="table-of-contents__link toc-highlight">Why can’t the agent find an existing reservation?</a></li><li><a href="#do-i-need-to-reconnect-if-credentials-change" class="table-of-contents__link toc-highlight">Do I need to reconnect if credentials change?</a></li><li><a href="#does-this-integration-support-multiple-hotels-in-one-setup" class="table-of-contents__link toc-highlight">Does this integration support multiple hotels in one setup?</a></li><li><a href="#does-opera-auto-sync-every-roomrateconfiguration-object" class="table-of-contents__link toc-highlight">Does Opera auto-sync every room/rate/configuration object?</a></li></ul></li><li><a href="#10-manager-rollout-summary" class="table-of-contents__link toc-highlight">10. Manager Rollout Summary</a><ul><li><a href="#go-live-recommendation" class="table-of-contents__link toc-highlight">Go-Live Recommendation</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/opera.pdf" download="opera.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
 </body>
 </html>
