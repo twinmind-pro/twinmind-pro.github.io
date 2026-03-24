@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">GoHighLevel Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/gohighlevel"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="GoHighLevel Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. What This Integration Does"><meta data-rh="true" property="og:description" content="1. What This Integration Does"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/gohighlevel"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/gohighlevel" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/gohighlevel" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"GoHighLevel Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/gohighlevel"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.15fd1b0f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3584a649.js" defer="defer"></script>
 <script src="/assets/js/main.b6d4e17a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -97,7 +97,7 @@
 <p>Each feature can be independently enabled or disabled:</p>
 <table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>Enable Availability Check</strong></td><td>On</td><td>The agent can look up available time slots</td></tr><tr><td><strong>Enable Booking</strong></td><td>On</td><td>The agent can create appointments</td></tr><tr><td><strong>Enable Cancellation</strong></td><td>On</td><td>The agent can cancel appointments</td></tr><tr><td><strong>Check Existing Clients</strong></td><td>On</td><td>The agent recognizes returning callers by phone</td></tr><tr><td><strong>Sync Conversation to GHL</strong></td><td>On</td><td>The call/chat is written back to GHL as a conversation message</td></tr><tr><td><strong>Save Client History Notes</strong></td><td>On</td><td>A summary or transcript is added to the contact&#x27;s notes</td></tr><tr><td><strong>Update Pipeline Stage</strong></td><td>Off</td><td>The agent moves the lead to a pipeline stage after the call</td></tr><tr><td><strong>Auto-Setup Canvas Scenarios</strong></td><td>On</td><td>Default booking and cancellation scenarios are added to Canvas automatically</td></tr></tbody></table>
 <blockquote>
-<p><strong>Recommended defaults for a new setup:</strong> leave all defaults as-is. Turn on <strong>Update Pipeline Stage</strong> only after you have written clear rules for when to move leads and have tested it on a demo contact.</p>
+<p><strong>Recommended defaults for a new setup:</strong> leave all defaults as-is. Turn on <strong>Update Pipeline Stage</strong> only after you have tested it on a demo contact. If you leave the pipeline rule fields blank, Newo now auto-generates fallback guidance from the current GHL pipelines and stages after <strong>Publish All</strong>.</p>
 </blockquote>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-calendar-settings">4.3 Calendar Settings<a href="#43-calendar-settings" class="hash-link" aria-label="Direct link to 4.3 Calendar Settings" title="Direct link to 4.3 Calendar Settings" translate="no">​</a></h3>
 <table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Calendar Selection Mode</strong></td><td>How the agent picks a calendar. Options: <code>single</code>, <code>by name</code>, <code>by duration</code>. Default: <code>single</code>.</td></tr><tr><td><strong>Default Calendar</strong></td><td>The calendar to use when mode is <code>single</code>. Populated automatically after Publish.</td></tr><tr><td><strong>Calendar Selection Instructions</strong></td><td>(Used with <code>by name</code> or <code>by duration</code> mode.) Tell the AI how to choose between calendars.</td></tr></tbody></table>
@@ -108,9 +108,9 @@
 <li class=""><strong>By Duration</strong> — the agent picks the calendar based on the desired appointment length. Useful when your calendars are organized by duration.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-pipeline-settings">4.4 Pipeline Settings<a href="#44-pipeline-settings" class="hash-link" aria-label="Direct link to 4.4 Pipeline Settings" title="Direct link to 4.4 Pipeline Settings" translate="no">​</a></h3>
-<table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Default Pipeline</strong></td><td>The GHL pipeline to update after sessions. Populated automatically after Publish.</td></tr><tr><td><strong>Pipeline Stage Rules</strong></td><td>Instructions for the AI on how to choose which stage to move the lead to.</td></tr></tbody></table>
+<table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Default Pipeline</strong></td><td>The GHL pipeline to update after sessions. Populated automatically after Publish.</td></tr><tr><td><strong>Auto-Select Pipeline</strong></td><td>Lets the AI choose the best pipeline from the conversation instead of always using the single selected pipeline.</td></tr><tr><td><strong>Pipeline Selection Rules</strong></td><td>Optional instructions for how to choose between multiple pipelines. If blank, Newo auto-generates fallback guidance from your live GHL pipelines and writes it into this field on <strong>Publish All</strong>.</td></tr><tr><td><strong>Pipeline Stage Rules</strong></td><td>Optional instructions for how to choose the final stage. If blank, Newo auto-generates fallback guidance from the selected pipeline and writes it into this field on <strong>Publish All</strong>.</td></tr></tbody></table>
 <blockquote>
-<p><strong>Tip:</strong> Write pipeline rules in plain language, e.g. <em>&quot;If the caller booked an appointment, move to Booked. If they asked to call back later, move to Follow-Up. If they are not interested, move to Closed - Lost.&quot;</em></p>
+<p><strong>Tip:</strong> Write pipeline rules in plain language, e.g. <em>&quot;If the caller booked an appointment, use Bookings Pipeline. If they need help with an existing appointment, use Support Pipeline.&quot;</em> Stage rules can stay very direct too: <em>&quot;If the caller booked an appointment, move to Booked. If they asked to call back later, move to Follow-Up. If they are not interested, move to Closed - Lost.&quot;</em></p>
 </blockquote>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-advanced-settings">4.5 Advanced Settings<a href="#45-advanced-settings" class="hash-link" aria-label="Direct link to 4.5 Advanced Settings" title="Direct link to 4.5 Advanced Settings" translate="no">​</a></h3>
 <p>These are safe to leave at defaults unless your implementation partner has specific requirements.</p>
@@ -151,6 +151,12 @@
 <p><strong>You will see in GHL:</strong> a new message in the contact&#x27;s Conversations tab and a new note in their Notes tab.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="57-update-pipeline-stage">5.7 Update Pipeline Stage<a href="#57-update-pipeline-stage" class="hash-link" aria-label="Direct link to 5.7 Update Pipeline Stage" title="Direct link to 5.7 Update Pipeline Stage" translate="no">​</a></h3>
 <p>If enabled, the AI evaluates the call outcome and moves the contact&#x27;s opportunity to the appropriate pipeline stage.</p>
+<p>What happens automatically:</p>
+<ul>
+<li class="">if <strong>Auto-Select Pipeline</strong> is off, Newo uses the selected pipeline</li>
+<li class="">if <strong>Auto-Select Pipeline</strong> is on, Newo first picks the best pipeline from the conversation</li>
+<li class="">if <strong>Pipeline Selection Rules</strong> or <strong>Pipeline Stage Rules</strong> are blank, Newo generates fallback guidance from the current GHL pipelines and stages and saves it into those fields during <strong>Publish All</strong></li>
+</ul>
 <p><strong>You will see in GHL:</strong> the contact&#x27;s opportunity updated to the new stage.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-how-to-test-that-everything-works">6. How to Test That Everything Works<a href="#6-how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to 6. How to Test That Everything Works" title="Direct link to 6. How to Test That Everything Works" translate="no">​</a></h2>
 <p>Before going live, run through this checklist on a demo contact.</p>
@@ -390,7 +396,9 @@
 <ul>
 <li class="">Is <strong>Update Pipeline Stage</strong> turned on?</li>
 <li class="">Is a pipeline selected in <strong>Default Pipeline</strong>?</li>
-<li class="">Are the <strong>Pipeline Stage Rules</strong> written clearly enough for the AI to pick the right stage?</li>
+<li class="">If <strong>Auto-Select Pipeline</strong> is on, do the available pipelines and their stages look correct after <strong>Publish All</strong>?</li>
+<li class="">Are the <strong>Pipeline Stage Rules</strong> or <strong>Pipeline Selection Rules</strong> written clearly enough for the AI to pick the right result?</li>
+<li class="">If you left those fields blank, did you click <strong>Publish All</strong> after changing pipelines so Newo could refresh the auto-generated fallback guidance?</li>
 </ul>
 <hr>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-calendars-or-pipelines-i-added-in-ghl-are-not-appearing">New calendars or pipelines I added in GHL are not appearing<a href="#new-calendars-or-pipelines-i-added-in-ghl-are-not-appearing" class="hash-link" aria-label="Direct link to New calendars or pipelines I added in GHL are not appearing" title="Direct link to New calendars or pipelines I added in GHL are not appearing" translate="no">​</a></h3>

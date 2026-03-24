@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Teamup Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/teamup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Teamup Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. Overview"><meta data-rh="true" property="og:description" content="1. Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/teamup"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/teamup" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/teamup" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamup Integration","item":"https://twinmind-pro.github.io/docs/integrations/teamup"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.15fd1b0f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3584a649.js" defer="defer"></script>
 <script src="/assets/js/main.b6d4e17a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -89,13 +89,28 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-step-3--connect-in-newo-platform">3.3 Step 3 — Connect in Newo Platform<a href="#33-step-3--connect-in-newo-platform" class="hash-link" aria-label="Direct link to 3.3 Step 3 — Connect in Newo Platform" title="Direct link to 3.3 Step 3 — Connect in Newo Platform" translate="no">​</a></h3>
 <ol>
 <li class="">Open <strong>Newo → Projects</strong></li>
+<li class="">Click the <strong>⋮</strong> menu → <strong>Create New Project</strong></li>
+</ol>
+<p><img decoding="async" loading="lazy" src="images/create_new_project.png" alt="Create New Project" class="img_ev3q"></p>
+<ol start="3">
+<li class="">In the <strong>Create Project</strong> dialog:<!-- -->
+<ul>
+<li class="">Fill in <strong>Idn</strong>, <strong>Title</strong>, and optionally <strong>Description</strong></li>
+<li class="">Set <strong>Registry</strong> to <code>production</code></li>
+<li class="">Under <strong>Module</strong>, select <code>teamup_integration</code></li>
+<li class="">Click <strong>Save</strong></li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" src="images/select_project.png" alt="Select teamup_integration module" class="img_ev3q"></p>
+<ol start="4">
 <li class="">Navigate to <strong>Builder / Attributes</strong> → section <strong>12. Teamup Settings</strong></li>
 <li class="">Set the required attributes:</li>
 </ol>
 <table><thead><tr><th>Attribute</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>teamup_api_key</code></td><td>✅</td><td>API key from Step 1</td></tr><tr><td><code>teamup_calendar_key</code></td><td>✅</td><td>Calendar key (<code>ks...</code>) from Step 2</td></tr><tr><td><code>teamup_base_url</code></td><td>❌</td><td>API base URL (default: <code>https://api.teamup.com</code>)</td></tr><tr><td><code>teamup_default_subcalendar_id</code></td><td>❌</td><td>Default sub-calendar ID for events. Auto-detected if only one exists</td></tr><tr><td><code>teamup_timezone</code></td><td>❌</td><td>IANA timezone (default: <code>America/New_York</code>)</td></tr><tr><td><code>teamup_slot_duration_minutes</code></td><td>❌</td><td>Slot duration in minutes (default: <code>30</code>)</td></tr><tr><td><code>teamup_show_for_days</code></td><td>❌</td><td>Availability window in days (default: <code>7</code>)</td></tr><tr><td><code>teamup_check_availability_on_conversation_start</code></td><td>❌</td><td>Auto-check availability on new conversation (default: <code>False</code>)</td></tr><tr><td><code>teamup_enable_slot_check</code></td><td>❌</td><td>Enable availability checking (default: <code>True</code>)</td></tr><tr><td><code>teamup_enable_booking</code></td><td>❌</td><td>Enable booking capability (default: <code>True</code>)</td></tr><tr><td><code>teamup_enable_cancellation</code></td><td>❌</td><td>Enable cancellation capability (default: <code>True</code>)</td></tr><tr><td><code>teamup_setup_scenarios</code></td><td>❌</td><td>Auto-add default scenarios to canvas (default: <code>True</code>)</td></tr><tr><td><code>teamup_override_agent_attributes</code></td><td>❌</td><td>Override ConvoAgent booking schemas and feature flags (default: <code>True</code>)</td></tr></tbody></table>
 <p><img decoding="async" loading="lazy" src="images/attributes1.png" alt="Newo Attributes — API Key, Calendar Key, Sub-Calendar ID, Timezone" class="img_ev3q"></p>
 <p><img decoding="async" loading="lazy" src="images/attributes2.png" alt="Newo Attributes — Slot Duration, Feature Flags" class="img_ev3q"></p>
-<ol start="4">
+<ol start="6">
 <li class="">Click <strong>Save + Publish All</strong></li>
 <li class="">On publish, the SetupFlow automatically:<!-- -->
 <ul>
