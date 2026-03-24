@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Calendly Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/calendly"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Calendly Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. Overview"><meta data-rh="true" property="og:description" content="1. Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/calendly"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/calendly" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/calendly" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Calendly Integration","item":"https://twinmind-pro.github.io/docs/integrations/calendly"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.6927a01e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.90071d74.js" defer="defer"></script>
 <script src="/assets/js/main.b6d4e17a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -57,7 +57,7 @@
 </ul>
 </li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Step 1 — OAuth App Details" src="/assets/images/step1_oauth_app_details-689067a5f81c2dfdb198dfacbc3eb650.png" width="2649" height="1511" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step1_oauth_app_details.png" alt="Step 1 — OAuth App Details" class="img_ev3q"></p>
 <ol start="4">
 <li class=""><strong>Step 2 of 2 — Choose scopes:</strong>
 <ul>
@@ -73,11 +73,11 @@
 </ul>
 </li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Step 2 — OAuth Scopes" src="/assets/images/step2_oauth_scopes-a56dfa798ad6ef005d62f1b3cd90159a.png" width="1185" height="1871" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step2_oauth_scopes.png" alt="Step 2 — OAuth Scopes" class="img_ev3q"></p>
 <ol start="5">
 <li class="">Copy the <strong>Client ID</strong> and <strong>Client Secret</strong> — store them securely</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Step 3 — Client ID and Client Secret" src="/assets/images/step3_client_id_secret-4ded975b540634aaca2a829de9cf11c7.png" width="2078" height="1206" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step3_client_id_secret.png" alt="Step 3 — Client ID and Client Secret" class="img_ev3q"></p>
 <blockquote>
 <p><strong>Important:</strong> The Client Secret will not be available again once you leave this page. Save it immediately. To copy the Client ID later, you can find it on the edit app page.</p>
 </blockquote>
@@ -88,7 +88,7 @@
 <li class="">Select an existing event type or create a new one</li>
 <li class="">In the event settings, set <strong>Location</strong> to <strong>Phone Call</strong> (Outbound — Calendly calls the invitee)</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Event Type — Phone Call Location" src="/assets/images/step5_event_type_phone_call-705fecba6fb9edff52a2548f089fcf96.png" width="897" height="1994" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step5_event_type_phone_call.png" alt="Event Type — Phone Call Location" class="img_ev3q"></p>
 <ol start="4">
 <li class="">Configure your preferred <strong>duration</strong> (this maps to <code>calendly_duration</code> attribute, default: 30 min)</li>
 <li class="">Save the event type</li>
@@ -102,7 +102,7 @@
 <li class="">Set the following attributes in <strong>Builder / Attributes</strong> (group: <strong>12. Calendly Settings</strong>):</li>
 </ol>
 <table><thead><tr><th>Attribute</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>calendly_client_id</code></td><td>✅</td><td>OAuth2 Client ID from Calendly Developer Portal</td></tr><tr><td><code>calendly_client_secret</code></td><td>✅</td><td>OAuth2 Client Secret from Calendly Developer Portal</td></tr><tr><td><code>calendly_redirect_uri</code></td><td>❌</td><td>OAuth2 redirect URI (default: <code>https://static.newo.ai/auth.html</code>)</td></tr><tr><td><code>calendly_base_url</code></td><td>❌</td><td>API base URL (default: <code>https://api.calendly.com</code>)</td></tr><tr><td><code>calendly_auth_url</code></td><td>❌</td><td>Auth server URL (default: <code>https://auth.calendly.com</code>). Hidden.</td></tr><tr><td><code>calendly_event_type_uri</code></td><td>❌</td><td>Event type for booking. Auto-populated from API after OAuth setup.</td></tr><tr><td><code>calendly_show_for_days</code></td><td>❌</td><td>Days into future to show slots (default: <code>5</code>, max: 7)</td></tr><tr><td><code>calendly_duration</code></td><td>❌</td><td>Slot duration in minutes (default: <code>30</code>). Hidden.</td></tr><tr><td><code>calendly_enable_slot_check</code></td><td>❌</td><td>Enable availability checking (default: <code>True</code>)</td></tr><tr><td><code>calendly_enable_booking</code></td><td>❌</td><td>Enable booking capability (default: <code>True</code>)</td></tr><tr><td><code>calendly_enable_cancellation</code></td><td>❌</td><td>Enable cancellation capability (default: <code>True</code>)</td></tr><tr><td><code>calendly_check_availability_on_conversation_start</code></td><td>❌</td><td>Auto-check availability on session start (default: <code>False</code>)</td></tr><tr><td><code>calendly_setup_scenarios</code></td><td>❌</td><td>Auto-add booking/cancellation scenarios to canvas (default: <code>True</code>)</td></tr><tr><td><code>calendly_override_agent_attributes</code></td><td>❌</td><td>Override ConvoAgent attributes on setup (default: <code>True</code>)</td></tr></tbody></table>
-<p><img decoding="async" loading="lazy" alt="Newo Platform — Calendly Attributes" src="/assets/images/step4_newo_platform_attributes-56af30c5a732a74e1260ed48007c2b21.png" width="3374" height="918" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step4_newo_platform_attributes.png" alt="Newo Platform — Calendly Attributes" class="img_ev3q"></p>
 <ol start="3">
 <li class="">Click <strong>Save + Publish All</strong></li>
 <li class="">On publish, the SetupFlow automatically:<!-- -->
@@ -120,13 +120,13 @@
 <li class="">In the <strong>12. Calendly Settings</strong> section, find the attribute <strong>12-01. OAuth Authorization Code</strong> (<code>calendly_oauth_code</code>)</li>
 <li class="">In the description, click the <strong>&quot;open Calendly authorization page&quot;</strong> link</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="OAuth Authorization Code attribute" src="/assets/images/step6_oauth_code_attribute-9db0dc013a15a3aa164c359222166292.png" width="2722" height="538" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step6_oauth_code_attribute.png" alt="OAuth Authorization Code attribute" class="img_ev3q"></p>
 <ol start="3">
 <li class="">A Calendly authorization page will open. Approve the access request.</li>
 <li class="">After approval, you will be redirected to the <strong>NEWO.AI &quot;Access Granted&quot;</strong> page showing a verification code</li>
 <li class="">Click <strong>Copy Code</strong> to copy the authorization code</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Access Granted — copy the verification code" src="/assets/images/step7_access_granted_code-c33817bcb4dee55927673b6fb51f2e2e.png" width="995" height="836" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="images/step7_access_granted_code.png" alt="Access Granted — copy the verification code" class="img_ev3q"></p>
 <ol start="6">
 <li class="">Go back to the Newo Platform and paste the copied code into the <strong><code>calendly_oauth_code</code></strong> attribute field</li>
 <li class=""><strong>IMPORTANT: Click the <code>Save</code> button on the attribute card first!</strong> Do not skip this step — the code must be saved before publishing.</li>
