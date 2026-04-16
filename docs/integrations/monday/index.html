@@ -3,138 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Monday.com Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/monday"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Monday.com Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. Overview"><meta data-rh="true" property="og:description" content="1. Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/monday"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/monday" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/monday" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Monday.com Integration","item":"https://twinmind-pro.github.io/docs/integrations/monday"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.2452429d.js" defer="defer"></script>
-<script src="/assets/js/main.c5b1bab4.js" defer="defer"></script>
+<title data-rh="true">Monday.com Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/monday"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Monday.com Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. What This Integration Does"><meta data-rh="true" property="og:description" content="1. What This Integration Does"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/monday"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/monday" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/monday" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Monday.com Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/monday"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.a6834bbd.js" defer="defer"></script>
+<script src="/assets/js/main.90148283.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/monday"><span title="Monday.com Integration" class="linkLabel_WmDU">Monday.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Monday.com Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Monday.com Integration</h1></header>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-overview">1. Overview<a href="#1-overview" class="hash-link" aria-label="Direct link to 1. Overview" title="Direct link to 1. Overview" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-description">1.1 Description<a href="#11-description" class="hash-link" aria-label="Direct link to 1.1 Description" title="Direct link to 1.1 Description" translate="no">​</a></h3>
-<p><strong>Monday.com Integration</strong> connects <strong>Monday.com</strong> (work management platform) with <strong>Newo Platform</strong>.</p>
-<p>It enables:</p>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration Guide" class="linkLabel_WmDU">ServiceM8 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Monday.com Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Monday.com Integration Guide</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-what-this-integration-does">1. What This Integration Does<a href="#1-what-this-integration-does" class="hash-link" aria-label="Direct link to 1. What This Integration Does" title="Direct link to 1. What This Integration Does" translate="no">​</a></h2>
+<p>The Newo AI Agent integrates with monday.com so your AI can act as a scheduling assistant on top of your existing monday boards.</p>
+<p>Once connected, the AI agent can:</p>
 <ul>
-<li class="">Checking appointment availability based on existing meetings in Monday boards</li>
-<li class="">Creating new bookings as meeting items in Activities board with contact linking</li>
-<li class="">Cancelling appointments by archiving meeting items</li>
-<li class="">Detecting existing customers by phone and retrieving their upcoming bookings</li>
-<li class="">Managing two interconnected boards: Activities (meetings) and Contacts (customers)</li>
-<li class="">Optional silent availability preload on conversation start</li>
+<li class="">check appointment availability based on the meetings already on your <strong>Activities</strong> board and offer time slots to callers</li>
+<li class="">book new appointments and automatically create or link the contact on your <strong>Contacts</strong> board</li>
+<li class="">cancel appointments by archiving the meeting item on your Activities board</li>
+<li class="">recognize returning clients by phone number and pull their upcoming bookings into the conversation</li>
+<li class="">preload availability silently at the start of a session, so the agent answers faster</li>
 </ul>
-<p>This integration is designed for <strong>service businesses and teams</strong> who use Monday.com boards for scheduling and need <strong>automated appointment management through a conversational AI agent</strong> (voice or chat).</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="12-use-cases">1.2 Use Cases<a href="#12-use-cases" class="hash-link" aria-label="Direct link to 1.2 Use Cases" title="Direct link to 1.2 Use Cases" translate="no">​</a></h3>
+<p><strong>In plain terms:</strong> your monday.com boards become the calendar and client list that your AI assistant works from. Conversations on any channel (voice, chat, SMS, WhatsApp) read from and write to the same boards your team already uses.</p>
+<p><img decoding="async" loading="lazy" alt="monday.com integration entry point" src="/assets/images/S01-d26ac8b1ac62cc05a3f9005cdf3d74e8.png" width="2758" height="1424" class="img_ev3q"></p>
+<p><em>Figure S01. The MondayCRM Settings block in the Newo Builder — entry point for setup.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-before-you-start">2. Before You Start<a href="#2-before-you-start" class="hash-link" aria-label="Direct link to 2. Before You Start" title="Direct link to 2. Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
 <ul>
-<li class="">When a client asks about availability → Query Activities board for meetings, compute free slots</li>
-<li class="">When a client wants to book → Find or create contact in Contacts board, create meeting in Activities board</li>
-<li class="">When a client wants to cancel → Archive the meeting item in Activities board</li>
-<li class="">When a caller&#x27;s phone is identified → Look up contact and retrieve upcoming bookings</li>
-<li class="">When a conversation starts → Optionally preload nearest available slots silently</li>
+<li class="">an active <strong>monday.com</strong> account</li>
+<li class=""><strong>admin access</strong> to that account (you&#x27;ll need to open the Developer Center)</li>
+<li class="">access to the Newo project builder for your project</li>
+<li class="">permission to edit project settings and click <strong>Publish All</strong></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="13-supported-features">1.3 Supported Features<a href="#13-supported-features" class="hash-link" aria-label="Direct link to 1.3 Supported Features" title="Direct link to 1.3 Supported Features" translate="no">​</a></h3>
-<table><thead><tr><th>Feature</th><th>Supported</th><th>Notes</th></tr></thead><tbody><tr><td>Check Availability</td><td>✅</td><td>Computes free slots from booked meetings in Activities board</td></tr><tr><td>Book Appointment</td><td>✅</td><td>Creates meeting item with contact link</td></tr><tr><td>Cancel Appointment</td><td>✅</td><td>Archives meeting item</td></tr><tr><td>Existing Client Detection</td><td>✅</td><td>By phone number, with prompt context injection</td></tr><tr><td>Upcoming Booking Retrieval</td><td>✅</td><td>Future meetings stored in persona</td></tr><tr><td>Silent Availability Preload</td><td>✅</td><td>Optional check on conversation start</td></tr><tr><td>Contact Auto-Creation</td><td>✅</td><td>If contact not found by phone, creates new one</td></tr><tr><td>Custom Date/Notes Columns</td><td>✅</td><td>Auto-detected from board structure</td></tr><tr><td>Configurable Slot Duration</td><td>✅</td><td>Default 30 min</td></tr><tr><td>Reschedule</td><td>❌</td><td>Cancel + rebook as workaround</td></tr><tr><td>Board Template Setup</td><td>❌</td><td>Boards must be pre-created manually</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-requirements">2. Requirements<a href="#2-requirements" class="hash-link" aria-label="Direct link to 2. Requirements" title="Direct link to 2. Requirements" translate="no">​</a></h2>
-<p>Before installation:</p>
+<p>The integration works on top of <strong>two boards</strong> that must already exist on your monday account:</p>
 <ul>
-<li class="">Active <strong>Monday.com</strong> account</li>
-<li class=""><strong>Monday.com OAuth App</strong> with Client ID and Client Secret</li>
-<li class="">Two pre-configured boards:<!-- -->
-<ul>
-<li class=""><strong>Activities board</strong> — for meetings/events (must have columns: <code>activity_type</code>, <code>activity_status</code>, <code>activity_start_time</code>, <code>activity_end_time</code>, <code>activity_item</code>)</li>
-<li class=""><strong>Contacts board</strong> — for customer records (must have column: <code>contact_phone</code>)</li>
+<li class=""><strong>Activities board</strong> — where appointments / meetings live</li>
+<li class=""><strong>Contacts board</strong> — where your clients live</li>
 </ul>
-</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-how-to-setup">3. How to Setup<a href="#3-how-to-setup" class="hash-link" aria-label="Direct link to 3. How to Setup" title="Direct link to 3. How to Setup" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-step-1--authorize-in-mondaycom">3.1 Step 1 — Authorize in Monday.com<a href="#31-step-1--authorize-in-mondaycom" class="hash-link" aria-label="Direct link to 3.1 Step 1 — Authorize in Monday.com" title="Direct link to 3.1 Step 1 — Authorize in Monday.com" translate="no">​</a></h3>
-<ol>
-<li class="">Create an OAuth app in Monday.com developer portal</li>
-<li class="">In Newo platform, set <code>monday_client_id</code> and <code>monday_client_secret</code></li>
-<li class="">Obtain the OAuth authorization code</li>
-<li class="">Paste the code into the <code>monday_oauth_code</code> attribute</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-step-2--connect-in-platform">3.2 Step 2 — Connect in Platform<a href="#32-step-2--connect-in-platform" class="hash-link" aria-label="Direct link to 3.2 Step 2 — Connect in Platform" title="Direct link to 3.2 Step 2 — Connect in Platform" translate="no">​</a></h3>
-<ol>
-<li class="">Open <strong>Newo → Projects</strong></li>
-<li class="">Set the following attributes in <strong>Builder / Attributes</strong>:</li>
-</ol>
-<table><thead><tr><th>Attribute</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>monday_client_id</code></td><td>✅</td><td>OAuth Client ID</td></tr><tr><td><code>monday_client_secret</code></td><td>✅</td><td>OAuth Client Secret</td></tr><tr><td><code>monday_oauth_code</code></td><td>✅</td><td>One-time OAuth authorization code</td></tr><tr><td><code>activities_id</code></td><td>✅</td><td>Board ID for meetings/activities</td></tr><tr><td><code>contacts_id</code></td><td>✅</td><td>Board ID for contacts</td></tr><tr><td><code>monday_base_api_url</code></td><td>❌</td><td>GraphQL API endpoint (default: <code>https://api.monday.com/v2</code>)</td></tr><tr><td><code>monday_timezone</code></td><td>❌</td><td>Booking timezone (default: project timezone)</td></tr><tr><td><code>monday_duration</code></td><td>❌</td><td>Slot duration in minutes (default: <code>30</code>)</td></tr><tr><td><code>monday_show_for_days</code></td><td>❌</td><td>Days ahead for availability (default: <code>1</code>)</td></tr><tr><td><code>monday_check_availability_on_conversation_start</code></td><td>❌</td><td>Auto-check availability on start (default: <code>False</code>)</td></tr><tr><td><code>monday_slots_available</code></td><td>❌</td><td>Enable availability checking (default: <code>True</code>)</td></tr><tr><td><code>monday_booking_available</code></td><td>❌</td><td>Enable booking capability (default: <code>True</code>)</td></tr><tr><td><code>monday_cancelation_available</code></td><td>❌</td><td>Enable cancellation capability (default: <code>True</code>)</td></tr></tbody></table>
-<ol start="3">
-<li class="">Click <strong>Save + Publish All</strong></li>
-<li class="">On publish, the SetupFlow automatically:<!-- -->
+<p>The boards must include a few specific columns so the agent knows where to read and write.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="activities-board--required-columns">Activities board — required columns<a href="#activities-board--required-columns" class="hash-link" aria-label="Direct link to Activities board — required columns" title="Direct link to Activities board — required columns" translate="no">​</a></h3>
+<table><thead><tr><th>Column ID</th><th>What it&#x27;s for</th></tr></thead><tbody><tr><td><code>activity_type</code></td><td>The kind of activity. The agent looks for <strong>Meeting</strong>.</td></tr><tr><td><code>activity_status</code></td><td>Status of the activity (e.g. <strong>Open</strong>, <strong>Done</strong>). The agent treats <strong>Done</strong> as not blocking.</td></tr><tr><td><code>activity_start_time</code></td><td>Start date and time of the appointment.</td></tr><tr><td><code>activity_end_time</code></td><td>End date and time of the appointment.</td></tr><tr><td><code>activity_item</code></td><td>A link/connection to the related item on the Contacts board.</td></tr></tbody></table>
+<p>Optional columns the agent will auto-detect and fill in if they exist:</p>
 <ul>
-<li class="">Exchanges the OAuth code for an access token</li>
-<li class="">Queries the Activities board for column structure (auto-detects date and notes columns)</li>
-<li class="">Discovers the group ID for activity items</li>
-<li class="">Injects booking and availability payload schemas</li>
+<li class="">a <strong>date column</strong> — populated with the booking date for calendar views</li>
+<li class="">a <strong>notes / long text column</strong> — populated with booking details</li>
 </ul>
-</li>
-</ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-how-to-use">4. How to Use<a href="#4-how-to-use" class="hash-link" aria-label="Direct link to 4. How to Use" title="Direct link to 4. How to Use" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-how-the-integration-works">4.1 How the Integration Works<a href="#41-how-the-integration-works" class="hash-link" aria-label="Direct link to 4.1 How the Integration Works" title="Direct link to 4.1 How the Integration Works" translate="no">​</a></h3>
-<p>The integration uses Monday.com <strong>GraphQL API</strong> to manage two boards: Activities (meetings) and Contacts (customers). Availability is computed by querying existing meetings and finding gaps. Bookings create new items linked to contacts.</p>
+<p><img decoding="async" loading="lazy" alt="Activities board with required columns" src="/assets/images/S02-52c5e35ead360a35a0c02a7fa0c2bb3d.png" width="2432" height="592" class="img_ev3q"></p>
+<p><em>Figure S02. The Activities board — meeting items with type, status, start/end times, and a link to the Contacts board.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="contacts-board--required-columns">Contacts board — required columns<a href="#contacts-board--required-columns" class="hash-link" aria-label="Direct link to Contacts board — required columns" title="Direct link to Contacts board — required columns" translate="no">​</a></h3>
+<table><thead><tr><th>Column ID</th><th>What it&#x27;s for</th></tr></thead><tbody><tr><td><code>contact_phone</code></td><td>Phone number of the client. Used to recognize returning callers and to link bookings.</td></tr><tr><td><code>contact_email</code></td><td>Email of the client. Displayed back to the agent as context when available.</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Contacts board with required columns" src="/assets/images/S03-e2684d34f60d8d9dc47e70d805b76c41.png" width="2430" height="744" class="img_ev3q"></p>
+<p><em>Figure S03. The Contacts board — clients with phone and email columns.</em></p>
+<blockquote>
+<p><strong>Tip:</strong> If your boards use different column IDs, either rename them to match the IDs above, or reach out to us so we can help adjust the setup.</p>
+</blockquote>
+<p>You will also need one of the following authentication methods:</p>
 <ul>
-<li class="">A <strong>Trigger</strong> is a system event that starts a flow</li>
-<li class="">An <strong>Action</strong> is the GraphQL operation performed in Monday.com</li>
-</ul>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="available-triggers">Available Triggers<a href="#available-triggers" class="hash-link" aria-label="Direct link to Available Triggers" title="Direct link to Available Triggers" translate="no">​</a></h4>
-<table><thead><tr><th>Trigger</th><th>Event</th><th>Description</th></tr></thead><tbody><tr><td><strong>Check Availability</strong></td><td><code>get_available_slots</code></td><td>When the agent needs to look up open slots</td></tr><tr><td><strong>Book Appointment</strong></td><td><code>book_slot</code></td><td>When the agent confirms a booking</td></tr><tr><td><strong>Cancel Appointment</strong></td><td><code>convo_agent_cancel_booking</code></td><td>When the agent processes a cancellation</td></tr><tr><td><strong>Phone Identified</strong></td><td><code>define_user_phone_number</code></td><td>When the caller&#x27;s phone is detected</td></tr><tr><td><strong>Session Start</strong></td><td><code>session_started</code></td><td>Optional silent availability preload</td></tr><tr><td><strong>Setup</strong></td><td><code>start_update_event</code></td><td>Initializes integration on deploy</td></tr></tbody></table>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="available-actions">Available Actions<a href="#available-actions" class="hash-link" aria-label="Direct link to Available Actions" title="Direct link to Available Actions" translate="no">​</a></h4>
-<ul>
-<li class=""><strong>Query Activities</strong> — Fetch meetings with filters (GraphQL <code>items_page</code> on Activities board)</li>
-<li class=""><strong>Create Meeting</strong> — New meeting item with dates and contact link (GraphQL <code>create_item</code>)</li>
-<li class=""><strong>Archive Meeting</strong> — Cancel appointment (GraphQL <code>archive_item</code>)</li>
-<li class=""><strong>Query Contacts</strong> — Search by phone (GraphQL <code>items_page</code> on Contacts board)</li>
-<li class=""><strong>Create Contact</strong> — New contact with phone (GraphQL <code>create_item</code>)</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-architecture-diagrams">4.2 Architecture Diagrams<a href="#42-architecture-diagrams" class="hash-link" aria-label="Direct link to 4.2 Architecture Diagrams" title="Direct link to 4.2 Architecture Diagrams" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="overall-sequence">Overall Sequence<a href="#overall-sequence" class="hash-link" aria-label="Direct link to Overall Sequence" title="Direct link to Overall Sequence" translate="no">​</a></h4>
-<!-- -->
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="availabilityflow">AvailabilityFlow<a href="#availabilityflow" class="hash-link" aria-label="Direct link to AvailabilityFlow" title="Direct link to AvailabilityFlow" translate="no">​</a></h4>
-<!-- -->
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="bookingflow">BookingFlow<a href="#bookingflow" class="hash-link" aria-label="Direct link to BookingFlow" title="Direct link to BookingFlow" translate="no">​</a></h4>
-<!-- -->
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="cancellationflow">CancellationFlow<a href="#cancellationflow" class="hash-link" aria-label="Direct link to CancellationFlow" title="Direct link to CancellationFlow" translate="no">​</a></h4>
-<!-- -->
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="existingclientflow">ExistingClientFlow<a href="#existingclientflow" class="hash-link" aria-label="Direct link to ExistingClientFlow" title="Direct link to ExistingClientFlow" translate="no">​</a></h4>
-<!-- -->
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-where-to-test">4.3 Where to Test<a href="#43-where-to-test" class="hash-link" aria-label="Direct link to 4.3 Where to Test" title="Direct link to 4.3 Where to Test" translate="no">​</a></h3>
-<p>Testing can be done through the <strong>Newo conversation interface</strong> (chat or voice channel).</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-testing-and-verification">4.4 Testing and Verification<a href="#44-testing-and-verification" class="hash-link" aria-label="Direct link to 4.4 Testing and Verification" title="Direct link to 4.4 Testing and Verification" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="to-test-the-integration">To test the integration:<a href="#to-test-the-integration" class="hash-link" aria-label="Direct link to To test the integration:" title="Direct link to To test the integration:" translate="no">​</a></h4>
-<ol>
-<li class=""><strong>Setup</strong>: Publish and verify OAuth token + board structure discovery</li>
-<li class=""><strong>Existing Client</strong>: Call from a known phone — verify customer info injected into prompt</li>
-<li class=""><strong>Availability</strong>: Ask about open slots — verify free times computed from Activities board</li>
-<li class=""><strong>Booking</strong>: Complete a booking — verify meeting item created in Activities board linked to contact</li>
-<li class=""><strong>Cancellation</strong>: Cancel a booking — verify item archived in Monday.com</li>
-</ol>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="if-no-action-occurs">If no action occurs:<a href="#if-no-action-occurs" class="hash-link" aria-label="Direct link to If no action occurs:" title="Direct link to If no action occurs:" translate="no">​</a></h4>
-<ul>
-<li class="">Ensure OAuth credentials are set (<code>monday_client_id</code>, <code>monday_client_secret</code>)</li>
-<li class="">Verify <code>monday_access_token</code> was obtained</li>
-<li class="">Confirm <code>activities_id</code> and <code>contacts_id</code> are set to valid board IDs</li>
-<li class="">Check that the Activities board has required columns (<code>activity_type</code>, <code>activity_status</code>, <code>activity_start_time</code>, <code>activity_end_time</code>)</li>
-<li class="">Verify feature flags are enabled</li>
-<li class="">Re-publish the project if settings were changed</li>
+<li class=""><strong>API Token</strong> — recommended. The simplest option. You copy one token from monday&#x27;s Developer Center and paste it into Newo.</li>
+<li class=""><strong>OAuth</strong> — for setups where you want the assistant to connect through a monday.com app you own (for example, a published marketplace app).</li>
 </ul>
 <blockquote>
-<p>Note: This integration creates and archives real items in Monday.com boards.</p>
+<p><strong>Which should I use?</strong> Use <strong>API Token</strong> unless your implementation partner has specifically asked you to use OAuth. Both options give the agent the same capabilities — the API Token method is faster to set up.</p>
 </blockquote>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-faq">5. FAQ<a href="#5-faq" class="hash-link" aria-label="Direct link to 5. FAQ" title="Direct link to 5. FAQ" translate="no">​</a></h2>
-<p><strong>Q: What board structure is required?</strong>
-A: Two boards are needed. The <strong>Activities board</strong> must have columns: <code>activity_type</code> (Meeting), <code>activity_status</code> (Open/Done), <code>activity_start_time</code>, <code>activity_end_time</code>, <code>activity_item</code> (relationship to Contacts). The <strong>Contacts board</strong> must have <code>contact_phone</code> column.</p>
-<p><strong>Q: How is availability computed?</strong>
-A: The integration queries the Activities board for meetings (type=Meeting, status≠Done) within the date range, then uses a sliding window algorithm to find gaps. Slot duration is configurable via <code>monday_duration</code> (default: 30 min).</p>
-<p><strong>Q: How does cancellation work?</strong>
-A: Cancellation uses Monday.com&#x27;s <code>archive_item</code> mutation — it doesn&#x27;t delete the item but archives it, making it recoverable. The booking_id is the Activities board item ID.</p>
-<p><strong>Q: Are date and notes columns auto-detected?</strong>
-A: Yes. During setup, the integration queries the Activities board columns and auto-detects date columns (by <code>date_</code> ID prefix or &quot;Date&quot; title) and notes columns (by <code>long_text_</code> ID prefix or &quot;Notes&quot; title). If not found, items are still created without these optional columns.</p>
-<p><strong>Q: Can I use existing Monday.com boards?</strong>
-A: Yes, as long as they have the required column structure. Set the board IDs in <code>activities_id</code> and <code>contacts_id</code> attributes.</p>
-<p><strong>Q: What happens with token refresh?</strong>
-A: The UtilsFlow handles HTTP 401 responses, but the token refresh implementation for Monday.com is currently a placeholder. If tokens expire, re-authorization may be needed.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/meistertask"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">MeisterTask Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/mozrest"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Mozrest Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a><ul><li><a href="#11-description" class="table-of-contents__link toc-highlight">1.1 Description</a></li><li><a href="#12-use-cases" class="table-of-contents__link toc-highlight">1.2 Use Cases</a></li><li><a href="#13-supported-features" class="table-of-contents__link toc-highlight">1.3 Supported Features</a></li></ul></li><li><a href="#2-requirements" class="table-of-contents__link toc-highlight">2. Requirements</a></li><li><a href="#3-how-to-setup" class="table-of-contents__link toc-highlight">3. How to Setup</a><ul><li><a href="#31-step-1--authorize-in-mondaycom" class="table-of-contents__link toc-highlight">3.1 Step 1 — Authorize in Monday.com</a></li><li><a href="#32-step-2--connect-in-platform" class="table-of-contents__link toc-highlight">3.2 Step 2 — Connect in Platform</a></li></ul></li><li><a href="#4-how-to-use" class="table-of-contents__link toc-highlight">4. How to Use</a><ul><li><a href="#41-how-the-integration-works" class="table-of-contents__link toc-highlight">4.1 How the Integration Works</a></li><li><a href="#42-architecture-diagrams" class="table-of-contents__link toc-highlight">4.2 Architecture Diagrams</a></li><li><a href="#43-where-to-test" class="table-of-contents__link toc-highlight">4.3 Where to Test</a></li><li><a href="#44-testing-and-verification" class="table-of-contents__link toc-highlight">4.4 Testing and Verification</a></li></ul></li><li><a href="#5-faq" class="table-of-contents__link toc-highlight">5. FAQ</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/monday.pdf" download="monday.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-connecting-for-the-first-time">3. Connecting for the First Time<a href="#3-connecting-for-the-first-time" class="hash-link" aria-label="Direct link to 3. Connecting for the First Time" title="Direct link to 3. Connecting for the First Time" translate="no">​</a></h2>
+<p>Both methods need your <strong>board IDs</strong>, so let&#x27;s grab those first.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-find-your-board-ids">3.1 Find Your Board IDs<a href="#31-find-your-board-ids" class="hash-link" aria-label="Direct link to 3.1 Find Your Board IDs" title="Direct link to 3.1 Find Your Board IDs" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>Open your monday.com account in the browser.</p>
+</li>
+<li class="">
+<p>Open the <strong>Activities board</strong>.</p>
+</li>
+<li class="">
+<p>Look at the URL in the address bar:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">https://your-account.monday.com/boards/1234567890</span><br></span></code></pre></div></div>
+<p>The number at the end (in this example <code>1234567890</code>) is the <strong>Activities board ID</strong>. Write it down.</p>
+</li>
+<li class="">
+<p>Repeat for the <strong>Contacts board</strong> — open it and copy the number at the end of its URL. That&#x27;s the <strong>Contacts board ID</strong>.</p>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="monday.com board URL with the board ID highlighted" src="/assets/images/S04-872f34c17f63856e2c5aa088740e43a1.png" width="944" height="74" class="img_ev3q"></p>
+<p><em>Figure S04. The board ID is the number at the end of the board URL.</em></p>
+<blockquote>
+<p><strong>Tip:</strong> You can also find the board ID from the board menu: <strong>... menu → Board settings → Board ID</strong>.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-connect-with-api-token-recommended">3.2 Connect with API Token (Recommended)<a href="#32-connect-with-api-token-recommended" class="hash-link" aria-label="Direct link to 3.2 Connect with API Token (Recommended)" title="Direct link to 3.2 Connect with API Token (Recommended)" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>In monday.com, click your <strong>profile avatar</strong> in the top-right corner and choose <strong>Developers</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="monday.com profile menu with Developers highlighted" src="/assets/images/S05-e21d993cfeb59abb38b91ebebe576b6e.png" width="924" height="1054" class="img_ev3q"></p>
+<p><em>Figure S05. The Developers entry in the monday profile menu — opens the Developer Center.</em></p>
+</li>
+<li class="">
+<p>In the Developer Center sidebar, open the <strong>API Token</strong> section.</p>
+<p><img decoding="async" loading="lazy" alt="Developer Center with the API Token page open" src="/assets/images/S06-c3dc74706f4aea3ab760f8bae6190061.png" width="2880" height="784" class="img_ev3q"></p>
+<p><em>Figure S06. The API Token page in the monday Developer Center.</em></p>
+</li>
+<li class="">
+<p>Click <strong>Show</strong> (or the copy icon) next to your personal API token and copy the full value.</p>
+<p><img decoding="async" loading="lazy" alt="API token field with the copy button highlighted" src="/assets/images/S07-06ff939fb9258e55d3107e5ab6403c3b.png" width="2296" height="564" class="img_ev3q"></p>
+<p><em>Figure S07. Copy the API token from the Developer Center.</em></p>
+</li>
+<li class="">
+<p>Open your project in Newo and go to <strong>Builder → Attributes</strong>.</p>
+</li>
+<li class="">
+<p>Find the <strong>MondayCRM Settings</strong> section.</p>
+</li>
+<li class="">
+<p>Set <strong>Authentication Method</strong> (<code>monday_auth_type</code>) to <code>Token</code>.</p>
+</li>
+<li class="">
+<p>Paste the token into the <strong>API Token</strong> (<code>monday_api_token</code>) field.</p>
+</li>
+<li class="">
+<p>Fill in <strong>Activities ID</strong> (<code>activities_id</code>) and <strong>Contacts ID</strong> (<code>contacts_id</code>) from Step 3.1.</p>
+</li>
+<li class="">
+<p>Click <strong>Save</strong> on every attribute you changed.</p>
+</li>
+<li class="">
+<p>Click <strong>Publish All</strong>.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> This token gives full access to your monday.com account — do not share it publicly. If it ever leaks, regenerate it from the Developer Center; the old token stops working immediately.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-connect-with-oauth">3.3 Connect with OAuth<a href="#33-connect-with-oauth" class="hash-link" aria-label="Direct link to 3.3 Connect with OAuth" title="Direct link to 3.3 Connect with OAuth" translate="no">​</a></h3>
+<p>Use this method only if you want the assistant to connect through a monday.com app you own (for example, a published marketplace app).</p>
+<ol>
+<li class="">
+<p>In monday.com, open the Developer Center (profile avatar → <strong>Developers</strong>) and choose <strong>My apps</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="monday.com Developer Center My apps page" src="/assets/images/S08-639b6a3bad1ff01217790f8acdd93705.png" width="2880" height="1290" class="img_ev3q"></p>
+<p><em>Figure S08. The My apps page in the monday Developer Center.</em></p>
+</li>
+<li class="">
+<p>Open an existing app or click <strong>Create app</strong> and give it a name (for example <code>Newo AI Assistant</code>).</p>
+<p><img decoding="async" loading="lazy" alt="monday.com Create app dialog" src="/assets/images/S09-2da6dde6139c955b4af00c3a370d939b.png" width="1074" height="1016" class="img_ev3q"></p>
+<p><em>Figure S09. Creating a new monday app to host the OAuth connection.</em></p>
+</li>
+<li class="">
+<p>Inside the app, open <strong>Features</strong> and add a new <strong>OAuth &amp; Permissions</strong> feature. Copy the <strong>Client ID</strong> and <strong>Client Secret</strong> from this screen.</p>
+<p><img decoding="async" loading="lazy" alt="OAuth feature settings page showing Client ID and Client Secret" src="/assets/images/S10-49559437c9bf07fbde8b36969fa46ec6.png" width="2880" height="1164" class="img_ev3q"></p>
+<p><em>Figure S10. The OAuth &amp; Permissions feature page — Client ID and Client Secret live here.</em></p>
+</li>
+<li class="">
+<p>In the <strong>Scopes</strong> section of the same page, enable:</p>
+<ul>
+<li class=""><code>boards:read</code></li>
+<li class=""><code>boards:write</code></li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="OAuth scopes with boards and boards checked" src="/assets/images/S11-a84ce8f978764ed979405994afc1d24a.png" width="2880" height="1334" class="img_ev3q"></p>
+<p><em>Figure S11. Required OAuth scopes.</em></p>
+</li>
+<li class="">
+<p>In the <strong>Redirect URIs</strong> field, enter the redirect URI we provided you (for example <code>https://twinmind.pro/</code>) and <strong>Save</strong>. The redirect URI must exactly match the value you&#x27;ll paste into Newo — including <code>https://</code>, slashes, and trailing characters.</p>
+<p><img decoding="async" loading="lazy" alt="Redirect URIs field on the OAuth settings page" src="/assets/images/S12-ed47e865157516ebbed1d6e9e183df12.png" width="2338" height="738" class="img_ev3q"></p>
+<p><em>Figure S12. Redirect URI configured on the monday app.</em></p>
+</li>
+<li class="">
+<p>On the same OAuth settings page, click the <strong>Making OAuth request</strong> link — monday builds it automatically using your Client ID, Redirect URI, and scopes. Open it in a new browser tab and click <strong>Approve</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="monday.com OAuth approval screen" src="/assets/images/S13-cae362a611b0d140bf258f9f6881587f.png" width="2880" height="1618" class="img_ev3q"></p>
+<p><em>Figure S13. Approving the OAuth request for your monday app.</em></p>
+</li>
+<li class="">
+<p>After approval, monday redirects you to your redirect URI and appends a <code>code=...</code> parameter to the URL, for example:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">https://twinmind.pro/?code=abc123xyz...&amp;state=monday-agent-setup</span><br></span></code></pre></div></div>
+<p>Copy the value of the <code>code</code> parameter (everything between <code>code=</code> and <code>&amp;state=</code>). That&#x27;s your one-time <strong>OAuth code</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="Browser address bar after approval, code value highlighted" src="/assets/images/S14-10f52277185b453c9658a0b541d83ed9.png" width="1766" height="68" class="img_ev3q"></p>
+<p><em>Figure S14. Copy the OAuth code from the URL after approval.</em></p>
+</li>
+<li class="">
+<p>In Newo, open <strong>Builder → Attributes</strong> and find the <strong>MondayCRM Settings</strong> section.</p>
+</li>
+<li class="">
+<p>Set <strong>Authentication Method</strong> (<code>monday_auth_type</code>) to <code>OAuth</code>.</p>
+</li>
+<li class="">
+<p>Fill in:</p>
+<ul>
+<li class=""><strong>Client ID</strong> (<code>monday_client_id</code>)</li>
+<li class=""><strong>Client Secret</strong> (<code>monday_client_secret</code>)</li>
+<li class=""><strong>OAuth Redirect URI</strong> (<code>monday_redirect_uri</code>) — must exactly match the URI configured in step 5</li>
+<li class=""><strong>OAuth Code</strong> (<code>monday_oauth_code</code>)</li>
+</ul>
+</li>
+<li class="">
+<p>Fill in <strong>Activities ID</strong> (<code>activities_id</code>) and <strong>Contacts ID</strong> (<code>contacts_id</code>) from Step 3.1.</p>
+</li>
+<li class="">
+<p>Click <strong>Save</strong> on every attribute you changed.</p>
+</li>
+<li class="">
+<p>Click <strong>Publish All</strong>.</p>
+</li>
+</ol>
+<blockquote>
+<p>The OAuth code is <strong>one-time and short-lived</strong>. If setup doesn&#x27;t succeed immediately, generate a fresh code (repeat step 6) and paste it again.</p>
+</blockquote>
+<p><strong>What happens after Publish:</strong></p>
+<ul>
+<li class="">For OAuth: Newo exchanges the one-time code for a long-lived access token and stores it in the <strong>Access Token</strong> (<code>monday_access_token</code>) attribute.</li>
+<li class="">For Token: Newo uses the API token directly on every request.</li>
+<li class="">Newo reads your Activities board structure to auto-detect optional date and notes columns and the correct group ID for new items.</li>
+<li class="">The assistant&#x27;s Canvas is updated — Via Agent booking and cancellation scenarios are installed from the Newo library and conflicting defaults are removed.</li>
+<li class="">The booking, availability, and cancellation tools are enabled for your AI agent.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-settings-reference">4. Settings Reference<a href="#4-settings-reference" class="hash-link" aria-label="Direct link to 4. Settings Reference" title="Direct link to 4. Settings Reference" translate="no">​</a></h2>
+<p>You can find all settings in <strong>Builder → Attributes → MondayCRM Settings</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="MondayCRM Settings block in the Newo Builder" src="/assets/images/S01-d26ac8b1ac62cc05a3f9005cdf3d74e8.png" width="2758" height="1424" class="img_ev3q"></p>
+<p><em>Figure S01 (repeat). The MondayCRM Settings block where every attribute below is configured.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-connection-settings">4.1 Connection Settings<a href="#41-connection-settings" class="hash-link" aria-label="Direct link to 4.1 Connection Settings" title="Direct link to 4.1 Connection Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>Authentication Method</strong> (<code>monday_auth_type</code>)</td><td>Choose <code>Token</code> (recommended) or <code>OAuth</code>.</td><td>Yes</td></tr><tr><td><strong>API Token</strong> (<code>monday_api_token</code>)</td><td>Personal API token from the monday Developer Center.</td><td>Token only</td></tr><tr><td><strong>Client ID</strong> (<code>monday_client_id</code>)</td><td>OAuth Client ID from your monday app.</td><td>OAuth only</td></tr><tr><td><strong>Client Secret</strong> (<code>monday_client_secret</code>)</td><td>OAuth Client Secret from your monday app.</td><td>OAuth only</td></tr><tr><td><strong>OAuth Redirect URI</strong> (<code>monday_redirect_uri</code>)</td><td>Must exactly match the redirect URI in your monday app.</td><td>OAuth only</td></tr><tr><td><strong>OAuth Code</strong> (<code>monday_oauth_code</code>)</td><td>One-time authorization code from the redirect URL.</td><td>OAuth only</td></tr><tr><td><strong>Access Token</strong> (<code>monday_access_token</code>)</td><td>Auto-filled by Newo after a successful OAuth exchange. Do not edit by hand.</td><td>Auto</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Authentication Method dropdown in Newo" src="/assets/images/S15-d6f1fb08e97e70fc7ce79d6c5f1c9b67.png" width="2060" height="488" class="img_ev3q"></p>
+<p><em>Figure S15. The Authentication Method dropdown — choose Token or OAuth.</em></p>
+<p><img decoding="async" loading="lazy" alt="API Token field in Newo" src="/assets/images/S16-4d32b5aebe2f4a01d05036e594bc81cf.png" width="2088" height="462" class="img_ev3q"></p>
+<p><em>Figure S16. The API Token field — used when Authentication Method is set to Token.</em></p>
+<p><img decoding="async" loading="lazy" alt="OAuth fields in Newo" src="/assets/images/S17-39302af41dcbad64d73ae465cd927fea.png" width="2332" height="1278" class="img_ev3q"></p>
+<p><em>Figure S17. The OAuth fields — Client ID, Client Secret, Redirect URI, and OAuth Code.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-board-settings">4.2 Board Settings<a href="#42-board-settings" class="hash-link" aria-label="Direct link to 4.2 Board Settings" title="Direct link to 4.2 Board Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>Activities ID</strong> (<code>activities_id</code>)</td><td>The ID of the Activities board (meetings/appointments).</td><td>Yes</td></tr><tr><td><strong>Contacts ID</strong> (<code>contacts_id</code>)</td><td>The ID of the Contacts board (clients).</td><td>Yes</td></tr><tr><td><strong>API Base URL</strong> (<code>monday_base_api_url</code>)</td><td>monday GraphQL endpoint. Default <code>https://api.monday.com/v2</code> — leave as-is.</td><td>No</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Activities and Contacts ID fields in Newo" src="/assets/images/S18-6a97f6a3cf3c9941705933768217d57e.png" width="2074" height="918" class="img_ev3q"></p>
+<p><em>Figure S18. The board ID fields filled with numeric IDs from your monday URLs.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-feature-onoff-switches">4.3 Feature On/Off Switches<a href="#43-feature-onoff-switches" class="hash-link" aria-label="Direct link to 4.3 Feature On/Off Switches" title="Direct link to 4.3 Feature On/Off Switches" translate="no">​</a></h3>
+<p>Each feature can be independently enabled or disabled:</p>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>Enable Availability Check</strong> (<code>monday_slots_available</code>)</td><td>On</td><td>The agent can look up available time slots from the Activities board</td></tr><tr><td><strong>Enable Booking</strong> (<code>monday_booking_available</code>)</td><td>On</td><td>The agent can create new meeting items</td></tr><tr><td><strong>Enable Cancellation</strong> (<code>monday_cancelation_available</code>)</td><td>On</td><td>The agent can archive meeting items</td></tr><tr><td><strong>Preload Availability on Session Start</strong> (<code>monday_check_availability_on_conversation_start</code>)</td><td>Off</td><td>Silently checks the calendar in the background before the caller asks</td></tr></tbody></table>
+<blockquote>
+<p><strong>Recommended defaults for a new setup:</strong> leave all defaults as-is. Turn on <strong>Preload Availability on Session Start</strong> only if you want the agent to be slightly faster at the cost of an extra background API call per session.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-availability-tuning">4.4 Availability Tuning<a href="#44-availability-tuning" class="hash-link" aria-label="Direct link to 4.4 Availability Tuning" title="Direct link to 4.4 Availability Tuning" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Slot Duration</strong> (<code>monday_duration</code>)</td><td><code>30</code></td><td>Length (in minutes) of an availability slot. The agent slices the day into slots of this size.</td></tr><tr><td><strong>Days Ahead</strong> (<code>monday_show_for_days</code>)</td><td><code>1</code></td><td>How many days into the future to look at when computing availability.</td></tr><tr><td><strong>Timezone</strong> (<code>monday_timezone</code>)</td><td>Project timezone</td><td>Controls how phrases like <em>&quot;3 pm tomorrow&quot;</em> are interpreted before being sent to monday in UTC.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-save-and-publish">4.5 Save and Publish<a href="#45-save-and-publish" class="hash-link" aria-label="Direct link to 4.5 Save and Publish" title="Direct link to 4.5 Save and Publish" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Important — Save each attribute individually.</strong> After editing any attribute value in the Newo admin panel, click <strong>Save</strong> on <strong>that attribute</strong> before moving on. Changes that are not saved will be discarded when you publish.</p>
+</blockquote>
+<p>Once every attribute you changed has been saved:</p>
+<ol>
+<li class="">Double-check that each field shows its new value (a saved attribute keeps the value after you click away).</li>
+<li class="">Click <strong>Publish All</strong> to deploy the changes to your AI agent.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Save and Publish All buttons in the Newo Builder" src="/assets/images/S19-cb65feec8b6fcedfd79bb6ab2c766667.png" width="2118" height="1268" class="img_ev3q"></p>
+<p><em>Figure S19. Save each attribute, then click Publish All to deploy the changes.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-what-the-ai-agent-can-do">5. What the AI Agent Can Do<a href="#5-what-the-ai-agent-can-do" class="hash-link" aria-label="Direct link to 5. What the AI Agent Can Do" title="Direct link to 5. What the AI Agent Can Do" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-check-availability">5.1 Check Availability<a href="#51-check-availability" class="hash-link" aria-label="Direct link to 5.1 Check Availability" title="Direct link to 5.1 Check Availability" translate="no">​</a></h3>
+<p>The AI looks at your Activities board, finds the meetings already booked for the requested day, and offers free slots based on <strong>Slot Duration</strong> and <strong>Days Ahead</strong>.</p>
+<p>Example: <em>&quot;Do you have anything tomorrow afternoon?&quot;</em> → the agent checks your Activities board and reads back the open times.</p>
+<p><strong>You will see in monday.com:</strong> no record is created at this step.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-book-an-appointment">5.2 Book an Appointment<a href="#52-book-an-appointment" class="hash-link" aria-label="Direct link to 5.2 Book an Appointment" title="Direct link to 5.2 Book an Appointment" translate="no">​</a></h3>
+<p>The AI books the appointment the caller confirms.</p>
+<p>What happens automatically:</p>
+<ul>
+<li class="">Newo searches the Contacts board for the caller&#x27;s phone number.</li>
+<li class="">If the contact does not exist, Newo creates a new contact (name + phone).</li>
+<li class="">A new meeting item is created on the Activities board with the right start/end time, type <strong>Meeting</strong>, status <strong>Open</strong>.</li>
+<li class="">The meeting item is linked to the contact via the <code>activity_item</code> connection.</li>
+</ul>
+<p><strong>You will see in monday.com:</strong> a new meeting item on the Activities board, plus a new or existing contact on the Contacts board.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-cancel-an-appointment">5.3 Cancel an Appointment<a href="#53-cancel-an-appointment" class="hash-link" aria-label="Direct link to 5.3 Cancel an Appointment" title="Direct link to 5.3 Cancel an Appointment" translate="no">​</a></h3>
+<p>The AI handles cancellation requests during the conversation.</p>
+<p><strong>You will see in monday.com:</strong> the meeting item is archived (not deleted — it can still be restored from the board&#x27;s Archived view).</p>
+<blockquote>
+<p>The agent can only cancel an appointment it has context for. Make sure your Canvas includes the cancellation scenario (it is added automatically when <strong>Auto-Setup Canvas Scenarios</strong> runs on first publish — see Section 7).</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-recognize-returning-clients">5.4 Recognize Returning Clients<a href="#54-recognize-returning-clients" class="hash-link" aria-label="Direct link to 5.4 Recognize Returning Clients" title="Direct link to 5.4 Recognize Returning Clients" translate="no">​</a></h3>
+<p>When a call comes in with a caller ID, the AI looks up the phone number on the Contacts board and loads any upcoming meetings linked to that contact. The agent enters the conversation already knowing who&#x27;s calling and what they have on the calendar.</p>
+<p><strong>You will see in monday.com:</strong> no record is created. This works silently in the background.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-how-to-test-that-everything-works">6. How to Test That Everything Works<a href="#6-how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to 6. How to Test That Everything Works" title="Direct link to 6. How to Test That Everything Works" translate="no">​</a></h2>
+<p>Before going live, run through this checklist on a test contact.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="61-after-setup">6.1 After Setup<a href="#61-after-setup" class="hash-link" aria-label="Direct link to 6.1 After Setup" title="Direct link to 6.1 After Setup" translate="no">​</a></h3>
+<p>After clicking <strong>Publish All</strong>, confirm:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Authentication Method</strong> is set to either <code>OAuth</code> or <code>Token</code></li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->For Token mode: <strong>API Token</strong> is filled in</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->For OAuth mode: <strong>Access Token</strong> is filled in (auto-populated by Newo after a successful exchange)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Activities ID</strong> and <strong>Contacts ID</strong> match your boards</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->No error messages appear in the publish log</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="62-test-availability">6.2 Test Availability<a href="#62-test-availability" class="hash-link" aria-label="Direct link to 6.2 Test Availability" title="Direct link to 6.2 Test Availability" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test chat or call session.</li>
+<li class="">Ask: <em>&quot;What times are available tomorrow?&quot;</em></li>
+<li class="">Confirm the agent returns a list of times that match the gaps between meetings already on your Activities board.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="63-test-booking">6.3 Test Booking<a href="#63-test-booking" class="hash-link" aria-label="Direct link to 6.3 Test Booking" title="Direct link to 6.3 Test Booking" translate="no">​</a></h3>
+<ol>
+<li class="">Ask the agent to book a specific time (ideally outside your busy hours).</li>
+<li class="">Provide a test name and phone number.</li>
+<li class="">Open monday.com — a new meeting item should appear on the Activities board with the correct start/end time and a link to a contact on the Contacts board (a new contact is created if the test phone wasn&#x27;t there).</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="64-test-cancellation">6.4 Test Cancellation<a href="#64-test-cancellation" class="hash-link" aria-label="Direct link to 6.4 Test Cancellation" title="Direct link to 6.4 Test Cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">Ask the agent to cancel the appointment created in step 6.3.</li>
+<li class="">Open monday.com — the meeting item should now be in the Archived state on the Activities board.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="65-test-returning-client-recognition">6.5 Test Returning Client Recognition<a href="#65-test-returning-client-recognition" class="hash-link" aria-label="Direct link to 6.5 Test Returning Client Recognition" title="Direct link to 6.5 Test Returning Client Recognition" translate="no">​</a></h3>
+<ol>
+<li class="">Start a session from a phone number that already exists on your Contacts board.</li>
+<li class="">The agent should greet the caller with context about their existing booking.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-canvas-auto-setup">7. Canvas Auto-Setup<a href="#7-canvas-auto-setup" class="hash-link" aria-label="Direct link to 7. Canvas Auto-Setup" title="Direct link to 7. Canvas Auto-Setup" translate="no">​</a></h2>
+<p>When the integration is published for the first time, Newo automatically updates your Canvas:</p>
+<ul>
+<li class="">conflicting default scheduling and cancellation scenarios are removed</li>
+<li class="">the <strong>Via Agent</strong> booking scenario is added from the Newo library — so the agent knows how to drive a booking conversation</li>
+<li class="">the <strong>Via Agent</strong> cancellation scenario is added — so the agent knows how to handle &quot;I want to cancel my appointment&quot;</li>
+</ul>
+<p><strong>What this means for you:</strong></p>
+<ul>
+<li class="">you get a working starting point out of the box</li>
+<li class="">you can customize these scenarios for your business</li>
+<li class="">if you make significant Canvas customizations, re-test after any reconnect or Publish</li>
+</ul>
+<blockquote>
+<p>These are starter templates, not a finished conversation design. Review them and adjust to match your business language and workflows.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-reconnecting-and-rotating-credentials">8. Reconnecting and Rotating Credentials<a href="#8-reconnecting-and-rotating-credentials" class="hash-link" aria-label="Direct link to 8. Reconnecting and Rotating Credentials" title="Direct link to 8. Reconnecting and Rotating Credentials" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-do-i-need-to-reconnect">When do I need to reconnect?<a href="#when-do-i-need-to-reconnect" class="hash-link" aria-label="Direct link to When do I need to reconnect?" title="Direct link to When do I need to reconnect?" translate="no">​</a></h3>
+<ul>
+<li class="">The OAuth access token has been revoked or your monday app was uninstalled</li>
+<li class="">You rotated or regenerated the API token in monday</li>
+<li class="">The agent suddenly stopped checking availability, booking, or cancelling</li>
+<li class="">You changed the redirect URI on your monday app</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-rotate-the-api-token">How to rotate the API Token<a href="#how-to-rotate-the-api-token" class="hash-link" aria-label="Direct link to How to rotate the API Token" title="Direct link to How to rotate the API Token" translate="no">​</a></h3>
+<ol>
+<li class="">In monday&#x27;s Developer Center, open the API Token page and click <strong>Regenerate</strong>. The old token stops working immediately.</li>
+<li class="">Copy the new token.</li>
+<li class="">Paste it into the <strong>API Token</strong> field in Newo.</li>
+<li class="">Click <strong>Save</strong> and then <strong>Publish All</strong>.</li>
+<li class="">Run a quick availability test.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-re-authorize-oauth">How to re-authorize OAuth<a href="#how-to-re-authorize-oauth" class="hash-link" aria-label="Direct link to How to re-authorize OAuth" title="Direct link to How to re-authorize OAuth" translate="no">​</a></h3>
+<ol>
+<li class="">Generate a fresh OAuth code by reopening the <strong>Making OAuth request</strong> link from your monday app and approving again.</li>
+<li class="">Paste the new code into the <strong>OAuth Code</strong> field in Newo.</li>
+<li class="">Click <strong>Save</strong> and then <strong>Publish All</strong>.</li>
+<li class="">Confirm a new value appears in the <strong>Access Token</strong> field.</li>
+<li class="">Run a quick availability test.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-safe-reconnect-rule">The safe reconnect rule<a href="#the-safe-reconnect-rule" class="hash-link" aria-label="Direct link to The safe reconnect rule" title="Direct link to The safe reconnect rule" translate="no">​</a></h3>
+<p>Any time you change credentials, always do all three:</p>
+<ol>
+<li class=""><strong>Save</strong> the attribute</li>
+<li class=""><strong>Publish All</strong></li>
+<li class="">Run at least one live test (availability or booking)</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-troubleshooting">9. Troubleshooting<a href="#9-troubleshooting" class="hash-link" aria-label="Direct link to 9. Troubleshooting" title="Direct link to 9. Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-says-it-cannot-check-availability-book-or-cancel">The agent says it cannot check availability, book, or cancel<a href="#the-agent-says-it-cannot-check-availability-book-or-cancel" class="hash-link" aria-label="Direct link to The agent says it cannot check availability, book, or cancel" title="Direct link to The agent says it cannot check availability, book, or cancel" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the credentials or board IDs are missing or invalid.</p>
+<p><strong>Fix:</strong></p>
+<ol>
+<li class="">Open Newo and check that <strong>Authentication Method</strong> is set.</li>
+<li class="">For Token mode — confirm <strong>API Token</strong> is not empty.</li>
+<li class="">For OAuth mode — confirm <strong>Client ID</strong>, <strong>Client Secret</strong>, <strong>Redirect URI</strong>, and <strong>OAuth Code</strong> are filled, and that <strong>Access Token</strong> is populated after publish. If <strong>Access Token</strong> is still empty, generate a fresh OAuth code (Section 3.3 step 6) and Publish again.</li>
+<li class="">Confirm <strong>Activities ID</strong> and <strong>Contacts ID</strong> are valid numeric IDs from the URLs of your boards.</li>
+<li class="">Click <strong>Publish All</strong> after any change.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="my-oauth-code-keeps-failing">My OAuth code keeps failing<a href="#my-oauth-code-keeps-failing" class="hash-link" aria-label="Direct link to My OAuth code keeps failing" title="Direct link to My OAuth code keeps failing" translate="no">​</a></h3>
+<ul>
+<li class="">OAuth codes are <strong>one-time</strong> and <strong>short-lived</strong>. If setup didn&#x27;t succeed immediately, the code may already be used or expired — generate a new one.</li>
+<li class="">The <strong>Redirect URI</strong> in the Newo admin panel must <strong>exactly match</strong> the one configured in your monday app — check for trailing slashes, <code>http</code> vs <code>https</code>, and typos.</li>
+<li class="">Make sure your Client ID, Client Secret, and Redirect URI all come from the same monday app.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bookings-are-created-but-with-no-times-in-the-date-column">Bookings are created but with no times in the date column<a href="#bookings-are-created-but-with-no-times-in-the-date-column" class="hash-link" aria-label="Direct link to Bookings are created but with no times in the date column" title="Direct link to Bookings are created but with no times in the date column" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the agent only auto-fills date/notes columns it can detect. If your board uses non-standard column IDs they may not be picked up.</p>
+<p><strong>Fix:</strong> rename the optional date column ID to start with <code>date_</code> and the long-text column ID to start with <code>long_text_</code> (or use the title <code>Date</code> / <code>Notes</code>). Re-publish.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-cant-recognize-returning-clients">The agent can&#x27;t recognize returning clients<a href="#the-agent-cant-recognize-returning-clients" class="hash-link" aria-label="Direct link to The agent can&#x27;t recognize returning clients" title="Direct link to The agent can&#x27;t recognize returning clients" translate="no">​</a></h3>
+<ul>
+<li class="">Check that the phone number on your Contacts board is stored in the <code>contact_phone</code> column.</li>
+<li class="">Phone numbers need to be in a consistent format (we recommend the international format, e.g. <code>+15551234567</code>).</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-found-a-different-time-slot-than-i-expected">The agent found a different time slot than I expected<a href="#the-agent-found-a-different-time-slot-than-i-expected" class="hash-link" aria-label="Direct link to The agent found a different time slot than I expected" title="Direct link to The agent found a different time slot than I expected" translate="no">​</a></h3>
+<ul>
+<li class="">Check the <strong>Timezone</strong> attribute (<code>monday_timezone</code>). It controls how <em>&quot;3 pm tomorrow&quot;</em> is interpreted before the value is sent to monday in UTC.</li>
+<li class="">Confirm that the items on your Activities board have correct <code>activity_start_time</code> / <code>activity_end_time</code> values.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-booked-meeting-is-not-blocking-new-availability">A booked meeting is not blocking new availability<a href="#a-booked-meeting-is-not-blocking-new-availability" class="hash-link" aria-label="Direct link to A booked meeting is not blocking new availability" title="Direct link to A booked meeting is not blocking new availability" translate="no">​</a></h3>
+<ul>
+<li class="">Confirm the meeting item has <code>activity_type</code> = <strong>Meeting</strong> and <code>activity_status</code> is not <strong>Done</strong> — the agent ignores anything marked Done.</li>
+<li class="">Confirm <code>activity_start_time</code> and <code>activity_end_time</code> are populated.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-columns-i-added-to-the-boards-are-not-being-used">New columns I added to the boards are not being used<a href="#new-columns-i-added-to-the-boards-are-not-being-used" class="hash-link" aria-label="Direct link to New columns I added to the boards are not being used" title="Direct link to New columns I added to the boards are not being used" translate="no">​</a></h3>
+<p><strong>Fix:</strong> click <strong>Publish All</strong>. The board metadata (columns, group ID) is refreshed on every publish.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="im-nervous-about-sharing-the-api-token">I&#x27;m nervous about sharing the API token<a href="#im-nervous-about-sharing-the-api-token" class="hash-link" aria-label="Direct link to I&#x27;m nervous about sharing the API token" title="Direct link to I&#x27;m nervous about sharing the API token" translate="no">​</a></h3>
+<ul>
+<li class="">You can <strong>regenerate the API token</strong> in the monday Developer Center at any time. The moment you do, the old token stops working.</li>
+<li class="">If you ever want to disconnect the agent entirely, regenerate the token (Token mode) or revoke the OAuth app (OAuth mode). Access is cut off immediately.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-faq">10. FAQ<a href="#10-faq" class="hash-link" aria-label="Direct link to 10. FAQ" title="Direct link to 10. FAQ" translate="no">​</a></h2>
+<p><strong>Does this create real records in monday.com?</strong>
+Yes. Bookings, cancellations, and contact creation all happen on your live monday boards.</p>
+<p><strong>Which connection method should I use?</strong>
+Use <strong>API Token</strong> unless your implementation partner has a specific reason to use OAuth. Both methods give the agent the same capabilities.</p>
+<p><strong>Can one setup handle multiple monday accounts?</strong>
+No. Each Newo project connects to one monday account and one pair of boards. Use separate Newo projects for separate monday accounts.</p>
+<p><strong>Can I use my existing monday boards?</strong>
+Yes — as long as they have the required column IDs (see Section 2). If your boards use different column IDs, either rename them to match or contact us.</p>
+<p><strong>Can the agent recognize returning customers automatically?</strong>
+Yes — when the caller&#x27;s phone number is available, the agent looks them up on the Contacts board and pulls their upcoming bookings into the conversation.</p>
+<p><strong>Does the integration support rescheduling?</strong>
+Not directly. The agent will cancel the existing booking and create a new one for the new time.</p>
+<p><strong>What does Canvas Auto-Setup do?</strong>
+On first publish, Newo removes conflicting default scenarios from your Canvas and installs the Via Agent booking and cancellation scenarios from the library. These are starting templates — review and customize them for your business.</p>
+<p><strong>Can the agent detect the caller&#x27;s timezone?</strong>
+Times are interpreted using the <code>monday_timezone</code> attribute. If you operate across multiple timezones, talk to us about per-conversation timezone overrides.</p>
+<p><strong>What happens if my OAuth access token expires?</strong>
+Re-run the OAuth flow (Section 8). Paste a fresh OAuth code, Save, and Publish All — Newo will exchange it for a new access token and overwrite the old one.</p>
+<p><strong>What is the safest first test?</strong>
+Ask the agent for tomorrow&#x27;s availability. It only reads from the board (no records are created), so it&#x27;s a safe way to confirm the connection works.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-support-handoff-notes">11. Support Handoff Notes<a href="#11-support-handoff-notes" class="hash-link" aria-label="Direct link to 11. Support Handoff Notes" title="Direct link to 11. Support Handoff Notes" translate="no">​</a></h2>
+<p>When handing off to a support or partner team, make sure they know:</p>
+<ul>
+<li class="">which connection method is active (Token or OAuth)</li>
+<li class="">which monday account is connected</li>
+<li class="">the <strong>Activities ID</strong> and <strong>Contacts ID</strong> in use</li>
+<li class="">which features are enabled or disabled</li>
+<li class="">whether Canvas Auto-Setup was used or the Canvas was customized afterwards</li>
+</ul>
+<p><strong>The two most common fixes for any issue:</strong></p>
+<ol>
+<li class="">Reconnect credentials and click <strong>Publish All</strong></li>
+<li class="">Run a quick availability or booking test to confirm recovery</li>
+</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/meistertask"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">MeisterTask Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/mozrest"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Mozrest Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-what-this-integration-does" class="table-of-contents__link toc-highlight">1. What This Integration Does</a></li><li><a href="#2-before-you-start" class="table-of-contents__link toc-highlight">2. Before You Start</a><ul><li><a href="#activities-board--required-columns" class="table-of-contents__link toc-highlight">Activities board — required columns</a></li><li><a href="#contacts-board--required-columns" class="table-of-contents__link toc-highlight">Contacts board — required columns</a></li></ul></li><li><a href="#3-connecting-for-the-first-time" class="table-of-contents__link toc-highlight">3. Connecting for the First Time</a><ul><li><a href="#31-find-your-board-ids" class="table-of-contents__link toc-highlight">3.1 Find Your Board IDs</a></li><li><a href="#32-connect-with-api-token-recommended" class="table-of-contents__link toc-highlight">3.2 Connect with API Token (Recommended)</a></li><li><a href="#33-connect-with-oauth" class="table-of-contents__link toc-highlight">3.3 Connect with OAuth</a></li></ul></li><li><a href="#4-settings-reference" class="table-of-contents__link toc-highlight">4. Settings Reference</a><ul><li><a href="#41-connection-settings" class="table-of-contents__link toc-highlight">4.1 Connection Settings</a></li><li><a href="#42-board-settings" class="table-of-contents__link toc-highlight">4.2 Board Settings</a></li><li><a href="#43-feature-onoff-switches" class="table-of-contents__link toc-highlight">4.3 Feature On/Off Switches</a></li><li><a href="#44-availability-tuning" class="table-of-contents__link toc-highlight">4.4 Availability Tuning</a></li><li><a href="#45-save-and-publish" class="table-of-contents__link toc-highlight">4.5 Save and Publish</a></li></ul></li><li><a href="#5-what-the-ai-agent-can-do" class="table-of-contents__link toc-highlight">5. What the AI Agent Can Do</a><ul><li><a href="#51-check-availability" class="table-of-contents__link toc-highlight">5.1 Check Availability</a></li><li><a href="#52-book-an-appointment" class="table-of-contents__link toc-highlight">5.2 Book an Appointment</a></li><li><a href="#53-cancel-an-appointment" class="table-of-contents__link toc-highlight">5.3 Cancel an Appointment</a></li><li><a href="#54-recognize-returning-clients" class="table-of-contents__link toc-highlight">5.4 Recognize Returning Clients</a></li></ul></li><li><a href="#6-how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">6. How to Test That Everything Works</a><ul><li><a href="#61-after-setup" class="table-of-contents__link toc-highlight">6.1 After Setup</a></li><li><a href="#62-test-availability" class="table-of-contents__link toc-highlight">6.2 Test Availability</a></li><li><a href="#63-test-booking" class="table-of-contents__link toc-highlight">6.3 Test Booking</a></li><li><a href="#64-test-cancellation" class="table-of-contents__link toc-highlight">6.4 Test Cancellation</a></li><li><a href="#65-test-returning-client-recognition" class="table-of-contents__link toc-highlight">6.5 Test Returning Client Recognition</a></li></ul></li><li><a href="#7-canvas-auto-setup" class="table-of-contents__link toc-highlight">7. Canvas Auto-Setup</a></li><li><a href="#8-reconnecting-and-rotating-credentials" class="table-of-contents__link toc-highlight">8. Reconnecting and Rotating Credentials</a><ul><li><a href="#when-do-i-need-to-reconnect" class="table-of-contents__link toc-highlight">When do I need to reconnect?</a></li><li><a href="#how-to-rotate-the-api-token" class="table-of-contents__link toc-highlight">How to rotate the API Token</a></li><li><a href="#how-to-re-authorize-oauth" class="table-of-contents__link toc-highlight">How to re-authorize OAuth</a></li><li><a href="#the-safe-reconnect-rule" class="table-of-contents__link toc-highlight">The safe reconnect rule</a></li></ul></li><li><a href="#9-troubleshooting" class="table-of-contents__link toc-highlight">9. Troubleshooting</a><ul><li><a href="#the-agent-says-it-cannot-check-availability-book-or-cancel" class="table-of-contents__link toc-highlight">The agent says it cannot check availability, book, or cancel</a></li><li><a href="#my-oauth-code-keeps-failing" class="table-of-contents__link toc-highlight">My OAuth code keeps failing</a></li><li><a href="#bookings-are-created-but-with-no-times-in-the-date-column" class="table-of-contents__link toc-highlight">Bookings are created but with no times in the date column</a></li><li><a href="#the-agent-cant-recognize-returning-clients" class="table-of-contents__link toc-highlight">The agent can&#39;t recognize returning clients</a></li><li><a href="#the-agent-found-a-different-time-slot-than-i-expected" class="table-of-contents__link toc-highlight">The agent found a different time slot than I expected</a></li><li><a href="#a-booked-meeting-is-not-blocking-new-availability" class="table-of-contents__link toc-highlight">A booked meeting is not blocking new availability</a></li><li><a href="#new-columns-i-added-to-the-boards-are-not-being-used" class="table-of-contents__link toc-highlight">New columns I added to the boards are not being used</a></li><li><a href="#im-nervous-about-sharing-the-api-token" class="table-of-contents__link toc-highlight">I&#39;m nervous about sharing the API token</a></li></ul></li><li><a href="#10-faq" class="table-of-contents__link toc-highlight">10. FAQ</a></li><li><a href="#11-support-handoff-notes" class="table-of-contents__link toc-highlight">11. Support Handoff Notes</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/monday.pdf" download="monday.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
 </body>
 </html>

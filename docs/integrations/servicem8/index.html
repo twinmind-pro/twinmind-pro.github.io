@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/servicem8" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">ServiceM8 Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/servicem8"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="ServiceM8 Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="See also: TESTINGGUIDE.md"><meta data-rh="true" property="og:description" content="See also: TESTINGGUIDE.md"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/servicem8"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/servicem8" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/servicem8" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ServiceM8 Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/servicem8"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.a6834bbd.js" defer="defer"></script>
+<script src="/assets/js/main.90148283.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration Guide" class="linkLabel_WmDU">ServiceM8 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">ServiceM8 Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>ServiceM8 Integration Guide</h1></header>
+<p>See also: <a class="" href="/docs/integrations/TESTING_GUIDE.md">TESTING_GUIDE.md</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-what-this-integration-does">1. What This Integration Does<a href="#1-what-this-integration-does" class="hash-link" aria-label="Direct link to 1. What This Integration Does" title="Direct link to 1. What This Integration Does" translate="no">​</a></h2>
+<p>The Newo AI Agent integrates with ServiceM8 so your AI can act as a field service receptionist for your business.</p>
+<p>Once connected, the AI agent can:</p>
+<ul>
+<li class="">check staff availability for requested service dates</li>
+<li class="">create field service jobs (plumbing, electrical, HVAC, etc.)</li>
+<li class="">cancel jobs</li>
+<li class="">reschedule jobs to a new date/time</li>
+<li class="">look up existing job status and schedule details</li>
+<li class="">create price quotes / estimates</li>
+<li class="">auto-add default FSM scenarios to Canvas</li>
+<li class="">refresh static data (staff, categories, materials) in the background</li>
+</ul>
+<p><strong>In plain terms:</strong> the AI can talk to customers about availability and bookings while ServiceM8 acts as the job management backend.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="manager-quick-view">Manager Quick View<a href="#manager-quick-view" class="hash-link" aria-label="Direct link to Manager Quick View" title="Direct link to Manager Quick View" translate="no">​</a></h3>
+<table><thead><tr><th>Question</th><th>Short answer</th></tr></thead><tbody><tr><td><strong>What business problem does this solve?</strong></td><td>Lets the AI handle job scheduling, cancellation, rescheduling, and status lookup without a human dispatcher.</td></tr><tr><td><strong>Who is this for?</strong></td><td>Field service businesses already using ServiceM8 (plumbers, electricians, HVAC, cleaners, handymen).</td></tr><tr><td><strong>What is needed before setup?</strong></td><td>ServiceM8 API Key plus default staff UUID.</td></tr><tr><td><strong>How long does setup usually take?</strong></td><td>5-10 minutes if API key is ready.</td></tr><tr><td><strong>How do we know it worked?</strong></td><td>Publish completes, <code>servicem8_staff</code> attribute is populated with JSON, agent returns available slots in a test conversation.</td></tr><tr><td><strong>What should we test first?</strong></td><td>Availability check, then booking.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-fit--not-a-fit">Best Fit / Not a Fit<a href="#best-fit--not-a-fit" class="hash-link" aria-label="Direct link to Best Fit / Not a Fit" title="Direct link to Best Fit / Not a Fit" translate="no">​</a></h3>
+<p><strong>Best fit:</strong></p>
+<ul>
+<li class="">field service job scheduling (plumbing, electrical, HVAC, cleaning)</li>
+<li class="">AI-led customer conversations about availability and bookings</li>
+<li class="">businesses with 1-50 staff who dispatch jobs through ServiceM8</li>
+</ul>
+<p><strong>Not a fit:</strong></p>
+<ul>
+<li class="">CRM-heavy workflows (use HubSpot, Pipedrive integrations instead)</li>
+<li class="">e-commerce (use Shopify integration)</li>
+<li class="">restaurant reservations (use SevenRooms integration)</li>
+<li class="">multi-location routing inside one ServiceM8 account</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-before-you-start">2. Before You Start<a href="#2-before-you-start" class="hash-link" aria-label="Direct link to 2. Before You Start" title="Direct link to 2. Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">access to the Newo project builder for your project</li>
+<li class="">permission to edit project settings and publish</li>
+<li class="">a ServiceM8 account (free trial works for testing)</li>
+<li class="">an API Key from ServiceM8</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="who-usually-provides-what">Who Usually Provides What<a href="#who-usually-provides-what" class="hash-link" aria-label="Direct link to Who Usually Provides What" title="Direct link to Who Usually Provides What" translate="no">​</a></h3>
+<table><thead><tr><th>Role</th><th>Usually provides</th></tr></thead><tbody><tr><td><strong>Business owner / manager</strong></td><td>ServiceM8 account access, staff list, service categories, business hours</td></tr><tr><td><strong>ServiceM8 admin</strong></td><td>API Key (Settings → API Keys), default staff UUID</td></tr><tr><td><strong>Newo implementer / PM</strong></td><td>Newo setup, feature toggles, publish, test plan, go-live validation</td></tr></tbody></table>
+<p>You will need these values before setup:</p>
+<ul>
+<li class=""><strong>API Key</strong> (from ServiceM8 Settings → API Keys)</li>
+<li class=""><strong>Default Staff UUID</strong> (from ServiceM8 staff list or API)</li>
+<li class=""><strong>Default Category UUID</strong> (optional, from ServiceM8 categories)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-setting-up-a-servicem8-account-from-scratch">2.1 Setting Up a ServiceM8 Account from Scratch<a href="#21-setting-up-a-servicem8-account-from-scratch" class="hash-link" aria-label="Direct link to 2.1 Setting Up a ServiceM8 Account from Scratch" title="Direct link to 2.1 Setting Up a ServiceM8 Account from Scratch" translate="no">​</a></h3>
+<p>If the business doesn&#x27;t have a ServiceM8 account yet:</p>
+<ol>
+<li class=""><strong>Sign up</strong> at <a href="https://www.servicem8.com/us/sign-up-free" target="_blank" rel="noopener noreferrer" class="">servicem8.com/sign-up-free</a> — free trial, no credit card</li>
+<li class=""><strong>Add staff members</strong>: in ServiceM8, add at least 1-2 technicians/plumbers with name + email</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 Staff List" src="/assets/images/S07_servicem8_staff_list-a41b35f8038effdb94555b0df765ff26.png" width="3445" height="1054" class="img_ev3q"></p>
+<p><em>Figure S07. Staff list in ServiceM8.</em></p>
+<ol start="3">
+<li class=""><strong>Add job categories</strong>: go to <strong>Materials &amp; Services</strong> → add categories matching the business services (e.g., &quot;Plumbing Repair&quot;, &quot;Water Heater&quot;, &quot;Drain Cleaning&quot;)</li>
+<li class=""><strong>Generate API Key</strong>: go to <strong>Settings → API Keys</strong> → Generate new key</li>
+</ol>
+<blockquote>
+<p><strong>Note about allocation windows:</strong> ServiceM8 creates default allocation windows (Morning, Afternoon, Business Hours) automatically when you sign up. No action needed — the integration uses them as-is.</p>
+</blockquote>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 API Keys Page" src="/assets/images/S06_servicem8_api_keys_page-039de8f8d1d7e3d5c31d5f44b5410872.png" width="3416" height="1555" class="img_ev3q"></p>
+<p><em>Figure S06. API Keys page in ServiceM8 Settings.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-getting-the-default-staff-uuid">2.2 Getting the Default Staff UUID<a href="#22-getting-the-default-staff-uuid" class="hash-link" aria-label="Direct link to 2.2 Getting the Default Staff UUID" title="Direct link to 2.2 Getting the Default Staff UUID" translate="no">​</a></h3>
+<p>The integration needs a default staff UUID to check availability and assign jobs. ServiceM8 UI does not show UUIDs, so you get them from Newo after first publish:</p>
+<ol>
+<li class="">Set up just the <strong>API Key</strong> in Newo and publish</li>
+<li class="">Open a test conversation (this triggers the first data refresh)</li>
+<li class="">Go to <strong>Builder → Attributes</strong> → find <strong><code>servicem8_staff</code></strong></li>
+<li class="">It will contain a JSON list with all staff members and their UUIDs</li>
+<li class="">Copy the <code>uuid</code> of the primary technician</li>
+<li class="">Paste it into the <strong>Default Staff UUID</strong> field</li>
+<li class="">Publish again</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> ServiceM8 UI does not expose UUIDs anywhere. The auto-populated <code>servicem8_staff</code> attribute after publish is the easiest way to get them.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-getting-the-default-category-uuid-optional">2.3 Getting the Default Category UUID (optional)<a href="#23-getting-the-default-category-uuid-optional" class="hash-link" aria-label="Direct link to 2.3 Getting the Default Category UUID (optional)" title="Direct link to 2.3 Getting the Default Category UUID (optional)" translate="no">​</a></h3>
+<p>Same approach — after publish, find <strong><code>servicem8_categories</code></strong> attribute in Newo. Copy the <code>uuid</code> of the main service category. If not set, jobs will be created without a category.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-connecting-for-the-first-time">3. Connecting for the First Time<a href="#3-connecting-for-the-first-time" class="hash-link" aria-label="Direct link to 3. Connecting for the First Time" title="Direct link to 3. Connecting for the First Time" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-configure-servicem8-in-newo">3.1 Configure ServiceM8 in Newo<a href="#31-configure-servicem8-in-newo" class="hash-link" aria-label="Direct link to 3.1 Configure ServiceM8 in Newo" title="Direct link to 3.1 Configure ServiceM8 in Newo" translate="no">​</a></h3>
+<ol>
+<li class="">Open your project in Newo.</li>
+<li class="">Go to <strong>Builder → Attributes</strong>.</li>
+<li class="">Find the <strong>ServiceM8 Settings</strong> section.</li>
+<li class="">Fill in:<!-- -->
+<ul>
+<li class=""><strong>API Key</strong> — from ServiceM8 Settings → API Keys</li>
+<li class=""><strong>Default Staff UUID</strong> — UUID of the primary staff member</li>
+<li class=""><strong>Default Category UUID</strong> — (optional) UUID of the default job category</li>
+</ul>
+</li>
+<li class="">Review the feature toggles:<!-- -->
+<ul>
+<li class=""><strong>Enable Availability Check</strong> — On</li>
+<li class=""><strong>Enable Booking</strong> — On</li>
+<li class=""><strong>Enable Cancellation</strong> — On</li>
+<li class=""><strong>Enable Reschedule</strong> — On</li>
+<li class=""><strong>Enable Job Lookup</strong> — On</li>
+<li class=""><strong>Enable Quote Creation</strong> — On</li>
+<li class=""><strong>Setup Canvas Scenarios</strong> — On</li>
+</ul>
+</li>
+<li class="">Click <strong>Save</strong>.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 API Key field" src="/assets/images/S01_servicem8_settings_api_key-3a71793f4a6d3d77b8cd4dd59a9dffc4.png" width="3449" height="864" class="img_ev3q"></p>
+<p><em>Figure S01. The API Key field in ServiceM8 Settings.</em></p>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 Default Staff UUID field" src="/assets/images/S02_servicem8_settings_staff_uuid-78af3557a532eec2baa15b70d842b55f.png" width="3456" height="861" class="img_ev3q"></p>
+<p><em>Figure S02. The Default Staff UUID field.</em></p>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 Feature Toggles" src="/assets/images/S03_servicem8_settings_toggles-0bcc771ec40f8b593141e6750c7388c7.png" width="3437" height="1566" class="img_ev3q"></p>
+<p><em>Figure S03. Feature toggles for ServiceM8 capabilities.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-what-happens-after-publish">3.2 What Happens After Publish<a href="#32-what-happens-after-publish" class="hash-link" aria-label="Direct link to 3.2 What Happens After Publish" title="Direct link to 3.2 What Happens After Publish" translate="no">​</a></h3>
+<p>When you publish:</p>
+<ul>
+<li class="">Newo creates the <code>servicem8_connector</code> HTTP connector</li>
+<li class="">creates the setup persona</li>
+<li class="">registers 6 custom AI tools (availability, booking, cancel, reschedule, lookup, quote)</li>
+<li class="">optionally auto-adds FSM scenarios to Canvas (booking, cancellation, job lookup)</li>
+</ul>
+<p>On the first conversation (<code>session_started</code>):</p>
+<ul>
+<li class="">refreshes staff directory, job categories, and materials catalog from ServiceM8</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-what-successful-setup-looks-like">3.3 What &quot;Successful Setup&quot; Looks Like<a href="#33-what-successful-setup-looks-like" class="hash-link" aria-label="Direct link to 3.3 What &quot;Successful Setup&quot; Looks Like" title="Direct link to 3.3 What &quot;Successful Setup&quot; Looks Like" translate="no">​</a></h3>
+<p>After setup is complete, you should expect:</p>
+<ul>
+<li class=""><code>servicem8_staff</code> has a non-empty JSON value (staff list)</li>
+<li class=""><code>servicem8_categories</code> has a non-empty JSON value</li>
+<li class="">the project can run an availability check without errors</li>
+<li class="">the ServiceM8 settings stay saved after refresh</li>
+<li class="">if Canvas auto-setup is enabled, FSM scenarios appear in Canvas</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="ServiceM8 Publish Success" src="/assets/images/S05_servicem8_publish_success-f461eddcd0af3f7716430e4706abd112.png" width="3456" height="985" class="img_ev3q"></p>
+<p><em>Figure S05. After successful publish — <code>servicem8_staff</code> populated with staff JSON.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-quick-smoke-test">3.4 Quick Smoke Test<a href="#34-quick-smoke-test" class="hash-link" aria-label="Direct link to 3.4 Quick Smoke Test" title="Direct link to 3.4 Quick Smoke Test" translate="no">​</a></h3>
+<ol>
+<li class="">Open a test conversation with the agent</li>
+<li class="">Say: <em>&quot;I need a plumber tomorrow. What times are available?&quot;</em></li>
+<li class="">The agent should respond with available time slots (e.g., 8 AM to 5 PM)</li>
+<li class="">If you get slots → setup is working</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-settings-reference">4. Settings Reference<a href="#4-settings-reference" class="hash-link" aria-label="Direct link to 4. Settings Reference" title="Direct link to 4. Settings Reference" translate="no">​</a></h2>
+<p>All settings are in <strong>Builder → Attributes → ServiceM8 Settings</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-connection-settings">4.1 Connection Settings<a href="#41-connection-settings" class="hash-link" aria-label="Direct link to 4.1 Connection Settings" title="Direct link to 4.1 Connection Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>Base URL</strong></td><td>Root URL for the ServiceM8 API (<code>https://api.servicem8.com/api_1.0</code>)</td><td>Yes (auto-filled)</td></tr><tr><td><strong>API Key</strong></td><td>Sent in <code>X-API-Key</code> header for every API call</td><td>Yes</td></tr><tr><td><strong>Default Staff UUID</strong></td><td>Staff member used for availability checks and job assignment</td><td>Yes</td></tr><tr><td><strong>Default Category UUID</strong></td><td>Job category assigned to new jobs</td><td>Optional</td></tr><tr><td><strong>Activity Duration (minutes)</strong></td><td>Default job duration when scheduling (default: 60)</td><td>Optional</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-feature-toggles">4.2 Feature Toggles<a href="#42-feature-toggles" class="hash-link" aria-label="Direct link to 4.2 Feature Toggles" title="Direct link to 4.2 Feature Toggles" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>Enable Availability Check</strong></td><td>On</td><td>Allows the agent to check staff availability</td></tr><tr><td><strong>Enable Booking</strong></td><td>On</td><td>Allows the agent to create field service jobs</td></tr><tr><td><strong>Enable Cancellation</strong></td><td>On</td><td>Allows the agent to cancel jobs</td></tr><tr><td><strong>Enable Reschedule</strong></td><td>On</td><td>Allows the agent to reschedule jobs</td></tr><tr><td><strong>Enable Job Lookup</strong></td><td>On</td><td>Allows the agent to look up job status</td></tr><tr><td><strong>Enable Quote Creation</strong></td><td>On</td><td>Allows the agent to create price quotes</td></tr><tr><td><strong>Setup Canvas Scenarios</strong></td><td>On</td><td>Adds FSM conversation scenarios to Canvas on publish</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-technical--auto-filled-settings">4.3 Technical / Auto-filled Settings<a href="#43-technical--auto-filled-settings" class="hash-link" aria-label="Direct link to 4.3 Technical / Auto-filled Settings" title="Direct link to 4.3 Technical / Auto-filled Settings" translate="no">​</a></h3>
+<table><thead><tr><th>Setting</th><th>Default</th><th>What it does</th></tr></thead><tbody><tr><td><strong>Static Data Refresh Interval</strong></td><td><code>3600</code></td><td>Seconds between staff/category/material refreshes (default: 1 hour)</td></tr><tr><td><strong>Static Data Last Updated</strong></td><td>Auto</td><td>Timestamp of the most recent background refresh</td></tr><tr><td><strong>Staff Directory</strong></td><td>Auto</td><td>Cached JSON list of active staff members</td></tr><tr><td><strong>Job Categories</strong></td><td>Auto</td><td>Cached JSON list of active job categories</td></tr><tr><td><strong>Materials Catalog</strong></td><td>Auto</td><td>Cached JSON list of active materials</td></tr><tr><td><strong>Setup Persona ID</strong></td><td>Auto</td><td>Persona used during setup operations</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-what-the-ai-agent-can-do">5. What the AI Agent Can Do<a href="#5-what-the-ai-agent-can-do" class="hash-link" aria-label="Direct link to 5. What the AI Agent Can Do" title="Direct link to 5. What the AI Agent Can Do" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-check-availability">5.1 Check Availability<a href="#51-check-availability" class="hash-link" aria-label="Direct link to 5.1 Check Availability" title="Direct link to 5.1 Check Availability" translate="no">​</a></h3>
+<p>The AI checks ServiceM8 availability for a requested date:</p>
+<ul>
+<li class="">fetches allocation windows (shift templates)</li>
+<li class="">fetches already-scheduled activities for the staff</li>
+<li class="">calculates free slots by subtracting busy periods from business hours</li>
+</ul>
+<p>The integration calls:</p>
+<ul>
+<li class=""><code>GET /allocationwindow.json</code> — shift templates</li>
+<li class=""><code>GET /jobactivity.json</code> — scheduled activities</li>
+</ul>
+<p>What the agent receives:</p>
+<ul>
+<li class="">list of available time slots for the requested date (e.g., 8 AM, 9 AM, 10 AM...)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-create-a-job-booking">5.2 Create a Job (Booking)<a href="#52-create-a-job-booking" class="hash-link" aria-label="Direct link to 5.2 Create a Job (Booking)" title="Direct link to 5.2 Create a Job (Booking)" translate="no">​</a></h3>
+<p>The AI creates a field service job after collecting:</p>
+<ul>
+<li class="">service description (what the customer needs)</li>
+<li class="">preferred date and time</li>
+<li class="">customer name, phone, email</li>
+<li class="">service address</li>
+</ul>
+<p>The integration calls:</p>
+<ul>
+<li class=""><code>GET /search.json</code> — find existing client</li>
+<li class=""><code>POST /company.json</code> — create new client (if not found)</li>
+<li class=""><code>GET /company.json</code> — resolve client UUID</li>
+<li class=""><code>POST /job.json</code> — create the job</li>
+<li class=""><code>GET /job.json</code> — resolve job UUID</li>
+<li class=""><code>POST /jobactivity.json</code> — schedule the activity</li>
+</ul>
+<p>On success, the agent:</p>
+<ul>
+<li class="">stores booking metadata in the persona <code>bookings</code> attribute</li>
+<li class="">confirms the booking to the customer with date, time, and job reference</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-look-up-job-status">5.3 Look Up Job Status<a href="#53-look-up-job-status" class="hash-link" aria-label="Direct link to 5.3 Look Up Job Status" title="Direct link to 5.3 Look Up Job Status" translate="no">​</a></h3>
+<p>The AI can look up an existing job when the customer asks about it.</p>
+<p>The integration:</p>
+<ol>
+<li class="">reads the customer&#x27;s bookings from persona attributes</li>
+<li class="">matches the customer&#x27;s description against stored bookings</li>
+<li class="">calls <code>GET /job/{uuid}.json</code> to get current status</li>
+<li class="">calls <code>GET /jobactivity.json</code> to get schedule details</li>
+<li class="">returns status, scheduled date/time, and description to the customer</li>
+</ol>
+<p><strong>No UUID needed from the customer</strong> — the agent matches by date/time/description from persona bookings.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-cancel-a-job">5.4 Cancel a Job<a href="#54-cancel-a-job" class="hash-link" aria-label="Direct link to 5.4 Cancel a Job" title="Direct link to 5.4 Cancel a Job" translate="no">​</a></h3>
+<p>The AI cancels a job when the customer requests it.</p>
+<p>The integration:</p>
+<ol>
+<li class="">reads bookings from persona, matches by context</li>
+<li class="">calls <code>POST /job/{uuid}.json</code> with status <code>Unsuccessful</code></li>
+<li class="">calls <code>GET /jobactivity.json</code> to find scheduled activities</li>
+<li class="">calls <code>DELETE /jobactivity/{uuid}.json</code> to remove them</li>
+</ol>
+<p><strong>No UUID needed from the customer.</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="55-reschedule-a-job">5.5 Reschedule a Job<a href="#55-reschedule-a-job" class="hash-link" aria-label="Direct link to 5.5 Reschedule a Job" title="Direct link to 5.5 Reschedule a Job" translate="no">​</a></h3>
+<p>The AI can move a job to a new date/time.</p>
+<p>The integration:</p>
+<ol>
+<li class="">reads bookings from persona, matches by context</li>
+<li class="">finds the existing activity via <code>GET /jobactivity.json</code></li>
+<li class="">updates it via <code>POST /jobactivity/{uuid}.json</code> with new start/end dates</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="56-create-a-quote">5.6 Create a Quote<a href="#56-create-a-quote" class="hash-link" aria-label="Direct link to 5.6 Create a Quote" title="Direct link to 5.6 Create a Quote" translate="no">​</a></h3>
+<p>The AI can create a price quote / estimate for a customer.</p>
+<p>The integration reuses the client search/create chain, then:</p>
+<ul>
+<li class="">calls <code>POST /job.json</code> with status <code>Quote</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="57-auto-setup-canvas-scenarios">5.7 Auto-Setup Canvas Scenarios<a href="#57-auto-setup-canvas-scenarios" class="hash-link" aria-label="Direct link to 5.7 Auto-Setup Canvas Scenarios" title="Direct link to 5.7 Auto-Setup Canvas Scenarios" translate="no">​</a></h3>
+<p>If Canvas auto-setup is enabled, ServiceM8 inserts FSM-specific scenarios:</p>
+<ul>
+<li class=""><strong>Book a Field Service Job</strong> scenario + intent</li>
+<li class=""><strong>Cancel a Field Service Job</strong> scenario + intent</li>
+<li class=""><strong>Look Up Job Status</strong> scenario + intent</li>
+</ul>
+<p>These replace the default NAF appointment scenarios with field-service-specific language and code-phrases.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="58-refresh-static-data">5.8 Refresh Static Data<a href="#58-refresh-static-data" class="hash-link" aria-label="Direct link to 5.8 Refresh Static Data" title="Direct link to 5.8 Refresh Static Data" translate="no">​</a></h3>
+<p>On each new conversation, ServiceM8 refreshes (if stale):</p>
+<ul>
+<li class=""><strong>Staff directory</strong> — names, UUIDs, contact info</li>
+<li class=""><strong>Job categories</strong> — names, UUIDs</li>
+<li class=""><strong>Materials catalog</strong> — names, prices, UUIDs</li>
+</ul>
+<p>This happens automatically via <code>StaticDataFlow</code> on <code>session_started</code>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-supported-features">6. Supported Features<a href="#6-supported-features" class="hash-link" aria-label="Direct link to 6. Supported Features" title="Direct link to 6. Supported Features" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Supported</th><th>Notes</th></tr></thead><tbody><tr><td>Check availability</td><td>Yes</td><td>Uses allocation windows + activity schedule</td></tr><tr><td>Create job (booking)</td><td>Yes</td><td>Full chain: search/create client → create job → schedule activity</td></tr><tr><td>Cancel job</td><td>Yes</td><td>Sets status to Unsuccessful, removes activities</td></tr><tr><td>Reschedule job</td><td>Yes</td><td>Updates activity schedule</td></tr><tr><td>Look up job status</td><td>Yes</td><td>Returns status, date, time, description</td></tr><tr><td>Create quote</td><td>Yes</td><td>Creates Quote-status job</td></tr><tr><td>Canvas auto-setup</td><td>Yes</td><td>Inserts FSM-specific scenarios</td></tr><tr><td>Static data refresh</td><td>Yes</td><td>Staff, categories, materials</td></tr><tr><td>Webhook notifications</td><td>No</td><td>Not needed — removed by design</td></tr><tr><td>Email/SMS from ServiceM8</td><td>No</td><td>Requires OAuth, removed by design</td></tr><tr><td>Multi-location</td><td>No</td><td>One ServiceM8 account per project</td></tr><tr><td>Custom fields</td><td>No</td><td>Not implemented</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-technical-architecture">7. Technical Architecture<a href="#7-technical-architecture" class="hash-link" aria-label="Direct link to 7. Technical Architecture" title="Direct link to 7. Technical Architecture" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="71-custom-newo-tools">7.1 Custom Newo Tools<a href="#71-custom-newo-tools" class="hash-link" aria-label="Direct link to 7.1 Custom Newo Tools" title="Direct link to 7.1 Custom Newo Tools" translate="no">​</a></h3>
+<table><thead><tr><th>Tool</th><th>Trigger code-phrase</th></tr></thead><tbody><tr><td><code>servicem8_check_availability</code></td><td>&quot;Let me check what times are available...&quot;</td></tr><tr><td><code>servicem8_create_job</code></td><td>&quot;I&#x27;m booking that service for you now...&quot;</td></tr><tr><td><code>servicem8_cancel_job</code></td><td>&quot;I&#x27;ll cancel that job now...&quot;</td></tr><tr><td><code>servicem8_reschedule_job</code></td><td>&quot;Let me reschedule that for you...&quot;</td></tr><tr><td><code>servicem8_lookup_job</code></td><td>&quot;Let me look up your job...&quot;</td></tr><tr><td><code>servicem8_create_quote</code></td><td>&quot;Let me put together a quote...&quot;</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="72-internal-events">7.2 Internal Events<a href="#72-internal-events" class="hash-link" aria-label="Direct link to 7.2 Internal Events" title="Direct link to 7.2 Internal Events" translate="no">​</a></h3>
+<table><thead><tr><th>Event</th><th>Purpose</th></tr></thead><tbody><tr><td><code>servicem8_execute_request</code></td><td>Send an authenticated HTTP request through NetworkFlow</td></tr><tr><td><code>servicem8_result_success</code></td><td>Route successful API responses back to ApiFlow</td></tr><tr><td><code>servicem8_result_error</code></td><td>Route failed API responses back to ApiFlow</td></tr><tr><td><code>servicem8_availability_success</code></td><td>Availability slots ready for the agent</td></tr><tr><td><code>servicem8_booking_success</code></td><td>Job booked successfully</td></tr><tr><td><code>servicem8_cancellation_success</code></td><td>Job cancelled successfully</td></tr><tr><td><code>servicem8_lookup_success</code></td><td>Job details retrieved</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="73-high-level-sequence">7.3 High-Level Sequence<a href="#73-high-level-sequence" class="hash-link" aria-label="Direct link to 7.3 High-Level Sequence" title="Direct link to 7.3 High-Level Sequence" translate="no">​</a></h3>
+<!-- -->
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="74-three-layer-architecture">7.4 Three-Layer Architecture<a href="#74-three-layer-architecture" class="hash-link" aria-label="Direct link to 7.4 Three-Layer Architecture" title="Direct link to 7.4 Three-Layer Architecture" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Entry Layer          API Layer (ApiFlow)         Network Layer</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">─────────────       ──────────────────          ──────────────</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">AvailabilityFlow ──► CheckAvailability chain ──► _executeRequestSkill</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">BookingFlow ───────► Search/Create/Job chain ──► SendCommand(send_request)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">CancellationFlow ──► Cancel chain ─────────────► servicem8_connector</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">RescheduleFlow ────► Reschedule chain                    │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">ExistingClientFlow ► Lookup chain              HTTP GET/POST/DELETE</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">QuoteFlow ─────────► Quote chain                         │</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                                               ServiceM8 REST API</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-how-to-test-that-everything-works">8. How to Test That Everything Works<a href="#8-how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to 8. How to Test That Everything Works" title="Direct link to 8. How to Test That Everything Works" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-test-order">Recommended Test Order<a href="#recommended-test-order" class="hash-link" aria-label="Direct link to Recommended Test Order" title="Direct link to Recommended Test Order" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Availability</strong>: proves API key auth and staff data work</li>
+<li class=""><strong>Booking</strong>: proves full chain (search → create client → job → activity)</li>
+<li class=""><strong>Cancellation</strong>: proves lookup from persona bookings + cancel chain</li>
+<li class=""><strong>Reschedule</strong>: proves activity update</li>
+<li class=""><strong>Quote</strong>: proves quote-status job creation</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="81-after-setup">8.1 After Setup<a href="#81-after-setup" class="hash-link" aria-label="Direct link to 8.1 After Setup" title="Direct link to 8.1 After Setup" translate="no">​</a></h3>
+<p>After clicking <strong>Publish All</strong>, confirm:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->no publish errors appear</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>servicem8_staff</code> has a non-empty JSON value (wait for first <code>session_started</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>servicem8_categories</code> has a non-empty JSON value</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->feature toggles have the intended values</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="82-test-availability">8.2 Test Availability<a href="#82-test-availability" class="hash-link" aria-label="Direct link to 8.2 Test Availability" title="Direct link to 8.2 Test Availability" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test conversation</li>
+<li class="">Say: <em>&quot;I need a plumber tomorrow at 123 Main St. What times are available?&quot;</em></li>
+<li class="">Agent should return time slots (e.g., 8 AM to 5 PM with gaps)</li>
+<li class="">If slots appear → availability is working</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="83-test-booking">8.3 Test Booking<a href="#83-test-booking" class="hash-link" aria-label="Direct link to 8.3 Test Booking" title="Direct link to 8.3 Test Booking" translate="no">​</a></h3>
+<ol>
+<li class="">Pick a slot from the availability results</li>
+<li class="">Provide name, phone, and email when asked</li>
+<li class="">Agent should confirm: <em>&quot;Your job has been booked for [date] at [time]&quot;</em></li>
+<li class="">Verify the job appears in ServiceM8 (Jobs list)</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="84-test-cancellation">8.4 Test Cancellation<a href="#84-test-cancellation" class="hash-link" aria-label="Direct link to 8.4 Test Cancellation" title="Direct link to 8.4 Test Cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">In the same conversation, say: <em>&quot;Actually, I need to cancel that appointment&quot;</em></li>
+<li class="">Agent should find the booking automatically (no UUID needed)</li>
+<li class="">Agent asks: <em>&quot;Are you sure?&quot;</em></li>
+<li class="">Confirm → Agent says: <em>&quot;Your job has been cancelled&quot;</em></li>
+<li class="">Verify job status is <code>Unsuccessful</code> in ServiceM8</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="85-test-reschedule">8.5 Test Reschedule<a href="#85-test-reschedule" class="hash-link" aria-label="Direct link to 8.5 Test Reschedule" title="Direct link to 8.5 Test Reschedule" translate="no">​</a></h3>
+<ol>
+<li class="">Book a job first</li>
+<li class="">Say: <em>&quot;Can you move my appointment to next Friday at 2 PM?&quot;</em></li>
+<li class="">Agent should update the schedule</li>
+<li class="">Verify the activity dates changed in ServiceM8</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="86-test-quote">8.6 Test Quote<a href="#86-test-quote" class="hash-link" aria-label="Direct link to 8.6 Test Quote" title="Direct link to 8.6 Test Quote" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;Can I get a quote for installing a new water heater?&quot;</em></li>
+<li class="">Provide details when asked</li>
+<li class="">Agent should create a Quote-status job in ServiceM8</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-faq-and-troubleshooting">9. FAQ and Troubleshooting<a href="#9-faq-and-troubleshooting" class="hash-link" aria-label="Direct link to 9. FAQ and Troubleshooting" title="Direct link to 9. FAQ and Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-does-the-agent-say-no-slots-available">Why does the agent say &quot;no slots available&quot;?<a href="#why-does-the-agent-say-no-slots-available" class="hash-link" aria-label="Direct link to Why does the agent say &quot;no slots available&quot;?" title="Direct link to Why does the agent say &quot;no slots available&quot;?" translate="no">​</a></h3>
+<p>Check:</p>
+<ul>
+<li class="">ServiceM8 has <strong>allocation windows</strong> configured (Settings → Allocation Windows)</li>
+<li class="">There is at least one active staff member</li>
+<li class=""><code>servicem8_default_staff_uuid</code> is set correctly</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-does-booking-fail-with-scheduling-system-error">Why does booking fail with &quot;scheduling system error&quot;?<a href="#why-does-booking-fail-with-scheduling-system-error" class="hash-link" aria-label="Direct link to Why does booking fail with &quot;scheduling system error&quot;?" title="Direct link to Why does booking fail with &quot;scheduling system error&quot;?" translate="no">​</a></h3>
+<p>Most commonly:</p>
+<ul>
+<li class=""><strong>API Key is empty</strong> — check <code>servicem8_api_key</code> attribute</li>
+<li class=""><strong>API Key is invalid</strong> — generate a new one in ServiceM8 Settings → API Keys</li>
+<li class=""><strong>ServiceM8 account is on a restricted plan</strong> — try generating a new key</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-cant-the-agent-find-my-booking-for-cancellation">Why can&#x27;t the agent find my booking for cancellation?<a href="#why-cant-the-agent-find-my-booking-for-cancellation" class="hash-link" aria-label="Direct link to Why can&#x27;t the agent find my booking for cancellation?" title="Direct link to Why can&#x27;t the agent find my booking for cancellation?" translate="no">​</a></h3>
+<p>The agent reads bookings from the <strong>persona attribute</strong>, not from ServiceM8 directly. If the booking was created outside the AI conversation (e.g., in ServiceM8 UI), the agent won&#x27;t know about it. Bookings must be created through the AI to appear in the cancel/reschedule flow.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-i-need-oauth">Do I need OAuth?<a href="#do-i-need-oauth" class="hash-link" aria-label="Direct link to Do I need OAuth?" title="Direct link to Do I need OAuth?" translate="no">​</a></h3>
+<p>No. This integration uses API Key authentication only. No OAuth setup is required.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-this-work-with-servicem8-free-trial">Does this work with ServiceM8 free trial?<a href="#does-this-work-with-servicem8-free-trial" class="hash-link" aria-label="Direct link to Does this work with ServiceM8 free trial?" title="Direct link to Does this work with ServiceM8 free trial?" translate="no">​</a></h3>
+<p>Yes. All features work with the free trial account.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-i-use-this-for-multiple-locations">Can I use this for multiple locations?<a href="#can-i-use-this-for-multiple-locations" class="hash-link" aria-label="Direct link to Can I use this for multiple locations?" title="Direct link to Can I use this for multiple locations?" translate="no">​</a></h3>
+<p>Not in the current implementation. One ServiceM8 account per Newo project.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-manager-rollout-summary">10. Manager Rollout Summary<a href="#10-manager-rollout-summary" class="hash-link" aria-label="Direct link to 10. Manager Rollout Summary" title="Direct link to 10. Manager Rollout Summary" translate="no">​</a></h2>
+<p>This integration is a good fit if you want the AI to handle:</p>
+<ul>
+<li class="">scheduling availability questions from customers</li>
+<li class="">field service job creation (booking)</li>
+<li class="">job changes (reschedule) and cancellations</li>
+<li class="">job status inquiries</li>
+<li class="">price quote creation</li>
+</ul>
+<p>This integration is <strong>not</strong> currently positioned as:</p>
+<ul>
+<li class="">a CRM replacement</li>
+<li class="">an invoicing system</li>
+<li class="">a customer notification system (no email/SMS from ServiceM8)</li>
+</ul>
+<p><strong>Recommended rollout order:</strong></p>
+<ol>
+<li class="">Set up ServiceM8 account (or use existing)</li>
+<li class="">Generate API Key</li>
+<li class="">Configure in Newo (API Key + Default Staff UUID)</li>
+<li class="">Publish</li>
+<li class="">Test availability → booking → cancel</li>
+<li class="">Review Canvas scenarios</li>
+<li class="">Go live</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="go-live-recommendation">Go-Live Recommendation<a href="#go-live-recommendation" class="hash-link" aria-label="Direct link to Go-Live Recommendation" title="Direct link to Go-Live Recommendation" translate="no">​</a></h3>
+<p>For the cleanest launch:</p>
+<ul>
+<li class="">start with one service type (e.g., plumbing only)</li>
+<li class="">keep all core features enabled unless there is a clear business reason not to</li>
+<li class="">run at least one real booking and cancellation before launch day</li>
+<li class="">have a fallback human dispatcher ready for the first live shift</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/repcard"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Repcard CRM Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/servicetitan"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">ServiceTitan Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-what-this-integration-does" class="table-of-contents__link toc-highlight">1. What This Integration Does</a><ul><li><a href="#manager-quick-view" class="table-of-contents__link toc-highlight">Manager Quick View</a></li><li><a href="#best-fit--not-a-fit" class="table-of-contents__link toc-highlight">Best Fit / Not a Fit</a></li></ul></li><li><a href="#2-before-you-start" class="table-of-contents__link toc-highlight">2. Before You Start</a><ul><li><a href="#who-usually-provides-what" class="table-of-contents__link toc-highlight">Who Usually Provides What</a></li><li><a href="#21-setting-up-a-servicem8-account-from-scratch" class="table-of-contents__link toc-highlight">2.1 Setting Up a ServiceM8 Account from Scratch</a></li><li><a href="#22-getting-the-default-staff-uuid" class="table-of-contents__link toc-highlight">2.2 Getting the Default Staff UUID</a></li><li><a href="#23-getting-the-default-category-uuid-optional" class="table-of-contents__link toc-highlight">2.3 Getting the Default Category UUID (optional)</a></li></ul></li><li><a href="#3-connecting-for-the-first-time" class="table-of-contents__link toc-highlight">3. Connecting for the First Time</a><ul><li><a href="#31-configure-servicem8-in-newo" class="table-of-contents__link toc-highlight">3.1 Configure ServiceM8 in Newo</a></li><li><a href="#32-what-happens-after-publish" class="table-of-contents__link toc-highlight">3.2 What Happens After Publish</a></li><li><a href="#33-what-successful-setup-looks-like" class="table-of-contents__link toc-highlight">3.3 What &quot;Successful Setup&quot; Looks Like</a></li><li><a href="#34-quick-smoke-test" class="table-of-contents__link toc-highlight">3.4 Quick Smoke Test</a></li></ul></li><li><a href="#4-settings-reference" class="table-of-contents__link toc-highlight">4. Settings Reference</a><ul><li><a href="#41-connection-settings" class="table-of-contents__link toc-highlight">4.1 Connection Settings</a></li><li><a href="#42-feature-toggles" class="table-of-contents__link toc-highlight">4.2 Feature Toggles</a></li><li><a href="#43-technical--auto-filled-settings" class="table-of-contents__link toc-highlight">4.3 Technical / Auto-filled Settings</a></li></ul></li><li><a href="#5-what-the-ai-agent-can-do" class="table-of-contents__link toc-highlight">5. What the AI Agent Can Do</a><ul><li><a href="#51-check-availability" class="table-of-contents__link toc-highlight">5.1 Check Availability</a></li><li><a href="#52-create-a-job-booking" class="table-of-contents__link toc-highlight">5.2 Create a Job (Booking)</a></li><li><a href="#53-look-up-job-status" class="table-of-contents__link toc-highlight">5.3 Look Up Job Status</a></li><li><a href="#54-cancel-a-job" class="table-of-contents__link toc-highlight">5.4 Cancel a Job</a></li><li><a href="#55-reschedule-a-job" class="table-of-contents__link toc-highlight">5.5 Reschedule a Job</a></li><li><a href="#56-create-a-quote" class="table-of-contents__link toc-highlight">5.6 Create a Quote</a></li><li><a href="#57-auto-setup-canvas-scenarios" class="table-of-contents__link toc-highlight">5.7 Auto-Setup Canvas Scenarios</a></li><li><a href="#58-refresh-static-data" class="table-of-contents__link toc-highlight">5.8 Refresh Static Data</a></li></ul></li><li><a href="#6-supported-features" class="table-of-contents__link toc-highlight">6. Supported Features</a></li><li><a href="#7-technical-architecture" class="table-of-contents__link toc-highlight">7. Technical Architecture</a><ul><li><a href="#71-custom-newo-tools" class="table-of-contents__link toc-highlight">7.1 Custom Newo Tools</a></li><li><a href="#72-internal-events" class="table-of-contents__link toc-highlight">7.2 Internal Events</a></li><li><a href="#73-high-level-sequence" class="table-of-contents__link toc-highlight">7.3 High-Level Sequence</a></li><li><a href="#74-three-layer-architecture" class="table-of-contents__link toc-highlight">7.4 Three-Layer Architecture</a></li></ul></li><li><a href="#8-how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">8. How to Test That Everything Works</a><ul><li><a href="#recommended-test-order" class="table-of-contents__link toc-highlight">Recommended Test Order</a></li><li><a href="#81-after-setup" class="table-of-contents__link toc-highlight">8.1 After Setup</a></li><li><a href="#82-test-availability" class="table-of-contents__link toc-highlight">8.2 Test Availability</a></li><li><a href="#83-test-booking" class="table-of-contents__link toc-highlight">8.3 Test Booking</a></li><li><a href="#84-test-cancellation" class="table-of-contents__link toc-highlight">8.4 Test Cancellation</a></li><li><a href="#85-test-reschedule" class="table-of-contents__link toc-highlight">8.5 Test Reschedule</a></li><li><a href="#86-test-quote" class="table-of-contents__link toc-highlight">8.6 Test Quote</a></li></ul></li><li><a href="#9-faq-and-troubleshooting" class="table-of-contents__link toc-highlight">9. FAQ and Troubleshooting</a><ul><li><a href="#why-does-the-agent-say-no-slots-available" class="table-of-contents__link toc-highlight">Why does the agent say &quot;no slots available&quot;?</a></li><li><a href="#why-does-booking-fail-with-scheduling-system-error" class="table-of-contents__link toc-highlight">Why does booking fail with &quot;scheduling system error&quot;?</a></li><li><a href="#why-cant-the-agent-find-my-booking-for-cancellation" class="table-of-contents__link toc-highlight">Why can&#39;t the agent find my booking for cancellation?</a></li><li><a href="#do-i-need-oauth" class="table-of-contents__link toc-highlight">Do I need OAuth?</a></li><li><a href="#does-this-work-with-servicem8-free-trial" class="table-of-contents__link toc-highlight">Does this work with ServiceM8 free trial?</a></li><li><a href="#can-i-use-this-for-multiple-locations" class="table-of-contents__link toc-highlight">Can I use this for multiple locations?</a></li></ul></li><li><a href="#10-manager-rollout-summary" class="table-of-contents__link toc-highlight">10. Manager Rollout Summary</a><ul><li><a href="#go-live-recommendation" class="table-of-contents__link toc-highlight">Go-Live Recommendation</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/servicem8.pdf" download="servicem8.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>
