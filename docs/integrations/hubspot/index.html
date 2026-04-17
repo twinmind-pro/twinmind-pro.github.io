@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">HubSpot Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/hubspot"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="HubSpot Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. Overview"><meta data-rh="true" property="og:description" content="1. Overview"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/hubspot"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/hubspot" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/hubspot" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HubSpot Integration","item":"https://twinmind-pro.github.io/docs/integrations/hubspot"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.a6834bbd.js" defer="defer"></script>
-<script src="/assets/js/main.90148283.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c775c3d8.js" defer="defer"></script>
+<script src="/assets/js/main.5a448a73.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -43,34 +43,58 @@
 <li class="">active <strong>HubSpot</strong> account</li>
 <li class=""><strong>HubSpot Meetings</strong> enabled</li>
 <li class="">one working <strong>meeting link slug</strong></li>
-<li class="">one <strong>HubSpot Service Key</strong> (PAT-style token) with the scopes your booking flows require</li>
+<li class="">either:<!-- -->
+<ul>
+<li class="">one <strong>OAuth authorization code</strong> from the Newo-provided HubSpot auth link</li>
+<li class="">or one <strong>HubSpot Service Key</strong> (PAT-style token) with the scopes your booking flows require</li>
+</ul>
+</li>
 <li class="">correct business timezone</li>
 </ul>
-<p>Current setup is <strong>token-based</strong> from the customer side.</p>
+<p>Current setup supports <strong>two authentication modes</strong>:</p>
+<ul>
+<li class=""><code>OAuth</code></li>
+<li class=""><code>Token</code></li>
+</ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-how-to-setup">3. How to Setup<a href="#3-how-to-setup" class="hash-link" aria-label="Direct link to 3. How to Setup" title="Direct link to 3. How to Setup" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-step-1--create-a-hubspot-service-key">3.1 Step 1 — Create a HubSpot Service Key<a href="#31-step-1--create-a-hubspot-service-key" class="hash-link" aria-label="Direct link to 3.1 Step 1 — Create a HubSpot Service Key" title="Direct link to 3.1 Step 1 — Create a HubSpot Service Key" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-step-1--choose-authentication-method">3.1 Step 1 — Choose Authentication Method<a href="#31-step-1--choose-authentication-method" class="hash-link" aria-label="Direct link to 3.1 Step 1 — Choose Authentication Method" title="Direct link to 3.1 Step 1 — Choose Authentication Method" translate="no">​</a></h3>
+<p>Set <code>hubspot_auth_type</code> to one of:</p>
+<ul>
+<li class=""><code>OAuth</code></li>
+<li class=""><code>Token</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-oauth-setup">3.2 OAuth Setup<a href="#32-oauth-setup" class="hash-link" aria-label="Direct link to 3.2 OAuth Setup" title="Direct link to 3.2 OAuth Setup" translate="no">​</a></h3>
+<p>If you use <code>OAuth</code>:</p>
+<ol>
+<li class="">Open the authorization link from the <code>hubspot_oauth_code</code> attribute description in Newo.</li>
+<li class="">Approve access in HubSpot.</li>
+<li class="">Copy the returned OAuth code.</li>
+<li class="">Paste it into <code>hubspot_oauth_code</code>.</li>
+</ol>
+<p>During setup, the integration uses that code when creating the HubSpot connector and then also triggers the connector&#x27;s <code>authorization_code</code> action.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-token-setup">3.3 Token Setup<a href="#33-token-setup" class="hash-link" aria-label="Direct link to 3.3 Token Setup" title="Direct link to 3.3 Token Setup" translate="no">​</a></h3>
 <ol>
 <li class="">Open HubSpot.</li>
 <li class="">Go to <strong>Settings &gt; Integrations &gt; Service Keys</strong>.</li>
 <li class="">Create a new key with the CRM / Meetings permissions your flow needs.</li>
 <li class="">Copy the generated token.</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-step-2--find-the-meeting-link-slug">3.2 Step 2 — Find the Meeting Link Slug<a href="#32-step-2--find-the-meeting-link-slug" class="hash-link" aria-label="Direct link to 3.2 Step 2 — Find the Meeting Link Slug" title="Direct link to 3.2 Step 2 — Find the Meeting Link Slug" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-step-2--find-the-meeting-link-slug">3.4 Step 2 — Find the Meeting Link Slug<a href="#34-step-2--find-the-meeting-link-slug" class="hash-link" aria-label="Direct link to 3.4 Step 2 — Find the Meeting Link Slug" title="Direct link to 3.4 Step 2 — Find the Meeting Link Slug" translate="no">​</a></h3>
 <p>Example:</p>
 <ul>
 <li class="">full link: <code>https://meetings-eu1.hubspot.com/test-meetings-page</code></li>
 <li class="">slug: <code>test-meetings-page</code></li>
 </ul>
 <p>Put only the last path segment into <code>hubspot_slug_name</code>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-step-3--configure-attributes-in-newo">3.3 Step 3 — Configure Attributes in Newo<a href="#33-step-3--configure-attributes-in-newo" class="hash-link" aria-label="Direct link to 3.3 Step 3 — Configure Attributes in Newo" title="Direct link to 3.3 Step 3 — Configure Attributes in Newo" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="35-step-3--configure-attributes-in-newo">3.5 Step 3 — Configure Attributes in Newo<a href="#35-step-3--configure-attributes-in-newo" class="hash-link" aria-label="Direct link to 3.5 Step 3 — Configure Attributes in Newo" title="Direct link to 3.5 Step 3 — Configure Attributes in Newo" translate="no">​</a></h3>
 <p>Open <strong>Newo -&gt; Projects -&gt; Builder / Attributes</strong> and set:</p>
-<table><thead><tr><th>Attribute</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>hubspot_auth_type</code></td><td>✅</td><td>Current customer-facing mode is <code>Token</code></td></tr><tr><td><code>hubspot_service_key</code></td><td>✅</td><td>HubSpot Service Key / PAT</td></tr><tr><td><code>hubspot_slug_name</code></td><td>✅</td><td>HubSpot meeting link slug</td></tr><tr><td><code>hubspot_base_api_url</code></td><td>❌</td><td>Defaults to <code>https://api.hubapi.com</code></td></tr><tr><td><code>hubspot_timezone</code></td><td>❌</td><td>Defaults to project business timezone</td></tr><tr><td><code>hubspot_duration</code></td><td>❌</td><td>Slot length in minutes, default <code>30</code></td></tr><tr><td><code>hubspot_show_for_days</code></td><td>❌</td><td>Search window in days, default <code>1</code></td></tr><tr><td><code>hubspot_slots_available</code></td><td>❌</td><td>Enable / disable availability flow</td></tr><tr><td><code>hubspot_booking_available</code></td><td>❌</td><td>Enable / disable booking flow</td></tr><tr><td><code>hubspot_cancelation_available</code></td><td>❌</td><td>Enable / disable cancellation flow</td></tr><tr><td><code>hubspot_sync_conversation</code></td><td>❌</td><td>Enable / disable outbound phone note sync</td></tr><tr><td><code>hubspot_setup_scenarios</code></td><td>❌</td><td>Auto-add default booking/cancellation scenarios to canvas</td></tr></tbody></table>
+<table><thead><tr><th>Attribute</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>hubspot_auth_type</code></td><td>✅</td><td><code>OAuth</code> or <code>Token</code></td></tr><tr><td><code>hubspot_oauth_code</code></td><td>Required for OAuth</td><td>One-time OAuth code copied from the HubSpot authorization page</td></tr><tr><td><code>hubspot_service_key</code></td><td>Required for Token</td><td>HubSpot Service Key / PAT</td></tr><tr><td><code>hubspot_slug_name</code></td><td>✅</td><td>HubSpot meeting link slug</td></tr><tr><td><code>hubspot_base_api_url</code></td><td>❌</td><td>Defaults to <code>https://api.hubapi.com</code></td></tr><tr><td><code>hubspot_timezone</code></td><td>❌</td><td>Defaults to project business timezone</td></tr><tr><td><code>hubspot_duration</code></td><td>❌</td><td>Slot length in minutes, default <code>30</code></td></tr><tr><td><code>hubspot_show_for_days</code></td><td>❌</td><td>Search window in days, default <code>1</code></td></tr><tr><td><code>hubspot_slots_available</code></td><td>❌</td><td>Enable / disable availability flow</td></tr><tr><td><code>hubspot_booking_available</code></td><td>❌</td><td>Enable / disable booking flow</td></tr><tr><td><code>hubspot_cancelation_available</code></td><td>❌</td><td>Enable / disable cancellation flow</td></tr><tr><td><code>hubspot_sync_conversation</code></td><td>❌</td><td>Enable / disable outbound phone note sync</td></tr><tr><td><code>hubspot_setup_scenarios</code></td><td>❌</td><td>Auto-add default booking/cancellation scenarios to canvas</td></tr></tbody></table>
 <p>Hidden/system attributes are managed by setup automatically, for example:</p>
 <ul>
 <li class=""><code>hubspot_override_agent_attributes</code></li>
 <li class=""><code>setup_persona_id</code></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-step-4--publish">3.4 Step 4 — Publish<a href="#34-step-4--publish" class="hash-link" aria-label="Direct link to 3.4 Step 4 — Publish" title="Direct link to 3.4 Step 4 — Publish" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="36-step-4--publish">3.6 Step 4 — Publish<a href="#36-step-4--publish" class="hash-link" aria-label="Direct link to 3.6 Step 4 — Publish" title="Direct link to 3.6 Step 4 — Publish" translate="no">​</a></h3>
 <p>On publish, the current setup logic:</p>
 <ul>
 <li class="">syncs project attributes and tool-gating attributes</li>
@@ -79,6 +103,11 @@
 <li class="">creates / reuses the setup persona</li>
 <li class="">validates the HubSpot connection with:
 <code>GET /crm/v3/objects/contacts?limit=1</code></li>
+</ul>
+<p>Operational note:</p>
+<ul>
+<li class=""><code>OAuth</code> requests use the <code>api</code> connector path</li>
+<li class=""><code>Token</code> requests use the <code>http</code> connector path with <code>Authorization: Bearer &lt;hubspot_service_key&gt;</code></li>
 </ul>
 <p>If <code>hubspot_setup_scenarios = True</code>, the integration also participates in workflow-builder canvas setup through <code>CanvasSetupFlow</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-how-it-works">4. How It Works<a href="#4-how-it-works" class="hash-link" aria-label="Direct link to 4. How It Works" title="Direct link to 4. How It Works" translate="no">​</a></h2>
@@ -167,8 +196,9 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="64-troubleshooting">6.4 Troubleshooting<a href="#64-troubleshooting" class="hash-link" aria-label="Direct link to 6.4 Troubleshooting" title="Direct link to 6.4 Troubleshooting" translate="no">​</a></h3>
 <p>If setup fails:</p>
 <ul>
-<li class="">confirm <code>hubspot_service_key</code> is valid</li>
-<li class="">confirm the token has the scopes needed by your booking flows</li>
+<li class="">if using <code>OAuth</code>, confirm <code>hubspot_oauth_code</code> was pasted correctly and connector authorization completed</li>
+<li class="">if using <code>Token</code>, confirm <code>hubspot_service_key</code> is valid</li>
+<li class="">confirm the OAuth app / token has the scopes needed by your booking flows</li>
 <li class="">confirm <code>hubspot_base_api_url</code> is correct</li>
 </ul>
 <p>If availability works but booking fails:</p>
@@ -189,9 +219,11 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-faq">7. FAQ<a href="#7-faq" class="hash-link" aria-label="Direct link to 7. FAQ" title="Direct link to 7. FAQ" translate="no">​</a></h2>
 <p><strong>Q: What authentication method does the current setup use?</strong><br>
-<!-- -->A: Current customer-facing setup uses a <strong>HubSpot Service Key / Token</strong>. The visible auth attribute is <code>hubspot_auth_type</code>, and in the current setup it is fixed to <code>Token</code>.</p>
-<p><strong>Q: Does this integration still use the old OAuth-code + refresh-token setup?</strong><br>
-<!-- -->A: No. The current README and current setup flow are token-based from the customer side. The old <code>hubspot_oauth_code</code>, <code>client_id</code>, <code>client_secret</code>, and refresh-token instructions are obsolete.</p>
+<!-- -->A: The current setup supports both <code>OAuth</code> and <code>Token</code> through <code>hubspot_auth_type</code>.</p>
+<p><strong>Q: What does OAuth mode require from the user?</strong><br>
+<!-- -->A: In the current implementation, the user opens the auth link from <code>hubspot_oauth_code</code>, approves HubSpot access, copies the returned code, and pastes it into <code>hubspot_oauth_code</code>.</p>
+<p><strong>Q: Does the current runtime use <code>api</code> or <code>http</code> routing?</strong><br>
+<!-- -->A: <code>OAuth</code> uses the <code>api</code> path. <code>Token</code> uses the <code>http</code> path with a bearer token header.</p>
 <p><strong>Q: How are contacts matched during booking?</strong><br>
 <!-- -->A: Booking first searches HubSpot contacts by <strong>email</strong>. If no contact is found, a new contact is created.</p>
 <p><strong>Q: How does cancellation identify the meeting to delete?</strong><br>
@@ -203,6 +235,6 @@
 <p><strong>Q: Can I disable the default canvas scenarios?</strong><br>
 <!-- -->A: Yes. Set <code>hubspot_setup_scenarios</code> to <code>False</code>.</p>
 <p><strong>Q: What is the meeting slug?</strong><br>
-<!-- -->A: It is the last path segment of your HubSpot meeting link, stored in <code>hubspot_slug_name</code>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/housecallpro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">HouseCallPro Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/kolla"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Kolla Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a><ul><li><a href="#11-description" class="table-of-contents__link toc-highlight">1.1 Description</a></li><li><a href="#12-use-cases" class="table-of-contents__link toc-highlight">1.2 Use Cases</a></li><li><a href="#13-supported-features" class="table-of-contents__link toc-highlight">1.3 Supported Features</a></li></ul></li><li><a href="#2-requirements" class="table-of-contents__link toc-highlight">2. Requirements</a></li><li><a href="#3-how-to-setup" class="table-of-contents__link toc-highlight">3. How to Setup</a><ul><li><a href="#31-step-1--create-a-hubspot-service-key" class="table-of-contents__link toc-highlight">3.1 Step 1 — Create a HubSpot Service Key</a></li><li><a href="#32-step-2--find-the-meeting-link-slug" class="table-of-contents__link toc-highlight">3.2 Step 2 — Find the Meeting Link Slug</a></li><li><a href="#33-step-3--configure-attributes-in-newo" class="table-of-contents__link toc-highlight">3.3 Step 3 — Configure Attributes in Newo</a></li><li><a href="#34-step-4--publish" class="table-of-contents__link toc-highlight">3.4 Step 4 — Publish</a></li></ul></li><li><a href="#4-how-it-works" class="table-of-contents__link toc-highlight">4. How It Works</a><ul><li><a href="#41-flows" class="table-of-contents__link toc-highlight">4.1 Flows</a></li><li><a href="#42-triggers" class="table-of-contents__link toc-highlight">4.2 Triggers</a></li><li><a href="#43-main-api-actions" class="table-of-contents__link toc-highlight">4.3 Main API Actions</a></li><li><a href="#44-overall-sequence" class="table-of-contents__link toc-highlight">4.4 Overall Sequence</a></li><li><a href="#45-availabilityflow" class="table-of-contents__link toc-highlight">4.5 AvailabilityFlow</a></li><li><a href="#46-bookingflow" class="table-of-contents__link toc-highlight">4.6 BookingFlow</a></li><li><a href="#47-cancellationflow" class="table-of-contents__link toc-highlight">4.7 CancellationFlow</a></li><li><a href="#48-existingclientflow" class="table-of-contents__link toc-highlight">4.8 ExistingClientFlow</a></li><li><a href="#49-conversationflow" class="table-of-contents__link toc-highlight">4.9 ConversationFlow</a></li></ul></li><li><a href="#5-canvas-setup" class="table-of-contents__link toc-highlight">5. Canvas Setup</a></li><li><a href="#6-testing" class="table-of-contents__link toc-highlight">6. Testing</a><ul><li><a href="#61-conversation-testing" class="table-of-contents__link toc-highlight">6.1 Conversation Testing</a></li><li><a href="#62-webhook-test-events" class="table-of-contents__link toc-highlight">6.2 Webhook Test Events</a></li><li><a href="#63-what-to-verify" class="table-of-contents__link toc-highlight">6.3 What to Verify</a></li><li><a href="#64-troubleshooting" class="table-of-contents__link toc-highlight">6.4 Troubleshooting</a></li></ul></li><li><a href="#7-faq" class="table-of-contents__link toc-highlight">7. FAQ</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/hubspot.pdf" download="hubspot.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+<!-- -->A: It is the last path segment of your HubSpot meeting link, stored in <code>hubspot_slug_name</code>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/housecallpro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">HouseCallPro Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/kolla"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Kolla Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a><ul><li><a href="#11-description" class="table-of-contents__link toc-highlight">1.1 Description</a></li><li><a href="#12-use-cases" class="table-of-contents__link toc-highlight">1.2 Use Cases</a></li><li><a href="#13-supported-features" class="table-of-contents__link toc-highlight">1.3 Supported Features</a></li></ul></li><li><a href="#2-requirements" class="table-of-contents__link toc-highlight">2. Requirements</a></li><li><a href="#3-how-to-setup" class="table-of-contents__link toc-highlight">3. How to Setup</a><ul><li><a href="#31-step-1--choose-authentication-method" class="table-of-contents__link toc-highlight">3.1 Step 1 — Choose Authentication Method</a></li><li><a href="#32-oauth-setup" class="table-of-contents__link toc-highlight">3.2 OAuth Setup</a></li><li><a href="#33-token-setup" class="table-of-contents__link toc-highlight">3.3 Token Setup</a></li><li><a href="#34-step-2--find-the-meeting-link-slug" class="table-of-contents__link toc-highlight">3.4 Step 2 — Find the Meeting Link Slug</a></li><li><a href="#35-step-3--configure-attributes-in-newo" class="table-of-contents__link toc-highlight">3.5 Step 3 — Configure Attributes in Newo</a></li><li><a href="#36-step-4--publish" class="table-of-contents__link toc-highlight">3.6 Step 4 — Publish</a></li></ul></li><li><a href="#4-how-it-works" class="table-of-contents__link toc-highlight">4. How It Works</a><ul><li><a href="#41-flows" class="table-of-contents__link toc-highlight">4.1 Flows</a></li><li><a href="#42-triggers" class="table-of-contents__link toc-highlight">4.2 Triggers</a></li><li><a href="#43-main-api-actions" class="table-of-contents__link toc-highlight">4.3 Main API Actions</a></li><li><a href="#44-overall-sequence" class="table-of-contents__link toc-highlight">4.4 Overall Sequence</a></li><li><a href="#45-availabilityflow" class="table-of-contents__link toc-highlight">4.5 AvailabilityFlow</a></li><li><a href="#46-bookingflow" class="table-of-contents__link toc-highlight">4.6 BookingFlow</a></li><li><a href="#47-cancellationflow" class="table-of-contents__link toc-highlight">4.7 CancellationFlow</a></li><li><a href="#48-existingclientflow" class="table-of-contents__link toc-highlight">4.8 ExistingClientFlow</a></li><li><a href="#49-conversationflow" class="table-of-contents__link toc-highlight">4.9 ConversationFlow</a></li></ul></li><li><a href="#5-canvas-setup" class="table-of-contents__link toc-highlight">5. Canvas Setup</a></li><li><a href="#6-testing" class="table-of-contents__link toc-highlight">6. Testing</a><ul><li><a href="#61-conversation-testing" class="table-of-contents__link toc-highlight">6.1 Conversation Testing</a></li><li><a href="#62-webhook-test-events" class="table-of-contents__link toc-highlight">6.2 Webhook Test Events</a></li><li><a href="#63-what-to-verify" class="table-of-contents__link toc-highlight">6.3 What to Verify</a></li><li><a href="#64-troubleshooting" class="table-of-contents__link toc-highlight">6.4 Troubleshooting</a></li></ul></li><li><a href="#7-faq" class="table-of-contents__link toc-highlight">7. FAQ</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/hubspot.pdf" download="hubspot.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
 </body>
 </html>
