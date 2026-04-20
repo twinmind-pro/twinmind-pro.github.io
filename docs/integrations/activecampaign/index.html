@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/activecampaign" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">ActiveCampaign Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/activecampaign"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="ActiveCampaign Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="1. What This Integration Does"><meta data-rh="true" property="og:description" content="1. What This Integration Does"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/activecampaign"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/activecampaign" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/activecampaign" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ActiveCampaign Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/activecampaign"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.6563489a.js" defer="defer"></script>
+<script src="/assets/js/main.dddca1f5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="HouseCallPro Integration" class="linkLabel_WmDU">HouseCallPro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration Guide" class="linkLabel_WmDU">ServiceM8 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">ActiveCampaign Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>ActiveCampaign Integration Guide</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-what-this-integration-does">1. What This Integration Does<a href="#1-what-this-integration-does" class="hash-link" aria-label="Direct link to 1. What This Integration Does" title="Direct link to 1. What This Integration Does" translate="no">​</a></h2>
+<p>The Newo AI Agent integrates with ActiveCampaign so your AI can act as a CRM intake and follow-up assistant during live conversations.</p>
+<p>Once connected, the AI agent can:</p>
+<ul>
+<li class="">create or update a contact in ActiveCampaign from the caller&#x27;s name, email, and phone</li>
+<li class="">apply an intent-based tag to the contact at the end of the conversation</li>
+<li class="">enroll an existing contact into an ActiveCampaign automation</li>
+<li class="">create a sales deal in the CRM pipeline for qualified inquiries</li>
+<li class="">auto-register Canvas scenarios and custom tools on publish</li>
+<li class="">sync tags, automations, and deal stages from ActiveCampaign into Newo settings during setup</li>
+</ul>
+<p><strong>In plain terms:</strong> the AI collects lead details in conversation, writes them into ActiveCampaign, and can trigger the next CRM action without a human opening the CRM.</p>
+<p><img decoding="async" loading="lazy" alt="ActiveCampaign home screen" src="/assets/images/S01-activecampaign-home-cfdac0a899ea61596f271634ccc27290.png" width="3748" height="2636" class="img_ev3q"></p>
+<p><em>Figure S01. ActiveCampaign home screen before opening account settings.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-before-you-start">2. Before You Start<a href="#2-before-you-start" class="hash-link" aria-label="Direct link to 2. Before You Start" title="Direct link to 2. Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">an ActiveCampaign account with API access</li>
+<li class="">permission to view <strong>Settings → Developer</strong></li>
+<li class="">access to the Newo project builder for your project</li>
+<li class="">permission to edit attributes and run <strong>Publish All</strong></li>
+</ul>
+<p>You will need:</p>
+<ul>
+<li class=""><strong>API URL</strong> from ActiveCampaign</li>
+<li class=""><strong>API Key</strong> from ActiveCampaign</li>
+</ul>
+<blockquote>
+<p><strong>Important:</strong> this integration uses ActiveCampaign API v3 over the shared <code>http</code> connector. The API URL can be stored either as the full <code>.../api/3</code> path or as the account base URL; the integration appends <code>/api/3</code> when needed.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-connecting-for-the-first-time">3. Connecting for the First Time<a href="#3-connecting-for-the-first-time" class="hash-link" aria-label="Direct link to 3. Connecting for the First Time" title="Direct link to 3. Connecting for the First Time" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-get-credentials-in-activecampaign">3.1 Get Credentials in ActiveCampaign<a href="#31-get-credentials-in-activecampaign" class="hash-link" aria-label="Direct link to 3.1 Get Credentials in ActiveCampaign" title="Direct link to 3.1 Get Credentials in ActiveCampaign" translate="no">​</a></h3>
+<ol>
+<li class="">Log in to ActiveCampaign.</li>
+<li class="">Open <strong>Settings → Developer</strong>.</li>
+<li class="">Copy your <strong>API URL</strong>.</li>
+<li class="">Copy your <strong>API Key</strong>.</li>
+</ol>
+<p>The API URL usually looks like <code>https://your-account.api-us1.com/api/3</code>.</p>
+<p><img decoding="async" loading="lazy" alt="Open settings from the ActiveCampaign header" src="/assets/images/S02-activecampaign-settings-entry-fe842d0fbd57426e634eeaaa6a4ca465.png" width="3748" height="2636" class="img_ev3q"></p>
+<p><em>Figure S02. Open ActiveCampaign settings from the top-right corner.</em></p>
+<p><img decoding="async" loading="lazy" alt="ActiveCampaign account settings sidebar" src="/assets/images/S03-activecampaign-account-settings-846d43481899ac75f248ac325f6ab6c2.png" width="3748" height="2636" class="img_ev3q"></p>
+<p><em>Figure S03. Settings screen with the sidebar where the <strong>Developer</strong> section is located.</em></p>
+<p><img decoding="async" loading="lazy" alt="ActiveCampaign developer page with API URL and API Key" src="/assets/images/S04-activecampaign-developer-0efe99cbf3c25360abcee91231e6057c.png" width="3748" height="2636" class="img_ev3q"></p>
+<p><em>Figure S04. Copy the API URL and API Key from <strong>Settings → Developer</strong>.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-connect-in-newo">3.2 Connect in Newo<a href="#32-connect-in-newo" class="hash-link" aria-label="Direct link to 3.2 Connect in Newo" title="Direct link to 3.2 Connect in Newo" translate="no">​</a></h3>
+<ol>
+<li class="">Open your project in Newo and go to <strong>Builder → Attributes</strong>.</li>
+<li class="">Find the <strong>Activecampaign Settings</strong> section.</li>
+<li class="">Fill in the following fields:</li>
+</ol>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>API URL</strong> (<code>activecampaign_base_url</code>)</td><td>Base URL for ActiveCampaign API v3</td><td>Yes</td></tr><tr><td><strong>API Key</strong> (<code>activecampaign_api_key</code>)</td><td>API token sent as <code>Api-Token</code> header</td><td>Yes</td></tr></tbody></table>
+<ol start="4">
+<li class="">Click <strong>Save</strong>.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>What happens after Publish:</strong></p>
+<ul>
+<li class="">Newo creates the <code>activecampaign_connector</code> HTTP connector if it does not exist</li>
+<li class="">Newo creates an internal <code>setup_persona_id</code> used for custom tool registration</li>
+<li class="">Newo registers four custom tools in ConvoAgent:<!-- -->
+<ul>
+<li class=""><code>activecampaign_create_update_contact</code></li>
+<li class=""><code>activecampaign_tag_contact</code></li>
+<li class=""><code>activecampaign_add_to_automation</code></li>
+<li class=""><code>activecampaign_create_deal</code></li>
+</ul>
+</li>
+<li class="">Newo syncs tags from <code>GET /tags</code></li>
+<li class="">Newo syncs automations from <code>GET /automations</code></li>
+<li class="">Newo syncs deal stages from <code>GET /dealStages</code></li>
+<li class="">Newo stores synced data in customer attributes for later use</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-advanced-runtime-settings">3.3 Advanced Runtime Settings<a href="#33-advanced-runtime-settings" class="hash-link" aria-label="Direct link to 3.3 Advanced Runtime Settings" title="Direct link to 3.3 Advanced Runtime Settings" translate="no">​</a></h3>
+<p>These attributes are read by the flows but are not created automatically in <code>SetupFlow</code>. If you want to influence behavior, add them manually in Builder:</p>
+<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>Automation Name</strong> (<code>project_attributes_setting_automation_name</code>)</td><td>Intended default automation label for enrollment messaging</td><td>No</td></tr><tr><td><strong>Deal Title</strong> (<code>project_attributes_setting_deal_title</code>)</td><td>Overrides the default generated deal title</td><td>No</td></tr><tr><td><strong>Tag Map</strong> (<code>project_attributes_setting_activecampaign_tag_map</code>)</td><td>JSON map of synced tag names to ActiveCampaign IDs</td><td>Auto-filled on publish</td></tr><tr><td><strong>Automation Map</strong> (<code>project_attributes_setting_activecampaign_automation_map</code>)</td><td>JSON map of synced automation names to IDs</td><td>Auto-filled on publish</td></tr><tr><td><strong>Default Stage ID</strong> (<code>project_attributes_setting_activecampaign_default_stage_id</code>)</td><td>First synced stage ID saved during setup</td><td>Auto-filled on publish</td></tr></tbody></table>
+<blockquote>
+<p><strong>Current implementation note:</strong> <code>Automation Name</code> is stored in flow context and used in user-facing confirmation text, but the enrollment flow currently fetches all automations and uses the first returned automation instead of filtering by that name.</p>
+</blockquote>
+<p><img decoding="async" loading="lazy" alt="Newo Activecampaign Settings attributes" src="/assets/images/S05-newo-activecampaign-settings-351276063d0d29b945d6e9611238cdf8.png" width="4672" height="2636" class="img_ev3q"></p>
+<p><em>Figure S05. Newo Builder attributes for ActiveCampaign credentials and post-publish setup persona.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-what-the-ai-agent-can-do">4. What the AI Agent Can Do<a href="#4-what-the-ai-agent-can-do" class="hash-link" aria-label="Direct link to 4. What the AI Agent Can Do" title="Direct link to 4. What the AI Agent Can Do" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-create-or-update-a-contact">4.1 Create or Update a Contact<a href="#41-create-or-update-a-contact" class="hash-link" aria-label="Direct link to 4.1 Create or Update a Contact" title="Direct link to 4.1 Create or Update a Contact" translate="no">​</a></h3>
+<p>When the conversation reaches the code phrase <strong>&quot;Let me save your contact information now.&quot;</strong>, the integration:</p>
+<ul>
+<li class="">reads <code>user.name</code></li>
+<li class="">reads persona <code>email</code></li>
+<li class="">reads persona <code>phone</code></li>
+<li class="">splits full name into first and last name</li>
+<li class="">calls ActiveCampaign <code>POST /contact/sync</code></li>
+</ul>
+<p><strong>You will see in ActiveCampaign:</strong> a new or updated contact record.</p>
+<p><strong>You will see in Newo:</strong> persona attribute <code>activecampaign_contact_id</code> is saved after success.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-tag-a-contact-by-intent">4.2 Tag a Contact by Intent<a href="#42-tag-a-contact-by-intent" class="hash-link" aria-label="Direct link to 4.2 Tag a Contact by Intent" title="Direct link to 4.2 Tag a Contact by Intent" translate="no">​</a></h3>
+<p>At wrap-up, the integration can label the contact based on conversation intent. The current heuristics are:</p>
+<ul>
+<li class=""><code>callback-requested</code> if memory mentions <code>callback</code> or <code>call me back</code></li>
+<li class=""><code>new-lead</code> if memory mentions <code>new</code> plus <code>lead</code> or <code>customer</code></li>
+<li class="">otherwise <code>interested</code></li>
+</ul>
+<p>The flow:</p>
+<ol>
+<li class="">searches the contact by email via <code>GET /contacts</code></li>
+<li class="">creates the contact first via <code>POST /contact/sync</code> if no contact exists</li>
+<li class="">searches tags via <code>GET /tags?search=&lt;tag&gt;</code></li>
+<li class="">links the tag via <code>POST /contactTags</code></li>
+</ol>
+<p><strong>You will see in ActiveCampaign:</strong> the contact gets a new contact-tag association.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-enroll-a-contact-into-an-automation">4.3 Enroll a Contact into an Automation<a href="#43-enroll-a-contact-into-an-automation" class="hash-link" aria-label="Direct link to 4.3 Enroll a Contact into an Automation" title="Direct link to 4.3 Enroll a Contact into an Automation" translate="no">​</a></h3>
+<p>When the conversation reaches the code phrase <strong>&quot;Let me set up your follow-up sequence now.&quot;</strong>, the integration:</p>
+<ol>
+<li class="">looks up the contact by email via <code>GET /contacts</code></li>
+<li class="">loads automations via <code>GET /automations</code></li>
+<li class="">uses the first returned automation</li>
+<li class="">enrolls the contact via <code>POST /contactAutomations</code></li>
+</ol>
+<p><strong>You will see in ActiveCampaign:</strong> the existing contact is added to an automation.</p>
+<blockquote>
+<p><strong>Important limitation:</strong> this flow does <strong>not</strong> create a missing contact. If the email does not match an existing contact, the integration still continues but may try to enroll an empty contact ID. In practice, you should run contact sync first or ensure the contact already exists.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-create-a-sales-deal">4.4 Create a Sales Deal<a href="#44-create-a-sales-deal" class="hash-link" aria-label="Direct link to 4.4 Create a Sales Deal" title="Direct link to 4.4 Create a Sales Deal" translate="no">​</a></h3>
+<p>When the conversation reaches the code phrase <strong>&quot;Let me create a deal for your inquiry now.&quot;</strong>, the integration:</p>
+<ol>
+<li class="">looks up the contact by email via <code>GET /contacts</code></li>
+<li class="">creates the contact first via <code>POST /contact/sync</code> if needed</li>
+<li class="">loads stages via <code>GET /dealStages</code></li>
+<li class="">chooses the first returned stage</li>
+<li class="">builds a deal payload and sends <code>POST /deals</code></li>
+</ol>
+<p>Deal value is inferred from conversation memory by scanning for numbers over <code>100</code>, and currency is always <code>usd</code>.</p>
+<p><strong>You will see in ActiveCampaign:</strong> a new deal connected to the contact.</p>
+<blockquote>
+<p><strong>Current implementation note:</strong> deal owner is hardcoded to <code>&quot;1&quot;</code> in <code>CreateDealFlow</code>, not taken from a customer attribute.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-auto-setup-canvas-scenarios">4.5 Auto-Setup Canvas Scenarios<a href="#45-auto-setup-canvas-scenarios" class="hash-link" aria-label="Direct link to 4.5 Auto-Setup Canvas Scenarios" title="Direct link to 4.5 Auto-Setup Canvas Scenarios" translate="no">​</a></h3>
+<p>On canvas build, the integration inserts library content for:</p>
+<ul>
+<li class="">introduction</li>
+<li class="">gather name</li>
+<li class="">gather phone</li>
+<li class="">gather email</li>
+<li class="">finish conversation</li>
+<li class="">capture contact scenario</li>
+<li class="">add to automation scenario</li>
+<li class="">create deal scenario</li>
+</ul>
+<p>This lets the conversation layer trigger the custom tools using explicit code phrases rather than generic booking tools.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-how-the-integration-works">5. How the Integration Works<a href="#5-how-the-integration-works" class="hash-link" aria-label="Direct link to 5. How the Integration Works" title="Direct link to 5. How the Integration Works" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-triggers">5.1 Triggers<a href="#51-triggers" class="hash-link" aria-label="Direct link to 5.1 Triggers" title="Direct link to 5.1 Triggers" translate="no">​</a></h3>
+<table><thead><tr><th>Trigger</th><th>Event</th><th>Description</th></tr></thead><tbody><tr><td>Setup on publish</td><td><code>project_publish_finish</code></td><td>Creates connector, setup persona, tools, and starts settings sync</td></tr><tr><td>Capture contact</td><td><code>activecampaign_create_update_contact</code></td><td>Starts contact upsert flow</td></tr><tr><td>Tag contact</td><td><code>activecampaign_tag_contact</code></td><td>Starts contact lookup and tag application</td></tr><tr><td>Add to automation</td><td><code>activecampaign_add_to_automation</code></td><td>Starts automation enrollment flow</td></tr><tr><td>Create deal</td><td><code>activecampaign_create_deal</code></td><td>Starts deal creation flow</td></tr><tr><td>Canvas build</td><td><code>gm_workflow_builder_canvas_built</code></td><td>Inserts ActiveCampaign canvas items</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-actions">5.2 Actions<a href="#52-actions" class="hash-link" aria-label="Direct link to 5.2 Actions" title="Direct link to 5.2 Actions" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Sync contact</strong> — <code>POST /contact/sync</code></li>
+<li class=""><strong>Search contact</strong> — <code>GET /contacts</code></li>
+<li class=""><strong>Search tag</strong> — <code>GET /tags</code></li>
+<li class=""><strong>Create contact tag link</strong> — <code>POST /contactTags</code></li>
+<li class=""><strong>Search automations</strong> — <code>GET /automations</code></li>
+<li class=""><strong>Create automation enrollment</strong> — <code>POST /contactAutomations</code></li>
+<li class=""><strong>Search deal stages</strong> — <code>GET /dealStages</code></li>
+<li class=""><strong>Create deal</strong> — <code>POST /deals</code></li>
+<li class=""><strong>Setup sync: tags</strong> — <code>GET /tags</code></li>
+<li class=""><strong>Setup sync: automations</strong> — <code>GET /automations</code></li>
+<li class=""><strong>Setup sync: stages</strong> — <code>GET /dealStages</code></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-architecture">5.3 Architecture<a href="#53-architecture" class="hash-link" aria-label="Direct link to 5.3 Architecture" title="Direct link to 5.3 Architecture" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="overall-sequence">Overall Sequence<a href="#overall-sequence" class="hash-link" aria-label="Direct link to Overall Sequence" title="Direct link to Overall Sequence" translate="no">​</a></h4>
+<!-- -->
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="contact-sync-flow">Contact Sync Flow<a href="#contact-sync-flow" class="hash-link" aria-label="Direct link to Contact Sync Flow" title="Direct link to Contact Sync Flow" translate="no">​</a></h4>
+<!-- -->
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tag-contact-flow">Tag Contact Flow<a href="#tag-contact-flow" class="hash-link" aria-label="Direct link to Tag Contact Flow" title="Direct link to Tag Contact Flow" translate="no">​</a></h4>
+<!-- -->
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="add-to-automation-flow">Add to Automation Flow<a href="#add-to-automation-flow" class="hash-link" aria-label="Direct link to Add to Automation Flow" title="Direct link to Add to Automation Flow" translate="no">​</a></h4>
+<!-- -->
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-deal-flow">Create Deal Flow<a href="#create-deal-flow" class="hash-link" aria-label="Direct link to Create Deal Flow" title="Direct link to Create Deal Flow" translate="no">​</a></h4>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-how-to-test-that-everything-works">6. How to Test That Everything Works<a href="#6-how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to 6. How to Test That Everything Works" title="Direct link to 6. How to Test That Everything Works" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="61-after-setup">6.1 After Setup<a href="#61-after-setup" class="hash-link" aria-label="Direct link to 6.1 After Setup" title="Direct link to 6.1 After Setup" translate="no">​</a></h3>
+<p>After clicking <strong>Publish All</strong>, confirm:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->the <code>activecampaign_connector</code> exists</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>project_attributes_settings_newo_tools</code> contains four ActiveCampaign tools</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>project_attributes_setting_activecampaign_tag_map</code> is populated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>project_attributes_setting_activecampaign_automation_map</code> is populated</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <code>project_attributes_setting_activecampaign_default_stage_id</code> is populated</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="62-test-contact-sync">6.2 Test Contact Sync<a href="#62-test-contact-sync" class="hash-link" aria-label="Direct link to 6.2 Test Contact Sync" title="Direct link to 6.2 Test Contact Sync" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test conversation.</li>
+<li class="">Give the agent a name, phone number, and email.</li>
+<li class="">Trigger the contact-save scenario.</li>
+<li class="">Verify in ActiveCampaign that the contact exists or was updated.</li>
+<li class="">Verify persona attribute <code>activecampaign_contact_id</code> is set.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="63-test-tagging">6.3 Test Tagging<a href="#63-test-tagging" class="hash-link" aria-label="Direct link to 6.3 Test Tagging" title="Direct link to 6.3 Test Tagging" translate="no">​</a></h3>
+<ol>
+<li class="">Use a conversation that clearly contains callback or lead intent.</li>
+<li class="">Let the conversation reach the finish procedure.</li>
+<li class="">Verify the contact was found or created.</li>
+<li class="">Verify a tag association appears on the contact in ActiveCampaign.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="64-test-automation-enrollment">6.4 Test Automation Enrollment<a href="#64-test-automation-enrollment" class="hash-link" aria-label="Direct link to 6.4 Test Automation Enrollment" title="Direct link to 6.4 Test Automation Enrollment" translate="no">​</a></h3>
+<ol>
+<li class="">Make sure the contact already exists in ActiveCampaign.</li>
+<li class="">Make sure at least one automation exists.</li>
+<li class="">Trigger the follow-up sequence scenario.</li>
+<li class="">Verify the contact is enrolled in an automation.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="65-test-deal-creation">6.5 Test Deal Creation<a href="#65-test-deal-creation" class="hash-link" aria-label="Direct link to 6.5 Test Deal Creation" title="Direct link to 6.5 Test Deal Creation" translate="no">​</a></h3>
+<ol>
+<li class="">Start a sales inquiry conversation.</li>
+<li class="">Mention a budget such as <code>$1200</code> or <code>1500 per month</code>.</li>
+<li class="">Trigger the deal-creation scenario.</li>
+<li class="">Verify the contact exists.</li>
+<li class="">Verify a new deal appears in ActiveCampaign with a value and stage.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="66-if-something-does-not-work">6.6 If Something Does Not Work<a href="#66-if-something-does-not-work" class="hash-link" aria-label="Direct link to 6.6 If Something Does Not Work" title="Direct link to 6.6 If Something Does Not Work" translate="no">​</a></h3>
+<ul>
+<li class="">confirm both <code>activecampaign_base_url</code> and <code>activecampaign_api_key</code> are filled in</li>
+<li class="">confirm the API URL belongs to the correct account</li>
+<li class="">republish after changing any credentials</li>
+<li class="">verify the user has persona <code>email</code> before tag, automation, or deal flows</li>
+<li class="">verify ActiveCampaign already has automations configured if enrollment is expected</li>
+<li class="">verify at least one deal stage exists if deal creation is expected</li>
+<li class="">check whether the flow hit <code>activecampaign_api_error</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-faq">7. FAQ<a href="#7-faq" class="hash-link" aria-label="Direct link to 7. FAQ" title="Direct link to 7. FAQ" translate="no">​</a></h2>
+<p><strong>Q: Does this integration support OAuth?</strong><br>
+<!-- -->A: No. The current implementation uses only API URL + API Key and sends requests through the shared <code>http</code> connector.</p>
+<p><strong>Q: What happens on Publish All?</strong><br>
+<!-- -->A: The integration creates its connector, creates an internal setup persona, registers four custom tools, and syncs tags, automations, and deal stages from ActiveCampaign.</p>
+<p><strong>Q: Does automation enrollment create a missing contact automatically?</strong><br>
+<!-- -->A: No. <code>AddToAutomationFlow</code> only searches by email and then continues to automations. If the contact is missing, enrollment may fail or target an empty contact ID.</p>
+<p><strong>Q: How does the tag get chosen?</strong><br>
+<!-- -->A: The current code uses simple keyword heuristics on <code>memory</code>. It maps to <code>callback-requested</code>, <code>new-lead</code>, or falls back to <code>interested</code>.</p>
+<p><strong>Q: How is the automation selected?</strong><br>
+<!-- -->A: The current flow fetches <code>GET /automations</code> and uses the first returned automation. The configured <code>automation_name</code> is not yet used as an API filter.</p>
+<p><strong>Q: How is the deal stage selected?</strong><br>
+<!-- -->A: The flow fetches <code>GET /dealStages</code> and uses the first returned stage. The synced default stage attribute is stored during setup but is not read back by <code>CreateDealFlow</code>.</p>
+<p><strong>Q: Who becomes the deal owner?</strong><br>
+<!-- -->A: Right now the owner is hardcoded to <code>&quot;1&quot;</code> in <code>CreateDealFlow</code>, so production use should verify that user ID is valid in the target ActiveCampaign account.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/bitrix"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Bitrix24 Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-what-this-integration-does" class="table-of-contents__link toc-highlight">1. What This Integration Does</a></li><li><a href="#2-before-you-start" class="table-of-contents__link toc-highlight">2. Before You Start</a></li><li><a href="#3-connecting-for-the-first-time" class="table-of-contents__link toc-highlight">3. Connecting for the First Time</a><ul><li><a href="#31-get-credentials-in-activecampaign" class="table-of-contents__link toc-highlight">3.1 Get Credentials in ActiveCampaign</a></li><li><a href="#32-connect-in-newo" class="table-of-contents__link toc-highlight">3.2 Connect in Newo</a></li><li><a href="#33-advanced-runtime-settings" class="table-of-contents__link toc-highlight">3.3 Advanced Runtime Settings</a></li></ul></li><li><a href="#4-what-the-ai-agent-can-do" class="table-of-contents__link toc-highlight">4. What the AI Agent Can Do</a><ul><li><a href="#41-create-or-update-a-contact" class="table-of-contents__link toc-highlight">4.1 Create or Update a Contact</a></li><li><a href="#42-tag-a-contact-by-intent" class="table-of-contents__link toc-highlight">4.2 Tag a Contact by Intent</a></li><li><a href="#43-enroll-a-contact-into-an-automation" class="table-of-contents__link toc-highlight">4.3 Enroll a Contact into an Automation</a></li><li><a href="#44-create-a-sales-deal" class="table-of-contents__link toc-highlight">4.4 Create a Sales Deal</a></li><li><a href="#45-auto-setup-canvas-scenarios" class="table-of-contents__link toc-highlight">4.5 Auto-Setup Canvas Scenarios</a></li></ul></li><li><a href="#5-how-the-integration-works" class="table-of-contents__link toc-highlight">5. How the Integration Works</a><ul><li><a href="#51-triggers" class="table-of-contents__link toc-highlight">5.1 Triggers</a></li><li><a href="#52-actions" class="table-of-contents__link toc-highlight">5.2 Actions</a></li><li><a href="#53-architecture" class="table-of-contents__link toc-highlight">5.3 Architecture</a></li></ul></li><li><a href="#6-how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">6. How to Test That Everything Works</a><ul><li><a href="#61-after-setup" class="table-of-contents__link toc-highlight">6.1 After Setup</a></li><li><a href="#62-test-contact-sync" class="table-of-contents__link toc-highlight">6.2 Test Contact Sync</a></li><li><a href="#63-test-tagging" class="table-of-contents__link toc-highlight">6.3 Test Tagging</a></li><li><a href="#64-test-automation-enrollment" class="table-of-contents__link toc-highlight">6.4 Test Automation Enrollment</a></li><li><a href="#65-test-deal-creation" class="table-of-contents__link toc-highlight">6.5 Test Deal Creation</a></li><li><a href="#66-if-something-does-not-work" class="table-of-contents__link toc-highlight">6.6 If Something Does Not Work</a></li></ul></li><li><a href="#7-faq" class="table-of-contents__link toc-highlight">7. FAQ</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/activecampaign.pdf" download="activecampaign.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>
