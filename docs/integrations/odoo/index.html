@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/odoo" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Odoo Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/odoo"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Odoo Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects Odoo with the Newo AI agent so callers and chat visitors can"><meta data-rh="true" property="og:description" content="Connects Odoo with the Newo AI agent so callers and chat visitors can"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/odoo"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/odoo" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/odoo" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Odoo Integration","item":"https://twinmind-pro.github.io/docs/integrations/odoo"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.f46b37f0.js" defer="defer"></script>
+<script src="/assets/js/main.d3acfc26.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Odoo Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Odoo Integration</h1></header>
+<p>Connects <strong>Odoo</strong> with the Newo AI agent so callers and chat visitors can
+look up their account, check upcoming appointments, book or reschedule
+meetings, ask about orders, request a return, get a price quote, and
+open or check service requests — all without a human on the line.</p>
+<blockquote>
+<p><strong>Time to first success:</strong> ~15 minutes if you already have an Odoo
+instance and an admin user. ~30 minutes if you still need to create
+the Odoo account and pick a plan that allows external API access.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">an active <strong>Odoo</strong> account on the <strong>Custom</strong> pricing plan (for
+odoo.com SaaS) or any self-hosted Odoo (Community or Enterprise);
+the One App Free and Standard SaaS plans block the external API.</li>
+<li class=""><strong>admin access</strong> to the Odoo console — you&#x27;ll need it to open
+the user list and generate an API key.</li>
+<li class="">a dedicated or existing Odoo <strong>API user</strong> with the rights to
+create calendar events, sales orders, and CRM leads. Every
+appointment, lead, and note created from the agent will be
+attributed to this user.</li>
+<li class="">access to the <strong>Newo Builder</strong> for your project, with permission
+to edit project settings and click <strong>Publish All</strong>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do">What the AI can do<a href="#what-the-ai-can-do" class="hash-link" aria-label="Direct link to What the AI can do" title="Direct link to What the AI can do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Identify the caller from their phone number.</strong> The agent pulls the
+customer&#x27;s profile from Odoo before doing anything else, so it can
+tailor every reply.</li>
+<li class=""><strong>Check available time slots.</strong> The agent reads the calendar and
+reads back open slots without checking the team&#x27;s screen.</li>
+<li class=""><strong>Book a meeting.</strong> The agent confirms the slot, the purpose, and
+creates the calendar event in Odoo.</li>
+<li class=""><strong>Reschedule a meeting.</strong> The agent finds the existing meeting and
+moves it to a new time the customer accepts.</li>
+<li class=""><strong>Cancel a meeting.</strong> The agent finds the existing meeting and
+cancels it after explicit confirmation.</li>
+<li class=""><strong>Check existing appointments.</strong> The agent reads back upcoming
+appointments for the caller&#x27;s profile.</li>
+<li class=""><strong>Track an order, add a note, or process a return.</strong> The agent looks
+up the customer&#x27;s orders and acts on the one the customer points to.</li>
+<li class=""><strong>Prepare a quote.</strong> The agent captures product needs and generates
+a price quote from the catalog.</li>
+<li class=""><strong>Open or check a service request.</strong> The agent creates a CRM lead,
+reads back its status, updates it, or cancels it on request.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-at-a-glance">Features at a glance<a href="#features-at-a-glance" class="hash-link" aria-label="Direct link to Features at a glance" title="Direct link to Features at a glance" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Included</th></tr></thead><tbody><tr><td>Caller identification by phone</td><td>✅</td></tr><tr><td>Availability lookup</td><td>✅</td></tr><tr><td>Booking creation</td><td>✅</td></tr><tr><td>Reschedule existing booking</td><td>✅</td></tr><tr><td>Cancel existing booking</td><td>✅</td></tr><tr><td>Order status / notes / returns</td><td>✅</td></tr><tr><td>Price quoting</td><td>✅</td></tr><tr><td>Service requests (CRM leads)</td><td>✅</td></tr><tr><td>Multi-database routing inside one Odoo instance</td><td>❌ (one database per Newo project)</td></tr><tr><td>Real-time order tracking events (webhooks)</td><td>❌ (the agent reads on demand)</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h2>
+<p>A step-by-step walkthrough is below. Newo screenshots are referenced
+where applicable; place them under
+<code>documentation/integrations/odoo/screenshots/</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare-your-odoo-account">1. Prepare your Odoo account<a href="#1-prepare-your-odoo-account" class="hash-link" aria-label="Direct link to 1. Prepare your Odoo account" title="Direct link to 1. Prepare your Odoo account" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1a-make-sure-your-odoo-plan-allows-the-external-api">1a. Make sure your Odoo plan allows the external API<a href="#1a-make-sure-your-odoo-plan-allows-the-external-api" class="hash-link" aria-label="Direct link to 1a. Make sure your Odoo plan allows the external API" title="Direct link to 1a. Make sure your Odoo plan allows the external API" translate="no">​</a></h4>
+<p>External API access on <strong>odoo.com SaaS</strong> requires the <strong>Custom</strong>
+pricing plan. The 15-day free trial includes API access; after the
+trial expires you must be on the Custom plan to keep the integration
+working. Self-hosted Odoo (Community or Enterprise) has no plan
+restriction.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1b-note-your-instance-url-and-database-name">1b. Note your instance URL and database name<a href="#1b-note-your-instance-url-and-database-name" class="hash-link" aria-label="Direct link to 1b. Note your instance URL and database name" title="Direct link to 1b. Note your instance URL and database name" translate="no">​</a></h4>
+<ul>
+<li class="">The <strong>instance URL</strong> is the address you log in to, e.g.
+<code>https://mycompany.odoo.com</code>.</li>
+<li class="">The <strong>database name</strong> is the subdomain on odoo.com SaaS (e.g.
+<code>mycompany</code>), or the name you typed when creating a self-hosted
+database.</li>
+</ul>
+<p><strong>How to verify:</strong> open your Odoo URL in a browser; you should land
+on the database picker or directly in the dashboard.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1c-pick-or-create-the-user-the-agent-will-act-as">1c. Pick (or create) the user the agent will act as<a href="#1c-pick-or-create-the-user-the-agent-will-act-as" class="hash-link" aria-label="Direct link to 1c. Pick (or create) the user the agent will act as" title="Direct link to 1c. Pick (or create) the user the agent will act as" translate="no">​</a></h4>
+<p>The agent acts as a real Odoo user — every appointment, lead, and
+note created from the agent will be attributed to that user. Either
+pick an existing admin user or create a dedicated <strong>API user</strong> with
+the rights to create calendar events, sales orders, and CRM leads.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-get-your-odoo-credentials">2. Get your Odoo credentials<a href="#2-get-your-odoo-credentials" class="hash-link" aria-label="Direct link to 2. Get your Odoo credentials" title="Direct link to 2. Get your Odoo credentials" translate="no">​</a></h3>
+<p>The integration uses an Odoo <strong>API key</strong> (not a password). API keys
+are long-lived and can be revoked individually without changing the
+user&#x27;s password.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="generate-an-api-key-only-supported-method">Generate an API Key (only supported method)<a href="#generate-an-api-key-only-supported-method" class="hash-link" aria-label="Direct link to Generate an API Key (only supported method)" title="Direct link to Generate an API Key (only supported method)" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Log in to your Odoo instance and open the <strong>Settings</strong> app from
+the apps grid.</p>
+<p><img decoding="async" loading="lazy" alt="Odoo apps grid with the Settings tile highlighted" src="/assets/images/odoo_dashboard-b776eed88c00dd8230ce64a3cf2dd83d.png" width="1600" height="879" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>On the <strong>General Settings</strong> page, in the <strong>Users</strong> section, click
+<strong>Manage Users</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="Settings → Users section with Manage Users link" src="/assets/images/odoo_settings_users-9111c69c6c6f8400bfa770a04487e38d.png" width="1600" height="741" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>From the user list, click the user the agent will act as.</p>
+<p><img decoding="async" loading="lazy" alt="Odoo user list with the API user highlighted" src="/assets/images/odoo_users_list-4980cdf9049409d065c2a32569c113e0.png" width="1600" height="240" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>Open the <strong>Security</strong> tab and click <strong>Add API Key</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="Security tab on the user page with the Add API Key button" src="/assets/images/odoo_user_security_tab-d81d22e42ef9c61825b54d50e5a29383.png" width="1600" height="900" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>Confirm your password in the <strong>Access Control</strong> dialog and click
+<strong>Confirm Password</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="Access Control dialog asking for the current password" src="/assets/images/odoo_access_control-d87fe6bab3329997d9b527bd8a6895de.png" width="1468" height="662" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>In the <strong>New API Key</strong> dialog, enter a description (e.g. <code>Newo</code>)
+and pick a duration. Click <strong>Generate key</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="New API Key dialog with description and duration fields" src="/assets/images/odoo_new_api_key_form-8569c8b278fcac893a33e920652fd483.png" width="1600" height="940" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>Copy the key from the <strong>API Key Ready</strong> dialog and click <strong>Done!</strong>.
+<strong>Odoo shows the key only once</strong> — store it securely before
+closing this dialog.</p>
+<p><img decoding="async" loading="lazy" alt="API Key Ready dialog showing the masked key and Done button" src="/assets/images/odoo_api_key_ready-c0cb5e1e21ee09e50789b2e1bcda27d5.png" width="1390" height="820" class="img_ev3q"></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important:</strong> if you lose the API key, generate a new one. Odoo
+cannot show an existing key again.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note on duration.</strong> Odoo lets you set an expiry on the API key
+(1 month, 3 months, 1 year, or no expiry). Pick a duration that
+matches your security policy — when the key expires, the
+integration stops working until you generate a new one and paste
+it into Newo Builder.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-configure-in-newo">3. Configure in Newo<a href="#3-configure-in-newo" class="hash-link" aria-label="Direct link to 3. Configure in Newo" title="Direct link to 3. Configure in Newo" translate="no">​</a></h3>
+<ol>
+<li class="">Open the project in <strong>Newo Builder</strong> and find the
+<strong>Odoo Settings</strong> group of settings.</li>
+<li class="">Paste your Odoo URL into <strong>Base URL</strong> (the full
+<code>https://mycompany.odoo.com</code>, no trailing slash).</li>
+<li class="">Paste the API user&#x27;s email into <strong>Username</strong>.</li>
+<li class="">Paste the key from step 2 into <strong>API Key</strong>.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-hit-publish-all">4. Hit Publish All<a href="#4-hit-publish-all" class="hash-link" aria-label="Direct link to 4. Hit Publish All" title="Direct link to 4. Hit Publish All" translate="no">​</a></h3>
+<p>After <strong>Publish All</strong>, the integration takes care of the rest:</p>
+<ul>
+<li class="">Verifies your credentials by authenticating against your Odoo
+instance.</li>
+<li class="">Resolves the internal user ID and database name from your
+credentials.</li>
+<li class="">Registers the trigger phrases the agent will listen for.</li>
+<li class="">Publishes the canvas scenarios and intents (existing
+customizations are preserved).</li>
+</ul>
+<p><strong>How to verify:</strong></p>
+<ul>
+<li class="">✅ The 8 intents listed in the <em>Scenarios</em> section appear in your
+canvas library.</li>
+<li class="">✅ The 8 scenarios listed in the <em>Scenarios</em> section appear in
+your canvas library.</li>
+<li class="">✅ A test chat that asks &quot;can I book a meeting?&quot; gets the agent to
+reply with the <em>&quot;Let me pull up your account...&quot;</em> trigger phrase.</li>
+</ul>
+<p>If any of those checks fails, jump to <em>Common errors and recovery</em>
+below.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test-that-everything-works">How to test that everything works<a href="#how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to How to test that everything works" title="Direct link to How to test that everything works" translate="no">​</a></h2>
+<p>Before going live, run through this checklist on a demo contact in
+your Odoo account.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-caller-identification">Test caller identification<a href="#test-caller-identification" class="hash-link" aria-label="Direct link to Test caller identification" title="Direct link to Test caller identification" translate="no">​</a></h3>
+<ol>
+<li class="">Make sure a contact exists in Odoo with a phone number you can
+reproduce in a test session.</li>
+<li class="">Start a test chat or call session.</li>
+<li class="">Provide the same phone number.</li>
+<li class="">The agent should reply with <em>&quot;Let me pull up your account...&quot;</em>
+and address the caller by name in the next reply.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-availability-and-booking">Test availability and booking<a href="#test-availability-and-booking" class="hash-link" aria-label="Direct link to Test availability and booking" title="Direct link to Test availability and booking" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;Can I book a meeting for next week?&quot;</em>.</li>
+<li class="">Provide the phone number from the previous test when asked.</li>
+<li class="">Pick a meeting purpose and rough time window.</li>
+<li class="">The agent says <em>&quot;Let me check what we have available for you...&quot;</em>
+and reads back open slots from the API user&#x27;s calendar.</li>
+<li class="">Pick one slot.</li>
+<li class="">The agent says <em>&quot;I am booking your appointment now...&quot;</em> and
+confirms.</li>
+<li class="">Open Odoo → <strong>Calendar</strong> — a new event appears for the test
+contact at the chosen time, on the API user&#x27;s calendar.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-appointment-lookup">Test appointment lookup<a href="#test-appointment-lookup" class="hash-link" aria-label="Direct link to Test appointment lookup" title="Direct link to Test appointment lookup" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;Can you check my upcoming appointments?&quot;</em>.</li>
+<li class="">Provide the phone number from the previous test.</li>
+<li class="">The agent says <em>&quot;Let me check your appointment details...&quot;</em> and
+reads back the meeting created in the previous test.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-reschedule">Test reschedule<a href="#test-reschedule" class="hash-link" aria-label="Direct link to Test reschedule" title="Direct link to Test reschedule" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;Can you move that meeting to a different time?&quot;</em>.</li>
+<li class="">The agent says <em>&quot;Let me check what we have available for you...&quot;</em>
+and offers new slots.</li>
+<li class="">Pick a new slot.</li>
+<li class="">The agent says <em>&quot;I am rescheduling your appointment now...&quot;</em> and
+confirms.</li>
+<li class="">Open Odoo → <strong>Calendar</strong> — the event time is now the new slot.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-cancellation">Test cancellation<a href="#test-cancellation" class="hash-link" aria-label="Direct link to Test cancellation" title="Direct link to Test cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;Cancel my upcoming meeting&quot;</em>.</li>
+<li class="">Confirm explicitly when the agent reads back the meeting and
+asks &quot;cancel that one?&quot;.</li>
+<li class="">The agent says <em>&quot;I am cancelling your booking now...&quot;</em>.</li>
+<li class="">Open Odoo → <strong>Calendar</strong> — the event is gone or marked as
+cancelled.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-order-inquiry-and-return-if-you-use-odoo-sales">Test order inquiry and return <em>(if you use Odoo Sales)</em><a href="#test-order-inquiry-and-return-if-you-use-odoo-sales" class="hash-link" aria-label="Direct link to test-order-inquiry-and-return-if-you-use-odoo-sales" title="Direct link to test-order-inquiry-and-return-if-you-use-odoo-sales" translate="no">​</a></h3>
+<ol>
+<li class="">Make sure the test contact has at least one delivered order in
+Odoo.</li>
+<li class="">Ask: <em>&quot;I&#x27;d like to return one of my orders&quot;</em>.</li>
+<li class="">Provide the phone number.</li>
+<li class="">The agent says <em>&quot;Let me pull up your orders...&quot;</em>, reads back the
+list, and asks which one.</li>
+<li class="">Describe the order in everyday language (&quot;the most recent one&quot;).</li>
+<li class="">After explicit <em>Yes</em> confirmation, give a return reason.</li>
+<li class="">The agent says <em>&quot;Let me process that return for you...&quot;</em> and
+confirms.</li>
+<li class="">Open Odoo → <strong>Sales</strong> — a return is recorded against the order.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-service-request-creation-if-you-use-odoo-crm">Test service request creation <em>(if you use Odoo CRM)</em><a href="#test-service-request-creation-if-you-use-odoo-crm" class="hash-link" aria-label="Direct link to test-service-request-creation-if-you-use-odoo-crm" title="Direct link to test-service-request-creation-if-you-use-odoo-crm" translate="no">​</a></h3>
+<ol>
+<li class="">Ask: <em>&quot;I need help with something — can you log a request?&quot;</em>.</li>
+<li class="">Provide the phone number and a short request description.</li>
+<li class="">The agent says <em>&quot;Let me create a service request for you...&quot;</em>
+and confirms.</li>
+<li class="">Open Odoo → <strong>CRM</strong> — a new lead appears for the test contact
+with the request description.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenarios">Scenarios<a href="#scenarios" class="hash-link" aria-label="Direct link to Scenarios" title="Direct link to Scenarios" translate="no">​</a></h2>
+<p>The integration ships with 8 editable scenarios on the canvas.
+Operators can tweak them in Newo Builder; the agent picks up the
+changes on the next <strong>Publish All</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-gets-added-on-publish-all">What gets added on Publish All<a href="#what-gets-added-on-publish-all" class="hash-link" aria-label="Direct link to What gets added on Publish All" title="Direct link to What gets added on Publish All" translate="no">​</a></h3>
+<p>The first <strong>Publish All</strong> adds the following intents and scenarios to
+your project library:</p>
+<table><thead><tr><th>Intent</th><th>Scenario</th></tr></thead><tbody><tr><td><strong>Schedule a Meeting</strong></td><td><strong>Schedule a Meeting via Odoo</strong></td></tr><tr><td><strong>Cancel a Meeting</strong></td><td><strong>Cancel a Meeting via Odoo</strong></td></tr><tr><td><strong>Reschedule a Meeting</strong></td><td><strong>Reschedule a Meeting via Odoo</strong></td></tr><tr><td><strong>Check Appointments</strong></td><td><strong>Check Existing Appointments</strong></td></tr><tr><td><strong>Order Inquiry</strong></td><td><strong>Order Inquiry &amp; Returns</strong></td></tr><tr><td><strong>Quote Request</strong></td><td><strong>Quote Request</strong></td></tr><tr><td><strong>Service Request</strong></td><td><strong>Create a Service Request</strong></td></tr><tr><td><strong>Check Request Status</strong></td><td><strong>Check Service Request Status</strong></td></tr></tbody></table>
+<p>These are a <strong>reference implementation</strong>. You can edit any of them in
+the canvas UI — change wording, add steps, translate, adjust the tone
+— and the agent will use your edited version on the next <strong>Publish
+All</strong>.</p>
+<blockquote>
+<p><strong>Updates do not overwrite your edits.</strong> Once you edit a scenario
+or intent in the canvas, future updates of this integration will
+<strong>NOT</strong> touch your edited copy. The trade-off: you also won&#x27;t
+automatically receive the latest shipped defaults. If you want to
+pull in newer defaults later, delete your edited copy from the
+canvas and run <strong>Publish All</strong> — the original is restored from the
+integration&#x27;s library, and you can re-apply your tweaks on top of
+the newer baseline.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-trigger-phrases-matter">Why trigger phrases matter<a href="#why-trigger-phrases-matter" class="hash-link" aria-label="Direct link to Why trigger phrases matter" title="Direct link to Why trigger phrases matter" translate="no">​</a></h3>
+<blockquote>
+<p>Each scenario contains an exact sentence the agent must say at a
+specific step — that sentence is the <em>trigger phrase</em> the
+integration listens for to fire the corresponding feature. If you
+rewrite a scenario, <strong>keep every trigger phrase intact</strong> —
+otherwise the feature stops working.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-1--schedule-a-meeting-via-odoo">Scenario 1 — Schedule a Meeting via Odoo<a href="#scenario-1--schedule-a-meeting-via-odoo" class="hash-link" aria-label="Direct link to Scenario 1 — Schedule a Meeting via Odoo" title="Direct link to Scenario 1 — Schedule a Meeting via Odoo" translate="no">​</a></h3>
+<p>Runs when a caller asks to book a meeting or appointment.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number to look up their account.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class="">Wait for the <strong>Caller profile panel</strong> to populate; if the account
+is not found, ask for a different phone number or hand off.</li>
+<li class="">Ask the customer for the desired meeting purpose and time window.</li>
+<li class=""><strong>Trigger phrase for availability:</strong> <em>&quot;Let me check what we have
+available for you...&quot;</em>.</li>
+<li class="">Read back the open slots; let the customer pick one.</li>
+<li class=""><strong>Trigger phrase for booking:</strong> <em>&quot;I am booking your appointment now...&quot;</em>.</li>
+<li class="">Confirm the booking outcome.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Schedule a Meeting</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check what we have available for you...&quot;</em> — fires the
+availability lookup.</li>
+<li class=""><em>&quot;I am booking your appointment now...&quot;</em> — fires the booking creation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile
+(name, phone, email); populated when the phone number is
+recognised.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword greetings and confirmations around the trigger phrases.</li>
+<li class="">✅ Add data-collection steps (e.g. ask for meeting topic).</li>
+<li class="">✅ Change the tone or language.</li>
+<li class="">❌ Reword, translate, or shorten any trigger phrase listed above.</li>
+<li class="">❌ Remove the steps where the agent says a trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-2--cancel-a-meeting-via-odoo">Scenario 2 — Cancel a Meeting via Odoo<a href="#scenario-2--cancel-a-meeting-via-odoo" class="hash-link" aria-label="Direct link to Scenario 2 — Cancel a Meeting via Odoo" title="Direct link to Scenario 2 — Cancel a Meeting via Odoo" translate="no">​</a></h3>
+<p>Runs when a caller asks to cancel an existing meeting.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number to look up their account.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for appointment lookup:</strong> <em>&quot;Let me check your
+appointment details...&quot;</em>.</li>
+<li class="">Read back the upcoming meeting and ask explicitly to confirm the
+cancellation.</li>
+<li class=""><strong>Trigger phrase for cancellation:</strong> <em>&quot;I am cancelling your booking now...&quot;</em>.</li>
+<li class="">Confirm the outcome to the customer.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Cancel a Meeting</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check your appointment details...&quot;</em> — fires the existing
+appointment lookup.</li>
+<li class=""><em>&quot;I am cancelling your booking now...&quot;</em> — fires the cancellation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword the confirmation prompt.</li>
+<li class="">✅ Insert a &quot;are you sure?&quot; extra step.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+<li class="">❌ Skip the explicit cancellation confirmation step.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-3--reschedule-a-meeting-via-odoo">Scenario 3 — Reschedule a Meeting via Odoo<a href="#scenario-3--reschedule-a-meeting-via-odoo" class="hash-link" aria-label="Direct link to Scenario 3 — Reschedule a Meeting via Odoo" title="Direct link to Scenario 3 — Reschedule a Meeting via Odoo" translate="no">​</a></h3>
+<p>Runs when a caller asks to move an existing meeting to a new time.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number to look up their account.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for appointment lookup:</strong> <em>&quot;Let me check your
+appointment details...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for availability:</strong> <em>&quot;Let me check what we have
+available for you...&quot;</em>.</li>
+<li class="">Let the customer pick a new slot.</li>
+<li class=""><strong>Trigger phrase for reschedule:</strong> <em>&quot;I am rescheduling your appointment now...&quot;</em>.</li>
+<li class="">Confirm the outcome.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Reschedule a Meeting</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check your appointment details...&quot;</em> — fires the existing
+appointment lookup.</li>
+<li class=""><em>&quot;Let me check what we have available for you...&quot;</em> — fires the
+availability lookup.</li>
+<li class=""><em>&quot;I am rescheduling your appointment now...&quot;</em> — fires the reschedule.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword the confirmation steps.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-4--check-existing-appointments">Scenario 4 — Check Existing Appointments<a href="#scenario-4--check-existing-appointments" class="hash-link" aria-label="Direct link to Scenario 4 — Check Existing Appointments" title="Direct link to Scenario 4 — Check Existing Appointments" translate="no">​</a></h3>
+<p>Runs when a caller asks about their upcoming appointments without
+intent to change them yet.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for appointment lookup:</strong> <em>&quot;Let me check your
+appointment details...&quot;</em>.</li>
+<li class="">Read back the upcoming meetings.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Check Appointments</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check your appointment details...&quot;</em> — fires the appointment
+lookup.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword how the upcoming appointments are presented.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-5--order-inquiry--returns">Scenario 5 — Order Inquiry &amp; Returns<a href="#scenario-5--order-inquiry--returns" class="hash-link" aria-label="Direct link to Scenario 5 — Order Inquiry &amp; Returns" title="Direct link to Scenario 5 — Order Inquiry &amp; Returns" translate="no">​</a></h3>
+<p>Runs when a caller asks about an order, wants to leave a note, or
+wants to process a return.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class="">Determine what the customer needs (status / note / return).</li>
+<li class=""><strong>Trigger phrase for status check:</strong> <em>&quot;Let me check your order status...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for adding a note:</strong> <em>&quot;I&#x27;ll add that note to your
+order now...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for orders list (returns flow):</strong> <em>&quot;Let me pull up
+your orders...&quot;</em>.</li>
+<li class="">Read back the order list, confirm which order the customer means.</li>
+<li class=""><strong>Trigger phrase for processing a return:</strong> <em>&quot;Let me process that
+return for you...&quot;</em>.</li>
+<li class="">Confirm the outcome.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Order Inquiry</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check your order status...&quot;</em> — fires the order status lookup.</li>
+<li class=""><em>&quot;I&#x27;ll add that note to your order now...&quot;</em> — fires the note
+addition.</li>
+<li class=""><em>&quot;Let me pull up your orders...&quot;</em> — fires the order list lookup.</li>
+<li class=""><em>&quot;Let me process that return for you...&quot;</em> — fires the return.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+<li class=""><strong>Customer orders panel</strong> — the list of orders eligible for return,
+with product details and amounts.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword how the order list is presented.</li>
+<li class="">✅ Add a &quot;are you sure?&quot; step before the return.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+<li class="">❌ Skip the explicit &quot;Yes / No&quot; confirmation before the return.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-6--quote-request">Scenario 6 — Quote Request<a href="#scenario-6--quote-request" class="hash-link" aria-label="Direct link to Scenario 6 — Quote Request" title="Direct link to Scenario 6 — Quote Request" translate="no">​</a></h3>
+<p>Runs when a caller asks for a price quote.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class="">Capture the products and quantities the customer needs.</li>
+<li class=""><strong>Trigger phrase for quote:</strong> <em>&quot;Let me prepare a quote for you...&quot;</em>.</li>
+<li class="">Read back the quote.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Quote Request</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me prepare a quote for you...&quot;</em> — fires the quote generation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword the product capture step.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-7--create-a-service-request">Scenario 7 — Create a Service Request<a href="#scenario-7--create-a-service-request" class="hash-link" aria-label="Direct link to Scenario 7 — Create a Service Request" title="Direct link to Scenario 7 — Create a Service Request" translate="no">​</a></h3>
+<p>Runs when a caller asks for help, repair, or any task that should be
+captured as a CRM lead.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class="">Capture the request details.</li>
+<li class=""><strong>Trigger phrase for service request creation:</strong> <em>&quot;Let me create a
+service request for you...&quot;</em>.</li>
+<li class="">Confirm the outcome.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Service Request</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me create a service request for you...&quot;</em> — fires the lead
+creation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword the request capture step.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-8--check-service-request-status">Scenario 8 — Check Service Request Status<a href="#scenario-8--check-service-request-status" class="hash-link" aria-label="Direct link to Scenario 8 — Check Service Request Status" title="Direct link to Scenario 8 — Check Service Request Status" translate="no">​</a></h3>
+<p>Runs when a caller asks for the status of a service request, wants to
+add information to it, or wants to cancel it.</p>
+<ol>
+<li class="">Ask for the customer&#x27;s phone number.</li>
+<li class=""><strong>Trigger phrase for client lookup:</strong> <em>&quot;Let me pull up your account...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for status check:</strong> <em>&quot;Let me check your service
+requests...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for cancelling a request:</strong> <em>&quot;Let me cancel that
+service request for you...&quot;</em>.</li>
+<li class=""><strong>Trigger phrase for adding to a request:</strong> <em>&quot;Let me add that to
+your service request...&quot;</em>.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Check Request Status</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me pull up your account...&quot;</em> — fires caller identification.</li>
+<li class=""><em>&quot;Let me check your service requests...&quot;</em> — fires the lead status
+lookup.</li>
+<li class=""><em>&quot;Let me cancel that service request for you...&quot;</em> — fires the lead
+cancellation.</li>
+<li class=""><em>&quot;Let me add that to your service request...&quot;</em> — fires the lead
+update.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Caller profile panel</strong> — the customer&#x27;s existing Odoo profile.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">✅ Reword how each outcome is presented.</li>
+<li class="">❌ Reword any trigger phrase listed above.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="trigger-phrases-reference">Trigger phrases reference<a href="#trigger-phrases-reference" class="hash-link" aria-label="Direct link to Trigger phrases reference" title="Direct link to Trigger phrases reference" translate="no">​</a></h3>
+<table><thead><tr><th>Phrase (verbatim)</th><th>Fires</th><th>Scenarios</th></tr></thead><tbody><tr><td><em>&quot;Let me pull up your account...&quot;</em></td><td>Caller identification by phone</td><td>All 8</td></tr><tr><td><em>&quot;Let me check what we have available for you...&quot;</em></td><td>Availability lookup</td><td>Schedule, Reschedule</td></tr><tr><td><em>&quot;I am booking your appointment now...&quot;</em></td><td>Booking creation</td><td>Schedule</td></tr><tr><td><em>&quot;Let me check your appointment details...&quot;</em></td><td>Existing appointment lookup</td><td>Cancel, Reschedule, Check Appointments</td></tr><tr><td><em>&quot;I am cancelling your booking now...&quot;</em></td><td>Booking cancellation</td><td>Cancel</td></tr><tr><td><em>&quot;I am rescheduling your appointment now...&quot;</em></td><td>Booking reschedule</td><td>Reschedule</td></tr><tr><td><em>&quot;Let me check your order status...&quot;</em></td><td>Order status lookup</td><td>Order Inquiry</td></tr><tr><td><em>&quot;I&#x27;ll add that note to your order now...&quot;</em></td><td>Order note creation</td><td>Order Inquiry</td></tr><tr><td><em>&quot;Let me pull up your orders...&quot;</em></td><td>Orders list (returns flow)</td><td>Order Inquiry</td></tr><tr><td><em>&quot;Let me process that return for you...&quot;</em></td><td>Return processing</td><td>Order Inquiry</td></tr><tr><td><em>&quot;Let me prepare a quote for you...&quot;</em></td><td>Quote generation</td><td>Quote Request</td></tr><tr><td><em>&quot;Let me create a service request for you...&quot;</em></td><td>Service request (CRM lead) creation</td><td>Service Request</td></tr><tr><td><em>&quot;Let me check your service requests...&quot;</em></td><td>Service request status lookup</td><td>Check Request Status</td></tr><tr><td><em>&quot;Let me cancel that service request for you...&quot;</em></td><td>Service request cancellation</td><td>Check Request Status</td></tr><tr><td><em>&quot;Let me add that to your service request...&quot;</em></td><td>Service request update</td><td>Check Request Status</td></tr></tbody></table>
+<blockquote>
+<p><strong>How to use this table.</strong> When you edit a scenario on the canvas,
+copy each phrase from the matching cell — character for character.
+If the agent stops reacting to a feature after editing, this is
+the first place to check.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-dialogs">Example dialogs<a href="#example-dialogs" class="hash-link" aria-label="Direct link to Example dialogs" title="Direct link to Example dialogs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-1--booking-the-first-available-slot-happy-path">Example 1 — Booking the first available slot (happy path)<a href="#example-1--booking-the-first-available-slot-happy-path" class="hash-link" aria-label="Direct link to Example 1 — Booking the first available slot (happy path)" title="Direct link to Example 1 — Booking the first available slot (happy path)" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Caller:</strong> Hi, can I book a meeting for next week?
+<strong>Agent:</strong> Sure — could I have your phone number so I can pull up your account?
+<strong>Caller:</strong> Yes, +1 555 010 0123.
+<strong>Agent:</strong> <em>Let me pull up your account...</em>
+<strong>Agent:</strong> Got it, Sophia. What&#x27;s the meeting about and roughly when works for you?
+<strong>Caller:</strong> Tuesday afternoon, project review.
+<strong>Agent:</strong> <em>Let me check what we have available for you...</em>
+<strong>Agent:</strong> I have Tuesday at 2 PM or 4 PM. Which one would you like?
+<strong>Caller:</strong> 2 PM.
+<strong>Agent:</strong> <em>I am booking your appointment now...</em>
+<strong>Agent:</strong> Booked — Tuesday at 2 PM, project review. You&#x27;ll see it in your calendar shortly.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-2--cancelling-with-explicit-confirmation-edge-case">Example 2 — Cancelling with explicit confirmation (edge case)<a href="#example-2--cancelling-with-explicit-confirmation-edge-case" class="hash-link" aria-label="Direct link to Example 2 — Cancelling with explicit confirmation (edge case)" title="Direct link to Example 2 — Cancelling with explicit confirmation (edge case)" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Caller:</strong> I need to cancel my Friday meeting.
+<strong>Agent:</strong> Sure — your phone number, please?
+<strong>Caller:</strong> +1 555 010 0456.
+<strong>Agent:</strong> <em>Let me pull up your account...</em>
+<strong>Agent:</strong> <em>Let me check your appointment details...</em>
+<strong>Agent:</strong> I see one upcoming meeting — Friday at 11 AM, project review. Cancel that one?
+<strong>Caller:</strong> Yes please.
+<strong>Agent:</strong> <em>I am cancelling your booking now...</em>
+<strong>Agent:</strong> Cancelled — Friday at 11 AM, project review. Anything else?</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-3--returning-a-product-the-customer-cant-fully-name-edge-case">Example 3 — Returning a product the customer can&#x27;t fully name (edge case)<a href="#example-3--returning-a-product-the-customer-cant-fully-name-edge-case" class="hash-link" aria-label="Direct link to Example 3 — Returning a product the customer can&#x27;t fully name (edge case)" title="Direct link to Example 3 — Returning a product the customer can&#x27;t fully name (edge case)" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Caller:</strong> I want to return those USB drives I bought last week.
+<strong>Agent:</strong> Sure — your phone number?
+<strong>Caller:</strong> +1 555 010 0789.
+<strong>Agent:</strong> <em>Let me pull up your account...</em>
+<strong>Agent:</strong> <em>Let me pull up your orders...</em>
+<strong>Agent:</strong> I see two recent orders: order #1042, USB-C cables, $24, and order #1051, USB-A drives 64GB ×3, $48. Which one did you mean?
+<strong>Caller:</strong> The USB drives.
+<strong>Agent:</strong> Just to confirm — you&#x27;d like to return order 1051, USB-A drives 64GB ×3, $48. Is that correct?
+<strong>Caller:</strong> Yes.
+<strong>Agent:</strong> What&#x27;s the reason?
+<strong>Caller:</strong> Wrong size, I wanted USB-C.
+<strong>Agent:</strong> <em>Let me process that return for you...</em>
+<strong>Agent:</strong> Done — return processed for order 1051.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="customizing-the-agent">Customizing the agent<a href="#customizing-the-agent" class="hash-link" aria-label="Direct link to Customizing the agent" title="Direct link to Customizing the agent" translate="no">​</a></h2>
+<p>The scenarios shipped with this integration are a <strong>reference
+implementation</strong> — fully editable in the Newo Builder UI. Common
+tweaks:</p>
+<ul>
+<li class=""><strong>Translate the agent into another language.</strong> Change scenario step
+wording and confirmation text; never translate the trigger phrases.</li>
+<li class=""><strong>Add a manual-confirmation step before booking, cancelling, or
+returning.</strong> Insert an extra scenario step asking the customer to
+confirm before the trigger phrase fires.</li>
+<li class=""><strong>Restore defaults / pull newer defaults after an integration
+update.</strong> If you break a scenario, or you want to pick up the
+latest shipped version after an integration update, delete your
+edited copy from the canvas and run <strong>Publish All</strong> — the original
+is restored from the integration&#x27;s library, and you can re-apply
+your tweaks on top of the newer baseline.</li>
+</ul>
+<blockquote>
+<p><strong>Always preserve:</strong> every trigger phrase listed in the <em>Scenarios</em>
+section above. Reword anything else.</p>
+</blockquote>
+<blockquote>
+<p><strong>Reminder.</strong> Once you edit an intent or scenario, future updates
+of this integration will <strong>not</strong> overwrite your edited copy. Plan
+to revisit the <em>Changelog</em> section after each update and decide
+whether to merge new defaults into your version.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ" translate="no">​</a></h2>
+<p><strong>Q. Does the agent need its own Odoo user?</strong>
+Not strictly — but a dedicated API user makes audit trails and
+permission management cleaner. Every record created by the agent will
+be attributed to whichever user owns the API key.</p>
+<p><strong>Q. How does the agent know which calendar to book in?</strong>
+It books on the calendar of the user that owns the API key. If you
+want bookings on a shared calendar, point the API key at a user that
+already has access to it.</p>
+<p><strong>Q. What happens to my API key when I rotate Odoo passwords?</strong>
+Nothing — API keys are independent of the user&#x27;s password. Rotate
+the API key in <strong>Account Security &gt; API Keys</strong> if you want to revoke
+it.</p>
+<p><strong>Q. The free trial expired. Will the integration still work?</strong>
+Only if you upgrade to the <strong>Custom</strong> plan on odoo.com SaaS, or
+self-host. Standard and One App Free plans block external API access.</p>
+<p><strong>Q. How does the agent identify a returning customer?</strong>
+By the phone number the caller provides. The agent calls Odoo&#x27;s
+contact lookup, then reads back the matching profile.</p>
+<p><strong>Q. Can the agent operate on more than one Odoo database from one
+Newo project?</strong>
+No. One project ties to one database. Run separate Newo projects for
+separate Odoo instances.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common errors and recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common errors and recovery" title="Direct link to Common errors and recovery" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-all-fails-with-authentication-failed">Publish All fails with &quot;Authentication failed&quot;<a href="#publish-all-fails-with-authentication-failed" class="hash-link" aria-label="Direct link to Publish All fails with &quot;Authentication failed&quot;" title="Direct link to Publish All fails with &quot;Authentication failed&quot;" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the <strong>API Key</strong> in Newo Builder does not match a
+valid key on the Odoo user, or the <strong>Username</strong> does not match the
+user that owns the key.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open Odoo → <strong>Settings &gt; Users &gt; [API user] &gt; Account Security</strong>
+and confirm the API key is still listed (not revoked).</li>
+<li class="">Generate a new API key if needed and copy it.</li>
+<li class="">Paste it into <strong>API Key</strong> in Newo Builder; double-check <strong>Username</strong>
+and <strong>Base URL</strong> for typos.</li>
+<li class="">Click <strong>Publish All</strong> again.</li>
+</ol>
+<p><strong>How to verify:</strong> the Odoo settings group no longer shows an error
+banner, and a test chat fires the <em>&quot;Let me pull up your account...&quot;</em>
+trigger phrase.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-all-fails-with-a-connection-error">Publish All fails with a connection error<a href="#publish-all-fails-with-a-connection-error" class="hash-link" aria-label="Direct link to Publish All fails with a connection error" title="Direct link to Publish All fails with a connection error" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the <strong>Base URL</strong> is wrong, the Odoo instance is
+unreachable from Newo, or the URL contains a trailing slash that
+the integration cannot strip.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open the URL in a browser; if Odoo loads, the URL is reachable.</li>
+<li class="">Remove any trailing <code>/</code> from <strong>Base URL</strong> in Newo Builder.</li>
+<li class="">Make sure the URL uses <code>https://</code>, not <code>http://</code>, for production
+instances.</li>
+<li class="">Click <strong>Publish All</strong> again.</li>
+</ol>
+<p><strong>How to verify:</strong> Publish All completes without error; <strong>Username</strong>
+and <strong>API Key</strong> are accepted.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-does-not-react-when-the-customer-says-book-a-meeting">The agent does not react when the customer says &quot;book a meeting&quot;<a href="#the-agent-does-not-react-when-the-customer-says-book-a-meeting" class="hash-link" aria-label="Direct link to The agent does not react when the customer says &quot;book a meeting&quot;" title="Direct link to The agent does not react when the customer says &quot;book a meeting&quot;" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> a trigger phrase on the canvas was edited or
+translated and no longer matches what the integration listens for.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open the canvas, find the <strong>Schedule a Meeting via Odoo</strong> scenario.</li>
+<li class="">Compare each trigger phrase against the <em>Trigger phrases (do not
+edit)</em> list under <strong>Scenario 1</strong> above.</li>
+<li class="">Restore any phrase that differs (verbatim).</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>How to verify:</strong> repeat &quot;can I book a meeting?&quot; in a test chat —
+the agent now says <em>&quot;Let me pull up your account...&quot;</em>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="account-not-found-for-a-customer-the-operator-knows-exists">&quot;Account not found&quot; for a customer the operator knows exists<a href="#account-not-found-for-a-customer-the-operator-knows-exists" class="hash-link" aria-label="Direct link to &quot;Account not found&quot; for a customer the operator knows exists" title="Direct link to &quot;Account not found&quot; for a customer the operator knows exists" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the phone number on the Odoo contact does not match
+the format the caller is using (different country prefix, different
+spacing, missing leading zero).</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open the contact in Odoo and check the <strong>Phone</strong> field.</li>
+<li class="">Normalise it to the same format the caller uses (international
+format with <code>+</code> is the safest).</li>
+<li class="">Save the contact.</li>
+</ol>
+<p><strong>How to verify:</strong> repeat the call (or test chat) — the agent now
+finds the customer.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-api-key-was-rotated--agent-stopped-responding">The API Key was rotated — agent stopped responding<a href="#the-api-key-was-rotated--agent-stopped-responding" class="hash-link" aria-label="Direct link to The API Key was rotated — agent stopped responding" title="Direct link to The API Key was rotated — agent stopped responding" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the previous API key was revoked or replaced in
+Odoo, but the new one is not in Newo Builder yet.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Generate the new API key in Odoo if it doesn&#x27;t exist yet.</li>
+<li class="">Paste it into <strong>API Key</strong> in Newo Builder.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>How to verify:</strong> a test chat that triggers any scenario receives
+the expected agent reply.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>One Odoo database per Newo project.</strong> Set up separate Newo
+projects if you need to serve more than one database from one
+agent.</li>
+<li class=""><strong>No real-time order webhooks.</strong> The agent reads order status on
+demand when the customer asks; it does not push proactive updates.</li>
+<li class=""><strong>Multi-currency catalogue.</strong> The agent reads the price in the
+user&#x27;s currency configured in Odoo; it does not convert currencies
+on the fly.</li>
+<li class=""><strong>External API access on odoo.com SaaS requires a paid plan.</strong> Free
+and Standard plans block the integration.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-handoff-notes">Support handoff notes<a href="#support-handoff-notes" class="hash-link" aria-label="Direct link to Support handoff notes" title="Direct link to Support handoff notes" translate="no">​</a></h2>
+<p>When handing off this deployment to support or a partner team, share:</p>
+<ul>
+<li class=""><strong>Authentication method in use</strong> — API Key (the only supported
+method for this integration; no OAuth path).</li>
+<li class=""><strong>Key Odoo identifiers</strong> the agent acts against:<!-- -->
+<ul>
+<li class=""><strong>Base URL</strong> — the Odoo instance the agent talks to.</li>
+<li class=""><strong>Username</strong> — the API user whose calendar receives bookings
+and whose name is on every CRM lead the agent creates.</li>
+<li class=""><strong>Database name</strong> — auto-resolved during the first <strong>Publish
+All</strong>; visible in the <em>All settings reference</em> table below.</li>
+</ul>
+</li>
+<li class=""><strong>Feature toggles</strong> — the integration ships everything ON by
+default. Check the <em>Features at a glance</em> section above for the
+current scope.</li>
+<li class=""><strong>Whether canvas auto-setup ran</strong> — confirm the 8 reference
+scenarios appear in the canvas library. If they do not, the
+operator may have disabled the canvas-setup flag before
+publishing (see the <em>All settings reference</em> table below for
+the toggle).</li>
+<li class=""><strong>Two most common fixes</strong> for any reported issue:<!-- -->
+<ol>
+<li class="">Re-paste <strong>API Key</strong> in <strong>Newo Builder</strong> and click <strong>Publish
+All</strong>. Covers expired or rotated keys (the most frequent
+cause of agent silence).</li>
+<li class="">Run the <em>Test caller identification</em> step from the <em>How to
+test</em> section above. The failing step usually points straight
+at the root cause (auth / contact lookup / canvas drift).</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All settings reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All settings reference" title="Direct link to All settings reference" translate="no">​</a></h2>
+<p>Every setting the integration adds to the <strong>Odoo Settings</strong> group in
+Newo Builder. Operators typically only touch rows marked ✅ in the
+<em>Edit</em> column; rows marked ⚠️ are for admins only, and 🔒 rows are
+managed automatically by the integration.</p>
+<table><thead><tr><th>Name</th><th>Description</th><th>Required</th><th>Default</th><th>Hidden</th><th>Edit</th></tr></thead><tbody><tr><td><code>odoo_base_url</code></td><td>Base URL of your Odoo instance, e.g. <code>https://mycompany.odoo.com</code>.</td><td>Yes</td><td><em>(empty)</em></td><td>No</td><td>✅</td></tr><tr><td><code>odoo_username</code></td><td>Odoo login email of the user the agent acts as.</td><td>Yes</td><td><em>(empty)</em></td><td>No</td><td>✅</td></tr><tr><td><code>odoo_api_key</code></td><td>API key generated in the user&#x27;s <strong>Account Security</strong> tab.</td><td>Yes</td><td><em>(empty)</em></td><td>Yes</td><td>⚠️</td></tr><tr><td><code>odoo_uid</code></td><td>Internal Odoo user ID resolved from the credentials at first publish.</td><td>Yes</td><td><em>(empty)</em></td><td>Yes</td><td>🔒</td></tr><tr><td><code>odoo_database</code></td><td>Database name resolved from the URL at first publish.</td><td>Yes</td><td><em>(empty)</em></td><td>Yes</td><td>🔒</td></tr><tr><td><code>odoo_calendar_user_id</code></td><td>Calendar owner ID resolved from the credentials.</td><td>Yes</td><td><em>(empty)</em></td><td>Yes</td><td>🔒</td></tr><tr><td><code>odoo_default_duration</code></td><td>Default booking length in minutes when the customer doesn&#x27;t specify one.</td><td>No</td><td><code>30</code></td><td>Yes</td><td>⚠️</td></tr><tr><td><code>odoo_show_for_days</code></td><td>How many days ahead the agent looks at when listing availability.</td><td>No</td><td><code>5</code></td><td>Yes</td><td>⚠️</td></tr><tr><td><code>odoo_override_agent_attributes</code></td><td>Lets the integration write the standard tool-gating attributes on first publish. Disable only when integrating Odoo alongside another booking system.</td><td>No</td><td>on</td><td>Yes</td><td>⚠️</td></tr><tr><td><code>odoo_setup_scenarios</code></td><td>Lets the integration publish the 8 reference scenarios on first publish. Disable when you want full control over canvas content.</td><td>No</td><td>on</td><td>Yes</td><td>⚠️</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="v200--custom-tools-and-8-scenarios">v2.0.0 — Custom tools and 8 scenarios<a href="#v200--custom-tools-and-8-scenarios" class="hash-link" aria-label="Direct link to v2.0.0 — Custom tools and 8 scenarios" title="Direct link to v2.0.0 — Custom tools and 8 scenarios" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>8 scenarios shipped on Publish All.</strong> Booking, cancellation,
+reschedule, appointment lookup, order inquiry, quote, service
+request, request status — all editable on the canvas.</li>
+<li class=""><strong>Custom tools replace the standard NAF tools.</strong> The agent now
+fires Odoo features by trigger phrase, not by structured tool
+call.</li>
+<li class=""><strong>Phone-number-based caller identification.</strong> Every scenario opens
+with the caller-profile lookup before any business action.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/nexhealth"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">NexHealth Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/openemr"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">OpenEMR Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a></li><li><a href="#what-the-ai-can-do" class="table-of-contents__link toc-highlight">What the AI can do</a></li><li><a href="#features-at-a-glance" class="table-of-contents__link toc-highlight">Features at a glance</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#1-prepare-your-odoo-account" class="table-of-contents__link toc-highlight">1. Prepare your Odoo account</a></li><li><a href="#2-get-your-odoo-credentials" class="table-of-contents__link toc-highlight">2. Get your Odoo credentials</a></li><li><a href="#3-configure-in-newo" class="table-of-contents__link toc-highlight">3. Configure in Newo</a></li><li><a href="#4-hit-publish-all" class="table-of-contents__link toc-highlight">4. Hit Publish All</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How to test that everything works</a><ul><li><a href="#test-caller-identification" class="table-of-contents__link toc-highlight">Test caller identification</a></li><li><a href="#test-availability-and-booking" class="table-of-contents__link toc-highlight">Test availability and booking</a></li><li><a href="#test-appointment-lookup" class="table-of-contents__link toc-highlight">Test appointment lookup</a></li><li><a href="#test-reschedule" class="table-of-contents__link toc-highlight">Test reschedule</a></li><li><a href="#test-cancellation" class="table-of-contents__link toc-highlight">Test cancellation</a></li><li><a href="#test-order-inquiry-and-return-if-you-use-odoo-sales" class="table-of-contents__link toc-highlight">Test order inquiry and return <em>(if you use Odoo Sales)</em></a></li><li><a href="#test-service-request-creation-if-you-use-odoo-crm" class="table-of-contents__link toc-highlight">Test service request creation <em>(if you use Odoo CRM)</em></a></li></ul></li><li><a href="#scenarios" class="table-of-contents__link toc-highlight">Scenarios</a><ul><li><a href="#what-gets-added-on-publish-all" class="table-of-contents__link toc-highlight">What gets added on Publish All</a></li><li><a href="#why-trigger-phrases-matter" class="table-of-contents__link toc-highlight">Why trigger phrases matter</a></li><li><a href="#scenario-1--schedule-a-meeting-via-odoo" class="table-of-contents__link toc-highlight">Scenario 1 — Schedule a Meeting via Odoo</a></li><li><a href="#scenario-2--cancel-a-meeting-via-odoo" class="table-of-contents__link toc-highlight">Scenario 2 — Cancel a Meeting via Odoo</a></li><li><a href="#scenario-3--reschedule-a-meeting-via-odoo" class="table-of-contents__link toc-highlight">Scenario 3 — Reschedule a Meeting via Odoo</a></li><li><a href="#scenario-4--check-existing-appointments" class="table-of-contents__link toc-highlight">Scenario 4 — Check Existing Appointments</a></li><li><a href="#scenario-5--order-inquiry--returns" class="table-of-contents__link toc-highlight">Scenario 5 — Order Inquiry &amp; Returns</a></li><li><a href="#scenario-6--quote-request" class="table-of-contents__link toc-highlight">Scenario 6 — Quote Request</a></li><li><a href="#scenario-7--create-a-service-request" class="table-of-contents__link toc-highlight">Scenario 7 — Create a Service Request</a></li><li><a href="#scenario-8--check-service-request-status" class="table-of-contents__link toc-highlight">Scenario 8 — Check Service Request Status</a></li><li><a href="#trigger-phrases-reference" class="table-of-contents__link toc-highlight">Trigger phrases reference</a></li></ul></li><li><a href="#example-dialogs" class="table-of-contents__link toc-highlight">Example dialogs</a><ul><li><a href="#example-1--booking-the-first-available-slot-happy-path" class="table-of-contents__link toc-highlight">Example 1 — Booking the first available slot (happy path)</a></li><li><a href="#example-2--cancelling-with-explicit-confirmation-edge-case" class="table-of-contents__link toc-highlight">Example 2 — Cancelling with explicit confirmation (edge case)</a></li><li><a href="#example-3--returning-a-product-the-customer-cant-fully-name-edge-case" class="table-of-contents__link toc-highlight">Example 3 — Returning a product the customer can&#39;t fully name (edge case)</a></li></ul></li><li><a href="#customizing-the-agent" class="table-of-contents__link toc-highlight">Customizing the agent</a></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common errors and recovery</a><ul><li><a href="#publish-all-fails-with-authentication-failed" class="table-of-contents__link toc-highlight">Publish All fails with &quot;Authentication failed&quot;</a></li><li><a href="#publish-all-fails-with-a-connection-error" class="table-of-contents__link toc-highlight">Publish All fails with a connection error</a></li><li><a href="#the-agent-does-not-react-when-the-customer-says-book-a-meeting" class="table-of-contents__link toc-highlight">The agent does not react when the customer says &quot;book a meeting&quot;</a></li><li><a href="#account-not-found-for-a-customer-the-operator-knows-exists" class="table-of-contents__link toc-highlight">&quot;Account not found&quot; for a customer the operator knows exists</a></li><li><a href="#the-api-key-was-rotated--agent-stopped-responding" class="table-of-contents__link toc-highlight">The API Key was rotated — agent stopped responding</a></li></ul></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#support-handoff-notes" class="table-of-contents__link toc-highlight">Support handoff notes</a></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All settings reference</a></li><li><a href="#changelog" class="table-of-contents__link toc-highlight">Changelog</a><ul><li><a href="#v200--custom-tools-and-8-scenarios" class="table-of-contents__link toc-highlight">v2.0.0 — Custom tools and 8 scenarios</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/odoo.pdf" download="odoo.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>
