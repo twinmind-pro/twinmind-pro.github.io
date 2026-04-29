@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">XCALLY Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/xcally"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="XCALLY Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="How to Setup"><meta data-rh="true" property="og:description" content="How to Setup"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/xcally"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/xcally" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/xcally" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"XCALLY Integration","item":"https://twinmind-pro.github.io/docs/integrations/xcally"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.f46b37f0.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4b4af8f6.js" defer="defer"></script>
 <script src="/assets/js/main.d3acfc26.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,11 +23,18 @@
 <li class="">Base URL must not end with <code>/</code></li>
 <li class="">The contact list must belong to the same XCALLY Open Channel account</li>
 <li class=""><code>XCALLY Incoming Webhook URL</code> is generated automatically on publish and stored in a hidden field</li>
+<li class="">The XCALLY setup creates its own Newo Chat connector: <code>xcally_proxy_chat</code></li>
 </ul>
 <p>Quick check:</p>
 <table><thead><tr><th>Check</th><th>Expected</th></tr></thead><tbody><tr><td>API key</td><td>Not empty</td></tr><tr><td>Base URL</td><td>Ends with <code>/api</code></td></tr><tr><td>Account ID</td><td>Number</td></tr><tr><td>Contact list ID</td><td>Number</td></tr><tr><td>Return AI after close</td><td><code>True</code></td></tr><tr><td>Auto scenarios</td><td><code>True</code></td></tr></tbody></table>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-and-verify-xcally-account-settings">Publish and Verify XCALLY Account Settings<a href="#publish-and-verify-xcally-account-settings" class="hash-link" aria-label="Direct link to Publish and Verify XCALLY Account Settings" title="Direct link to Publish and Verify XCALLY Account Settings" translate="no">​</a></h3>
 <p>Click <code>Publish All</code> in Newo Builder.</p>
+<p>After publishing, XCALLY Integration creates and starts a dedicated Newo Chat connector named <code>xcally_proxy_chat</code>.
+This is the chat connector that supports XCALLY live-agent handoff.</p>
+<p><img decoding="async" loading="lazy" alt="XCALLY proxy chat connector" src="/assets/images/xcally_chat_settings-8a8720475876b170c9e1ab4b195493cc.png" width="3326" height="646" class="img_ev3q"></p>
+<p>If you want to use a website chat with XCALLY support, use the widget script from <code>xcally_proxy_chat</code>.
+Do not use the default <code>newo_chat</code> widget for XCALLY handoff tests: regular <code>newo_chat</code> messages are ignored by the XCALLY bridge.</p>
+<p><img decoding="async" loading="lazy" alt="XCALLY proxy chat widget script" src="/assets/images/xcally_widget_script-d40e9ae529d0756eaec736be284a3587.png" width="1600" height="396" class="img_ev3q"></p>
 <p>After publishing, open XCALLY and go to <code>Channels -&gt; Open Channel</code>.</p>
 <p>Find the account with ID <code>9</code>.</p>
 <p><img decoding="async" loading="lazy" alt="XCALLY Open Channel accounts list" src="/assets/images/xcally-openchannel-accounts-list-2ac2e1bccb574dcb3aea9452d305a270.png" width="1295" height="555" class="img_ev3q"></p>
@@ -51,16 +58,16 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test">How to Test<a href="#how-to-test" class="hash-link" aria-label="Direct link to How to Test" title="Direct link to How to Test" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="basic-handoff-test">Basic Handoff Test<a href="#basic-handoff-test" class="hash-link" aria-label="Direct link to Basic Handoff Test" title="Direct link to Basic Handoff Test" translate="no">​</a></h3>
 <ol>
-<li class="">Open the Newo chat widget</li>
+<li class="">Open the <code>xcally_proxy_chat</code> Newo chat widget</li>
 <li class="">Ask for a live operator</li>
 <li class="">Confirm the handoff</li>
 <li class="">Verify that a new interaction appears in XCALLY</li>
 <li class="">Reply from the XCALLY operator UI</li>
-<li class="">Verify that the reply appears back in the Newo chat</li>
+<li class="">Verify that the reply appears back in the <code>xcally_proxy_chat</code> widget</li>
 </ol>
 <p>Expected result:</p>
 <ul>
-<li class="">The user stays in the same Newo chat</li>
+<li class="">The user stays in the same <code>xcally_proxy_chat</code> chat</li>
 <li class="">XCALLY receives the interaction</li>
 <li class="">Operator replies return through <code>replyUri</code></li>
 </ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/workiz"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Workiz Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/yelp"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Yelp Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#how-to-setup" class="table-of-contents__link toc-highlight">How to Setup</a><ul><li><a href="#fill-newo-xcally-settings" class="table-of-contents__link toc-highlight">Fill Newo XCALLY Settings</a></li><li><a href="#publish-and-verify-xcally-account-settings" class="table-of-contents__link toc-highlight">Publish and Verify XCALLY Account Settings</a></li><li><a href="#check-xcally-agent-side" class="table-of-contents__link toc-highlight">Check XCALLY Agent Side</a></li></ul></li><li><a href="#how-to-test" class="table-of-contents__link toc-highlight">How to Test</a><ul><li><a href="#basic-handoff-test" class="table-of-contents__link toc-highlight">Basic Handoff Test</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/xcally.pdf" download="xcally.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
