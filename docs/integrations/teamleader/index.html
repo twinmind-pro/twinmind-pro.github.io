@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">TeamLeader Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/teamleader"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="TeamLeader Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects TeamLeader Focus (calendar, tasks, contacts) with the Newo AI agent so callers and chat visitors can ask about availability, book service visits, reschedule, or cancel — entirely by voice or chat, no receptionist required."><meta data-rh="true" property="og:description" content="Connects TeamLeader Focus (calendar, tasks, contacts) with the Newo AI agent so callers and chat visitors can ask about availability, book service visits, reschedule, or cancel — entirely by voice or chat, no receptionist required."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/teamleader"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/teamleader" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/teamleader" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TeamLeader Integration","item":"https://twinmind-pro.github.io/docs/integrations/teamleader"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.ba6b05e5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.35b71585.js" defer="defer"></script>
 <script src="/assets/js/main.03cffb28.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -66,10 +66,10 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-get-your-teamleader-credentials">2. Get your TeamLeader credentials<a href="#2-get-your-teamleader-credentials" class="hash-link" aria-label="Direct link to 2. Get your TeamLeader credentials" title="Direct link to 2. Get your TeamLeader credentials" translate="no">​</a></h3>
 <p>The integration uses <strong>OAuth 2.0</strong>, so you&#x27;ll register a private application in TeamLeader&#x27;s Marketplace.</p>
 <ol>
-<li class="">Go to <strong><a href="https://marketplace.focus.teamleader.eu/integrations/private" target="_blank" rel="noopener noreferrer" class="">https://marketplace.focus.teamleader.eu/integrations/private</a></strong> and sign in with your TeamLeader account.</li>
+<li class="">Go to <strong><a href="https://developer.focus.teamleader.eu/integrations" target="_blank" rel="noopener noreferrer" class="">https://developer.focus.teamleader.eu/integrations</a></strong> and sign in with your TeamLeader account.</li>
 <li class="">Click <strong>Create integration</strong>.</li>
 <li class="">Pick a name (e.g. <em>Newo AI Agent</em>) and an icon.</li>
-<li class=""><strong>Redirect URI</strong> — paste the value Newo gives you in the <strong><code>teamleader_oauth_code</code></strong> attribute description (it&#x27;s pre-generated for your project).</li>
+<li class=""><strong>Redirect URI</strong> — paste the value Newo gives you in the <strong><code>https://static.newo.ai/oauth/index.html</code></strong> attribute description (it&#x27;s pre-generated for your project).</li>
 <li class="">Pick the <strong>scopes</strong> the agent will use:<!-- -->
 <ul>
 <li class=""><code>users</code> (read users + teams)</li>
@@ -79,7 +79,14 @@
 <li class=""><code>companies</code> (optional, only if you&#x27;ll route inbound calls to companies)</li>
 </ul>
 </li>
-<li class="">Save the integration. TeamLeader shows you the <strong>Client ID</strong> and <strong>Client Secret</strong> — copy both.</li>
+<li class="">Terms of Service URL - <a href="https://newo.ai/terms-of-service/" target="_blank" rel="noopener noreferrer" class="">https://newo.ai/terms-of-service/</a></li>
+<li class="">Privacy URL - <a href="https://newo.ai/privacy-policy/" target="_blank" rel="noopener noreferrer" class="">https://newo.ai/privacy-policy/</a></li>
+<li class="">Countries - any values</li>
+<li class="">Languages - English</li>
+<li class="">Short description - AI Receptionist for HVAC: answers calls 24/7, books service visits in TeamLeader</li>
+<li class="">Long description - any text</li>
+<li class="">Copy <strong>Client ID</strong> и <strong>Client ID</strong> values</li>
+<li class="">Save the integration.</li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-configure-in-newo">3. Configure in Newo<a href="#3-configure-in-newo" class="hash-link" aria-label="Direct link to 3. Configure in Newo" title="Direct link to 3. Configure in Newo" translate="no">​</a></h3>
 <ol>
