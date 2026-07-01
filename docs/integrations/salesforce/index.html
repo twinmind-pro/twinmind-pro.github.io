@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/salesforce" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Salesforce Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/salesforce"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Salesforce Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects Salesforce CRM with the Newo AI agent so callers and chat visitors can be identified in CRM, saved as new prospects, routed into support cases, followed up by the team, and logged in Salesforce without a human manually copying conversation notes."><meta data-rh="true" property="og:description" content="Connects Salesforce CRM with the Newo AI agent so callers and chat visitors can be identified in CRM, saved as new prospects, routed into support cases, followed up by the team, and logged in Salesforce without a human manually copying conversation notes."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/salesforce"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/salesforce" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/salesforce" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Salesforce Integration","item":"https://twinmind-pro.github.io/docs/integrations/salesforce"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.88ef5dda.js" defer="defer"></script>
+<script src="/assets/js/main.c73f5c66.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/altegio"><span title="Altegio Integration" class="linkLabel_WmDU">Altegio Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/boulevard"><span title="Boulevard Integration" class="linkLabel_WmDU">Boulevard Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/close"><span title="Close Integration" class="linkLabel_WmDU">Close Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/cloud9"><span title="Cloud 9 Integration" class="linkLabel_WmDU">Cloud 9 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/deliverect"><span title="Deliverect Integration Guide" class="linkLabel_WmDU">Deliverect Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/poshub"><span title="PosHUB Integration" class="linkLabel_WmDU">PosHUB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/salesforce"><span title="Salesforce Integration" class="linkLabel_WmDU">Salesforce Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tableo"><span title="Tableo Integration" class="linkLabel_WmDU">Tableo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamleader"><span title="TeamLeader Integration" class="linkLabel_WmDU">TeamLeader Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/unitify"><span title="Unitify Condo Integration" class="linkLabel_WmDU">Unitify Condo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zendesk"><span title="Zendesk Integration" class="linkLabel_WmDU">Zendesk Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Salesforce Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Salesforce Integration</h1></header>
+<p>Connects <strong>Salesforce CRM</strong> with the Newo AI agent so callers and chat visitors can be identified in CRM, saved as new prospects, routed into support cases, followed up by the team, and logged in Salesforce without a human manually copying conversation notes.</p>
+<blockquote>
+<p><strong>Time to first success:</strong> about 45-90 minutes if a Salesforce admin is available and your org already allows API access. Plan more time if the org needs a new integration user, permission set review, or the optional Lead conversion setup.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">an active <strong>Salesforce</strong> org with <strong>My Domain</strong> enabled;</li>
+<li class="">Salesforce admin access, or a Salesforce admin who can create an External Client App and assign permissions;</li>
+<li class="">a dedicated Salesforce integration user, not a personal user account;</li>
+<li class="">permission to create or update Permission Sets in Salesforce;</li>
+<li class="">access to <strong>Newo Builder</strong> for the customer project, with permission to edit project settings and click <strong>Publish All</strong>;</li>
+<li class="">test Lead, Contact, Account, Case, and Opportunity records if you want to validate every feature before going live.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="required-salesforce-permissions">Required Salesforce permissions<a href="#required-salesforce-permissions" class="hash-link" aria-label="Direct link to Required Salesforce permissions" title="Direct link to Required Salesforce permissions" translate="no">​</a></h3>
+<p>The integration only does what the Salesforce integration user can do. Give that user a dedicated permission set with the permissions you actually plan to enable in Newo.</p>
+<table><thead><tr><th>Feature in Newo</th><th>Salesforce access needed</th></tr></thead><tbody><tr><td>Find Customers</td><td>API access plus read access to Leads, Contacts, and Accounts</td></tr><tr><td>Create Leads</td><td>Read/Create/Edit on Leads</td></tr><tr><td>Update Records</td><td>Edit access only on the Lead, Contact, and Account fields the business approves</td></tr><tr><td>Log Conversations</td><td>Activities access, ability to create/edit Tasks, and access to the related parent record</td></tr><tr><td>Manage Cases</td><td>Read/Create/Edit on Cases</td></tr><tr><td>Create Team Follow-up Reminders</td><td>Activities access, ability to create/edit Tasks, and access to the related Lead, Contact, Account, or Case</td></tr><tr><td>Convert Leads</td><td>Lead conversion permission and the optional Salesforce admin setup described below</td></tr><tr><td>Manage Opportunities</td><td>Create/Edit on Opportunities and read access to related Accounts</td></tr><tr><td>Save Related Records Together</td><td>All permissions needed for the Lead, Case, and Task parts you enable</td></tr></tbody></table>
+<p>For Tasks, Salesforce often exposes access through <strong>System Permissions</strong> rather than a simple Task object permission block. The important permissions are <strong>Access Activities</strong>, <strong>Edit Tasks</strong>, field-level access to the Task fields your org uses, and access to the parent record the Task is attached to.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do">What the AI can do<a href="#what-the-ai-can-do" class="hash-link" aria-label="Direct link to What the AI can do" title="Direct link to What the AI can do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Find existing customers.</strong> The agent searches Salesforce by phone number and uses the matched Lead, Contact, or Account in the conversation.</li>
+<li class=""><strong>Create duplicate-safe Leads.</strong> Before creating a new Lead, the integration checks whether the same phone or email already exists.</li>
+<li class=""><strong>Update approved CRM fields.</strong> The agent can update existing Lead, Contact, or Account details only after explicit confirmation.</li>
+<li class=""><strong>Log conversations as Salesforce Tasks.</strong> Useful calls and chats can be saved as internal activity notes on the selected CRM record.</li>
+<li class=""><strong>Manage support Cases.</strong> The agent can look up open Cases, create new support requests, update a Case, or close a Case after confirmation.</li>
+<li class=""><strong>Create team follow-up reminders.</strong> The agent can schedule a contact follow-up for the team, such as a callback, email, message, or proposal follow-up.</li>
+<li class=""><strong>Convert qualified Leads.</strong> Optional, Salesforce-admin-enabled feature for converting a Lead into customer records, with an Opportunity when needed.</li>
+<li class=""><strong>Manage Opportunities.</strong> The agent can create or update sales Opportunities, including stage, close date, amount, and next step.</li>
+<li class=""><strong>Save related records together.</strong> A new prospect, support Case, and follow-up reminder can be saved as one confirmed customer request.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="salesforce-data-model">Salesforce data model<a href="#salesforce-data-model" class="hash-link" aria-label="Direct link to Salesforce data model" title="Direct link to Salesforce data model" translate="no">​</a></h2>
+<p>Salesforce stays the source of truth. The agent does not create a parallel CRM. It keeps the current conversation anchored to the selected Salesforce record, then writes only the objects that are enabled in Newo and allowed by the Salesforce integration user&#x27;s permissions.</p>
+<table><thead><tr><th>When it happens</th><th>What the agent does</th></tr></thead><tbody><tr><td>A caller gives a phone number or calls from a known number</td><td>Searches Salesforce and classifies the person as an existing customer, existing Lead, registered Contact, matched record, or new prospect</td></tr><tr><td>A new person asks for sales follow-up</td><td>Collects name, phone or email, and reason, checks for duplicates, then creates a Lead only if no existing match is found</td></tr><tr><td>A customer asks to change stored details</td><td>Confirms the exact change and updates only approved fields</td></tr><tr><td>A support issue is raised</td><td>Creates or updates a Case instead of treating every support request as a live-human transfer</td></tr><tr><td>A follow-up is needed</td><td>Creates a team reminder linked to the right person or support Case</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-at-a-glance">Features at a glance<a href="#features-at-a-glance" class="hash-link" aria-label="Direct link to Features at a glance" title="Direct link to Features at a glance" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Included</th></tr></thead><tbody><tr><td>OAuth 2.0 Client Credentials setup</td><td>Yes</td></tr><tr><td>Existing External Client App or Connected App reuse</td><td>Yes, if the Salesforce admin approves it</td></tr><tr><td>Find Leads, Contacts, and Accounts by phone</td><td>Yes</td></tr><tr><td>Find customers by email only</td><td>No, phone lookup is the supported customer-identification path</td></tr><tr><td>Duplicate-safe Lead creation</td><td>Yes</td></tr><tr><td>Existing Lead, Contact, and Account updates</td><td>Yes, with allowlisted fields only</td></tr><tr><td>Conversation notes as Tasks</td><td>Yes</td></tr><tr><td>Team contact follow-up reminders as Tasks</td><td>Yes</td></tr><tr><td>Case lookup, creation, update, and close</td><td>Yes</td></tr><tr><td>Opportunity create and update</td><td>Yes</td></tr><tr><td>Lead conversion</td><td>Optional, requires Salesforce admin setup before enabling</td></tr><tr><td>Inbound Salesforce webhooks</td><td>No</td></tr><tr><td>Mock/dev mode in production setup</td><td>No</td></tr><tr><td>Arbitrary custom fields from conversation text</td><td>No, custom fields must be approved and configured first</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-the-newo-project">Create the Newo project<a href="#create-the-newo-project" class="hash-link" aria-label="Direct link to Create the Newo project" title="Direct link to Create the Newo project" translate="no">​</a></h3>
+<p>If this project already exists in <strong>Newo Builder</strong>, skip this subsection and continue with the integration-specific settings below.</p>
+<ol>
+<li class="">In <strong>Newo Builder</strong>, open the projects list and click <strong>Create Project</strong> (or <strong>Create New Project</strong> from the top-right menu).</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create New Project menu in Newo Builder" src="/assets/images/newo_create_project_button-92035c73bc75d1dc615912fe4feb354f.png" width="510" height="220" class="img_ev3q"></p>
+<ol start="2">
+<li class="">Fill <strong>IDN</strong> and <strong>Title</strong>. The exact names do not matter; use any clear names your team will recognize.</li>
+<li class="">In <strong>Registry</strong>, choose the release channel:<!-- -->
+<ul>
+<li class=""><strong>staging</strong> — the newest module fixes appear here first. Use it when you need the latest fix, but expect possible unfinished changes.</li>
+<li class=""><strong>production</strong> — the final stable version for live projects.</li>
+</ul>
+</li>
+<li class="">In <strong>Module</strong>, select the module for this integration.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1170" height="1846" class="img_ev3q">
+5. Leave <strong>Module version</strong> on <strong>Latest version</strong> unless support tells you to pin a specific version, then click <strong>Create</strong>.</p>
+<p>Follow the steps in order. Do the Salesforce setup first, then paste the resulting values into Newo.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare-your-salesforce-org">1. Prepare your Salesforce org<a href="#1-prepare-your-salesforce-org" class="hash-link" aria-label="Direct link to 1. Prepare your Salesforce org" title="Direct link to 1. Prepare your Salesforce org" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1a-confirm-my-domain">1a. Confirm My Domain<a href="#1a-confirm-my-domain" class="hash-link" aria-label="Direct link to 1a. Confirm My Domain" title="Direct link to 1a. Confirm My Domain" translate="no">​</a></h4>
+<ol>
+<li class="">In Salesforce, open <strong>Setup</strong>.</li>
+<li class="">Search for <strong>My Domain</strong>.</li>
+<li class="">Copy the active <strong>Current My Domain URL</strong>. It should look like <code>https://your-domain.my.salesforce.com</code>.</li>
+<li class="">Do not use <code>login.salesforce.com</code> as the Base URL in Newo.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Salesforce My Domain page" src="/assets/images/02_salesforce_my_domain-8316015ddc048c437ace941b131662bd.png" width="2940" height="1668" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1b-create-or-choose-the-integration-user">1b. Create or choose the integration user<a href="#1b-create-or-choose-the-integration-user" class="hash-link" aria-label="Direct link to 1b. Create or choose the integration user" title="Direct link to 1b. Create or choose the integration user" translate="no">​</a></h4>
+<p>Use a dedicated Salesforce user for the integration. This makes audit logs, ownership, and future credential rotation much cleaner.</p>
+<ol>
+<li class="">In <strong>Setup</strong>, search for <strong>Users</strong>.</li>
+<li class="">Create a new user or choose an existing service user.</li>
+<li class="">Make sure the user is active.</li>
+<li class="">Assign only the profile and permission sets this integration needs.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Salesforce Users page with user details redacted" src="/assets/images/03_salesforce_users_list-adf19a29a6411004534223a71dcdb54e.png" width="2936" height="1668" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1c-create-a-permission-set">1c. Create a permission set<a href="#1c-create-a-permission-set" class="hash-link" aria-label="Direct link to 1c. Create a permission set" title="Direct link to 1c. Create a permission set" translate="no">​</a></h4>
+<ol>
+<li class="">In <strong>Setup</strong>, search for <strong>Permission Sets</strong>.</li>
+<li class="">Click <strong>New</strong>.</li>
+<li class="">Name it something clear, for example <code>NewoIntegration</code>.</li>
+<li class="">Save it.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Salesforce Permission Sets list" src="/assets/images/04_salesforce_permission_sets_list-d0909c6a43e202447c8ddc8dc7063a86.png" width="2932" height="1648" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Create Salesforce Permission Set" src="/assets/images/05_salesforce_create_permission_set-e1a82084f04b6fe497b2781ff386268c.png" width="2940" height="1666" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1d-add-system-permissions">1d. Add system permissions<a href="#1d-add-system-permissions" class="hash-link" aria-label="Direct link to 1d. Add system permissions" title="Direct link to 1d. Add system permissions" translate="no">​</a></h4>
+<p>Open the permission set and review <strong>System Permissions</strong>.</p>
+<p>Minimum baseline:</p>
+<ul>
+<li class=""><strong>API Enabled</strong>;</li>
+<li class=""><strong>Access Activities</strong> and <strong>Edit Tasks</strong> if <strong>Log Conversations</strong> or <strong>Create Team Follow-up Reminders</strong> will be on;</li>
+<li class="">Lead conversion permission if <strong>Convert Leads</strong> will be on;</li>
+<li class="">any org-specific permissions required by validation rules, record types, or managed packages.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Search System Permissions in the permission set" src="/assets/images/06_salesforce_permission_set_system_permissions_search-37a0e6cd161e278f65b1b62a5d1cb104.png" width="2926" height="1668" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Enable required System Permissions" src="/assets/images/07_salesforce_permission_set_system_permissions-47ee66388df037281b4612ca76f4bea3.png" width="2934" height="1662" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1e-add-object-and-field-access">1e. Add object and field access<a href="#1e-add-object-and-field-access" class="hash-link" aria-label="Direct link to 1e. Add object and field access" title="Direct link to 1e. Add object and field access" translate="no">​</a></h4>
+<p>In the same permission set, open <strong>Object Settings</strong> and grant access for the Salesforce objects you enabled in Newo.</p>
+<p><img decoding="async" loading="lazy" alt="Permission Set Object Settings" src="/assets/images/08_salesforce_permission_set_object_settings-d5e229a3837544d4d9203710f499922d.png" width="2932" height="1660" class="img_ev3q"></p>
+<p>Recommended object access:</p>
+<table><thead><tr><th>Salesforce object</th><th>Minimum access</th></tr></thead><tbody><tr><td>Account</td><td>Read; Edit if the agent may update Account details</td></tr><tr><td>Contact</td><td>Read; Edit if the agent may update Contact details</td></tr><tr><td>Lead</td><td>Read/Create/Edit</td></tr><tr><td>Case</td><td>Read/Create/Edit if Case management is enabled</td></tr><tr><td>Task</td><td>Create/Edit for conversation logs and team reminders; also check Task field-level permissions</td></tr><tr><td>Opportunity</td><td>Create/Edit if Opportunity management is enabled</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Account object permissions" src="/assets/images/09_salesforce_object_permissions_account-5b71cf8342ed7553b098af8b1dcbbe3e.png" width="2936" height="1664" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Lead object permissions" src="/assets/images/10_salesforce_object_permissions_lead-53130a07b7a225bb2d792bdfa08a0681.png" width="2922" height="1672" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Case object permissions" src="/assets/images/11_salesforce_object_permissions_case-eaba36a3991931378ed120c879d5b670.png" width="2938" height="1658" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Task object permissions" src="/assets/images/12_salesforce_object_permissions_task-b3c61ea9eaf15bdf9c4a022128312ccc.png" width="2932" height="1660" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1f-assign-the-permission-set">1f. Assign the permission set<a href="#1f-assign-the-permission-set" class="hash-link" aria-label="Direct link to 1f. Assign the permission set" title="Direct link to 1f. Assign the permission set" translate="no">​</a></h4>
+<ol>
+<li class="">Open the permission set.</li>
+<li class="">Click <strong>Manage Assignments</strong>.</li>
+<li class="">Assign it to the integration user.</li>
+<li class="">Confirm the assignment completed successfully.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Assign permission set to integration user" src="/assets/images/13_salesforce_assign_permission_set_user-0776f8a670ef95b3254c56f3a77e12b7.png" width="2934" height="1664" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Permission set assignment summary" src="/assets/images/14_salesforce_assignment_summary-1d957341630c74a38bc30f4cb6741424.png" width="2930" height="1656" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-create-the-salesforce-oauth-app">2. Create the Salesforce OAuth app<a href="#2-create-the-salesforce-oauth-app" class="hash-link" aria-label="Direct link to 2. Create the Salesforce OAuth app" title="Direct link to 2. Create the Salesforce OAuth app" translate="no">​</a></h3>
+<p>For new installations, use <strong>External Client App</strong> with <strong>Client Credentials Flow</strong>. If the customer already has a compatible Connected App, a Salesforce admin may reuse it, but new installs should prefer the External Client App path shown below.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2a-open-external-client-app-manager">2a. Open External Client App Manager<a href="#2a-open-external-client-app-manager" class="hash-link" aria-label="Direct link to 2a. Open External Client App Manager" title="Direct link to 2a. Open External Client App Manager" translate="no">​</a></h4>
+<ol>
+<li class="">In <strong>Setup</strong>, search for <strong>external client apps</strong>.</li>
+<li class="">Open <strong>External Client App Manager</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="External Client App Manager search result" src="/assets/images/15_salesforce_external_client_app_manager_search-3d0d0200e4cfb393bc2710f96f70aed3.png" width="520" height="1616" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2b-enable-app-creation-if-needed">2b. Enable app creation if needed<a href="#2b-enable-app-creation-if-needed" class="hash-link" aria-label="Direct link to 2b. Enable app creation if needed" title="Direct link to 2b. Enable app creation if needed" translate="no">​</a></h4>
+<p>If the page asks you to allow creation of External Client Apps, enable it in <strong>External Client App Settings</strong>.</p>
+<p><img decoding="async" loading="lazy" alt="External Client App Settings" src="/assets/images/16_salesforce_external_client_app_settings-be6f17917b1a2c826ae2d0d4c168d98f.png" width="2900" height="1660" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2c-create-the-app">2c. Create the app<a href="#2c-create-the-app" class="hash-link" aria-label="Direct link to 2c. Create the app" title="Direct link to 2c. Create the app" translate="no">​</a></h4>
+<ol>
+<li class="">Click <strong>New External Client App</strong>.</li>
+<li class="">Enter a clear name, for example <code>Newo Integration</code>.</li>
+<li class="">Use the integration owner&#x27;s email address as the contact email.</li>
+<li class="">Keep the distribution state local unless your Salesforce admin has a different policy.</li>
+<li class="">Continue to the API/OAuth section.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="External Client App basic information" src="/assets/images/17_salesforce_external_client_app_basic_info-7b04483f80c21f67ffb0b4bd8c837edc.png" width="2930" height="1652" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2d-enable-oauth-settings">2d. Enable OAuth settings<a href="#2d-enable-oauth-settings" class="hash-link" aria-label="Direct link to 2d. Enable OAuth settings" title="Direct link to 2d. Enable OAuth settings" translate="no">​</a></h4>
+<p>In the API/OAuth section:</p>
+<ol>
+<li class="">Turn on <strong>Enable OAuth</strong>.</li>
+<li class="">Use a standard callback URL accepted by your Salesforce org. For Client Credentials setup, this value is usually not used during runtime, but Salesforce still requires it on the form.</li>
+<li class="">Add the OAuth scope <strong>Manage user data via APIs</strong>.</li>
+<li class="">Do not add extra scopes unless your Salesforce admin requires them.</li>
+<li class="">Leave token interception options off unless your security team explicitly requires them.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Enable OAuth and choose API scope" src="/assets/images/18_salesforce_external_client_app_oauth_scopes-86232c976376732b8f72567ca90bc34e.png" width="1896" height="1270" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2e-enable-client-credentials-flow">2e. Enable Client Credentials Flow<a href="#2e-enable-client-credentials-flow" class="hash-link" aria-label="Direct link to 2e. Enable Client Credentials Flow" title="Direct link to 2e. Enable Client Credentials Flow" translate="no">​</a></h4>
+<p>When Salesforce asks to confirm the Client Credentials Flow, click <strong>OK</strong>. This flow lets Newo authenticate server-to-server using the Client ID and Client Secret.</p>
+<p><img decoding="async" loading="lazy" alt="Confirm Client Credentials Flow" src="/assets/images/19_salesforce_confirm_client_credentials-98c9ec049b6270b57482b50364f7be23.png" width="1292" height="376" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="External Client App flow enablement" src="/assets/images/20_salesforce_external_app_flow_enablement-6a64621a7a180ec60c1f55f10702533e.png" width="2380" height="1436" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2f-configure-app-policies">2f. Configure app policies<a href="#2f-configure-app-policies" class="hash-link" aria-label="Direct link to 2f. Configure app policies" title="Direct link to 2f. Configure app policies" translate="no">​</a></h4>
+<p>Open the app <strong>Policies</strong> section.</p>
+<p>Recommended policy setup:</p>
+<ol>
+<li class="">Keep the app enabled.</li>
+<li class="">Set the start page to your Newo or company URL if Salesforce requires a value.</li>
+<li class="">Open the OAuth policies.</li>
+<li class="">Keep permitted users aligned with your org security policy.</li>
+<li class="">Under the Client Credentials Flow settings, set <strong>Run As</strong> to the integration user.</li>
+<li class="">Save the app.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="External Client App policies" src="/assets/images/21_salesforce_external_app_policies-8b530b0485368bc5d55170d4a750521e.png" width="2398" height="1454" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Run As user policy" src="/assets/images/22_salesforce_run_as_user_policy-3608b7b16b1545f0cb0665abdee57d28.png" width="2296" height="954" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="App authorization policy" src="/assets/images/23_salesforce_app_authorization_policy-9d8e3fd8952fa4892daf0bf8144da24b.png" width="2308" height="616" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="OAuth settings review" src="/assets/images/24_salesforce_oauth_settings_review-b96a5d6901212becf764e2a1242ed45a.png" width="2306" height="1158" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2g-copy-the-client-id-and-client-secret">2g. Copy the Client ID and Client Secret<a href="#2g-copy-the-client-id-and-client-secret" class="hash-link" aria-label="Direct link to 2g. Copy the Client ID and Client Secret" title="Direct link to 2g. Copy the Client ID and Client Secret" translate="no">​</a></h4>
+<p>Open the app&#x27;s consumer details and copy:</p>
+<ul>
+<li class=""><strong>Consumer Key</strong> - this is the <strong>Client ID</strong> in Newo;</li>
+<li class=""><strong>Consumer Secret</strong> - this is the <strong>Client Secret</strong> in Newo.</li>
+</ul>
+<p>Treat the secret like a password. Do not paste it in chat, email, or a ticket unless your security process allows it.</p>
+<p><img decoding="async" loading="lazy" alt="Consumer details with values redacted" src="/assets/images/25_salesforce_consumer_details-6b7840056592a0af5fe7ede772b3e633.png" width="1820" height="442" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-configure-in-newo">3. Configure in Newo<a href="#3-configure-in-newo" class="hash-link" aria-label="Direct link to 3. Configure in Newo" title="Direct link to 3. Configure in Newo" translate="no">​</a></h3>
+<ol>
+<li class="">Open the project in <strong>Newo Builder</strong>.</li>
+<li class="">Go to <strong>Attributes</strong>.</li>
+<li class="">Select <strong>Customer</strong>.</li>
+<li class="">Open the <strong>Module - Salesforce</strong> group.</li>
+<li class="">Fill the visible credential fields:<!-- -->
+<ul>
+<li class=""><strong>Base URL</strong> - Salesforce My Domain URL.</li>
+<li class=""><strong>Client ID</strong> - Salesforce Consumer Key.</li>
+<li class=""><strong>Client Secret</strong> - Salesforce Consumer Secret.</li>
+</ul>
+</li>
+<li class="">Review the feature switches and turn off anything the Salesforce admin has not permissioned yet.</li>
+<li class="">Keep <strong>Convert Leads</strong> off until the optional Lead conversion setup is complete.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Newo Salesforce settings group" src="/assets/images/27_newo_salesforce_settings_group-f0fffa76a49c411cf9bc4b0becd72452.png" width="2934" height="1652" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Newo Salesforce credential fields" src="/assets/images/26_newo_salesforce_credentials-d7b31e5f1503de9aa5cfbab392c5d52e.png" width="2116" height="888" class="img_ev3q"></p>
+<p>Recommended first-publish switches:</p>
+<table><thead><tr><th>Setting in Newo</th><th>Recommended first value</th><th>Why</th></tr></thead><tbody><tr><td><strong>Find Customers</strong></td><td>On</td><td>Most Salesforce scenarios need CRM context</td></tr><tr><td><strong>Create Leads</strong></td><td>On if sales follow-up is in scope</td><td>Creates new prospect records after duplicate check</td></tr><tr><td><strong>Update Records</strong></td><td>On only after approved field access is confirmed</td><td>Prevents accidental CRM writes before sign-off</td></tr><tr><td><strong>Log Conversations</strong></td><td>On if Task permissions are ready</td><td>Saves conversation summaries to activity history</td></tr><tr><td><strong>Manage Cases</strong></td><td>On if Case permissions are ready</td><td>Enables support request handling</td></tr><tr><td><strong>Create Team Follow-up Reminders</strong></td><td>On if Task permissions are ready</td><td>Creates callback/email/message reminders for the team</td></tr><tr><td><strong>Convert Leads</strong></td><td>Off at first</td><td>Turn on only after Salesforce admin installs and tests conversion support</td></tr><tr><td><strong>Manage Opportunities</strong></td><td>On if sales pipeline automation is in scope</td><td>Creates or updates sales Opportunities</td></tr><tr><td><strong>Save Related Records Together</strong></td><td>On if the team wants Lead + Case + Task saved together</td><td>Useful for complete intake requests</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-hit-publish-all">4. Hit Publish All<a href="#4-hit-publish-all" class="hash-link" aria-label="Direct link to 4. Hit Publish All" title="Direct link to 4. Hit Publish All" translate="no">​</a></h3>
+<p>After <strong>Publish All</strong>, the integration takes care of the rest:</p>
+<ul>
+<li class="">verifies the Salesforce credential path by requesting an access token;</li>
+<li class="">creates the secure connection Newo uses for Salesforce calls;</li>
+<li class="">registers the Salesforce actions the agent can trigger from conversation;</li>
+<li class="">installs the Salesforce reference scenarios and intents on the canvas when the setup switch is on;</li>
+<li class="">preserves existing edited canvas copies instead of overwriting operator customizations.</li>
+</ul>
+<p><strong>How to verify immediately:</strong></p>
+<ul>
+<li class="">The visible fields <strong>Base URL</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> are filled.</li>
+<li class="">Hidden technical values do not need manual editing.</li>
+<li class="">The Salesforce scenarios listed below appear in the canvas library.</li>
+<li class="">A test chat where the customer gives a known phone number makes the agent say <em>&quot;Let me check that for you.&quot;</em> and then answer from the Salesforce match.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-optional-enable-lead-conversion">5. Optional: enable Lead conversion<a href="#5-optional-enable-lead-conversion" class="hash-link" aria-label="Direct link to 5. Optional: enable Lead conversion" title="Direct link to 5. Optional: enable Lead conversion" translate="no">​</a></h3>
+<p>Turn on <strong>Convert Leads</strong> only after a Salesforce admin confirms Lead conversion is installed and tested for this org. The admin must make the org expose a Lead conversion action compatible with the integration&#x27;s expected request and response, then confirm that the integration user can run it.</p>
+<p>If this is not installed, keep <strong>Convert Leads</strong> off. The rest of the Salesforce integration can still work normally.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-optional-tune-custom-fields-and-routing">6. Optional: tune custom fields and routing<a href="#6-optional-tune-custom-fields-and-routing" class="hash-link" aria-label="Direct link to 6. Optional: tune custom fields and routing" title="Direct link to 6. Optional: tune custom fields and routing" translate="no">​</a></h3>
+<p>Only a technical owner should change hidden Salesforce settings. Common reasons:</p>
+<ul>
+<li class="">the org requires extra Lead fields;</li>
+<li class="">the Case status, priority, or origin picklists are customized;</li>
+<li class="">Opportunity stages or required fields differ from defaults;</li>
+<li class="">owner or queue routing must write only approved Salesforce owner IDs or queue IDs;</li>
+<li class="">the org uses custom objects that need explicit support.</li>
+</ul>
+<p>After any hidden setting changes, click <strong>Publish All</strong> and rerun the smoke tests below.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test-that-everything-works">How to test that everything works<a href="#how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to How to test that everything works" title="Direct link to How to test that everything works" translate="no">​</a></h2>
+<p>Use dedicated QA records. Some tests create or update Salesforce records, so do not run them on real customer data.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-customer-lookup">Test customer lookup<a href="#test-customer-lookup" class="hash-link" aria-label="Direct link to Test customer lookup" title="Direct link to Test customer lookup" translate="no">​</a></h3>
+<ol>
+<li class="">In Salesforce, prepare a Contact, Account, or Lead with a unique phone number.</li>
+<li class="">In a test chat, say: <em>&quot;Can you check my account? My phone number is +14155550101.&quot;</em></li>
+<li class="">The agent should say <em>&quot;Let me check that for you.&quot;</em></li>
+<li class="">The next reply should identify the caller context without creating a new record.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-new-lead-creation">Test new Lead creation<a href="#test-new-lead-creation" class="hash-link" aria-label="Direct link to Test new Lead creation" title="Direct link to Test new Lead creation" translate="no">​</a></h3>
+<ol>
+<li class="">Use a phone/email that does not already exist in Salesforce.</li>
+<li class="">Say: <em>&quot;I am new here. Please have sales follow up with me. My name is QA New Lead, my phone is +14155550999, my email is <a href="mailto:qa.salesforce.lead@example.com" target="_blank" rel="noopener noreferrer" class="">qa.salesforce.lead@example.com</a>, and I need pricing.&quot;</em></li>
+<li class="">The agent should collect or confirm missing details and say <em>&quot;I&#x27;ll send this to the sales team.&quot;</em></li>
+<li class="">A new Salesforce Lead should appear only after the duplicate check passes.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-duplicate-prevention">Test duplicate prevention<a href="#test-duplicate-prevention" class="hash-link" aria-label="Direct link to Test duplicate prevention" title="Direct link to Test duplicate prevention" translate="no">​</a></h3>
+<ol>
+<li class="">Use an email or phone already attached to an existing Lead, Contact, or Account.</li>
+<li class="">Ask the agent to save you as a new Lead.</li>
+<li class="">The agent should find the existing record and not create a duplicate Lead.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-record-update">Test record update<a href="#test-record-update" class="hash-link" aria-label="Direct link to Test record update" title="Direct link to Test record update" translate="no">​</a></h3>
+<ol>
+<li class="">First run customer lookup so the agent has a selected CRM record.</li>
+<li class="">Say: <em>&quot;Please update my email to <a href="mailto:qa.updated@example.com" target="_blank" rel="noopener noreferrer" class="">qa.updated@example.com</a>.&quot;</em></li>
+<li class="">The agent should confirm the change and say <em>&quot;I&#x27;ll update that for you.&quot;</em></li>
+<li class="">Salesforce should show only the approved field changed.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-support-case-creation">Test support Case creation<a href="#test-support-case-creation" class="hash-link" aria-label="Direct link to Test support Case creation" title="Direct link to Test support Case creation" translate="no">​</a></h3>
+<ol>
+<li class="">Say: <em>&quot;Please send this to support. My product has stopped syncing, and I need help today.&quot;</em></li>
+<li class="">If details are missing, the agent should ask for a short subject or issue description.</li>
+<li class="">Once confirmed, the agent should say <em>&quot;I&#x27;ll send this to support now.&quot;</em></li>
+<li class="">A Salesforce Case should appear with the issue summary.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-follow-up-reminder">Test follow-up reminder<a href="#test-follow-up-reminder" class="hash-link" aria-label="Direct link to Test follow-up reminder" title="Direct link to Test follow-up reminder" translate="no">​</a></h3>
+<ol>
+<li class="">Make sure the caller has a selected customer record or Case.</li>
+<li class="">Say: <em>&quot;Please ask the team to call me tomorrow about the proposal.&quot;</em></li>
+<li class="">The agent should say <em>&quot;I&#x27;ll set up that follow-up.&quot;</em></li>
+<li class="">A Salesforce Task should be created with a due date and linked target.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-conversation-note">Test conversation note<a href="#test-conversation-note" class="hash-link" aria-label="Direct link to Test conversation note" title="Direct link to Test conversation note" translate="no">​</a></h3>
+<ol>
+<li class="">Run a short test conversation after customer lookup.</li>
+<li class="">Say: <em>&quot;Please add this as a note on my profile.&quot;</em></li>
+<li class="">The agent should say <em>&quot;I&#x27;ll add that note to your profile.&quot;</em></li>
+<li class="">A completed Salesforce Task should appear as an activity note.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-opportunity-management">Test Opportunity management<a href="#test-opportunity-management" class="hash-link" aria-label="Direct link to Test Opportunity management" title="Direct link to Test Opportunity management" translate="no">​</a></h3>
+<ol>
+<li class="">Use a test Account or a known Opportunity.</li>
+<li class="">Say: <em>&quot;Create a sales opportunity for the onboarding package, stage Qualification, close date next Friday.&quot;</em></li>
+<li class="">The agent should confirm the stage and close date, then say <em>&quot;I&#x27;ll create that sales opportunity.&quot;</em></li>
+<li class="">Salesforce should show the new Opportunity or the approved update.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-related-record-bundle">Test related-record bundle<a href="#test-related-record-bundle" class="hash-link" aria-label="Direct link to Test related-record bundle" title="Direct link to Test related-record bundle" translate="no">​</a></h3>
+<ol>
+<li class="">Give the agent a complete intake request that includes prospect details, a support issue, and a team follow-up.</li>
+<li class="">The agent should confirm the combined request and say <em>&quot;I&#x27;ll save the full request now.&quot;</em></li>
+<li class="">Salesforce should show the related records saved together. If one required part is invalid, the agent should not claim partial success.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenarios">Scenarios<a href="#scenarios" class="hash-link" aria-label="Direct link to Scenarios" title="Direct link to Scenarios" translate="no">​</a></h2>
+<p>The integration ships with 10 editable scenarios on the canvas. Operators can tweak them in Newo Builder; the agent picks up changes on the next <strong>Publish All</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-gets-added-on-publish-all">What gets added on Publish All<a href="#what-gets-added-on-publish-all" class="hash-link" aria-label="Direct link to What gets added on Publish All" title="Direct link to What gets added on Publish All" translate="no">​</a></h3>
+<p>The first <strong>Publish All</strong> adds the following intents and scenarios to your project library:</p>
+<table><thead><tr><th>Intent</th><th>Scenario</th></tr></thead><tbody><tr><td><strong>Customer Record Lookup</strong></td><td><strong>Customer Record Lookup</strong></td></tr><tr><td><strong>New Prospect Capture</strong></td><td><strong>New Prospect Capture</strong></td></tr><tr><td><strong>Customer Details Save</strong></td><td><strong>Customer Details Save</strong></td></tr><tr><td><strong>Customer Record Update</strong></td><td><strong>Customer Record Update</strong></td></tr><tr><td><strong>Conversation Note</strong></td><td><strong>Conversation Note</strong></td></tr><tr><td><strong>Support Case Management</strong></td><td><strong>Support Case Management</strong></td></tr><tr><td><strong>Follow-up Reminder</strong></td><td><strong>Follow-up Reminder</strong></td></tr><tr><td><strong>Prospect Conversion</strong></td><td><strong>Prospect Conversion</strong></td></tr><tr><td><strong>Sales Opportunity Pipeline</strong></td><td><strong>Sales Opportunity Pipeline</strong></td></tr><tr><td><strong>Complete Customer Request</strong></td><td><strong>Complete Customer Request</strong></td></tr></tbody></table>
+<p>These are a <strong>reference implementation</strong>. You can edit wording, add extra questions, translate, or change tone in the canvas UI.</p>
+<blockquote>
+<p><strong>Updates do not overwrite your edits.</strong> Once you edit a scenario or intent in the canvas, future integration updates will not touch your edited copy. To pull newer shipped defaults later, delete the edited copy from the canvas and run <strong>Publish All</strong> again, then re-apply your tweaks.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-trigger-phrases-matter">Why trigger phrases matter<a href="#why-trigger-phrases-matter" class="hash-link" aria-label="Direct link to Why trigger phrases matter" title="Direct link to Why trigger phrases matter" translate="no">​</a></h3>
+<p>Each scenario contains a short sentence the agent says when it is ready to perform a Salesforce action. That sentence is the trigger phrase for the feature. If you rewrite a scenario, keep the trigger phrases below intact.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---customer-record-lookup">Scenario - Customer Record Lookup<a href="#scenario---customer-record-lookup" class="hash-link" aria-label="Direct link to Scenario - Customer Record Lookup" title="Direct link to Scenario - Customer Record Lookup" translate="no">​</a></h3>
+<p>Runs when a caller asks whether the business has their account on file, provides a phone number for lookup, or the agent needs CRM context before routing the conversation.</p>
+<ol>
+<li class="">Check whether Salesforce customer context is already present.</li>
+<li class="">Use caller ID or the phone number the customer gave. Do not ask for email, username, company, or name when a phone number is already known.</li>
+<li class="">Trigger lookup with <em>&quot;Let me check that for you.&quot;</em></li>
+<li class="">Wait for the customer record result.</li>
+<li class="">Branch as existing customer, registered contact, existing Lead, or new prospect.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Customer Record Lookup</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;Let me check that for you.&quot;</em> - fires customer lookup.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce CRM panel</strong> - current customer lookup status, selected record type, selected record name, and whether the caller is a new prospect or existing customer.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: reword the explanation around lookup, add compliance wording, add language-specific greetings.</li>
+<li class="">Do not: ask for email before phone lookup, remove the lookup step, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---new-prospect-capture">Scenario - New Prospect Capture<a href="#scenario---new-prospect-capture" class="hash-link" aria-label="Direct link to Scenario - New Prospect Capture" title="Direct link to Scenario - New Prospect Capture" translate="no">​</a></h3>
+<p>Runs when no matching Salesforce record exists and the caller wants sales, service, or follow-up.</p>
+<ol>
+<li class="">Confirm that a new prospect should be saved.</li>
+<li class="">Collect only missing details: name, phone or email, and a short reason for follow-up.</li>
+<li class="">Repeat the details and let the caller correct them.</li>
+<li class="">Trigger Lead creation with <em>&quot;I&#x27;ll send this to the sales team.&quot;</em></li>
+<li class="">Wait until the Lead result is visible before claiming the details were saved.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>New Prospect Capture</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll send this to the sales team.&quot;</em> - fires new Lead creation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce CRM panel</strong> - whether lookup found no existing record.</li>
+<li class=""><strong>Salesforce Lead panel</strong> - whether the Lead was created, duplicate was found, or Salesforce rejected the save.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: ask for business-specific qualification details before confirmation.</li>
+<li class="">Do not: promise to save before name plus phone/email plus reason are known, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---customer-details-save">Scenario - Customer Details Save<a href="#scenario---customer-details-save" class="hash-link" aria-label="Direct link to Scenario - Customer Details Save" title="Direct link to Scenario - Customer Details Save" translate="no">​</a></h3>
+<p>Runs before ending a conversation when another business action already happened but the caller is still not saved in Salesforce.</p>
+<ol>
+<li class="">Before closing, check whether the caller is a new prospect and whether the conversation already contains name, phone or email, and reason.</li>
+<li class="">Ask for exactly one missing detail if needed.</li>
+<li class="">Trigger save with <em>&quot;I&#x27;ll make sure the team has this.&quot;</em></li>
+<li class="">Continue to the normal closing path only after the result is known.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Customer Details Save</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll make sure the team has this.&quot;</em> - fires post-action Lead save.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce CRM panel</strong> - whether the caller is still a new prospect.</li>
+<li class=""><strong>Salesforce Lead panel</strong> - whether details were saved or a duplicate was found.</li>
+<li class=""><strong>Conversation context</strong> - the already-confirmed details collected earlier.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: change the closing wording around the save.</li>
+<li class="">Do not: skip this scenario when the caller is new, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---customer-record-update">Scenario - Customer Record Update<a href="#scenario---customer-record-update" class="hash-link" aria-label="Direct link to Scenario - Customer Record Update" title="Direct link to Scenario - Customer Record Update" translate="no">​</a></h3>
+<p>Runs when an existing customer asks to change stored details.</p>
+<ol>
+<li class="">Ensure a Salesforce customer record is selected.</li>
+<li class="">Confirm the exact field change.</li>
+<li class="">Trigger update with <em>&quot;I&#x27;ll update that for you.&quot;</em></li>
+<li class="">Wait for the update result before confirming.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Customer Record Update</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll update that for you.&quot;</em> - fires approved record update.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce CRM panel</strong> - selected record context.</li>
+<li class=""><strong>Salesforce Update panel</strong> - update status and returned details.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: require an extra confirmation for sensitive fields.</li>
+<li class="">Do not: let the agent infer unconfirmed changes or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---conversation-note">Scenario - Conversation Note<a href="#scenario---conversation-note" class="hash-link" aria-label="Direct link to Scenario - Conversation Note" title="Direct link to Scenario - Conversation Note" translate="no">​</a></h3>
+<p>Runs when a caller asks to save a note or the business wants a conversation summary stored on the selected Salesforce record.</p>
+<ol>
+<li class="">Ensure a customer record or newly created Lead is selected.</li>
+<li class="">Confirm that the note should be saved.</li>
+<li class="">Trigger note creation with <em>&quot;I&#x27;ll add that note to your profile.&quot;</em></li>
+<li class="">Confirm only after the note result succeeds.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Conversation Note</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll add that note to your profile.&quot;</em> - fires conversation note creation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce Interaction Log panel</strong> - whether the conversation note was added.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: change when the agent offers to save a note.</li>
+<li class="">Do not: claim the note is saved before the result panel updates, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---support-case-management">Scenario - Support Case Management<a href="#scenario---support-case-management" class="hash-link" aria-label="Direct link to Scenario - Support Case Management" title="Direct link to Scenario - Support Case Management" translate="no">​</a></h3>
+<p>Runs when the caller asks about an open support case, issue, complaint, service request, ticket, or support follow-up.</p>
+<ol>
+<li class="">Decide whether the caller wants lookup, create, update, or close.</li>
+<li class="">For a new support issue, collect a subject and issue description.</li>
+<li class="">Confirm the action.</li>
+<li class="">Trigger the right action with one of the phrases below.</li>
+<li class="">Wait for the Case result before summarizing.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Support Case Management</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll check your support cases.&quot;</em> - fires Case lookup.</li>
+<li class=""><em>&quot;I&#x27;ll send this to support now.&quot;</em> - fires Case creation.</li>
+<li class=""><em>&quot;I&#x27;ll update the case.&quot;</em> - fires Case update.</li>
+<li class=""><em>&quot;I&#x27;ll close the case now.&quot;</em> - fires Case close.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce CRM panel</strong> - selected customer context.</li>
+<li class=""><strong>Salesforce Case panel</strong> - Case lookup, create, update, close, or error result.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: add business-specific support triage questions.</li>
+<li class="">Do not: route asynchronous support requests to live-agent transfer unless the caller asks for a live human right now, or rewrite trigger phrases.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---follow-up-reminder">Scenario - Follow-up Reminder<a href="#scenario---follow-up-reminder" class="hash-link" aria-label="Direct link to Scenario - Follow-up Reminder" title="Direct link to Scenario - Follow-up Reminder" translate="no">​</a></h3>
+<p>Runs when the caller asks the team to contact someone later about a prospect, customer, or support case.</p>
+<ol>
+<li class="">Ensure a customer, Lead, or Case target exists.</li>
+<li class="">Collect who should be contacted, what the follow-up is about, and the due date when possible.</li>
+<li class="">Confirm the follow-up details.</li>
+<li class="">Trigger reminder creation with <em>&quot;I&#x27;ll set up that follow-up.&quot;</em></li>
+<li class="">Confirm the reminder and due date only after success.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Follow-up Reminder</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll set up that follow-up.&quot;</em> - fires team follow-up reminder creation.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce Follow-up Task panel</strong> - reminder status, target, and due date.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: require due date for every reminder if the business policy demands it.</li>
+<li class="">Do not: let callers manage arbitrary internal CRM tasks, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---prospect-conversion">Scenario - Prospect Conversion<a href="#scenario---prospect-conversion" class="hash-link" aria-label="Direct link to Scenario - Prospect Conversion" title="Direct link to Scenario - Prospect Conversion" translate="no">​</a></h3>
+<p>Runs when a qualified Salesforce Lead should be converted into customer/account records.</p>
+<ol>
+<li class="">Ensure the selected record is a qualified prospect or Lead.</li>
+<li class="">Confirm whether an Opportunity should be created.</li>
+<li class="">Trigger conversion with <em>&quot;I&#x27;ll convert this lead now.&quot;</em></li>
+<li class="">Mention the Opportunity only if the result includes it.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Prospect Conversion</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll convert this lead now.&quot;</em> - fires Lead conversion.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce Lead Conversion panel</strong> - conversion status and created customer records.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: require manager confirmation before conversion.</li>
+<li class="">Do not: enable this scenario until Salesforce admin setup is complete, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---sales-opportunity-pipeline">Scenario - Sales Opportunity Pipeline<a href="#scenario---sales-opportunity-pipeline" class="hash-link" aria-label="Direct link to Scenario - Sales Opportunity Pipeline" title="Direct link to Scenario - Sales Opportunity Pipeline" translate="no">​</a></h3>
+<p>Runs when the caller or operator asks to create a sales opportunity or update a pipeline stage, close date, amount, next step, owner, or approved custom field.</p>
+<ol>
+<li class="">Determine whether this is a create or update.</li>
+<li class="">For create, collect opportunity name, stage, and close date.</li>
+<li class="">Confirm the pipeline values.</li>
+<li class="">Trigger create with <em>&quot;I&#x27;ll create that sales opportunity.&quot;</em> or update with <em>&quot;I&#x27;ll update that sales opportunity.&quot;</em></li>
+<li class="">Confirm only from the result.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Sales Opportunity Pipeline</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll create that sales opportunity.&quot;</em> - fires Opportunity creation.</li>
+<li class=""><em>&quot;I&#x27;ll update that sales opportunity.&quot;</em> - fires Opportunity update.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce Opportunity panel</strong> - Opportunity creation or update result.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: add stage-specific qualification questions.</li>
+<li class="">Do not: let the agent infer stages, close dates, owners, or custom fields, or rewrite trigger phrases.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario---complete-customer-request">Scenario - Complete Customer Request<a href="#scenario---complete-customer-request" class="hash-link" aria-label="Direct link to Scenario - Complete Customer Request" title="Direct link to Scenario - Complete Customer Request" translate="no">​</a></h3>
+<p>Runs when a confirmed request should save multiple related items together, such as prospect details plus a support issue plus a follow-up reminder.</p>
+<ol>
+<li class="">Confirm that a combined customer request is needed.</li>
+<li class="">Collect all required details for the prospect, support issue, and follow-up parts.</li>
+<li class="">Repeat the complete request.</li>
+<li class="">Trigger the bundle with <em>&quot;I&#x27;ll save the full request now.&quot;</em></li>
+<li class="">Confirm only if the whole request succeeds.</li>
+</ol>
+<p><strong>Triggered by intent:</strong> <em>Complete Customer Request</em>.</p>
+<p><strong>Trigger phrases (do not edit):</strong></p>
+<ul>
+<li class=""><em>&quot;I&#x27;ll save the full request now.&quot;</em> - fires related-record bundle save.</li>
+</ul>
+<p><strong>What the agent reads to know the result:</strong></p>
+<ul>
+<li class=""><strong>Salesforce Composite Write panel</strong> - whether all requested related records were saved together.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI):</strong></p>
+<ul>
+<li class="">Safe: use this only for high-confidence intake flows where the business wants all-or-none saving.</li>
+<li class="">Do not: use this for a single simple action, or rewrite the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="trigger-phrases-reference">Trigger phrases reference<a href="#trigger-phrases-reference" class="hash-link" aria-label="Direct link to Trigger phrases reference" title="Direct link to Trigger phrases reference" translate="no">​</a></h3>
+<table><thead><tr><th>Phrase (verbatim)</th><th>Fires</th><th>Scenarios</th></tr></thead><tbody><tr><td><em>&quot;Let me check that for you.&quot;</em></td><td>Customer lookup</td><td>Customer Record Lookup</td></tr><tr><td><em>&quot;I&#x27;ll send this to the sales team.&quot;</em></td><td>Lead creation</td><td>New Prospect Capture</td></tr><tr><td><em>&quot;I&#x27;ll make sure the team has this.&quot;</em></td><td>Post-action Lead save</td><td>Customer Details Save</td></tr><tr><td><em>&quot;I&#x27;ll update that for you.&quot;</em></td><td>Existing record update</td><td>Customer Record Update</td></tr><tr><td><em>&quot;I&#x27;ll add that note to your profile.&quot;</em></td><td>Conversation note</td><td>Conversation Note</td></tr><tr><td><em>&quot;I&#x27;ll check your support cases.&quot;</em></td><td>Case lookup</td><td>Support Case Management</td></tr><tr><td><em>&quot;I&#x27;ll send this to support now.&quot;</em></td><td>Case creation</td><td>Support Case Management</td></tr><tr><td><em>&quot;I&#x27;ll update the case.&quot;</em></td><td>Case update</td><td>Support Case Management</td></tr><tr><td><em>&quot;I&#x27;ll close the case now.&quot;</em></td><td>Case close</td><td>Support Case Management</td></tr><tr><td><em>&quot;I&#x27;ll set up that follow-up.&quot;</em></td><td>Team follow-up reminder</td><td>Follow-up Reminder</td></tr><tr><td><em>&quot;I&#x27;ll convert this lead now.&quot;</em></td><td>Lead conversion</td><td>Prospect Conversion</td></tr><tr><td><em>&quot;I&#x27;ll create that sales opportunity.&quot;</em></td><td>Opportunity creation</td><td>Sales Opportunity Pipeline</td></tr><tr><td><em>&quot;I&#x27;ll update that sales opportunity.&quot;</em></td><td>Opportunity update</td><td>Sales Opportunity Pipeline</td></tr><tr><td><em>&quot;I&#x27;ll save the full request now.&quot;</em></td><td>Related-record bundle save</td><td>Complete Customer Request</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-dialogs">Example dialogs<a href="#example-dialogs" class="hash-link" aria-label="Direct link to Example dialogs" title="Direct link to Example dialogs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-1---existing-customer-lookup">Example 1 - Existing customer lookup<a href="#example-1---existing-customer-lookup" class="hash-link" aria-label="Direct link to Example 1 - Existing customer lookup" title="Direct link to Example 1 - Existing customer lookup" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Can you check my account? My phone number is +14155550101.
+<strong>Agent:</strong> <em>Let me check that for you.</em>
+<strong>Agent:</strong> I found your customer record. How can I help you today?</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-2---new-prospect-saved-without-duplicate">Example 2 - New prospect saved without duplicate<a href="#example-2---new-prospect-saved-without-duplicate" class="hash-link" aria-label="Direct link to Example 2 - New prospect saved without duplicate" title="Direct link to Example 2 - New prospect saved without duplicate" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> I need pricing and I want sales to follow up. My name is Maya Stone, my phone is +14155550999, and my email is <a href="mailto:maya@example.com" target="_blank" rel="noopener noreferrer" class="">maya@example.com</a>.
+<strong>Agent:</strong> I have Maya Stone, +14155550999, <a href="mailto:maya@example.com" target="_blank" rel="noopener noreferrer" class="">maya@example.com</a>, and a pricing follow-up request. Is that correct?
+<strong>Customer:</strong> Yes.
+<strong>Agent:</strong> <em>I&#x27;ll send this to the sales team.</em>
+<strong>Agent:</strong> You&#x27;re all set. The team has your details and will follow up.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-3---support-case-instead-of-live-transfer">Example 3 - Support Case instead of live transfer<a href="#example-3---support-case-instead-of-live-transfer" class="hash-link" aria-label="Direct link to Example 3 - Support Case instead of live transfer" title="Direct link to Example 3 - Support Case instead of live transfer" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Please send this to support. My sync stopped working after the update.
+<strong>Agent:</strong> What subject should I use for the support request?
+<strong>Customer:</strong> Sync stopped after update.
+<strong>Agent:</strong> I will open a support request for &quot;Sync stopped after update&quot; with the issue description you gave. Is that correct?
+<strong>Customer:</strong> Yes.
+<strong>Agent:</strong> <em>I&#x27;ll send this to support now.</em>
+<strong>Agent:</strong> The support request has been created.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-4---follow-up-reminder">Example 4 - Follow-up reminder<a href="#example-4---follow-up-reminder" class="hash-link" aria-label="Direct link to Example 4 - Follow-up reminder" title="Direct link to Example 4 - Follow-up reminder" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Please ask the manager to call me tomorrow about the proposal.
+<strong>Agent:</strong> I can set a reminder for the team to call you tomorrow about the proposal. Should I do that?
+<strong>Customer:</strong> Yes.
+<strong>Agent:</strong> <em>I&#x27;ll set up that follow-up.</em>
+<strong>Agent:</strong> Done. The team has a follow-up reminder for tomorrow.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-5---opportunity-update">Example 5 - Opportunity update<a href="#example-5---opportunity-update" class="hash-link" aria-label="Direct link to Example 5 - Opportunity update" title="Direct link to Example 5 - Opportunity update" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Move the onboarding deal to Proposal and set next step to send the quote.
+<strong>Agent:</strong> I will update the sales opportunity to Proposal and set the next step to send the quote. Is that right?
+<strong>Customer:</strong> Yes.
+<strong>Agent:</strong> <em>I&#x27;ll update that sales opportunity.</em>
+<strong>Agent:</strong> The sales opportunity has been updated.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="customizing-the-agent">Customizing the agent<a href="#customizing-the-agent" class="hash-link" aria-label="Direct link to Customizing the agent" title="Direct link to Customizing the agent" translate="no">​</a></h2>
+<p>The shipped Salesforce scenarios are a reference implementation. Common safe edits:</p>
+<ul>
+<li class=""><strong>Change tone and language.</strong> Reword greetings, confirmations, and handoff wording around the trigger phrases.</li>
+<li class=""><strong>Add business qualification questions.</strong> For example, add budget, company size, product area, or support severity questions before saving to Salesforce.</li>
+<li class=""><strong>Add stricter confirmations.</strong> For record updates, Case close, Lead conversion, and Opportunity changes, you can require explicit yes/no confirmation.</li>
+<li class=""><strong>Restore defaults after an update.</strong> Delete the edited scenario from the canvas and run <strong>Publish All</strong> to restore the shipped library version.</li>
+</ul>
+<blockquote>
+<p><strong>Always preserve:</strong> every trigger phrase in the <em>Trigger phrases reference</em> table.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ" translate="no">​</a></h2>
+<p><strong>Q. Should I use External Client App or Connected App?</strong>
+Use External Client App for new installs. A Salesforce admin may reuse an existing Connected App if it already supports the required server-to-server setup.</p>
+<p><strong>Q. Why does Newo ask for Base URL instead of login.salesforce.com?</strong>
+Salesforce token requests should use the org&#x27;s My Domain URL. That also keeps setup tied to the correct org.</p>
+<p><strong>Q. Does the agent search by email?</strong>
+Customer identification is phone-based. Lead duplicate checks can use phone and email before saving a new Lead.</p>
+<p><strong>Q. Can the agent write any Salesforce field the caller mentions?</strong>
+No. Writes are restricted to configured and permissioned fields.</p>
+<p><strong>Q. What happens if a duplicate Lead exists?</strong>
+The agent should not create a new Lead. It explains that an existing Salesforce record was found and can offer update, note, or follow-up options.</p>
+<p><strong>Q. Does the agent transfer every support issue to a human?</strong>
+No. Support issues become Cases unless the caller explicitly asks for a live human right now.</p>
+<p><strong>Q. Can I turn features off?</strong>
+Yes. Turn off the matching feature switch in <strong>Module - Salesforce</strong> and click <strong>Publish All</strong>.</p>
+<p><strong>Q. Do I need Lead conversion enabled?</strong>
+Only if the business wants the agent to convert qualified Leads. Keep it off until Salesforce admin setup is complete.</p>
+<p><strong>Q. What should I do when the Client Secret is rotated?</strong>
+Paste the new secret into <strong>Client Secret</strong> and click <strong>Publish All</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common errors and recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common errors and recovery" title="Direct link to Common errors and recovery" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-all-fails-after-entering-credentials">Publish All fails after entering credentials<a href="#publish-all-fails-after-entering-credentials" class="hash-link" aria-label="Direct link to Publish All fails after entering credentials" title="Direct link to Publish All fails after entering credentials" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the Base URL is not the org&#x27;s My Domain URL, the Client ID/Secret pair is wrong, or the External Client App is not enabled for Client Credentials.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">In Salesforce, reopen <strong>My Domain</strong> and copy the active org URL.</li>
+<li class="">In Salesforce, reopen the External Client App and confirm Client Credentials Flow is enabled.</li>
+<li class="">Copy the Consumer Key and Consumer Secret again.</li>
+<li class="">Paste them into <strong>Base URL</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> in Newo.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>How to verify:</strong> a customer lookup test makes the agent say <em>&quot;Let me check that for you.&quot;</em> and then answer from Salesforce context.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-says-it-cannot-save-a-task-or-note">The agent says it cannot save a Task or note<a href="#the-agent-says-it-cannot-save-a-task-or-note" class="hash-link" aria-label="Direct link to The agent says it cannot save a Task or note" title="Direct link to The agent says it cannot save a Task or note" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the integration user does not have Activities/Task permissions or does not have access to the related parent record.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">In Salesforce, open the integration user&#x27;s permission set.</li>
+<li class="">Confirm <strong>Access Activities</strong> and <strong>Edit Tasks</strong> are enabled.</li>
+<li class="">Confirm Task field access and parent object access.</li>
+<li class="">Republish in Newo.</li>
+</ol>
+<p><strong>How to verify:</strong> run the conversation note or follow-up reminder test and confirm a Salesforce Task appears.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-ignores-a-salesforce-action-after-canvas-edits">The agent ignores a Salesforce action after canvas edits<a href="#the-agent-ignores-a-salesforce-action-after-canvas-edits" class="hash-link" aria-label="Direct link to The agent ignores a Salesforce action after canvas edits" title="Direct link to The agent ignores a Salesforce action after canvas edits" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> a trigger phrase was rewritten, translated, or removed from the scenario.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open the edited scenario in the canvas.</li>
+<li class="">Compare each action sentence against <em>Trigger phrases reference</em>.</li>
+<li class="">Restore the phrase exactly.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>How to verify:</strong> repeat the same test chat and confirm the action runs.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lead-conversion-fails-or-never-runs">Lead conversion fails or never runs<a href="#lead-conversion-fails-or-never-runs" class="hash-link" aria-label="Direct link to Lead conversion fails or never runs" title="Direct link to Lead conversion fails or never runs" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> <strong>Convert Leads</strong> is on before Salesforce admin setup is complete, or the integration user cannot convert Leads.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Turn <strong>Convert Leads</strong> off if conversion is not ready.</li>
+<li class="">Ask the Salesforce admin to confirm Lead conversion permissions and compatible conversion setup.</li>
+<li class="">Turn <strong>Convert Leads</strong> back on only after an admin test succeeds.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><strong>How to verify:</strong> run a test conversion on a disposable Lead and confirm Salesforce shows the converted customer records.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-case-or-opportunity-save-is-rejected">A Case or Opportunity save is rejected<a href="#a-case-or-opportunity-save-is-rejected" class="hash-link" aria-label="Direct link to A Case or Opportunity save is rejected" title="Direct link to A Case or Opportunity save is rejected" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the Salesforce org has required fields, record types, validation rules, or restricted picklists that are not reflected in the integration settings.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Ask the Salesforce admin which required value is missing.</li>
+<li class="">Update the hidden field mapping/defaults with a technical owner.</li>
+<li class="">Confirm the integration user has access to those fields.</li>
+<li class="">Republish and rerun the Case or Opportunity test.</li>
+</ol>
+<p><strong>How to verify:</strong> the same customer phrasing creates or updates the Salesforce record successfully.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visible-credentials-are-correct-but-lookup-finds-nothing">Visible credentials are correct, but lookup finds nothing<a href="#visible-credentials-are-correct-but-lookup-finds-nothing" class="hash-link" aria-label="Direct link to Visible credentials are correct, but lookup finds nothing" title="Direct link to Visible credentials are correct, but lookup finds nothing" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the test phone is not stored on a Lead, Contact, or Account in the expected format, or the integration user cannot read that object.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Confirm the test record exists in Salesforce.</li>
+<li class="">Confirm the phone value is unique enough for a lookup.</li>
+<li class="">Confirm the integration user&#x27;s permission set can read the object.</li>
+<li class="">Rerun lookup with the exact phone number.</li>
+</ol>
+<p><strong>How to verify:</strong> the agent identifies the test record and does not ask for email first.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Phone is the supported customer lookup key</strong> - email-only CRM lookup is not the primary identification path.</li>
+<li class=""><strong>No inbound Salesforce webhooks</strong> - the integration acts from conversation-driven requests.</li>
+<li class=""><strong>No arbitrary custom field writes</strong> - field mappings and Salesforce permissions must be approved first.</li>
+<li class=""><strong>Lead conversion is optional</strong> - it requires Salesforce admin setup before the Newo toggle is turned on.</li>
+<li class=""><strong>Validation rules still apply</strong> - if Salesforce requires custom data, configure defaults or mappings before live use.</li>
+<li class=""><strong>The agent is not a general Salesforce admin</strong> - it handles customer-facing CRM actions, not arbitrary admin changes.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-handoff-notes">Support handoff notes<a href="#support-handoff-notes" class="hash-link" aria-label="Direct link to Support handoff notes" title="Direct link to Support handoff notes" translate="no">​</a></h2>
+<p>When handing off a Salesforce deployment to support or a partner team, share:</p>
+<ul>
+<li class=""><strong>Salesforce org URL</strong> - the My Domain URL used in <strong>Base URL</strong>.</li>
+<li class=""><strong>Authentication owner</strong> - who can rotate the External Client App secret.</li>
+<li class=""><strong>Integration user</strong> - the Salesforce user selected as the run-as user.</li>
+<li class=""><strong>Enabled feature switches</strong> - especially <strong>Convert Leads</strong>, <strong>Manage Opportunities</strong>, and <strong>Save Related Records Together</strong>.</li>
+<li class=""><strong>Permission set name</strong> - the permission set assigned to the integration user.</li>
+<li class=""><strong>Custom mapping decisions</strong> - any required Lead, Case, Task, Opportunity, owner, or queue customization.</li>
+<li class=""><strong>Canvas customization status</strong> - whether the shipped scenarios are untouched or edited copies.</li>
+</ul>
+<p>Most first-line fixes are: re-paste credentials and <strong>Publish All</strong>, then run the customer lookup smoke test.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All settings reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All settings reference" title="Direct link to All settings reference" translate="no">​</a></h2>
+<p>Every setting the integration adds to the <strong>Module - Salesforce</strong> group in Newo Builder. Operators typically only touch rows marked <strong>Safe</strong>. Rows marked <strong>Advanced</strong> are for admins or technical owners. Rows marked <strong>Auto-managed</strong> are written by the integration.</p>
+<table><thead><tr><th>Name</th><th>Description</th><th>Required</th><th>Default</th><th>Hidden</th><th>Edit</th></tr></thead><tbody><tr><td><code>salesforce_org_url</code></td><td>Salesforce My Domain URL used for authentication and API calls.</td><td>Yes</td><td><code>https://your-domain.my.salesforce.com</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_client_id</code></td><td>Client ID / Consumer Key from the Salesforce OAuth app.</td><td>Yes</td><td><em>(empty)</em></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_client_secret</code></td><td>Client Secret / Consumer Secret from the Salesforce OAuth app.</td><td>Yes</td><td><em>(empty)</em></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_record_lookup</code></td><td>Enables Salesforce customer lookup by phone.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_lead_creation</code></td><td>Enables duplicate-safe new Lead creation.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_record_update</code></td><td>Enables approved updates to existing customer records.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_interaction_logging</code></td><td>Enables conversation summaries saved as Salesforce Tasks.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_case_management</code></td><td>Enables Case lookup, creation, update, and close.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_follow_up_tasks</code></td><td>Enables team contact follow-up reminders.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_lead_conversion</code></td><td>Enables Lead conversion after Salesforce admin setup.</td><td>Yes, if Lead conversion is in scope</td><td><code>off</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_opportunity_pipeline</code></td><td>Enables Opportunity creation and updates.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_enable_composite_writes</code></td><td>Enables related Lead, Case, and Task records to be saved together.</td><td>No</td><td><code>on</code></td><td>No</td><td>Safe</td></tr><tr><td><code>salesforce_api_version</code></td><td>Salesforce API version used by the integration.</td><td>No</td><td><code>v66.0</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_oauth_flow</code></td><td>OAuth method, normally Client Credentials.</td><td>No</td><td><code>client_credentials</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_redirect_uri</code></td><td>Redirect URI for authorization-code setup only.</td><td>Yes, authorization-code setup only</td><td><em>(empty)</em></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_authorization_code</code></td><td>One-time authorization code for authorization-code setup only.</td><td>Yes, authorization-code setup only</td><td><em>(empty)</em></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_refresh_token</code></td><td>Refresh token cache for authorization-code setup.</td><td>No</td><td><em>(empty)</em></td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_access_token</code></td><td>Access token cache.</td><td>No</td><td><em>(empty)</em></td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_instance_url</code></td><td>Salesforce instance URL returned by OAuth.</td><td>No</td><td><em>(empty)</em></td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_access_token_expires_at</code></td><td>Timestamp used to refresh the access token.</td><td>No</td><td><em>(empty)</em></td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_search_objects</code></td><td>Salesforce record types searched during phone lookup.</td><td>No</td><td><code>Lead, Contact, Account</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_allowed_update_fields</code></td><td>Approved fields for customer record updates.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_lead_field_mapping</code></td><td>Approved fields for new Lead creation.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_task_field_mapping</code></td><td>Task fields used for notes and reminders.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_opportunity_field_mapping</code></td><td>Opportunity fields used for pipeline writes.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_assignment_mapping</code></td><td>Approved Salesforce owners and queues for routing.</td><td>No</td><td>empty routing map</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_default_lead_source</code></td><td>Default Lead Source when the caller does not provide one.</td><td>No</td><td><code>AI Receptionist</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_default_company</code></td><td>Default Company for Leads when company is not provided.</td><td>No</td><td><code>Unknown</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_task_subject</code></td><td>Default subject for conversation-log Tasks.</td><td>No</td><td><code>Newo AI conversation</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_task_status</code></td><td>Default Task status for conversation logs.</td><td>No</td><td><code>Completed</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_task_priority</code></td><td>Default Task priority for conversation logs.</td><td>No</td><td><code>Normal</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_case_field_mapping</code></td><td>Case defaults and allowed fields.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_duplicate_lookup_fields</code></td><td>Fields checked before a new Lead is created.</td><td>No</td><td>built-in JSON</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_follow_up_task_defaults</code></td><td>Defaults for team contact follow-up reminders.</td><td>No</td><td><code>Newo AI follow-up</code>, <code>Not Started</code>, <code>Normal</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_lead_conversion_apex_path</code></td><td>Salesforce admin-provided Lead conversion path.</td><td>Yes, if <strong>Convert Leads</strong> is on</td><td>built-in default</td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_setup_scenarios</code></td><td>Installs Salesforce conversation scenarios during Publish All.</td><td>No</td><td><code>on</code></td><td>Yes</td><td>Advanced</td></tr><tr><td><code>salesforce_lookup_extraction_schema</code></td><td>Internal extraction schema for lookup.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_lookup_extraction_instructions</code></td><td>Internal extraction rules for lookup.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_lead_extraction_schema</code></td><td>Internal extraction schema for Lead details.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_lead_extraction_instructions</code></td><td>Internal extraction rules for Lead details.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_update_extraction_schema</code></td><td>Internal extraction schema for record updates.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_update_extraction_instructions</code></td><td>Internal extraction rules for record updates.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_case_extraction_schema</code></td><td>Internal extraction schema for Case details.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_case_extraction_instructions</code></td><td>Internal extraction rules for Case details.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_follow_up_task_extraction_schema</code></td><td>Internal extraction schema for follow-up reminders.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_follow_up_task_extraction_instructions</code></td><td>Internal extraction rules for follow-up reminders.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_lead_conversion_extraction_schema</code></td><td>Internal extraction schema for Lead conversion.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_lead_conversion_extraction_instructions</code></td><td>Internal extraction rules for Lead conversion.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_opportunity_extraction_schema</code></td><td>Internal extraction schema for Opportunities.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_opportunity_extraction_instructions</code></td><td>Internal extraction rules for Opportunities.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_composite_write_extraction_schema</code></td><td>Internal extraction schema for related-record bundles.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_composite_write_extraction_instructions</code></td><td>Internal extraction rules for related-record bundles.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_interaction_summary_schema</code></td><td>Internal schema for conversation summaries.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>salesforce_interaction_summary_instructions</code></td><td>Internal rules for conversation summaries.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr><tr><td><code>setup_persona_id</code></td><td>Internal setup record used to register Salesforce actions.</td><td>No</td><td>auto-created</td><td>Yes</td><td>Auto-managed</td></tr></tbody></table></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/repcard"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Repcard CRM Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/servicem8"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">ServiceM8 Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a><ul><li><a href="#required-salesforce-permissions" class="table-of-contents__link toc-highlight">Required Salesforce permissions</a></li></ul></li><li><a href="#what-the-ai-can-do" class="table-of-contents__link toc-highlight">What the AI can do</a></li><li><a href="#salesforce-data-model" class="table-of-contents__link toc-highlight">Salesforce data model</a></li><li><a href="#features-at-a-glance" class="table-of-contents__link toc-highlight">Features at a glance</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#create-the-newo-project" class="table-of-contents__link toc-highlight">Create the Newo project</a></li><li><a href="#1-prepare-your-salesforce-org" class="table-of-contents__link toc-highlight">1. Prepare your Salesforce org</a></li><li><a href="#2-create-the-salesforce-oauth-app" class="table-of-contents__link toc-highlight">2. Create the Salesforce OAuth app</a></li><li><a href="#3-configure-in-newo" class="table-of-contents__link toc-highlight">3. Configure in Newo</a></li><li><a href="#4-hit-publish-all" class="table-of-contents__link toc-highlight">4. Hit Publish All</a></li><li><a href="#5-optional-enable-lead-conversion" class="table-of-contents__link toc-highlight">5. Optional: enable Lead conversion</a></li><li><a href="#6-optional-tune-custom-fields-and-routing" class="table-of-contents__link toc-highlight">6. Optional: tune custom fields and routing</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How to test that everything works</a><ul><li><a href="#test-customer-lookup" class="table-of-contents__link toc-highlight">Test customer lookup</a></li><li><a href="#test-new-lead-creation" class="table-of-contents__link toc-highlight">Test new Lead creation</a></li><li><a href="#test-duplicate-prevention" class="table-of-contents__link toc-highlight">Test duplicate prevention</a></li><li><a href="#test-record-update" class="table-of-contents__link toc-highlight">Test record update</a></li><li><a href="#test-support-case-creation" class="table-of-contents__link toc-highlight">Test support Case creation</a></li><li><a href="#test-follow-up-reminder" class="table-of-contents__link toc-highlight">Test follow-up reminder</a></li><li><a href="#test-conversation-note" class="table-of-contents__link toc-highlight">Test conversation note</a></li><li><a href="#test-opportunity-management" class="table-of-contents__link toc-highlight">Test Opportunity management</a></li><li><a href="#test-related-record-bundle" class="table-of-contents__link toc-highlight">Test related-record bundle</a></li></ul></li><li><a href="#scenarios" class="table-of-contents__link toc-highlight">Scenarios</a><ul><li><a href="#what-gets-added-on-publish-all" class="table-of-contents__link toc-highlight">What gets added on Publish All</a></li><li><a href="#why-trigger-phrases-matter" class="table-of-contents__link toc-highlight">Why trigger phrases matter</a></li><li><a href="#scenario---customer-record-lookup" class="table-of-contents__link toc-highlight">Scenario - Customer Record Lookup</a></li><li><a href="#scenario---new-prospect-capture" class="table-of-contents__link toc-highlight">Scenario - New Prospect Capture</a></li><li><a href="#scenario---customer-details-save" class="table-of-contents__link toc-highlight">Scenario - Customer Details Save</a></li><li><a href="#scenario---customer-record-update" class="table-of-contents__link toc-highlight">Scenario - Customer Record Update</a></li><li><a href="#scenario---conversation-note" class="table-of-contents__link toc-highlight">Scenario - Conversation Note</a></li><li><a href="#scenario---support-case-management" class="table-of-contents__link toc-highlight">Scenario - Support Case Management</a></li><li><a href="#scenario---follow-up-reminder" class="table-of-contents__link toc-highlight">Scenario - Follow-up Reminder</a></li><li><a href="#scenario---prospect-conversion" class="table-of-contents__link toc-highlight">Scenario - Prospect Conversion</a></li><li><a href="#scenario---sales-opportunity-pipeline" class="table-of-contents__link toc-highlight">Scenario - Sales Opportunity Pipeline</a></li><li><a href="#scenario---complete-customer-request" class="table-of-contents__link toc-highlight">Scenario - Complete Customer Request</a></li><li><a href="#trigger-phrases-reference" class="table-of-contents__link toc-highlight">Trigger phrases reference</a></li></ul></li><li><a href="#example-dialogs" class="table-of-contents__link toc-highlight">Example dialogs</a><ul><li><a href="#example-1---existing-customer-lookup" class="table-of-contents__link toc-highlight">Example 1 - Existing customer lookup</a></li><li><a href="#example-2---new-prospect-saved-without-duplicate" class="table-of-contents__link toc-highlight">Example 2 - New prospect saved without duplicate</a></li><li><a href="#example-3---support-case-instead-of-live-transfer" class="table-of-contents__link toc-highlight">Example 3 - Support Case instead of live transfer</a></li><li><a href="#example-4---follow-up-reminder" class="table-of-contents__link toc-highlight">Example 4 - Follow-up reminder</a></li><li><a href="#example-5---opportunity-update" class="table-of-contents__link toc-highlight">Example 5 - Opportunity update</a></li></ul></li><li><a href="#customizing-the-agent" class="table-of-contents__link toc-highlight">Customizing the agent</a></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common errors and recovery</a><ul><li><a href="#publish-all-fails-after-entering-credentials" class="table-of-contents__link toc-highlight">Publish All fails after entering credentials</a></li><li><a href="#the-agent-says-it-cannot-save-a-task-or-note" class="table-of-contents__link toc-highlight">The agent says it cannot save a Task or note</a></li><li><a href="#the-agent-ignores-a-salesforce-action-after-canvas-edits" class="table-of-contents__link toc-highlight">The agent ignores a Salesforce action after canvas edits</a></li><li><a href="#lead-conversion-fails-or-never-runs" class="table-of-contents__link toc-highlight">Lead conversion fails or never runs</a></li><li><a href="#a-case-or-opportunity-save-is-rejected" class="table-of-contents__link toc-highlight">A Case or Opportunity save is rejected</a></li><li><a href="#visible-credentials-are-correct-but-lookup-finds-nothing" class="table-of-contents__link toc-highlight">Visible credentials are correct, but lookup finds nothing</a></li></ul></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#support-handoff-notes" class="table-of-contents__link toc-highlight">Support handoff notes</a></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All settings reference</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/salesforce.pdf" download="salesforce.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>

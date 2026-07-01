@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/tableo" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Tableo Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/tableo"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Tableo Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects Tableo with the Newo AI agent so restaurant guests can ask"><meta data-rh="true" property="og:description" content="Connects Tableo with the Newo AI agent so restaurant guests can ask"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/tableo"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/tableo" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/tableo" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tableo Integration","item":"https://twinmind-pro.github.io/docs/integrations/tableo"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.88ef5dda.js" defer="defer"></script>
+<script src="/assets/js/main.c73f5c66.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/altegio"><span title="Altegio Integration" class="linkLabel_WmDU">Altegio Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/boulevard"><span title="Boulevard Integration" class="linkLabel_WmDU">Boulevard Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/close"><span title="Close Integration" class="linkLabel_WmDU">Close Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/cloud9"><span title="Cloud 9 Integration" class="linkLabel_WmDU">Cloud 9 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/deliverect"><span title="Deliverect Integration Guide" class="linkLabel_WmDU">Deliverect Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/poshub"><span title="PosHUB Integration" class="linkLabel_WmDU">PosHUB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/salesforce"><span title="Salesforce Integration" class="linkLabel_WmDU">Salesforce Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/tableo"><span title="Tableo Integration" class="linkLabel_WmDU">Tableo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamleader"><span title="TeamLeader Integration" class="linkLabel_WmDU">TeamLeader Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/unitify"><span title="Unitify Condo Integration" class="linkLabel_WmDU">Unitify Condo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zendesk"><span title="Zendesk Integration" class="linkLabel_WmDU">Zendesk Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Tableo Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Tableo Integration</h1></header>
+<p>Connects <strong>Tableo</strong> with the Newo AI agent so restaurant guests can ask
+for live reservation availability, choose a dining area, create a
+booking, modify their reservation or cancel it during a call or chat.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">an active <strong>Tableo</strong> restaurant account;</li>
+<li class="">access to the Tableo admin panel or a Tableo account administrator;</li>
+<li class="">a Tableo API token for the restaurant the agent will serve;</li>
+<li class="">dining areas configured in Tableo, such as <strong>Main Dining</strong> or
+<strong>Terrace</strong>;</li>
+<li class="">reservation availability configured for the dining areas and party
+sizes you want to offer;</li>
+<li class="">access to <strong>Newo Builder</strong>, with permission to edit attributes and
+click <strong>Publish All</strong>.</li>
+</ul>
+<p>The token selects the restaurant. One Newo Tableo connection should
+point to one restaurant account.</p>
+<p><img decoding="async" loading="lazy" alt="Tableo dining areas" src="/assets/images/S01-a0e97f883c48a643215f8bc455e78d4f.png" width="1600" height="905" class="img_ev3q"></p>
+<p><em>Figure S01. Tableo account settings with the available dining areas.</em></p>
+<p><img decoding="async" loading="lazy" alt="Tableo booking availability settings" src="/assets/images/S02-db097a184097b273f017fc25cdba541a.png" width="1600" height="901" class="img_ev3q"></p>
+<p><em>Figure S02. Tableo booking settings used when configuring online
+reservation availability.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-agent-can-do">What the Agent can do<a href="#what-the-agent-can-do" class="hash-link" aria-label="Direct link to What the Agent can do" title="Direct link to What the Agent can do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Check live reservation availability.</strong> The agent asks for the date
+and number of guests, then reads back real Tableo slots.</li>
+<li class=""><strong>Offer dining-area choices.</strong> If Tableo returns more than one dining
+area, the agent can ask whether the guest prefers options such as
+<strong>Main Dining</strong> or <strong>Terrace</strong>.</li>
+<li class=""><strong>Create a restaurant booking.</strong> After the guest confirms a slot and
+dining area, the reservation is created in Tableo.</li>
+<li class=""><strong>Remember bookings created during the conversation.</strong> The confirmed
+reservation is stored with the guest&#x27;s Newo profile.</li>
+<li class=""><strong>Look up existing reservations by phone number.</strong> When a guest phone
+number is detected, the integration can load accepted Tableo
+reservations for the configured upcoming lookup window. If the guest
+provides a phone number while asking to cancel or change a booking,
+the agent can announce the matching reservations and ask which one to
+use.</li>
+<li class=""><strong>Cancel an accepted reservation.</strong> After the guest confirms which
+accepted reservation should be cancelled, the agent can cancel it in
+Tableo.</li>
+<li class=""><strong>Reschedule an accepted reservation.</strong> After the guest chooses a
+replacement slot, the agent can move the existing reservation.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="returning-customer-recognition">Returning-customer recognition<a href="#returning-customer-recognition" class="hash-link" aria-label="Direct link to Returning-customer recognition" title="Direct link to Returning-customer recognition" translate="no">​</a></h2>
+<p>When a phone number becomes available during a conversation, the
+integration checks for that guest&#x27;s accepted Tableo reservations in the
+configured upcoming lookup window. The lookup is restricted to bookings
+whose guest phone number matches the detected number.</p>
+<p>This allows the agent to answer questions such as <em>&quot;Do I already have
+a reservation?&quot;</em> without
+exposing other guests&#x27; reservations.</p>
+<p>If the phone number is detected automatically at the start of a call,
+the lookup is silent and simply refreshes the guest&#x27;s reservation
+context. If the guest asks to cancel or move a reservation and then
+provides their phone number, the agent can tell them which matching
+reservations were found.</p>
+<p>If no booking is found in the configured upcoming window, the agent can
+ask for the reservation date and run a date-specific lookup for that
+same phone number.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-at-a-glance">Features at a glance<a href="#features-at-a-glance" class="hash-link" aria-label="Direct link to Features at a glance" title="Direct link to Features at a glance" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Included</th></tr></thead><tbody><tr><td>Check live availability by date and party size</td><td>Yes</td></tr><tr><td>Offer slots grouped by dining area</td><td>Yes</td></tr><tr><td>Create a booking in the selected dining area</td><td>Yes</td></tr><tr><td>Store newly created reservations in the guest profile</td><td>Yes</td></tr><tr><td>Refresh upcoming existing reservations by phone</td><td>Yes</td></tr><tr><td>Ask for a reservation date and run a date-specific lookup when needed</td><td>Yes</td></tr><tr><td>Hide cancelled reservations from the guest&#x27;s active booking list</td><td>Yes</td></tr><tr><td>Cancel an accepted Tableo reservation</td><td>Yes</td></tr><tr><td>Reschedule an accepted Tableo reservation after a replacement availability check</td><td>Yes</td></tr><tr><td>Take payments during the Newo conversation</td><td>No</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-the-newo-project">Create the Newo project<a href="#create-the-newo-project" class="hash-link" aria-label="Direct link to Create the Newo project" title="Direct link to Create the Newo project" translate="no">​</a></h3>
+<p>If this project already exists in <strong>Newo Builder</strong>, skip this subsection and continue with the integration-specific settings below.</p>
+<ol>
+<li class="">In <strong>Newo Builder</strong>, open the projects list and click <strong>Create Project</strong> (or <strong>Create New Project</strong> from the top-right menu).</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create New Project menu in Newo Builder" src="/assets/images/newo_create_project_button-92035c73bc75d1dc615912fe4feb354f.png" width="510" height="220" class="img_ev3q"></p>
+<ol start="2">
+<li class="">Fill <strong>IDN</strong> and <strong>Title</strong>. The exact names do not matter; use any clear names your team will recognize.</li>
+<li class="">In <strong>Registry</strong>, choose the release channel:<!-- -->
+<ul>
+<li class=""><strong>staging</strong> — the newest module fixes appear here first. Use it when you need the latest fix, but expect possible unfinished changes.</li>
+<li class=""><strong>production</strong> — the final stable version for live projects.</li>
+</ul>
+</li>
+<li class="">In <strong>Module</strong>, select the module for this integration.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1170" height="1846" class="img_ev3q">
+5. Leave <strong>Module version</strong> on <strong>Latest version</strong> unless support tells you to pin a specific version, then click <strong>Create</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare-your-tableo-account">1. Prepare your Tableo account<a href="#1-prepare-your-tableo-account" class="hash-link" aria-label="Direct link to 1. Prepare your Tableo account" title="Direct link to 1. Prepare your Tableo account" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-confirm-dining-areas-and-availability">1.1 Confirm dining areas and availability<a href="#11-confirm-dining-areas-and-availability" class="hash-link" aria-label="Direct link to 1.1 Confirm dining areas and availability" title="Direct link to 1.1 Confirm dining areas and availability" translate="no">​</a></h4>
+<ol>
+<li class="">Open the Tableo admin panel.</li>
+<li class="">Confirm that the restaurant has at least one dining area.</li>
+<li class="">Confirm that availability is configured for the dates, hours, and
+party sizes the agent should offer.</li>
+<li class="">Note the exact dining-area names. The agent presents those names to
+the guest and uses the guest&#x27;s selection when creating a booking.</li>
+</ol>
+<p><strong>How to verify:</strong> use the Tableo admin panel to confirm that a manual
+availability check returns slots for a known date and party size.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="12-confirm-the-restaurant-can-accept-bookings">1.2 Confirm the restaurant can accept bookings<a href="#12-confirm-the-restaurant-can-accept-bookings" class="hash-link" aria-label="Direct link to 1.2 Confirm the restaurant can accept bookings" title="Direct link to 1.2 Confirm the restaurant can accept bookings" translate="no">​</a></h4>
+<p>The Tableo account must be ready to accept API-created reservations.
+Some accounts require additional Tableo-side account linking before a
+booking can be accepted.</p>
+<p><strong>How to verify:</strong> create a test reservation from Tableo or confirm the
+account setup with the Tableo account administrator.</p>
+<p><img decoding="async" loading="lazy" alt="Tableo booking list" src="/assets/images/S03-9ef47ad379497d339229345fd891578d.png" width="1600" height="901" class="img_ev3q"></p>
+<p><em>Figure S03. Tableo bookings list with a test reservation created
+through the integration.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-get-your-tableo-credentials">2. Get your Tableo credentials<a href="#2-get-your-tableo-credentials" class="hash-link" aria-label="Direct link to 2. Get your Tableo credentials" title="Direct link to 2. Get your Tableo credentials" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tableo-api-token">Tableo API Token<a href="#tableo-api-token" class="hash-link" aria-label="Direct link to Tableo API Token" title="Direct link to Tableo API Token" translate="no">​</a></h4>
+<ol>
+<li class="">Open the Tableo admin panel.</li>
+<li class="">Generate or request the API token for the restaurant this agent
+should serve.</li>
+<li class="">Copy the token exactly as Tableo provides it.</li>
+</ol>
+<p>If your Tableo account does not show a token-generation page, ask your
+Tableo account administrator or implementation contact to issue the
+token.</p>
+<p><img decoding="async" loading="lazy" alt="Tableo API Integration settings" src="/assets/images/S04-605d91585797dbb88edf92346fc0455d.png" width="1600" height="900" class="img_ev3q"></p>
+<p><em>Figure S04. Tableo API Integration settings where the restaurant API
+token can be generated or replaced.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-add-tableo-to-the-newo-agent">3. Add Tableo to the Newo agent<a href="#3-add-tableo-to-the-newo-agent" class="hash-link" aria-label="Direct link to 3. Add Tableo to the Newo agent" title="Direct link to 3. Add Tableo to the Newo agent" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-add-the-tableo-module">3.1 Add the Tableo module<a href="#31-add-the-tableo-module" class="hash-link" aria-label="Direct link to 3.1 Add the Tableo module" title="Direct link to 3.1 Add the Tableo module" translate="no">​</a></h4>
+<ol>
+<li class="">Open the restaurant project in <strong>Newo Builder</strong>.</li>
+<li class="">Open the agent that should handle Tableo reservations.</li>
+<li class="">Press 3 dots and click <strong>Create New Project</strong>.</li>
+<li class="">Enter <strong>TableoIntegration</strong> into the IDN and TITLE fields.</li>
+<li class="">Select module <strong>tableo_integration</strong>.</li>
+<li class="">Toggle <strong>Auto update enabled</strong> and click <strong>Create</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Adding the Tableo module in Newo Builder" src="/assets/images/S05-e42bac10cb6976dc243deb2615a6eda1.png" width="2880" height="1624" class="img_ev3q"></p>
+<p><em>Figure S05. Creating the <strong>TableoIntegration</strong> module from the
+<code>tableo_integration</code> registry module in Newo Builder.</em></p>
+<p>After the module is added, the <strong>Module - TableoIntegration</strong> settings
+group becomes available in the project attributes.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-create-the-tableo-connector">3.2 Create the Tableo connector<a href="#32-create-the-tableo-connector" class="hash-link" aria-label="Direct link to 3.2 Create the Tableo connector" title="Direct link to 3.2 Create the Tableo connector" translate="no">​</a></h4>
+<ol>
+<li class="">In <strong>Newo Builder</strong>, open the <strong>Integrations</strong> settings for the project.</li>
+<li class="">Scroll down until you see the <strong>Tableo Booking Integration</strong>
+connector.</li>
+<li class="">Click the settings icon, enter the Tableo Base URL in the
+<strong>Tableo API base URL</strong> field, and click <strong>Save</strong>. The Tableo API
+base URL can be found in the API Integration section of the Tableo
+admin panel.</li>
+<li class="">Click + sign to create a new connector.</li>
+<li class="">Enter title as <strong>Tableo</strong>, idn as <strong>tableo</strong>, and connector name as <strong>Tableo</strong>.</li>
+<li class="">Save the connector.</li>
+</ol>
+<p>Get the <strong>Tableo Base API URL</strong> from the Tableo API or integration
+settings for the restaurant account. If the Tableo admin panel does
+not show it, ask the restaurant&#x27;s Tableo account administrator,
+Tableo support, or the Tableo implementation contact for the API base
+URL that belongs to that restaurant/environment.</p>
+<p><img decoding="async" loading="lazy" alt="Tableo connector base URL in Newo Builder" src="/assets/images/S06-ff25a1b29282be58764c2222ce57cf6e.png" width="2880" height="1620" class="img_ev3q"></p>
+<p><em>Figure S06. Tableo Booking Integration settings in Newo Builder where
+the <strong>Tableo Base URL</strong> is entered before creating the connector.</em></p>
+<p><img decoding="async" loading="lazy" alt="Tableo API Integration base URL" src="/assets/images/S07-6e4a73d70273893ee700a5b30bf7f970.png" width="2880" height="1622" class="img_ev3q"></p>
+<p><em>Figure S07. Tableo <strong>API Integration</strong> settings showing the restaurant
+Base URL and the API key area.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-configure-the-tableo-settings-in-newo">3.3 Configure the Tableo settings in Newo<a href="#33-configure-the-tableo-settings-in-newo" class="hash-link" aria-label="Direct link to 3.3 Configure the Tableo settings in Newo" title="Direct link to 3.3 Configure the Tableo settings in Newo" translate="no">​</a></h4>
+<ol>
+<li class="">Open your project in <strong>Newo Builder</strong>.</li>
+<li class="">Go to <strong>Builder -&gt; Attributes</strong>.</li>
+<li class="">Find the <strong>Module - TableoIntegration</strong> group.</li>
+<li class="">Set <strong>01. Tableo Connector Name</strong> to the same connector name you
+created in the previous step.</li>
+<li class="">Paste the token into <strong>02. Tableo API Token</strong> if it is not already
+stored on the connector.</li>
+<li class="">Leave these switches enabled for a normal setup:</li>
+</ol>
+<table><thead><tr><th>Setting</th><th>Purpose</th><th>Default</th></tr></thead><tbody><tr><td><strong>Enable Tableo Availability Check</strong></td><td>Allows the agent to check live reservation slots.</td><td>On</td></tr><tr><td><strong>Enable Tableo Booking</strong></td><td>Allows the agent to create a confirmed Tableo reservation.</td><td>On</td></tr><tr><td><strong>Tableo Booking Window</strong></td><td>Number of days to check for available slots starting from the guest&#x27;s requested reservation date.</td><td>3</td></tr><tr><td><strong>Enable Tableo Booking Lookup</strong></td><td>Allows upcoming reservation lookup by guest phone number.</td><td>On</td></tr><tr><td><strong>Tableo Booking Lookup Days</strong></td><td>Number of upcoming days to refresh after phone detection.</td><td>7</td></tr><tr><td><strong>Enable Tableo Cancellation</strong></td><td>Allows the agent to cancel an accepted Tableo reservation found in the guest profile.</td><td>On</td></tr><tr><td><strong>Enable Tableo Rescheduling</strong></td><td>Allows the agent to move an accepted reservation to a replacement slot.</td><td>On</td></tr><tr><td><strong>Setup Tableo Conversation Scenarios</strong></td><td>Adds Tableo booking, cancellation, and rescheduling guidance to the agent canvas.</td><td>On</td></tr></tbody></table>
+<ol start="7">
+<li class="">Save the edited attributes.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Tableo attributes in Newo Builder" src="/assets/images/S08-85b3354e59cdf4710782af9fe810d06f.png" width="1600" height="901" class="img_ev3q"></p>
+<p><em>Figure S08. The <strong>Module - TableoIntegration</strong> attributes in Newo
+Builder. Save the connector settings, then click <strong>Publish All</strong>.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-hit-publish-all">4. Hit Publish All<a href="#4-hit-publish-all" class="hash-link" aria-label="Direct link to 4. Hit Publish All" title="Direct link to 4. Hit Publish All" translate="no">​</a></h3>
+<p>After <strong>Publish All</strong>, the integration:</p>
+<ul>
+<li class="">uses the configured Tableo connector for live Tableo requests;</li>
+<li class="">applies the restaurant API token to that connection when the token
+is provided in the Tableo settings;</li>
+<li class="">enables Tableo availability checks, booking creation, cancellation,
+and rescheduling;</li>
+<li class="">prepares guest reservation lookup by phone number;</li>
+<li class="">installs Tableo booking, cancellation, and rescheduling guidance on
+the agent canvas when <strong>Setup Tableo Conversation Scenarios</strong> is on;</li>
+<li class="">removes the default regular table-booking scenario that would
+otherwise compete with the Tableo booking scenario;</li>
+<li class="">ensures the shared Newo procedures for date/time, name, phone, and
+email collection are available to the agent.</li>
+</ul>
+<p>There are no auto-populated dropdowns to select after publishing.
+Dining-area choices are loaded live whenever the agent checks
+availability.</p>
+<p><strong>How to verify:</strong></p>
+<ul>
+<li class="">the Tableo connector is saved and active;</li>
+<li class="">the Tableo settings remain saved after refreshing Newo Builder;</li>
+<li class="">a test availability conversation returns live Tableo slots;</li>
+<li class="">a confirmed test reservation appears in the Tableo booking list.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test-that-everything-works">How to test that everything works<a href="#how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to How to test that everything works" title="Direct link to How to test that everything works" translate="no">​</a></h2>
+<p>Use a test guest and a quiet date before going live.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-availability">Test availability<a href="#test-availability" class="hash-link" aria-label="Direct link to Test availability" title="Direct link to Test availability" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test conversation.</li>
+<li class="">Ask: <em>&quot;Do you have a table for four people this Friday evening?&quot;</em></li>
+<li class="">Confirm that the agent asks for any missing date or guest count.</li>
+<li class="">The agent should say: <em>&quot;Give me a moment to check available slots
+right now. I&#x27;ll get back to you shortly.&quot;</em></li>
+<li class="">Confirm that the agent reads back real Tableo time slots and dining
+areas.</li>
+<li class="">Compare the returned options with the Tableo admin panel.</li>
+</ol>
+<p>No reservation should be created during this check.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-booking">Test booking<a href="#test-booking" class="hash-link" aria-label="Direct link to Test booking" title="Direct link to Test booking" translate="no">​</a></h3>
+<ol>
+<li class="">Continue from the availability test.</li>
+<li class="">Choose one returned time and one returned dining area.</li>
+<li class="">Provide a test first name, last name, email address, and phone
+number with country code, such as <code>+35612345678</code>.</li>
+<li class="">Confirm the reservation when the agent asks.</li>
+<li class="">The agent should say: <em>&quot;I&#x27;m submitting your booking right now.
+Please give me a moment, and I&#x27;ll get back to you shortly.&quot;</em></li>
+<li class="">Open Tableo and check that the reservation appears under the
+selected date, time, dining area, and guest details.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-existing-reservation-lookup">Test existing-reservation lookup<a href="#test-existing-reservation-lookup" class="hash-link" aria-label="Direct link to Test existing-reservation lookup" title="Direct link to Test existing-reservation lookup" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test conversation with a phone number that has an accepted
+Tableo reservation in the configured lookup window.</li>
+<li class="">Ask: <em>&quot;Can you check my reservation?&quot;</em></li>
+<li class="">If the phone number is not already known, provide it when the agent
+asks.</li>
+<li class="">The agent should look up the matching accepted reservations and list
+the found date, time, and booking reference when available.</li>
+<li class="">If no reservation is found, provide the reservation date when the
+agent asks. The agent should run a date-specific lookup for the same
+phone number.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-cancellation">Test cancellation<a href="#test-cancellation" class="hash-link" aria-label="Direct link to Test cancellation" title="Direct link to Test cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">Start with a reservation stored in the guest profile, or ask the
+agent to look it up by phone number first.</li>
+<li class="">Ask the agent to cancel the reservation.</li>
+<li class="">Confirm the exact reservation when the agent asks.</li>
+<li class="">The agent should say: <em>&quot;I will cancel the selected reservation right
+now. Please give me a moment.&quot;</em></li>
+<li class="">Open Tableo and check that its status is cancelled.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-rescheduling">Test rescheduling<a href="#test-rescheduling" class="hash-link" aria-label="Direct link to Test rescheduling" title="Direct link to Test rescheduling" translate="no">​</a></h3>
+<ol>
+<li class="">Start with a reservation stored in the guest profile, or ask the
+agent to look it up by phone number first.</li>
+<li class="">Ask the agent to move it to another date or time.</li>
+<li class="">Choose one replacement slot returned by a fresh availability check.</li>
+<li class="">Confirm the change.</li>
+<li class="">The agent should say: <em>&quot;Give me a moment, I will reschedule your
+booking right now.&quot;</em></li>
+<li class="">Open Tableo and check the updated date, time, and dining area.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Tableo cancelled booking" src="/assets/images/S09-656f4e45c8e14a20468d67440034abfe.png" width="2822" height="1302" class="img_ev3q"></p>
+<p><em>Figure S09. Tableo booking list showing a cancelled reservation after
+the agent processes the cancellation request.</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-dialogs">Example dialogs<a href="#example-dialogs" class="hash-link" aria-label="Direct link to Example dialogs" title="Direct link to Example dialogs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-1---availability-and-dining-area-choice">Example 1 - Availability and dining-area choice<a href="#example-1---availability-and-dining-area-choice" class="hash-link" aria-label="Direct link to Example 1 - Availability and dining-area choice" title="Direct link to Example 1 - Availability and dining-area choice" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Guest:</strong> Do you have a table for four this Friday at around 7 PM?</p>
+<p><strong>Agent:</strong> Give me a moment to check available slots right now. I&#x27;ll
+get back to you shortly.</p>
+<p><strong>Agent:</strong> I have 7:00 PM available in Main Dining and Terrace.
+Which dining area would you prefer?</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-2---booking">Example 2 - Booking<a href="#example-2---booking" class="hash-link" aria-label="Direct link to Example 2 - Booking" title="Direct link to Example 2 - Booking" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Guest:</strong> Terrace, please.</p>
+<p><strong>Agent:</strong> Great. May I have your first name, last name, email
+address, and phone number with country code?</p>
+<p><strong>Guest:</strong> Sophia Reyes, <a href="mailto:sophia.reyes@example.com" target="_blank" rel="noopener noreferrer" class="">sophia.reyes@example.com</a>, +35612345678.</p>
+<p><strong>Agent:</strong> I can book a table for four on Friday at 7:00 PM on the
+Terrace. Shall I confirm it?</p>
+<p><strong>Guest:</strong> Yes.</p>
+<p><strong>Agent:</strong> I&#x27;m submitting your booking right now. Please give me a
+moment, and I&#x27;ll get back to you shortly.</p>
+<p><strong>Agent:</strong> Your reservation is confirmed.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-3---existing-reservation-lookup-and-cancellation">Example 3 - Existing reservation lookup and cancellation<a href="#example-3---existing-reservation-lookup-and-cancellation" class="hash-link" aria-label="Direct link to Example 3 - Existing reservation lookup and cancellation" title="Direct link to Example 3 - Existing reservation lookup and cancellation" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Guest:</strong> I need to cancel my booking.</p>
+<p><strong>Agent:</strong> Could you share the phone number associated with your
+booking?</p>
+<p><strong>Guest:</strong> +35612345678.</p>
+<p><strong>Agent:</strong> Give me a moment, I will look up your reservations now.</p>
+<p><strong>Agent:</strong> I found bookings for Friday at 12:00 PM and Friday at
+2:00 PM. Which one would you like to cancel?</p>
+<p><strong>Guest:</strong> The 2 PM one.</p>
+<p><strong>Agent:</strong> I will cancel the selected reservation right now. Please
+give me a moment.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-4---rescheduling-a-reservation">Example 4 - Rescheduling a reservation<a href="#example-4---rescheduling-a-reservation" class="hash-link" aria-label="Direct link to Example 4 - Rescheduling a reservation" title="Direct link to Example 4 - Rescheduling a reservation" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Guest:</strong> Can you move my reservation to tomorrow evening?</p>
+<p><strong>Agent:</strong> I found your current reservation. What time would you
+prefer tomorrow?</p>
+<p><strong>Guest:</strong> Around 7 PM, terrace if possible.</p>
+<p><strong>Agent:</strong> Give me a moment to check available slots right now. I&#x27;ll
+get back to you shortly.</p>
+<p><strong>Agent:</strong> I have 7:00 PM available on Terrace. Should I move your
+booking there?</p>
+<p><strong>Guest:</strong> Yes.</p>
+<p><strong>Agent:</strong> Give me a moment, I will reschedule your booking right
+now.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ" translate="no">​</a></h2>
+<p><strong>Q. Why does the agent ask for the number of guests before checking
+availability?</strong></p>
+<p>Tableo availability is filtered for the exact party size. Asking first
+keeps the returned options relevant and avoids offering a slot intended
+for a different table size.</p>
+<p><strong>Q. Why does the agent ask the guest to choose a dining area?</strong></p>
+<p>Tableo requires the dining area when creating a booking. The agent
+loads the valid names during the latest availability check and uses
+the guest&#x27;s selection.</p>
+<p><strong>Q. What phone format should guests provide?</strong></p>
+<p>Use the full phone number with country code and a leading <code>+</code>, such as
+<code>+35612345678</code>.</p>
+<p><strong>Q. Does the integration search all Tableo reservations?</strong></p>
+<p>No. The automatic existing-reservation lookup is limited to the
+configured upcoming lookup window and the guest phone number. If the
+guest is trying to cancel or move a booking and nothing is found in
+that window, the agent can ask for the reservation date and run a
+date-specific lookup.</p>
+<p><strong>Q. Can the agent cancel or reschedule a Tableo reservation?</strong></p>
+<p>Yes, when the reservation is stored in the guest profile. That can
+happen after the agent creates the booking, after a phone-number lookup,
+or after a date-specific lookup. Rescheduling also requires a fresh
+availability check so the guest chooses a real replacement slot.</p>
+<p><strong>Q. Why does the agent ignore cancelled reservations during lookup?</strong></p>
+<p>The lookup keeps accepted reservations in the guest profile and filters
+out cancelled reservations, so the agent does not offer to cancel or
+move a booking that is already cancelled.</p>
+<p><strong>Q. What happens when the Tableo API token is rotated?</strong></p>
+<p>Paste the replacement token into <strong>02. Tableo API Token</strong>, save the
+attribute, and click <strong>Publish All</strong> again.</p>
+<p><strong>Q. Can one Newo Tableo connection serve several restaurants?</strong></p>
+<p>Use one connection per restaurant. The Tableo token identifies the
+restaurant used for availability and booking.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common errors and recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common errors and recovery" title="Direct link to Common errors and recovery" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-returns-no-available-slots">The agent returns no available slots<a href="#the-agent-returns-no-available-slots" class="hash-link" aria-label="Direct link to The agent returns no available slots" title="Direct link to The agent returns no available slots" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the selected date or party size has no configured
+Tableo slots, or the Tableo API token is no longer valid.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Confirm that Tableo has availability for the requested date and
+exact party size.</li>
+<li class="">Confirm that <strong>02. Tableo API Token</strong> contains the current token.</li>
+<li class="">Save any Newo changes and click <strong>Publish All</strong>.</li>
+<li class="">Retry the same availability question.</li>
+</ol>
+<p><strong>How to verify:</strong> the agent reads back time slots and dining areas
+that match the Tableo admin panel.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-says-the-selected-dining-area-is-not-available">The agent says the selected dining area is not available<a href="#the-agent-says-the-selected-dining-area-is-not-available" class="hash-link" aria-label="Direct link to The agent says the selected dining area is not available" title="Direct link to The agent says the selected dining area is not available" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the booking attempt did not follow a recent
+availability check, or the guest chose a dining-area name that Tableo
+did not return.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Ask the agent to check availability again.</li>
+<li class="">Choose one of the dining-area names the agent reads back.</li>
+<li class="">Confirm the reservation again.</li>
+</ol>
+<p><strong>How to verify:</strong> the reservation appears under the selected dining
+area in Tableo.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-asks-for-a-phone-number-with-country-code">The agent asks for a phone number with country code<a href="#the-agent-asks-for-a-phone-number-with-country-code" class="hash-link" aria-label="Direct link to The agent asks for a phone number with country code" title="Direct link to The agent asks for a phone number with country code" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the guest supplied a domestic phone number without a
+leading <code>+</code> and country code.</p>
+<p><strong>How to recover:</strong> provide the full international phone number, such
+as <code>+35612345678</code>, and confirm the reservation again.</p>
+<p><strong>How to verify:</strong> the reservation appears in Tableo with the expected
+guest phone number.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tableo-rejects-the-booking-with-stripe-connect-account-linking-is-required">Tableo rejects the booking with &quot;Stripe Connect account linking is required&quot;<a href="#tableo-rejects-the-booking-with-stripe-connect-account-linking-is-required" class="hash-link" aria-label="Direct link to Tableo rejects the booking with &quot;Stripe Connect account linking is required&quot;" title="Direct link to Tableo rejects the booking with &quot;Stripe Connect account linking is required&quot;" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the Tableo account requires additional account
+linking before it accepts the reservation.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Open the Tableo admin panel and complete the required account
+linking step, or ask the Tableo account administrator to do it.</li>
+<li class="">Repeat the availability check.</li>
+<li class="">Submit the test reservation again.</li>
+</ol>
+<p><strong>How to verify:</strong> the reservation appears in the Tableo booking list
+without the linking error.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-token-was-replaced-but-the-agent-still-cannot-reach-tableo">The token was replaced but the agent still cannot reach Tableo<a href="#the-token-was-replaced-but-the-agent-still-cannot-reach-tableo" class="hash-link" aria-label="Direct link to The token was replaced but the agent still cannot reach Tableo" title="Direct link to The token was replaced but the agent still cannot reach Tableo" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> the new token was not saved and published in Newo.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Paste the new token into <strong>02. Tableo API Token</strong>.</li>
+<li class="">Save the attribute.</li>
+<li class="">Click <strong>Publish All</strong>.</li>
+<li class="">Repeat the availability test.</li>
+</ol>
+<p><strong>How to verify:</strong> live slots are returned for a known date and party
+size.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-apologises-but-newo-does-not-show-a-detailed-tableo-error">The agent apologises but Newo does not show a detailed Tableo error<a href="#the-agent-apologises-but-newo-does-not-show-a-detailed-tableo-error" class="hash-link" aria-label="Direct link to The agent apologises but Newo does not show a detailed Tableo error" title="Direct link to The agent apologises but Newo does not show a detailed Tableo error" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> some Tableo-side failures currently return no
+detailed failure message to the conversation.</p>
+<p><strong>How to recover:</strong></p>
+<ol>
+<li class="">Confirm the token, dining-area setup, availability, and account
+linking steps above.</li>
+<li class="">Retry once with the same test data.</li>
+<li class="">If the issue remains, share the time of the test, restaurant
+connector name, requested date, party size, and guest email with
+the implementation team so they can inspect the integration logs.</li>
+</ol>
+<p><strong>How to verify:</strong> repeat the same test and confirm that live slots or
+the new reservation now appear.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Existing-reservation refresh is window-limited.</strong> The background
+phone lookup loads only the configured number of upcoming days from
+the restaurant account.</li>
+<li class=""><strong>Date-specific lookup may be needed.</strong> If a directly-created Tableo
+reservation falls outside the configured lookup window, the agent
+must ask the guest for the reservation date before it can search that
+date.</li>
+<li class=""><strong>Cancellation and rescheduling require an accepted reservation.</strong>
+Cancelled reservations are filtered out of the active booking list.</li>
+<li class=""><strong>Dining-area choices come from the latest availability check.</strong> Ask
+the agent to refresh availability before booking if the options have
+changed.</li>
+<li class=""><strong>Some Tableo-side failures are silent.</strong> When the agent cannot
+complete a request and no detailed error appears, follow the recovery
+checklist above and provide the test timestamp to the implementation
+team.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-handoff-notes">Support handoff notes<a href="#support-handoff-notes" class="hash-link" aria-label="Direct link to Support handoff notes" title="Direct link to Support handoff notes" translate="no">​</a></h2>
+<p>When handing this deployment to support or a partner team, share:</p>
+<ul>
+<li class="">the restaurant represented by <strong>01. Tableo Connector Name</strong>;</li>
+<li class="">whether the API token has been entered and tested;</li>
+<li class="">which dining areas and party sizes should be available;</li>
+<li class="">whether Tableo-side account linking is complete;</li>
+<li class="">which feature switches are enabled;</li>
+<li class="">the timestamp, requested date, party size, dining area, and guest
+email for any failed test reservation.</li>
+</ul>
+<p>Do not send the full API token, guest phone number, or real guest data
+in a support message.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All settings reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All settings reference" title="Direct link to All settings reference" translate="no">​</a></h2>
+<p>Every setting the integration adds to the <strong>Module -
+TableoIntegration</strong> group in Newo Builder:</p>
+<table><thead><tr><th>Name</th><th>Description</th><th>Required</th><th>Default</th><th>Hidden</th><th>Edit</th></tr></thead><tbody><tr><td><code>tableo_connector_name</code></td><td>Human-readable label for the restaurant connection.</td><td>Yes</td><td><code>Tableo</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_api_token</code></td><td>Tableo restaurant API token used to authorise requests.</td><td>Yes</td><td><em>(empty)</em></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_enable_availability_check</code></td><td>Allows the agent to check live reservation slots.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_enable_booking</code></td><td>Allows the agent to create Tableo reservations.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_booking_window</code></td><td>Number of days to check for available slots starting from the guest&#x27;s requested reservation date.</td><td>No</td><td><code>3</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_enable_booking_lookup</code></td><td>Allows upcoming guest reservation lookup when a phone number is detected or provided during cancellation/rescheduling.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_booking_lookup_days</code></td><td>Number of upcoming days to refresh after phone detection.</td><td>No</td><td><code>7</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_enable_cancellation</code></td><td>Allows the agent to cancel an accepted Tableo reservation found in the guest profile.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_enable_reschedule</code></td><td>Allows the agent to move an accepted Tableo reservation found in the guest profile.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr><tr><td><code>tableo_setup_scenarios</code></td><td>Adds Tableo booking, cancellation, and rescheduling guidance to the agent canvas during Publish All.</td><td>No</td><td><code>True</code></td><td>No</td><td>Safe</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="v100---initial-tableo-reservation-support">v1.0.0 - Initial Tableo reservation support<a href="#v100---initial-tableo-reservation-support" class="hash-link" aria-label="Direct link to v1.0.0 - Initial Tableo reservation support" title="Direct link to v1.0.0 - Initial Tableo reservation support" translate="no">​</a></h3>
+<ul>
+<li class="">Added live availability checks filtered by date and party size.</li>
+<li class="">Added dining-area selection and Tableo booking creation.</li>
+<li class="">Added lookup of upcoming existing reservations by guest phone number.</li>
+<li class="">Added independent switches for availability, booking, and booking
+lookup.</li>
+<li class="">Added cancellation and rescheduling for accepted Tableo reservations
+found in the guest profile.</li>
+<li class="">Added announced phone/date booking lookup for cancellation and
+rescheduling flows.</li>
+<li class="">Added filtering so cancelled reservations are not offered as active
+bookings.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/tab32"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Tab32 Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/teamleader"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">TeamLeader Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a></li><li><a href="#what-the-agent-can-do" class="table-of-contents__link toc-highlight">What the Agent can do</a></li><li><a href="#returning-customer-recognition" class="table-of-contents__link toc-highlight">Returning-customer recognition</a></li><li><a href="#features-at-a-glance" class="table-of-contents__link toc-highlight">Features at a glance</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#create-the-newo-project" class="table-of-contents__link toc-highlight">Create the Newo project</a></li><li><a href="#1-prepare-your-tableo-account" class="table-of-contents__link toc-highlight">1. Prepare your Tableo account</a></li><li><a href="#2-get-your-tableo-credentials" class="table-of-contents__link toc-highlight">2. Get your Tableo credentials</a></li><li><a href="#3-add-tableo-to-the-newo-agent" class="table-of-contents__link toc-highlight">3. Add Tableo to the Newo agent</a></li><li><a href="#4-hit-publish-all" class="table-of-contents__link toc-highlight">4. Hit Publish All</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How to test that everything works</a><ul><li><a href="#test-availability" class="table-of-contents__link toc-highlight">Test availability</a></li><li><a href="#test-booking" class="table-of-contents__link toc-highlight">Test booking</a></li><li><a href="#test-existing-reservation-lookup" class="table-of-contents__link toc-highlight">Test existing-reservation lookup</a></li><li><a href="#test-cancellation" class="table-of-contents__link toc-highlight">Test cancellation</a></li><li><a href="#test-rescheduling" class="table-of-contents__link toc-highlight">Test rescheduling</a></li></ul></li><li><a href="#example-dialogs" class="table-of-contents__link toc-highlight">Example dialogs</a><ul><li><a href="#example-1---availability-and-dining-area-choice" class="table-of-contents__link toc-highlight">Example 1 - Availability and dining-area choice</a></li><li><a href="#example-2---booking" class="table-of-contents__link toc-highlight">Example 2 - Booking</a></li><li><a href="#example-3---existing-reservation-lookup-and-cancellation" class="table-of-contents__link toc-highlight">Example 3 - Existing reservation lookup and cancellation</a></li><li><a href="#example-4---rescheduling-a-reservation" class="table-of-contents__link toc-highlight">Example 4 - Rescheduling a reservation</a></li></ul></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common errors and recovery</a><ul><li><a href="#the-agent-returns-no-available-slots" class="table-of-contents__link toc-highlight">The agent returns no available slots</a></li><li><a href="#the-agent-says-the-selected-dining-area-is-not-available" class="table-of-contents__link toc-highlight">The agent says the selected dining area is not available</a></li><li><a href="#the-agent-asks-for-a-phone-number-with-country-code" class="table-of-contents__link toc-highlight">The agent asks for a phone number with country code</a></li><li><a href="#tableo-rejects-the-booking-with-stripe-connect-account-linking-is-required" class="table-of-contents__link toc-highlight">Tableo rejects the booking with &quot;Stripe Connect account linking is required&quot;</a></li><li><a href="#the-token-was-replaced-but-the-agent-still-cannot-reach-tableo" class="table-of-contents__link toc-highlight">The token was replaced but the agent still cannot reach Tableo</a></li><li><a href="#the-agent-apologises-but-newo-does-not-show-a-detailed-tableo-error" class="table-of-contents__link toc-highlight">The agent apologises but Newo does not show a detailed Tableo error</a></li></ul></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#support-handoff-notes" class="table-of-contents__link toc-highlight">Support handoff notes</a></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All settings reference</a></li><li><a href="#changelog" class="table-of-contents__link toc-highlight">Changelog</a><ul><li><a href="#v100---initial-tableo-reservation-support" class="table-of-contents__link toc-highlight">v1.0.0 - Initial Tableo reservation support</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/tableo.pdf" download="tableo.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>

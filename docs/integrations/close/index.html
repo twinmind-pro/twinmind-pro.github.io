@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integrations/close" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Close Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/close"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Close Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects Close with the Newo AI agent so chat visitors and callers can ask for pricing, request a callback, share contact info, and have the team receive a clean follow-up record without leaving the conversation."><meta data-rh="true" property="og:description" content="Connects Close with the Newo AI agent so chat visitors and callers can ask for pricing, request a callback, share contact info, and have the team receive a clean follow-up record without leaving the conversation."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/close"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/close" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/close" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Close Integration","item":"https://twinmind-pro.github.io/docs/integrations/close"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.88ef5dda.js" defer="defer"></script>
+<script src="/assets/js/main.c73f5c66.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/altegio"><span title="Altegio Integration" class="linkLabel_WmDU">Altegio Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/boulevard"><span title="Boulevard Integration" class="linkLabel_WmDU">Boulevard Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/close"><span title="Close Integration" class="linkLabel_WmDU">Close Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/cloud9"><span title="Cloud 9 Integration" class="linkLabel_WmDU">Cloud 9 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/deliverect"><span title="Deliverect Integration Guide" class="linkLabel_WmDU">Deliverect Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/poshub"><span title="PosHUB Integration" class="linkLabel_WmDU">PosHUB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/salesforce"><span title="Salesforce Integration" class="linkLabel_WmDU">Salesforce Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tableo"><span title="Tableo Integration" class="linkLabel_WmDU">Tableo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamleader"><span title="TeamLeader Integration" class="linkLabel_WmDU">TeamLeader Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/unitify"><span title="Unitify Condo Integration" class="linkLabel_WmDU">Unitify Condo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zendesk"><span title="Zendesk Integration" class="linkLabel_WmDU">Zendesk Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Close Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Close Integration</h1></header>
+<p>Connects <strong>Close</strong> with the Newo AI agent so chat visitors and callers can ask for pricing, request a callback, share contact info, and have the team receive a clean follow-up record without leaving the conversation.</p>
+<blockquote>
+<p><strong>Time to first success:</strong> about 15 minutes if you already have Close admin access and a Newo Builder project.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start" translate="no">​</a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li class="">an active <strong>Close</strong> account;</li>
+<li class="">admin access in Close, so you can create an API key;</li>
+<li class="">access to <strong>Newo Builder</strong>, with permission to edit project settings and click <strong>Publish All</strong>;</li>
+<li class="">the contact status or request status IDs your team wants to use, if the agent should apply specific statuses;</li>
+<li class="">a Close Scheduling Link or a default scheduling-link URL, if the agent should send meeting links;</li>
+<li class="">Newo SMS configured for the project, if the agent should send text messages.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do">What The AI Can Do<a href="#what-the-ai-can-do" class="hash-link" aria-label="Direct link to What The AI Can Do" title="Direct link to What The AI Can Do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Pass contact info to the team.</strong> The agent asks for a name and at least one contact method, then updates Close after it has enough information.</li>
+<li class=""><strong>Update an existing request.</strong> The agent can pass along confirmed next steps, priority, status, value, or notes.</li>
+<li class=""><strong>Add conversation notes.</strong> The agent can add a summary of the conversation to the current contact record.</li>
+<li class=""><strong>Create follow-up reminders.</strong> The agent can set a team reminder to call, email, text, or otherwise follow up.</li>
+<li class=""><strong>Subscribe a contact to a follow-up sequence.</strong> The agent can use a configured Close sequence when the operator enables this.</li>
+<li class=""><strong>Send approved text messages.</strong> The agent sends SMS through Newo SMS when SMS is enabled.</li>
+<li class=""><strong>Handle meeting-link workflows.</strong> The agent can send a Close scheduling link by SMS, find existing Close meeting activities, cancel confirmed meetings, and add meeting-change notes.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-at-a-glance">Features At A Glance<a href="#features-at-a-glance" class="hash-link" aria-label="Direct link to Features At A Glance" title="Direct link to Features At A Glance" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Included</th></tr></thead><tbody><tr><td>Contact info handoff</td><td>Yes</td></tr><tr><td>Contact status updates</td><td>Yes</td></tr><tr><td>Conversation note logging</td><td>Yes</td></tr><tr><td>Structured request updates</td><td>Yes</td></tr><tr><td>Team follow-up reminders</td><td>Yes</td></tr><tr><td>Sequence enrollment</td><td>Yes</td></tr><tr><td>SMS through Newo SMS</td><td>Optional</td></tr><tr><td>Meeting link sharing</td><td>Yes</td></tr><tr><td>Existing meeting lookup/cancel/note</td><td>Yes</td></tr><tr><td>Live slot booking</td><td>No</td></tr><tr><td>Close webhooks</td><td>No</td></tr><tr><td>OAuth marketplace flow</td><td>No</td></tr></tbody></table>
+<p>Live slot booking is intentionally not included in this module. The Close module sends a configured Close scheduling link by SMS and manages existing Close meeting activities. Use a scheduling integration if the agent must check live times or create calendar bookings directly.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="screenshots">Screenshots<a href="#screenshots" class="hash-link" aria-label="Direct link to Screenshots" title="Direct link to Screenshots" translate="no">​</a></h2>
+<p>Close setup screenshots are saved in:</p>
+<table><thead><tr><th>File</th><th>What it shows</th></tr></thead><tbody><tr><td><code>S01-settings-menu.png</code></td><td>Close left navigation with <strong>Settings</strong> selected.</td></tr><tr><td><code>S02-developer-menu.png</code></td><td>Close Settings side menu under <strong>Connect</strong>, with <strong>Developer</strong> selected.</td></tr><tr><td><code>S04-api-key-created.png</code></td><td>Close Developer page after creating the API key.</td></tr></tbody></table>
+<p>Do not include raw API keys in screenshots. If a key is visible, blur it before committing the image.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-the-newo-project">Create the Newo project<a href="#create-the-newo-project" class="hash-link" aria-label="Direct link to Create the Newo project" title="Direct link to Create the Newo project" translate="no">​</a></h3>
+<p>If this project already exists in <strong>Newo Builder</strong>, skip this subsection and continue with the integration-specific settings below.</p>
+<ol>
+<li class="">In <strong>Newo Builder</strong>, open the projects list and click <strong>Create Project</strong> (or <strong>Create New Project</strong> from the top-right menu).</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create New Project menu in Newo Builder" src="/assets/images/newo_create_project_button-92035c73bc75d1dc615912fe4feb354f.png" width="510" height="220" class="img_ev3q"></p>
+<ol start="2">
+<li class="">Fill <strong>IDN</strong> and <strong>Title</strong>. The exact names do not matter; use any clear names your team will recognize.</li>
+<li class="">In <strong>Registry</strong>, choose the release channel:<!-- -->
+<ul>
+<li class=""><strong>staging</strong> — the newest module fixes appear here first. Use it when you need the latest fix, but expect possible unfinished changes.</li>
+<li class=""><strong>production</strong> — the final stable version for live projects.</li>
+</ul>
+</li>
+<li class="">In <strong>Module</strong>, select the module for this integration.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1170" height="1846" class="img_ev3q">
+5. Leave <strong>Module version</strong> on <strong>Latest version</strong> unless support tells you to pin a specific version, then click <strong>Create</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare-your-close-account">1. Prepare Your Close Account<a href="#1-prepare-your-close-account" class="hash-link" aria-label="Direct link to 1. Prepare Your Close Account" title="Direct link to 1. Prepare Your Close Account" translate="no">​</a></h3>
+<ol>
+<li class="">Open Close.</li>
+<li class="">Go to <strong>Settings</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Close Settings menu" src="/assets/images/S01-settings-menu-ad5e6700be9b567b1e4f6d7e91719b5f.png" width="520" height="330" class="img_ev3q"></p>
+<ol start="3">
+<li class="">Under <strong>Connect</strong>, open <strong>Developer</strong>.</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Close Developer menu" src="/assets/images/S02-developer-menu-3e2a1021dbbb0c800a77829c2ed5742e.png" width="520" height="415" class="img_ev3q"></p>
+<ol start="4">
+<li class="">Open the <strong>API Keys</strong> tab.</li>
+<li class="">Click <strong>New API Key</strong>.</li>
+<li class="">Give the key a recognizable name, for example <code>Newo</code>.</li>
+<li class="">Copy the full API key when Close shows it.</li>
+</ol>
+<p>Close shows the full key only once. If it is lost, create a new one and replace the value in Newo.</p>
+<p><img decoding="async" loading="lazy" alt="Close API key created" src="/assets/images/S04-api-key-created-4113b5968f216873772fd40f66c229c1.png" width="2390" height="840" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-configure-in-newo">2. Configure In Newo<a href="#2-configure-in-newo" class="hash-link" aria-label="Direct link to 2. Configure In Newo" title="Direct link to 2. Configure In Newo" translate="no">​</a></h3>
+<p>Open <strong>Newo Builder</strong>, go to project settings, and find the <strong>Module - Close</strong> settings group.</p>
+<p>Fill the required settings first:</p>
+<table><thead><tr><th>Setting</th><th>What to enter</th></tr></thead><tbody><tr><td><strong>Close API Key</strong></td><td>The full Close API key.</td></tr><tr><td><strong>Close API Base URL</strong></td><td>Keep the default unless Close support gives you another URL.</td></tr><tr><td><strong>Default Contact Record Name</strong></td><td>Fallback name used when the visitor does not give a company name.</td></tr></tbody></table>
+<p>Then review optional defaults:</p>
+<table><thead><tr><th>Setting</th><th>Use when</th></tr></thead><tbody><tr><td><strong>Default Contact Status ID</strong></td><td>The team wants new or updated contact records to use a specific Close status.</td></tr><tr><td><strong>Potential Status ID</strong></td><td>A new caller shows initial interest but has not asked for a meeting yet.</td></tr><tr><td><strong>Interest Status ID</strong></td><td>The caller asks for or confirms a meeting.</td></tr><tr><td><strong>Not Interest Status ID</strong></td><td>The caller is wrong-number, inappropriate, no longer interested, or rejects required terms.</td></tr><tr><td><strong>Not Fit Status ID</strong></td><td>The caller does not meet configured requirements such as location or organization type.</td></tr><tr><td><strong>Canceled Status ID</strong></td><td>The caller cancels an existing meeting because they lost interest.</td></tr><tr><td><strong>Default Request Status ID</strong></td><td>The team wants structured request updates to use a specific status.</td></tr><tr><td><strong>Default Scheduling Link URL</strong></td><td>Optional override link. If empty, the module attempts to read the first Close Scheduling Link from the Close API.</td></tr></tbody></table>
+<p>Review feature switches:</p>
+<table><thead><tr><th>Setting</th><th>Default</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>Enable Contact Info Handoff</strong></td><td>On</td><td>Lets the agent pass visitor contact info to the team.</td></tr><tr><td><strong>Enable Contact Status Updates</strong></td><td>On</td><td>Lets the agent update contact status and configured fields.</td></tr><tr><td><strong>Enable Interaction Logging</strong></td><td>On</td><td>Lets the agent add conversation notes.</td></tr><tr><td><strong>Enable Request Updates</strong></td><td>On</td><td>Lets the agent create or update structured request details.</td></tr><tr><td><strong>Enable Follow-up Tasks</strong></td><td>On</td><td>Lets the agent set reminders for the team.</td></tr><tr><td><strong>Enable Sequence Enrollment</strong></td><td>On</td><td>Lets the agent subscribe a contact to a configured sequence.</td></tr><tr><td><strong>Enable Meeting Management</strong></td><td>On</td><td>Lets the agent send scheduling links by SMS and manage existing Close meetings.</td></tr><tr><td><strong>Enable SMS</strong></td><td>Off</td><td>Lets the agent send caller-approved SMS through Newo SMS.</td></tr><tr><td><strong>Setup Follow-up Scenarios</strong></td><td>On</td><td>Adds the reference canvas scenarios during publish.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-hit-publish-all">3. Hit Publish All<a href="#3-hit-publish-all" class="hash-link" aria-label="Direct link to 3. Hit Publish All" title="Direct link to 3. Hit Publish All" translate="no">​</a></h3>
+<p>Click <strong>Publish All</strong> after saving the settings.</p>
+<p>During publish, Newo:</p>
+<ul>
+<li class="">creates or reuses the Close connection;</li>
+<li class="">creates the visible setup settings and hidden system settings;</li>
+<li class="">registers the custom follow-up actions the agent can use;</li>
+<li class="">keeps generic booking, availability, and cancellation tools out of this module;</li>
+<li class="">registers Close-specific meeting-link and meeting-management actions;</li>
+<li class="">adds follow-up scenarios to the canvas when <strong>Setup Follow-up Scenarios</strong> is on.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-verify-setup">4. Verify Setup<a href="#4-verify-setup" class="hash-link" aria-label="Direct link to 4. Verify Setup" title="Direct link to 4. Verify Setup" translate="no">​</a></h3>
+<p>After <strong>Publish All</strong>:</p>
+<ul>
+<li class="">The <strong>Module - Close</strong> settings group should show the visible settings listed above.</li>
+<li class="">The canvas should include <strong>Initial Interest Intake</strong>, <strong>Meeting Request</strong>, <strong>Request Disposition</strong>, <strong>Meeting Change Request</strong>, <strong>Team Follow-up Reminder</strong>, and <strong>Text Message Send</strong>.</li>
+<li class="">A test chat should reach the phrase <code>&quot;I&#x27;ll pass your contact info to the team now.&quot;</code> only after the visitor has given a name and at least one contact method.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test-that-everything-works">How To Test That Everything Works<a href="#how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to How To Test That Everything Works" title="Direct link to How To Test That Everything Works" translate="no">​</a></h2>
+<p>Run these checks before going live.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="contact-follow-up">Contact Follow-up<a href="#contact-follow-up" class="hash-link" aria-label="Direct link to Contact Follow-up" title="Direct link to Contact Follow-up" translate="no">​</a></h3>
+<ol>
+<li class="">Start a test chat.</li>
+<li class="">Say:</li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Hi, I need pricing for your annual plan.</span><br></span></code></pre></div></div>
+<ol start="3">
+<li class="">When the agent asks who should be contacted, answer naturally:</li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">It&#x27;s for a team, and I&#x27;d like someone to get back to me with pricing.</span><br></span></code></pre></div></div>
+<ol start="4">
+<li class="">When the agent asks for contact info, provide it:</li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Sure, I&#x27;m Riley Brooks. You can reach me at riley@example.com or +1 555 010 7806.</span><br></span></code></pre></div></div>
+<p>Expected:</p>
+<ul>
+<li class="">The agent says: <code>&quot;I&#x27;ll pass your contact info to the team now.&quot;</code></li>
+<li class="">The agent waits for the Close result before saying the team has the contact info.</li>
+<li class="">A Close contact record exists with the name, email, and phone from the test.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="request-update">Request Update<a href="#request-update" class="hash-link" aria-label="Direct link to Request Update" title="Direct link to Request Update" translate="no">​</a></h3>
+<p>After contact info is already known, say:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Please add that we&#x27;re interested in the annual plan for a 20-person team.</span><br></span></code></pre></div></div>
+<p>Expected:</p>
+<ul>
+<li class="">The agent says it will pass the update to the team.</li>
+<li class="">Close receives the request update.</li>
+<li class="">The agent confirms only after the result is available.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="follow-up-reminder">Follow-up Reminder<a href="#follow-up-reminder" class="hash-link" aria-label="Direct link to Follow-up Reminder" title="Direct link to Follow-up Reminder" translate="no">​</a></h3>
+<p>After contact info is already known, say:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Please remind the team to call me tomorrow about pricing.</span><br></span></code></pre></div></div>
+<p>Expected:</p>
+<ul>
+<li class="">The agent says it will set a follow-up reminder for the team.</li>
+<li class="">The reminder appears in Close.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="meeting-link">Meeting Link<a href="#meeting-link" class="hash-link" aria-label="Direct link to Meeting Link" title="Direct link to Meeting Link" translate="no">​</a></h3>
+<p>Use this when <strong>Enable Meeting Management</strong> is on and Close has a scheduling link or <strong>Default Scheduling Link URL</strong> is configured.</p>
+<p>Say:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">I&#x27;d like to book a meeting with the team.</span><br></span></code></pre></div></div>
+<p>Expected:</p>
+<ul>
+<li class="">The agent says: <code>&quot;I&#x27;ll send the meeting link now.&quot;</code></li>
+<li class="">The link is sent through Newo SMS.</li>
+<li class="">In a voice conversation, the agent does not read or spell the URL.</li>
+<li class="">The Close contact status is updated to Interest when the status ID is configured.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sms">SMS<a href="#sms" class="hash-link" aria-label="Direct link to SMS" title="Direct link to SMS" translate="no">​</a></h3>
+<p>Use this only when <strong>Enable SMS</strong> is on and Newo SMS is configured for the project.</p>
+<p>Say:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Please text me: Thanks for your interest, our team will follow up today.</span><br></span></code></pre></div></div>
+<p>Expected:</p>
+<ul>
+<li class="">The agent confirms the exact text before sending.</li>
+<li class="">The message is sent through Newo SMS.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenarios">Scenarios<a href="#scenarios" class="hash-link" aria-label="Direct link to Scenarios" title="Direct link to Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-gets-added-on-publish-all">What Gets Added On Publish All<a href="#what-gets-added-on-publish-all" class="hash-link" aria-label="Direct link to What Gets Added On Publish All" title="Direct link to What Gets Added On Publish All" translate="no">​</a></h3>
+<table><thead><tr><th>Intent</th><th>Scenario</th></tr></thead><tbody><tr><td>Follow-up Contact Info</td><td>Follow-up Contact Info</td></tr><tr><td>Request Update</td><td>Request Update</td></tr><tr><td>Meeting Request</td><td>Meeting Request</td></tr><tr><td>Meeting Change Request</td><td>Meeting Change Request</td></tr><tr><td>Team Follow-up Reminder</td><td>Team Follow-up Reminder</td></tr><tr><td>Text Message Send</td><td>Text Message Send</td></tr></tbody></table>
+<p>These scenarios are a reference implementation. Operators can edit wording in the canvas UI, but future module updates do not overwrite edited copies. To get newer shipped defaults, delete the edited canvas item and run <strong>Publish All</strong> again.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-trigger-phrases-matter">Why Trigger Phrases Matter<a href="#why-trigger-phrases-matter" class="hash-link" aria-label="Direct link to Why Trigger Phrases Matter" title="Direct link to Why Trigger Phrases Matter" translate="no">​</a></h3>
+<p>Trigger phrases are the plain-English sentences that tell the agent it is time to call Close. If you customize scenario wording, keep the trigger phrase for the action you still want to happen.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="follow-up-contact-info">Follow-up Contact Info<a href="#follow-up-contact-info" class="hash-link" aria-label="Direct link to Follow-up Contact Info" title="Direct link to Follow-up Contact Info" translate="no">​</a></h3>
+<p>Use this when a visitor asks for pricing, a callback, more information, or someone from the team to get back to them.</p>
+<p>Steps:</p>
+<ol>
+<li class="">Check whether the conversation already contains the visitor&#x27;s name and at least one contact method.</li>
+<li class="">Ask only for missing information, one question at a time.</li>
+<li class="">Confirm the information in plain language.</li>
+<li class="">Say the trigger phrase: <em>&quot;I&#x27;ll pass your contact info to the team now.&quot;</em></li>
+<li class="">Wait for the result.</li>
+<li class="">Confirm that the team has the contact info.</li>
+</ol>
+<p>Triggered by intent: <strong>Follow-up Contact Info</strong></p>
+<p>Trigger phrases, do not edit:</p>
+<ul>
+<li class=""><code>&quot;I&#x27;ll pass your contact info to the team now.&quot;</code></li>
+<li class=""><code>&quot;I&#x27;ll make sure the team has your contact info.&quot;</code></li>
+<li class=""><code>&quot;I&#x27;ll pass your pricing request to the team now.&quot;</code></li>
+</ul>
+<p>What the agent reads to know the result:</p>
+<ul>
+<li class=""><strong>Contact record panel</strong> — tells the agent whether the handoff is loading, successful, or failed.</li>
+</ul>
+<p>Safe customization:</p>
+<ul>
+<li class="">You can reword how the agent asks for name, email, or phone.</li>
+<li class="">You can add business-specific context around pricing or callback expectations.</li>
+<li class="">Do not remove the trigger phrase.</li>
+<li class="">Do not tell the agent to confirm success before the Close result is available.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="request-update-1">Request Update<a href="#request-update-1" class="hash-link" aria-label="Direct link to Request Update" title="Direct link to Request Update" translate="no">​</a></h3>
+<p>Use this when the visitor or operator gives a concrete update, such as priority, status, expected value, or next step.</p>
+<p>Steps:</p>
+<ol>
+<li class="">Make sure contact info is already known.</li>
+<li class="">Use only confirmed update info.</li>
+<li class="">Say the trigger phrase: <em>&quot;I&#x27;ll pass that update to the team now.&quot;</em></li>
+<li class="">Wait for the result.</li>
+<li class="">Confirm briefly that the team has the update.</li>
+</ol>
+<p>Triggered by intent: <strong>Request Update</strong></p>
+<p>Trigger phrases, do not edit:</p>
+<ul>
+<li class=""><code>&quot;I&#x27;ll pass that update to the team now.&quot;</code></li>
+</ul>
+<p>What the agent reads to know the result:</p>
+<ul>
+<li class=""><strong>Contact record panel</strong> — tells the agent whether the update is loading, successful, or failed.</li>
+</ul>
+<p>Safe customization:</p>
+<ul>
+<li class="">You can change how the agent asks for priority or next-step details.</li>
+<li class="">Do not invent status IDs or values the visitor did not provide.</li>
+<li class="">Do not remove the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="team-follow-up-reminder">Team Follow-up Reminder<a href="#team-follow-up-reminder" class="hash-link" aria-label="Direct link to Team Follow-up Reminder" title="Direct link to Team Follow-up Reminder" translate="no">​</a></h3>
+<p>Use this when a visitor asks for a call, email, text, or later team follow-up.</p>
+<p>Steps:</p>
+<ol>
+<li class="">Make sure contact info is already known.</li>
+<li class="">Ask for the concrete follow-up action in the visitor&#x27;s words.</li>
+<li class="">Say the trigger phrase: <em>&quot;I&#x27;ll set a follow-up reminder for the team.&quot;</em></li>
+<li class="">Wait for the result.</li>
+<li class="">Confirm that the reminder is set.</li>
+</ol>
+<p>Triggered by intent: <strong>Team Follow-up Reminder</strong></p>
+<p>Trigger phrases, do not edit:</p>
+<ul>
+<li class=""><code>&quot;I&#x27;ll set a follow-up reminder for the team.&quot;</code></li>
+</ul>
+<p>What the agent reads to know the result:</p>
+<ul>
+<li class=""><strong>Contact record panel</strong> — tells the agent whether the reminder is loading, successful, or failed.</li>
+</ul>
+<p>Safe customization:</p>
+<ul>
+<li class="">You can change how the agent asks about preferred channel or timing.</li>
+<li class="">Do not promise a specific person unless your business context names that person.</li>
+<li class="">Do not remove the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="text-message-send">Text Message Send<a href="#text-message-send" class="hash-link" aria-label="Direct link to Text Message Send" title="Direct link to Text Message Send" translate="no">​</a></h3>
+<p>Use this when the visitor asks for a specific text message and SMS is enabled.</p>
+<p>Steps:</p>
+<ol>
+<li class="">Confirm the recipient phone number and exact SMS body.</li>
+<li class="">Say the trigger phrase: <em>&quot;I&#x27;ll send that text now.&quot;</em></li>
+<li class="">Wait for the result.</li>
+<li class="">Confirm whether the text was sent.</li>
+</ol>
+<p>Triggered by intent: <strong>Text Message Send</strong></p>
+<p>Trigger phrases, do not edit:</p>
+<ul>
+<li class=""><code>&quot;I&#x27;ll send that text now.&quot;</code></li>
+</ul>
+<p>What the agent reads to know the result:</p>
+<ul>
+<li class=""><strong>Contact record panel</strong> — tells the agent whether SMS sending is loading, successful, or failed.</li>
+</ul>
+<p>Safe customization:</p>
+<ul>
+<li class="">You can change how the agent asks for message approval.</li>
+<li class="">Do not rewrite the visitor-approved SMS body.</li>
+<li class="">Do not remove the trigger phrase.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="trigger-phrases-reference">Trigger Phrases Reference<a href="#trigger-phrases-reference" class="hash-link" aria-label="Direct link to Trigger Phrases Reference" title="Direct link to Trigger Phrases Reference" translate="no">​</a></h3>
+<table><thead><tr><th>Trigger phrase</th><th>Action</th></tr></thead><tbody><tr><td><code>&quot;I&#x27;ll pass your contact info to the team now.&quot;</code></td><td>Contact follow-up</td></tr><tr><td><code>&quot;I&#x27;ll make sure the team has your contact info.&quot;</code></td><td>Contact follow-up</td></tr><tr><td><code>&quot;I&#x27;ll pass your pricing request to the team now.&quot;</code></td><td>Contact follow-up</td></tr><tr><td><code>&quot;I&#x27;ll pass that update to the team now.&quot;</code></td><td>Request update</td></tr><tr><td><code>&quot;I&#x27;ll set a follow-up reminder for the team.&quot;</code></td><td>Follow-up reminder</td></tr><tr><td><code>&quot;I&#x27;ll send that text now.&quot;</code></td><td>SMS</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-dialogs">Example Dialogs<a href="#example-dialogs" class="hash-link" aria-label="Direct link to Example Dialogs" title="Direct link to Example Dialogs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="contact-follow-up-1">Contact Follow-up<a href="#contact-follow-up-1" class="hash-link" aria-label="Direct link to Contact Follow-up" title="Direct link to Contact Follow-up" translate="no">​</a></h3>
+<p>Customer: Hi, I need pricing for your annual plan.<br>
+<!-- -->Agent: Great, so you&#x27;d like pricing for the annual plan, correct?<br>
+<!-- -->Customer: It&#x27;s for a team, and I&#x27;d like someone to get back to me with pricing.<br>
+<!-- -->Agent: Could I get your name and the best email or phone number to reach you?<br>
+<!-- -->Customer: Sure, I&#x27;m Riley Brooks. You can reach me at <a href="mailto:riley@example.com" target="_blank" rel="noopener noreferrer" class="">riley@example.com</a> or +1 555 010 7806.<br>
+<!-- -->Agent: I&#x27;ll pass your contact info to the team now.<br>
+<!-- -->Agent after Close result: The team has your contact info and will follow up with pricing.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="missing-contact-method">Missing Contact Method<a href="#missing-contact-method" class="hash-link" aria-label="Direct link to Missing Contact Method" title="Direct link to Missing Contact Method" translate="no">​</a></h3>
+<p>Customer: Please have someone get back to me.<br>
+<!-- -->Agent: Sure. Could I get your name and the best email or phone number to reach you?<br>
+<!-- -->Customer: Riley Brooks.<br>
+<!-- -->Agent: Thanks, Riley. What email or phone number should the team use?</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="follow-up-reminder-1">Follow-up Reminder<a href="#follow-up-reminder-1" class="hash-link" aria-label="Direct link to Follow-up Reminder" title="Direct link to Follow-up Reminder" translate="no">​</a></h3>
+<p>Customer: Please remind the team to call me tomorrow about the annual plan.<br>
+<!-- -->Agent: I&#x27;ll set a follow-up reminder for the team.<br>
+<!-- -->Agent after Close result: The reminder is set for the team.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="customizing-the-agent">Customizing The Agent<a href="#customizing-the-agent" class="hash-link" aria-label="Direct link to Customizing The Agent" title="Direct link to Customizing The Agent" translate="no">​</a></h2>
+<p>You can safely edit:</p>
+<ul>
+<li class="">how the agent introduces the follow-up flow;</li>
+<li class="">how it asks for name, email, and phone;</li>
+<li class="">business-specific wording around pricing, demos, proposals, or callback expectations;</li>
+<li class="">whether the scenario asks for company name or team size.</li>
+</ul>
+<p>Always preserve:</p>
+<ul>
+<li class="">the trigger phrases listed above;</li>
+<li class="">the step where the agent waits for the result;</li>
+<li class="">the rule that the agent asks only for missing contact info;</li>
+<li class="">the rule that the agent does not claim completion before Close responds.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common Errors And Recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common Errors And Recovery" title="Direct link to Common Errors And Recovery" translate="no">​</a></h2>
+<table><thead><tr><th>Symptom</th><th>Likely cause</th><th>How to recover</th><th>How to verify</th></tr></thead><tbody><tr><td>Agent says the API key is not configured</td><td><strong>Close API Key</strong> is empty</td><td>Paste the full Close API key and click <strong>Publish All</strong></td><td>Run a contact follow-up test</td></tr><tr><td>Close rejects the request</td><td>The API key is wrong or was copied incompletely</td><td>Create a new key in Close and replace the value in Newo</td><td>The test creates or updates a contact record</td></tr><tr><td>Agent asks for the same info twice</td><td>Scenario wording was edited and no longer checks existing conversation info</td><td>Restore the reference <strong>Follow-up Contact Info</strong> scenario or compare against this guide</td><td>The agent asks only for missing info</td></tr><tr><td>Agent says it will pass info along but nothing appears in Close</td><td>Trigger phrase was removed or changed too much</td><td>Restore one supported trigger phrase and click <strong>Publish All</strong></td><td>The test reaches the Close result message</td></tr><tr><td>SMS is not sent</td><td>SMS is disabled or Newo SMS is not configured</td><td>Configure Newo SMS, enable <strong>Enable SMS</strong>, and publish</td><td>A test text is delivered through Newo SMS</td></tr><tr><td>Meeting link is not sent</td><td>No Close Scheduling Link exists and <strong>Default Scheduling Link URL</strong> is empty</td><td>Create a Close Scheduling Link or fill <strong>Default Scheduling Link URL</strong>, then publish</td><td>A meeting-link test sends the link by SMS</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h2>
+<ul>
+<li class="">This module sends meeting links and manages existing Close meeting activities; it does not check live availability slots.</li>
+<li class="">This module does not configure Close webhooks.</li>
+<li class="">This module does not implement a Close OAuth marketplace flow.</li>
+<li class="">SMS delivery depends on Newo SMS.</li>
+<li class="">The agent depends on exact trigger phrases to start Close actions.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-handoff-notes">Support Handoff Notes<a href="#support-handoff-notes" class="hash-link" aria-label="Direct link to Support Handoff Notes" title="Direct link to Support Handoff Notes" translate="no">​</a></h2>
+<ul>
+<li class="">Auth method: Close API key.</li>
+<li class="">Main Newo settings group: <strong>Module - Close</strong>.</li>
+<li class="">First smoke test: contact follow-up with a fresh email and phone.</li>
+<li class="">Most common fix: replace the API key and click <strong>Publish All</strong>.</li>
+<li class="">Canvas reset: delete edited follow-up scenarios and click <strong>Publish All</strong> to restore shipped defaults.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All Settings Reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All Settings Reference" title="Direct link to All Settings Reference" translate="no">​</a></h2>
+<table><thead><tr><th>Name</th><th>Description</th><th>Required</th><th>Default</th><th>Hidden</th><th>Edit</th></tr></thead><tbody><tr><td>Close API Key</td><td>API key used to connect to Close</td><td>Yes</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Close API Base URL</td><td>Base URL for Close API calls</td><td>No</td><td><code>https://api.close.com/api/v1</code></td><td>No</td><td>Rarely</td></tr><tr><td>Default Contact Record Name</td><td>Fallback record name when company name is unknown</td><td>No</td><td><code>Newo AI Prospect</code></td><td>No</td><td>Yes</td></tr><tr><td>Default Contact Status ID</td><td>Optional status for new or updated contact records</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Potential Status ID</td><td>Status for initial-interest callers</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Interest Status ID</td><td>Status for callers who request or confirm a meeting</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Not Interest Status ID</td><td>Status for wrong-number, inappropriate, or no-longer-interested callers</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Not Fit Status ID</td><td>Status for callers outside configured qualification requirements</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Canceled Status ID</td><td>Status for callers who cancel an existing meeting after losing interest</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Default Request Status ID</td><td>Optional status for structured request updates</td><td>No</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Default Scheduling Link URL</td><td>Optional override scheduling link; otherwise Close Scheduling Links are used</td><td>Only for meeting links</td><td>Empty</td><td>No</td><td>Yes</td></tr><tr><td>Enable Contact Info Handoff</td><td>Lets the agent pass contact info to the team</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Contact Status Updates</td><td>Lets the agent update contact status and configured fields</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Interaction Logging</td><td>Lets the agent add conversation notes</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Request Updates</td><td>Lets the agent create or update structured request details</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Follow-up Tasks</td><td>Lets the agent set team reminders</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Sequence Enrollment</td><td>Lets the agent add contacts to configured sequences</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable Meeting Management</td><td>Lets the agent send meeting links and manage Close meetings</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Enable SMS</td><td>Lets the agent send approved SMS through Newo SMS</td><td>No</td><td>Off</td><td>No</td><td>Yes</td></tr><tr><td>Setup Follow-up Scenarios</td><td>Adds reference canvas scenarios during publish</td><td>No</td><td>On</td><td>No</td><td>Yes</td></tr><tr><td>Internal extraction schemas and instructions</td><td>System-only data used to read conversation fields</td><td>No</td><td>Auto-created</td><td>Yes</td><td>No</td></tr><tr><td>Internal setup record</td><td>System-only setup record used during publish</td><td>No</td><td>Auto-created</td><td>Yes</td><td>No</td></tr></tbody></table></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/calendly"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Calendly Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/cloud9"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Cloud 9 Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a></li><li><a href="#what-the-ai-can-do" class="table-of-contents__link toc-highlight">What The AI Can Do</a></li><li><a href="#features-at-a-glance" class="table-of-contents__link toc-highlight">Features At A Glance</a></li><li><a href="#screenshots" class="table-of-contents__link toc-highlight">Screenshots</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#create-the-newo-project" class="table-of-contents__link toc-highlight">Create the Newo project</a></li><li><a href="#1-prepare-your-close-account" class="table-of-contents__link toc-highlight">1. Prepare Your Close Account</a></li><li><a href="#2-configure-in-newo" class="table-of-contents__link toc-highlight">2. Configure In Newo</a></li><li><a href="#3-hit-publish-all" class="table-of-contents__link toc-highlight">3. Hit Publish All</a></li><li><a href="#4-verify-setup" class="table-of-contents__link toc-highlight">4. Verify Setup</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How To Test That Everything Works</a><ul><li><a href="#contact-follow-up" class="table-of-contents__link toc-highlight">Contact Follow-up</a></li><li><a href="#request-update" class="table-of-contents__link toc-highlight">Request Update</a></li><li><a href="#follow-up-reminder" class="table-of-contents__link toc-highlight">Follow-up Reminder</a></li><li><a href="#meeting-link" class="table-of-contents__link toc-highlight">Meeting Link</a></li><li><a href="#sms" class="table-of-contents__link toc-highlight">SMS</a></li></ul></li><li><a href="#scenarios" class="table-of-contents__link toc-highlight">Scenarios</a><ul><li><a href="#what-gets-added-on-publish-all" class="table-of-contents__link toc-highlight">What Gets Added On Publish All</a></li><li><a href="#why-trigger-phrases-matter" class="table-of-contents__link toc-highlight">Why Trigger Phrases Matter</a></li><li><a href="#follow-up-contact-info" class="table-of-contents__link toc-highlight">Follow-up Contact Info</a></li><li><a href="#request-update-1" class="table-of-contents__link toc-highlight">Request Update</a></li><li><a href="#team-follow-up-reminder" class="table-of-contents__link toc-highlight">Team Follow-up Reminder</a></li><li><a href="#text-message-send" class="table-of-contents__link toc-highlight">Text Message Send</a></li><li><a href="#trigger-phrases-reference" class="table-of-contents__link toc-highlight">Trigger Phrases Reference</a></li></ul></li><li><a href="#example-dialogs" class="table-of-contents__link toc-highlight">Example Dialogs</a><ul><li><a href="#contact-follow-up-1" class="table-of-contents__link toc-highlight">Contact Follow-up</a></li><li><a href="#missing-contact-method" class="table-of-contents__link toc-highlight">Missing Contact Method</a></li><li><a href="#follow-up-reminder-1" class="table-of-contents__link toc-highlight">Follow-up Reminder</a></li></ul></li><li><a href="#customizing-the-agent" class="table-of-contents__link toc-highlight">Customizing The Agent</a></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common Errors And Recovery</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li><li><a href="#support-handoff-notes" class="table-of-contents__link toc-highlight">Support Handoff Notes</a></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All Settings Reference</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/close.pdf" download="close.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+</body>
+</html>
