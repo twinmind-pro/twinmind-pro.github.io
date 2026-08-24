@@ -3,515 +3,450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Deliverect Integration Guide | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/deliverect"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Deliverect Integration Guide | Newo.ai Integrations"><meta data-rh="true" name="description" content="What the AI can do"><meta data-rh="true" property="og:description" content="What the AI can do"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/deliverect"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/deliverect" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/deliverect" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Deliverect Integration Guide","item":"https://twinmind-pro.github.io/docs/integrations/deliverect"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.bb68b563.js" defer="defer"></script>
+<title data-rh="true">Deliverect Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/deliverect"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Deliverect Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="Connects Deliverect with the Newo AI agent and Food Order so customers can browse the restaurant menu, hear an accurate total, choose an available payment method, place an order, check its status, and request cancellation."><meta data-rh="true" property="og:description" content="Connects Deliverect with the Newo AI agent and Food Order so customers can browse the restaurant menu, hear an accurate total, choose an available payment method, place an order, check its status, and request cancellation."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/deliverect"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/deliverect" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/deliverect" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Deliverect Integration","item":"https://twinmind-pro.github.io/docs/integrations/deliverect"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
+<script src="/assets/js/runtime~main.cb9a5384.js" defer="defer"></script>
 <script src="/assets/js/main.4238d182.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/altegio"><span title="Altegio Integration" class="linkLabel_WmDU">Altegio Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/boulevard"><span title="Boulevard Integration" class="linkLabel_WmDU">Boulevard Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/close"><span title="Close Integration" class="linkLabel_WmDU">Close Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/cloud9"><span title="Cloud 9 Integration" class="linkLabel_WmDU">Cloud 9 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/deliverect"><span title="Deliverect Integration Guide" class="linkLabel_WmDU">Deliverect Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/poshub"><span title="PosHUB Integration" class="linkLabel_WmDU">PosHUB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/salesforce"><span title="Salesforce Integration" class="linkLabel_WmDU">Salesforce Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/sevenrooms"><span title="SevenRooms Integration" class="linkLabel_WmDU">SevenRooms Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tableo"><span title="Tableo Integration" class="linkLabel_WmDU">Tableo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamleader"><span title="TeamLeader Integration" class="linkLabel_WmDU">TeamLeader Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/ticketon"><span title="Ticketon Integration" class="linkLabel_WmDU">Ticketon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/unitify"><span title="Unitify Condo Integration" class="linkLabel_WmDU">Unitify Condo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zendesk"><span title="Zendesk Integration" class="linkLabel_WmDU">Zendesk Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Deliverect Integration Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Deliverect Integration Guide</h1></header>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do">What the AI can do<a href="#what-the-ai-can-do" class="hash-link" aria-label="Direct link to What the AI can do" title="Direct link to What the AI can do" translate="no">​</a></h2>
-<p>The Newo AI Agent integrates with Deliverect so your AI can act as a restaurant ordering assistant on top of a Deliverect-connected menu and channel link.</p>
-<p>Once connected, the AI agent can:</p>
-<ul>
-<li class="">answer menu questions from the synchronized Deliverect menu snapshot</li>
-<li class="">create new pickup, delivery, eat-in, or curbside orders</li>
-<li class="">enforce menu grounding by using only synced Deliverect items, PLUs, prices, and availability flags</li>
-<li class="">store orders created through the agent so the same caller can later ask about them</li>
-<li class="">receive Deliverect order status webhook updates and use the latest saved status when the caller asks about an order</li>
-<li class="">request cancellation of an existing order when the order is still eligible</li>
-<li class="">publish Deliverect ordering, status, and cancellation scenarios into the Newo Canvas</li>
-</ul>
-<p><strong>In plain terms:</strong> Deliverect remains the restaurant menu and order system. Newo becomes the conversational front desk that can take orders, check status, and request cancellations without asking the customer to open a web ordering link.</p>
-<p><img decoding="async" loading="lazy" alt="Deliverect settings entry point" src="/assets/images/S01-f31252e176b5b5262615db3dcdc93866.png" width="2748" height="1124" class="img_ev3q"></p>
-<p><em>Figure S01. The Module - DeliverectIntegration settings block in Newo Builder.</em></p>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">Newo.ai</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/">Integrations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://newo.ai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">newo.ai<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/"><span title="Overview" class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/activecampaign"><span title="ActiveCampaign Integration Guide" class="linkLabel_WmDU">ActiveCampaign Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/altegio"><span title="Altegio Integration" class="linkLabel_WmDU">Altegio Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/bitrix"><span title="Bitrix24 Integration" class="linkLabel_WmDU">Bitrix24 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/boulevard"><span title="Boulevard Integration" class="linkLabel_WmDU">Boulevard Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calcom"><span title="Cal.com Integration" class="linkLabel_WmDU">Cal.com Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/calendly"><span title="Calendly Integration" class="linkLabel_WmDU">Calendly Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/close"><span title="Close Integration" class="linkLabel_WmDU">Close Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/cloud9"><span title="Cloud 9 Integration" class="linkLabel_WmDU">Cloud 9 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/clover"><span title="Clover Integration" class="linkLabel_WmDU">Clover Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/integrations/deliverect"><span title="Deliverect Integration" class="linkLabel_WmDU">Deliverect Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/dentcomm"><span title="DentComm Integration" class="linkLabel_WmDU">DentComm Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/denticon"><span title="Denticon Integration" class="linkLabel_WmDU">Denticon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/exely"><span title="Exely Integration Guide" class="linkLabel_WmDU">Exely Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/fhir"><span title="FHIR Integration" class="linkLabel_WmDU">FHIR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/followupboss"><span title="FollowUpBoss Integration" class="linkLabel_WmDU">FollowUpBoss Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/gohighlevel"><span title="GoHighLevel Integration Guide" class="linkLabel_WmDU">GoHighLevel Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/housecallpro"><span title="Housecall Pro Integration" class="linkLabel_WmDU">Housecall Pro Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/hubspot"><span title="HubSpot Integration" class="linkLabel_WmDU">HubSpot Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/jobtread"><span title="JobTread Integration" class="linkLabel_WmDU">JobTread Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kolla"><span title="Kolla Integration" class="linkLabel_WmDU">Kolla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/kommo"><span title="Kommo Integration" class="linkLabel_WmDU">Kommo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/launch27"><span title="Launch27 Integration Guide" class="linkLabel_WmDU">Launch27 Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/meistertask"><span title="MeisterTask Integration" class="linkLabel_WmDU">MeisterTask Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/monday"><span title="Monday.com Integration Guide" class="linkLabel_WmDU">Monday.com Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/mozrest"><span title="Mozrest Integration" class="linkLabel_WmDU">Mozrest Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/nexhealth"><span title="NexHealth Integration" class="linkLabel_WmDU">NexHealth Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/odoo"><span title="Odoo Integration" class="linkLabel_WmDU">Odoo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/openemr"><span title="OpenEMR Integration" class="linkLabel_WmDU">OpenEMR Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/opera"><span title="Opera Integration Guide" class="linkLabel_WmDU">Opera Integration Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/pipedrive"><span title="Pipedrive Integration" class="linkLabel_WmDU">Pipedrive Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/poshub"><span title="PosHUB Integration" class="linkLabel_WmDU">PosHUB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/repcard"><span title="Repcard CRM Integration" class="linkLabel_WmDU">Repcard CRM Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/salesforce"><span title="Salesforce Integration" class="linkLabel_WmDU">Salesforce Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicem8"><span title="ServiceM8 Integration" class="linkLabel_WmDU">ServiceM8 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/servicetitan"><span title="ServiceTitan Integration" class="linkLabel_WmDU">ServiceTitan Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/sevenrooms"><span title="SevenRooms Integration" class="linkLabel_WmDU">SevenRooms Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/shopify"><span title="Shopify Integration" class="linkLabel_WmDU">Shopify Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/squareup"><span title="Square Integration" class="linkLabel_WmDU">Square Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/syrve"><span title="Syrve Integration" class="linkLabel_WmDU">Syrve Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tab32"><span title="Tab32 Integration" class="linkLabel_WmDU">Tab32 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/tableo"><span title="Tableo Integration" class="linkLabel_WmDU">Tableo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamleader"><span title="TeamLeader Integration" class="linkLabel_WmDU">TeamLeader Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/teamup"><span title="Teamup Integration" class="linkLabel_WmDU">Teamup Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/ticketon"><span title="Ticketon Integration" class="linkLabel_WmDU">Ticketon Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/trackb"><span title="TrackB Integration" class="linkLabel_WmDU">TrackB Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/unitify"><span title="Unitify Condo Integration" class="linkLabel_WmDU">Unitify Condo Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/workiz"><span title="Workiz Integration" class="linkLabel_WmDU">Workiz Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/xcally"><span title="XCALLY Integration" class="linkLabel_WmDU">XCALLY Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/yelp"><span title="Yelp Integration" class="linkLabel_WmDU">Yelp Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zendesk"><span title="Zendesk Integration" class="linkLabel_WmDU">Zendesk Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohoanalytics"><span title="Zoho Analytics Integration" class="linkLabel_WmDU">Zoho Analytics Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/integrations/zohocrm"><span title="Zoho CRM Integration" class="linkLabel_WmDU">Zoho CRM Integration</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Deliverect Integration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Deliverect Integration</h1></header>
+<p>Connects <strong>Deliverect</strong> with the Newo AI agent and <strong>Food Order</strong> so customers can browse the restaurant menu, hear an accurate total, choose an available payment method, place an order, check its status, and request cancellation.</p>
+<blockquote>
+<p><strong>Time to first success:</strong> about 30 minutes when the Deliverect location, channel link, menu, and connector access are already available. Deliverect channel certification and production activation may take longer.</p>
+</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start" translate="no">​</a></h2>
 <p>Make sure you have:</p>
 <ul>
-<li class="">an active Deliverect partner/channel setup for the restaurant location</li>
-<li class="">Deliverect <strong>Client ID</strong> and <strong>Client Secret</strong></li>
-<li class="">Deliverect <strong>Channel Name</strong></li>
-<li class="">Deliverect <strong>Channel Link ID</strong> for the restaurant location this agent will serve</li>
-<li class="">Deliverect <strong>Account ID</strong> for the customer account that owns the location</li>
-<li class="">a published menu for that Deliverect store/channel</li>
-<li class="">access to configure the Deliverect order-status webhook field for the channel link</li>
-<li class="">access to the Newo project builder and permission to click <strong>Publish All</strong></li>
+<li class="">an active Deliverect account with a location and POS connection;</li>
+<li class="">a published menu assigned to the location;</li>
+<li class="">a Newo channel link for that location;</li>
+<li class="">access to the Deliverect account and location settings;</li>
+<li class="">access to Newo Builder with permission to edit settings and click <strong>Publish All</strong>;</li>
+<li class="">the Deliverect <strong>Account ID</strong>;</li>
+<li class="">an active Deliverect Pay online gateway linked to the location if customers should pay by payment link;</li>
+<li class="">an offline gateway linked to the location if customers should pay at pickup or delivery;</li>
+<li class="">agreement with Deliverect and your finance team on whether Newo reports calculated tax as remitted.</li>
 </ul>
-<p>Production also requires Deliverect channel certification for the capabilities you plan to use, such as order creation, status lookup, and cancellation.</p>
-<blockquote>
-<p>Deliverect credentials are partner-gated. They are issued by Deliverect during channel onboarding; there is no public self-service setup where a restaurant operator can generate every credential alone.</p>
-</blockquote>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="deliverect-values-you-need">Deliverect values you need<a href="#deliverect-values-you-need" class="hash-link" aria-label="Direct link to Deliverect values you need" title="Direct link to Deliverect values you need" translate="no">​</a></h3>
-<table><thead><tr><th>Value</th><th>What it is used for</th></tr></thead><tbody><tr><td><strong>Client ID</strong></td><td>OAuth machine-to-machine token request.</td></tr><tr><td><strong>Client Secret</strong></td><td>OAuth machine-to-machine token request.</td></tr><tr><td><strong>Channel Name</strong></td><td>Channel API order URL path, usually <code>newoai</code>.</td></tr><tr><td><strong>Channel ID / Channel Link ID</strong></td><td>The restaurant/channel location where orders are submitted.</td></tr><tr><td><strong>Account ID</strong></td><td>Commerce API menu retrieval.</td></tr><tr><td><strong>Location ID</strong></td><td>Optional store ID for menu retrieval. Leave blank unless Deliverect gave a separate value.</td></tr></tbody></table>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-to-find-these-values-in-deliverect">Where to find these values in Deliverect<a href="#where-to-find-these-values-in-deliverect" class="hash-link" aria-label="Direct link to Where to find these values in Deliverect" title="Direct link to Where to find these values in Deliverect" translate="no">​</a></h3>
-<p>Most Deliverect identifiers come from the partner/channel setup, not from the restaurant-facing menu editor.</p>
-<table><thead><tr><th>Value</th><th>Where to get it</th></tr></thead><tbody><tr><td><strong>Client ID</strong> and <strong>Client Secret</strong></td><td>Deliverect channel onboarding email or partner developer credentials page. These belong to your channel app, not to an individual restaurant.</td></tr><tr><td><strong>Channel Name</strong></td><td>Deliverect channel onboarding details. Use the exact channel value assigned by Deliverect; it is case-sensitive. For the standard Newo channel this is usually <code>newoai</code>.</td></tr><tr><td><strong>Account ID</strong></td><td>In Deliverect, open the correct customer account and go to the account/admin details page. Copy the <strong>Account ID</strong> shown there. Figure S02 shows where this value appears.</td></tr><tr><td><strong>Channel ID / Channel Link ID</strong></td><td>In the same customer account, open the restaurant location/store and its channel link details. Copy the <strong>Channel Link ID</strong> for the exact restaurant location this agent should submit orders to. Figure S03 shows where this value appears.</td></tr><tr><td><strong>Location ID</strong></td><td>In the same location/store details page, copy the <strong>Location ID</strong> if Deliverect shows one. Leave this blank in Newo unless Deliverect provides a separate store/location ID for menu pulls. Figure S03 shows where this value appears.</td></tr></tbody></table>
-<p>If you are unsure which ID is which, ask Deliverect for the values for: <strong>client credentials</strong>, <strong>channel name</strong>, <strong>channelLinkId</strong>, <strong>accountId</strong>, and optional <strong>store/location ID</strong> for the same restaurant location.</p>
-<p><img decoding="async" loading="lazy" alt="Deliverect account details showing Account ID" src="/assets/images/S02-20c11c4b793712897840a8259943b067.png" width="2880" height="1624" class="img_ev3q"></p>
-<p><em>Figure S02. Deliverect account details: copy <strong>Account ID</strong> from this page.</em></p>
-<p><img decoding="async" loading="lazy" alt="Deliverect location and channel details showing Channel Link ID and Location ID" src="/assets/images/S03-c1989d664bdd8c8f2056fc5bd86a58f6.png" width="2880" height="1624" class="img_ev3q"></p>
-<p><em>Figure S03. Deliverect location/channel details: copy <strong>Channel Link ID</strong> for the connected channel and <strong>Location ID</strong> if Deliverect provides a separate location value.</em></p>
-<blockquote>
-<p><strong>Wrong Channel Link ID = wrong restaurant.</strong> Channel Link IDs are location-specific. Double-check this before sending any test order.</p>
-</blockquote>
+<p>The integration is designed for one Deliverect location per Newo project. Use a separate project for another location.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do">What the AI can do<a href="#what-the-ai-can-do" class="hash-link" aria-label="Direct link to What the AI can do" title="Direct link to What the AI can do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Use the live Deliverect menu.</strong> Food Order receives categories, products, prices, nested modifiers, availability, fulfillment types, currency, taxes, and configured fees.</li>
+<li class=""><strong>Quote one final total.</strong> The same Food Order total is used in the conversation, payment request, and submitted order.</li>
+<li class=""><strong>Create unpaid orders.</strong> Pay-at-pickup and pay-at-delivery orders are submitted immediately when that option is available for the selected fulfillment type.</li>
+<li class=""><strong>Take payment before order creation.</strong> For payment-link checkout, the agent sends a secure Deliverect Pay link and creates the real order only after payment authorization.</li>
+<li class=""><strong>Keep payment and order correlated.</strong> Newo stores the Deliverect Pay <code>paymentId</code> with the submitted order and adds it to the Channel Order note for support diagnostics.</li>
+<li class=""><strong>Track current order status.</strong> Deliverect status notifications update the customer&#x27;s saved order, which the agent can explain in plain language.</li>
+<li class=""><strong>Request cancellation.</strong> The agent uses the customer&#x27;s saved order and sends a cancellation request without asking the customer for internal identifiers.</li>
+<li class=""><strong>Respect live availability.</strong> Product snooze updates and busy-mode updates are applied to the current location.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="menu-prices-taxes-and-fees">Menu, prices, taxes, and fees<a href="#menu-prices-taxes-and-fees" class="hash-link" aria-label="Direct link to Menu, prices, taxes, and fees" title="Direct link to Menu, prices, taxes, and fees" translate="no">​</a></h2>
+<p>Deliverect remains the source of truth for the menu. Newo converts each Deliverect menu into the Food Order catalog after channel registration and whenever Deliverect publishes a menu update.</p>
+<table><thead><tr><th>Deliverect data</th><th>What Food Order receives</th></tr></thead><tbody><tr><td>Menu and fulfillment configuration</td><td>Delivery, pickup, eat-in, or curbside order types supported by the menu</td></tr><tr><td>Product and modifier prices</td><td>Decimal currency amounts used when building the cart</td></tr><tr><td>Product tax rate</td><td>Tax rate for the product</td></tr><tr><td>Modifier tax rate</td><td>The modifier&#x27;s own tax rate, even when it differs from the parent product</td></tr><tr><td>Delivery fee and its tax</td><td>One gross delivery fee</td></tr><tr><td>Service fee and its tax</td><td>One gross service fee</td></tr><tr><td>Bag fee</td><td>Package fee</td></tr><tr><td>Currency and tax mode</td><td>Currency, decimal precision, and whether listed prices already include tax</td></tr><tr><td>Snoozed products and busy mode</td><td>Current operational restrictions for the registered location</td></tr></tbody></table>
+<p>Food Order calculates and speaks the final total. Deliverect validates that the selected products and modifiers still exist and are available, then uses the submitted Food Order total as the single final amount for payment and order creation. It does not recalculate the grand total or reject an order because of a second competing total.</p>
+<p>The integration still calculates the individual item, modifier, tax, and fee rows required by Deliverect&#x27;s order format. This breakdown is used only to describe the order correctly to Deliverect; it does not replace the Food Order total.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-the-menu-refreshes">When the menu refreshes<a href="#when-the-menu-refreshes" class="hash-link" aria-label="Direct link to When the menu refreshes" title="Direct link to When the menu refreshes" translate="no">​</a></h3>
+<table><thead><tr><th>When it happens</th><th>Observable result</th></tr></thead><tbody><tr><td>Channel registration becomes active</td><td>The location, menu, and payment configuration are loaded</td></tr><tr><td>Deliverect publishes a menu update</td><td>Food Order receives the refreshed catalog</td></tr><tr><td>The operator clicks <strong>Publish All</strong></td><td>Setup is refreshed and a menu sync is requested</td></tr><tr><td>A customer submits an order after cached store data becomes stale</td><td>Current store and fee data are refreshed before validation</td></tr><tr><td>Food Order finishes rebuilding its catalog</td><td>Payment choices are published again so they are not lost during catalog replacement</td></tr></tbody></table>
+<p>If a menu update is rejected, the last valid Food Order catalog remains available and a sanitized error is stored for support.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="payment-and-order-lifecycle">Payment and order lifecycle<a href="#payment-and-order-lifecycle" class="hash-link" aria-label="Direct link to Payment and order lifecycle" title="Direct link to Payment and order lifecycle" translate="no">​</a></h2>
+<p>Food Order presents only the payment choices published for the selected fulfillment type.</p>
+<table><thead><tr><th>Customer choice</th><th>What happens</th></tr></thead><tbody><tr><td>Pay at pickup</td><td>The order is submitted immediately as unpaid</td></tr><tr><td>Pay at delivery</td><td>The order is submitted immediately as unpaid</td></tr><tr><td>Payment link</td><td>A draft is saved, a secure link is sent, and no restaurant order is created yet</td></tr><tr><td>Payment authorized</td><td>The saved draft is submitted as a paid order with the Deliverect payment reference</td></tr><tr><td>Payment refused</td><td>The draft remains unsubmitted and no restaurant order is created</td></tr><tr><td>Paid order submitted successfully</td><td>The temporary payment-to-customer mapping is deleted and the customer receives confirmation</td></tr><tr><td>Paid order submission definitively fails</td><td>When automatic refunds are enabled, the integration requests a full refund by the saved <code>paymentId</code>; it does not submit a duplicate order</td></tr></tbody></table>
+<p>The Channel Order API does not have a native field that links a Deliverect Pay
+payment to the order. Newo therefore owns the authoritative
+<code>channelOrderId ↔ paymentId</code> association. The payment ID is also appended to the
+order note, but Deliverect Pay screens and the downstream POS are not guaranteed
+to display it as a structured payment/order relationship.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cancellation-and-refund-lifecycle">Cancellation and refund lifecycle<a href="#cancellation-and-refund-lifecycle" class="hash-link" aria-label="Direct link to Cancellation and refund lifecycle" title="Direct link to Cancellation and refund lifecycle" translate="no">​</a></h3>
+<table><thead><tr><th>Event</th><th>Result</th></tr></thead><tbody><tr><td>Customer requests cancellation</td><td>Newo sends the same Channel Order ID with status <code>100</code>; this requests a POS void but is not final cancellation</td></tr><tr><td>POS returns status <code>110</code></td><td>The order is finally canceled</td></tr><tr><td>Status <code>110</code> for a paid order with a saved <code>paymentId</code></td><td>Newo requests a full Deliverect Pay refund when automatic refunds are enabled</td></tr><tr><td>Status <code>110</code> for pay at pickup/delivery</td><td>No refund is sent because Newo did not collect a payment</td></tr><tr><td>POS returns status <code>126</code></td><td>Cancellation failed; the order remains active and no refund is sent</td></tr></tbody></table>
+<p>Refunds are initiated only when Newo has the payment ID and original payment
+amount and <strong>Enable Automatic Refunds</strong> is on. Cancellation and payment
+correlation is stored in Newo because Channel Order does not expose a native
+Deliverect Pay reference field.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="enable-automatic-refunds">Enable Automatic Refunds<a href="#enable-automatic-refunds" class="hash-link" aria-label="Direct link to Enable Automatic Refunds" title="Direct link to Enable Automatic Refunds" translate="no">​</a></h4>
+<p>This switch is on by default and controls only whether Newo may start a new,
+full Deliverect Pay refund.</p>
+<table><thead><tr><th>Switch</th><th>Confirmed cancellation of a paid order</th><th>Definitive failure after payment</th><th>Customer notification</th></tr></thead><tbody><tr><td>On</td><td>Newo refunds the original charged amount after POS status <code>110</code></td><td>Newo refunds the original charged amount instead of creating a duplicate order</td><td>SMS confirms refund success or explains that the automatic refund failed</td></tr><tr><td>Off</td><td>The order is canceled, but Newo does not refund the payment</td><td>Newo preserves the payment reference but does not refund it</td><td>SMS asks the customer to contact support about the payment</td></tr></tbody></table>
+<p>The switch does not:</p>
+<ul>
+<li class="">disable order cancellation;</li>
+<li class="">affect pay-at-pickup or pay-at-delivery orders, because Newo collected no payment;</li>
+<li class="">refund when the POS rejects cancellation with status <code>126</code>;</li>
+<li class="">refund an order submission whose outcome is uncertain;</li>
+<li class="">provide partial refunds;</li>
+<li class="">refund existing payments when the switch is changed; or</li>
+<li class="">stop a refund request that Newo has already sent.</li>
+</ul>
+<p>Before turning the switch off, make sure support can find the Deliverect Pay
+payment and issue the full refund manually. Turning it on again affects only
+future refund decisions; a payment previously skipped still requires manual
+handling. Cancellation and refund webhooks are asynchronous, so their final
+results are sent by SMS and never cause a new spoken or chat response after the
+customer has left the conversation.</p>
+<p>The integration prevents repeated customer messages or repeated callbacks from creating duplicate payment requests or duplicate orders.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="payment-choices-published-to-food-order">Payment choices published to Food Order<a href="#payment-choices-published-to-food-order" class="hash-link" aria-label="Direct link to Payment choices published to Food Order" title="Direct link to Payment choices published to Food Order" translate="no">​</a></h3>
+<ul>
+<li class="">Delivery menus receive <strong>pay at delivery</strong> only when an offline gateway is linked.</li>
+<li class="">Pickup, eat-in, and curbside menus receive <strong>pay at pickup</strong> only when an offline gateway is linked.</li>
+<li class=""><strong>Payment link</strong> is added only when Deliverect returns an online payment gateway profile for the registered channel.</li>
+</ul>
+<p>The fulfillment type decides whether an offline gateway is presented as pay at pickup or pay at delivery. Without an offline gateway, the integration does not offer either method.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="one-registration-webhook">One registration webhook<a href="#one-registration-webhook" class="hash-link" aria-label="Direct link to One registration webhook" title="Direct link to One registration webhook" translate="no">​</a></h2>
+<p>Only <strong>Channel Registration Webhook URL</strong> is entered manually in Deliverect.</p>
+<p>When Deliverect calls that URL for a location, Newo returns the location&#x27;s five callback URLs:</p>
+<ul>
+<li class="">payment updates;</li>
+<li class="">menu updates;</li>
+<li class="">order status updates;</li>
+<li class="">product snooze and unsnooze updates;</li>
+<li class="">busy-mode updates.</li>
+</ul>
+<p>Deliverect stores those callback URLs inside the location configuration. Operators should not copy the five generated callback URLs into Deliverect one by one.</p>
+<p>The same registration event stores the location, channel link, optional external location reference, and registration state in Newo. New payments and orders are blocked unless the registration state is active.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features-at-a-glance">Features at a glance<a href="#features-at-a-glance" class="hash-link" aria-label="Direct link to Features at a glance" title="Direct link to Features at a glance" translate="no">​</a></h2>
+<table><thead><tr><th>Feature</th><th>Included</th></tr></thead><tbody><tr><td>Sync Deliverect menu to Food Order</td><td>✅</td></tr><tr><td>Publish product and modifier prices</td><td>✅</td></tr><tr><td>Publish product-specific and modifier-specific tax</td><td>✅</td></tr><tr><td>Publish delivery, service, and package fees</td><td>✅</td></tr><tr><td>Support nested modifier groups</td><td>✅</td></tr><tr><td>Use Food Order total for conversation, payment, and order</td><td>✅</td></tr><tr><td>Pay at pickup</td><td>✅, with an offline gateway</td></tr><tr><td>Pay at delivery</td><td>✅, with an offline gateway</td></tr><tr><td>Deliverect Pay redirect link</td><td>✅, with an online gateway</td></tr><tr><td>Create the paid order after authorization</td><td>✅</td></tr><tr><td>Store payment/order correlation in Newo</td><td>✅</td></tr><tr><td>Add <code>paymentId</code> to the paid Channel Order note</td><td>✅</td></tr><tr><td>Refund after definitive paid-order creation failure</td><td>✅</td></tr><tr><td>Refund a paid order after POS confirms status <code>110</code></td><td>✅</td></tr><tr><td>Receive order status updates</td><td>✅</td></tr><tr><td>Request order cancellation</td><td>✅</td></tr><tr><td>Receive snooze and busy-mode updates</td><td>✅</td></tr><tr><td>Multiple Deliverect locations in one Newo project</td><td>❌</td></tr><tr><td>Restaurant table reservations</td><td>❌</td></tr><tr><td>Edit the Deliverect menu from Newo</td><td>❌</td></tr><tr><td>Percentage-based service charges</td><td>❌</td></tr><tr><td>Taxed bag fees</td><td>❌</td></tr><tr><td>Deliverect discounts in the submitted breakdown</td><td>❌</td></tr></tbody></table>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-the-newo-project">Create the Newo project<a href="#create-the-newo-project" class="hash-link" aria-label="Direct link to Create the Newo project" title="Direct link to Create the Newo project" translate="no">​</a></h3>
-<p>If this project already exists in <strong>Newo Builder</strong>, skip this subsection and continue with the integration-specific settings below.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-prepare-your-deliverect-account">1. Prepare your Deliverect account<a href="#1-prepare-your-deliverect-account" class="hash-link" aria-label="Direct link to 1. Prepare your Deliverect account" title="Direct link to 1. Prepare your Deliverect account" translate="no">​</a></h3>
 <ol>
-<li class="">In <strong>Newo Builder</strong>, open the projects list and click <strong>Create Project</strong> (or <strong>Create New Project</strong> from the top-right menu).</li>
+<li class="">In Deliverect, confirm that the correct account, location, POS connection, and Newo channel link exist.</li>
+<li class="">Publish a menu to that location and verify that its products are available for the required order types.</li>
+<li class="">If payment links are required, open <strong>Deliverect Pay → Configuration</strong>, enable an online gateway, and link it to the location.</li>
+<li class="">If payment at pickup or delivery is required, enable an offline gateway and link it to the location.</li>
+<li class="">Copy the Deliverect <strong>Account ID</strong> for the customer account.</li>
+<li class="">Keep the location&#x27;s channel-registration configuration open. You will paste one Newo URL there after the first publish.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Create New Project menu in Newo Builder" src="/assets/images/newo_create_project_button-92035c73bc75d1dc615912fe4feb354f.png" width="510" height="220" class="img_ev3q"></p>
-<ol start="2">
-<li class="">Fill <strong>IDN</strong> and <strong>Title</strong>. The exact names do not matter; use any clear names your team will recognize.</li>
-<li class="">In <strong>Registry</strong>, choose the release channel:<!-- -->
-<ul>
-<li class=""><strong>staging</strong> — the newest module fixes appear here first. Use it when you need the latest fix, but expect possible unfinished changes.</li>
-<li class=""><strong>production</strong> — the final stable version for live projects.</li>
-</ul>
-</li>
-<li class="">In <strong>Module</strong>, select the module for this integration.</li>
-</ol>
-<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1170" height="1846" class="img_ev3q">
-5. Leave <strong>Module version</strong> on <strong>Latest version</strong> unless support tells you to pin a specific version, then click <strong>Create</strong>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-open-the-newo-project">3.1 Open the Newo Project<a href="#31-open-the-newo-project" class="hash-link" aria-label="Direct link to 3.1 Open the Newo Project" title="Direct link to 3.1 Open the Newo Project" translate="no">​</a></h3>
+<p>For Deliverect-side details, see the official <a href="https://developers.deliverect.com/page/channel-api" target="_blank" rel="noopener noreferrer" class="">Channel API guides</a> and <a href="https://developers.deliverect.com/docs/request-payments" target="_blank" rel="noopener noreferrer" class="">Deliverect Pay guide</a>.</p>
+<p><strong>How to verify:</strong> The location shows an active POS connection, a Newo channel link, and at least one published menu.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-get-your-deliverect-credentials">2. Get your Deliverect credentials<a href="#2-get-your-deliverect-credentials" class="hash-link" aria-label="Direct link to 2. Get your Deliverect credentials" title="Direct link to 2. Get your Deliverect credentials" translate="no">​</a></h3>
+<p>The integration uses the Deliverect connector provisioned for the Newo channel. It does not ask the operator to paste a Client ID, Client Secret, access token, or refresh token into the <strong>Module - Deliverect</strong> settings.</p>
+<p>If the connector is not authorized, contact the Newo integration administrator responsible for the Deliverect partner credentials before continuing.</p>
+<p><strong>How to verify:</strong> In Newo, the Deliverect connector is present and authorized; there are no Client ID, Client Secret, or Access Token fields under <strong>Module - Deliverect</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-configure-in-newo">3. Configure in Newo<a href="#3-configure-in-newo" class="hash-link" aria-label="Direct link to 3. Configure in Newo" title="Direct link to 3. Configure in Newo" translate="no">​</a></h3>
 <ol>
-<li class="">Open <strong>Newo Portal</strong>.</li>
-<li class="">Open the projects list.</li>
-<li class="">Select your project.</li>
+<li class="">Open the project in <strong>Newo Builder</strong> and find <strong>Module - Deliverect</strong>.</li>
+<li class="">Set <strong>Account ID</strong> to the Deliverect customer account that contains the location.</li>
+<li class="">Confirm <strong>API Base URL</strong> matches the environment. Keep staging until Deliverect certification is complete.</li>
+<li class="">Confirm <strong>Channel Scope</strong> matches the scope assigned to the Newo channel.</li>
+<li class="">Set <strong>Payment Return URL</strong> to the page customers should see after leaving checkout.</li>
+<li class="">Set <strong>Tax Remittance Policy</strong> according to the approved commercial and legal setup.</li>
+<li class="">Review the feature switches:</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Open Deliverect project" src="/assets/images/S04-58e84363a323aec0f70d78d40e65edb1.png" width="2880" height="1622" class="img_ev3q"></p>
-<p><em>Figure S04. Opening the Deliverect project in Newo Builder.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-open-deliverect-settings">3.2 Open Deliverect Settings<a href="#32-open-deliverect-settings" class="hash-link" aria-label="Direct link to 3.2 Open Deliverect Settings" title="Direct link to 3.2 Open Deliverect Settings" translate="no">​</a></h3>
-<ol>
-<li class="">Inside the project, open <strong>Builder</strong>.</li>
-<li class="">Click <strong>Attributes</strong> in the left sidebar.</li>
-<li class="">Find <strong>Module - DeliverectIntegration</strong>.</li>
-<li class="">Open the group.</li>
-</ol>
-<table><thead><tr><th>Deliverect attribute fields — part 1</th><th>Deliverect attribute fields — part 2</th></tr></thead><tbody><tr><td><img decoding="async" loading="lazy" alt="Newo Builder Deliverect attribute fields part 1" src="/assets/images/S05a-4d2e071b9385df9c68073dc20da4b1ab.png" width="2226" height="1292" class="img_ev3q"></td><td><img decoding="async" loading="lazy" alt="Newo Builder Deliverect attribute fields part 2" src="/assets/images/S05b-21c7f894258277d7c6ebf4f38450b2a8.png" width="2234" height="1058" class="img_ev3q"></td></tr></tbody></table>
-<p><em>Figure S05. Newo Builder Deliverect attributes where the copied Deliverect values are pasted.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-paste-oauth-credentials">3.3 Paste OAuth Credentials<a href="#33-paste-oauth-credentials" class="hash-link" aria-label="Direct link to 3.3 Paste OAuth Credentials" title="Direct link to 3.3 Paste OAuth Credentials" translate="no">​</a></h3>
-<p>Paste and save:</p>
-<ol>
-<li class=""><strong>01. Client ID</strong> (<code>deliverect_client_id</code>)</li>
-<li class=""><strong>02. Client Secret</strong> (<code>deliverect_client_secret</code>)</li>
-</ol>
-<p>Leave <strong>03. API Base URL</strong> on the staging default unless Deliverect has already certified the channel for production.</p>
-<p><img decoding="async" loading="lazy" alt="Paste Client ID and Client Secret" src="/assets/images/S06-c0f99b84c608a2f579d50a9db4e79deb.png" width="2058" height="1176" class="img_ev3q"></p>
-<p><em>Figure S06. Client ID and Client Secret fields in Newo.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-paste-channel-and-account-values">3.4 Paste Channel and Account Values<a href="#34-paste-channel-and-account-values" class="hash-link" aria-label="Direct link to 3.4 Paste Channel and Account Values" title="Direct link to 3.4 Paste Channel and Account Values" translate="no">​</a></h3>
-<p>Paste and save:</p>
-<ol>
-<li class=""><strong>04. Channel Name</strong> (<code>deliverect_channel_name</code>), usually <code>newoai</code></li>
-<li class=""><strong>05. Channel Link ID</strong> (<code>deliverect_channel_link_id</code>)</li>
-<li class=""><strong>06. Account ID</strong> (<code>deliverect_account_id</code>)</li>
-<li class=""><strong>07. Location ID</strong> (<code>deliverect_location_id</code>), optional</li>
-</ol>
-<p>If <strong>Location ID</strong> is blank, the integration uses <strong>Channel Link ID</strong> as the store ID for menu retrieval.</p>
-<p><img decoding="async" loading="lazy" alt="Paste channel and account values" src="/assets/images/S07-3234d23e8bc9a7735de7afe0689ff464.png" width="2214" height="1248" class="img_ev3q"></p>
-<p><em>Figure S07. Channel Name, Channel Link ID, Account ID, and optional Location ID.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="35-review-feature-switches">3.5 Review Feature Switches<a href="#35-review-feature-switches" class="hash-link" aria-label="Direct link to 3.5 Review Feature Switches" title="Direct link to 3.5 Review Feature Switches" translate="no">​</a></h3>
-<p>For a normal deployment, leave these enabled:</p>
-<ul>
-<li class=""><strong>Enable Order Creation</strong> (<code>deliverect_enable_ordering</code>)</li>
-<li class=""><strong>Enable Order Status Lookup</strong> (<code>deliverect_enable_order_status</code>)</li>
-<li class=""><strong>Enable Order Cancellation</strong> (<code>deliverect_enable_cancellation</code>)</li>
-<li class=""><strong>Publish Default Canvas</strong> (<code>deliverect_setup_scenarios</code>)</li>
-</ul>
-<p>Turn a feature off only if the restaurant or Deliverect certification scope does not allow it yet.</p>
-<p><img decoding="async" loading="lazy" alt="Deliverect feature switches" src="/assets/images/S08-92569af6c90a75ba34775442f9129f68.png" width="2228" height="1194" class="img_ev3q"></p>
-<p><em>Figure S08. Deliverect feature switches.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="36-configure-deliverect-webhooks">3.6 Configure Deliverect Webhooks<a href="#36-configure-deliverect-webhooks" class="hash-link" aria-label="Direct link to 3.6 Configure Deliverect Webhooks" title="Direct link to 3.6 Configure Deliverect Webhooks" translate="no">​</a></h3>
-<p>Newo creates incoming webhook URLs during setup. Copy those URLs from the Deliverect settings block in Newo, then paste them into the matching fields on the Deliverect location.</p>
-<p>In Deliverect:</p>
-<ol>
-<li class="">Open the <strong>Locations</strong> tab.</li>
-<li class="">Select the location connected to this Newo project.</li>
-<li class="">Click <strong>Edit</strong>.</li>
-<li class="">Turn on the <strong>Show more</strong> switch in the top right.</li>
-<li class="">Scroll to the correct section and paste the matching Newo webhook URL.</li>
-<li class="">Save the location.</li>
-</ol>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="361-menu-update-webhook">3.6.1 Menu Update Webhook<a href="#361-menu-update-webhook" class="hash-link" aria-label="Direct link to 3.6.1 Menu Update Webhook" title="Direct link to 3.6.1 Menu Update Webhook" translate="no">​</a></h4>
-<p>Menu refresh can use Deliverect menu update webhook events. Copy <strong>Menu Update Webhook URL</strong> from the Newo Deliverect settings block.</p>
-<p>In Deliverect, paste it into <strong>Menu update webhook URL</strong> under the <strong>Menu</strong> section of the selected location, then click <strong>Save</strong>.</p>
-<p>When Deliverect calls this webhook, Newo treats it as a menu-change notification and starts its existing menu cache refresh. Newo then pulls the latest menu from Deliverect Commerce API and rewrites the saved menu cache/prompt menu.</p>
-<p>You can also refresh the Newo menu manually: click <strong>Publish All</strong>, and the integration will pull the latest published menus from Deliverect.</p>
-<p><img decoding="async" loading="lazy" alt="Deliverect menu update webhook field" src="/assets/images/S09-3f0428303e96f62aefb953b99b02bafb.png" width="2880" height="1624" class="img_ev3q"></p>
-<p><em>Figure S09. Deliverect location editor: paste the Newo <strong>Menu Update Webhook URL</strong> into the <strong>Menu update webhook URL</strong> field under the <strong>Menu</strong> section.</em></p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="362-order-status-webhook">3.6.2 Order Status Webhook<a href="#362-order-status-webhook" class="hash-link" aria-label="Direct link to 3.6.2 Order Status Webhook" title="Direct link to 3.6.2 Order Status Webhook" translate="no">​</a></h4>
-<p>Order status lookup uses Deliverect order status webhook updates. Copy <strong>Order Status Webhook URL</strong> from the Newo Deliverect settings block.</p>
-<p>In Deliverect, paste it into <strong>Order status webhook URL</strong> under the <strong>Order</strong> section of the selected location, then click <strong>Save</strong>.</p>
-<p>Use the exact Newo-generated URL. It is the endpoint Deliverect calls when an order is accepted, denied, ready, in delivery, finalized, failed, or otherwise updated.</p>
-<p><img decoding="async" loading="lazy" alt="Deliverect order status webhook field" src="/assets/images/S10-5b825f8d5c42f3f0c3a4bce3aacbd0c8.png" width="2880" height="1614" class="img_ev3q"></p>
-<p><em>Figure S10. Deliverect location editor: paste the Newo <strong>Order Status Webhook URL</strong> into the <strong>Order status webhook URL</strong> field under the <strong>Order</strong> section.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="37-save-and-publish">3.7 Save and Publish<a href="#37-save-and-publish" class="hash-link" aria-label="Direct link to 3.7 Save and Publish" title="Direct link to 3.7 Save and Publish" translate="no">​</a></h3>
-<blockquote>
-<p><strong>Important: save each edited attribute.</strong> After editing a setting in Newo, click <strong>Save</strong> for that setting before moving on.</p>
-</blockquote>
-<p>When all fields are saved:</p>
-<ol>
+<table><thead><tr><th>Setting</th><th>Purpose</th><th>Default</th></tr></thead><tbody><tr><td><strong>Enable Food Ordering</strong></td><td>Allows Food Order to submit unpaid orders or start payment-link checkout</td><td>On</td></tr><tr><td><strong>Enable Order Status Lookup</strong></td><td>Allows the agent to explain the latest saved Deliverect status</td><td>On</td></tr><tr><td><strong>Enable Order Cancellation</strong></td><td>Allows the agent to send cancellation requests</td><td>On</td></tr><tr><td><strong>Enable Automatic Refunds</strong></td><td>Starts full Deliverect Pay refunds after confirmed cancellation or definitive paid-order creation failure; turn off only when support owns refunds manually</td><td>On</td></tr><tr><td><strong>Publish Status and Cancellation Canvas</strong></td><td>Publishes Deliverect&#x27;s two existing-order scenarios</td><td>On</td></tr></tbody></table>
+<ol start="8">
 <li class="">Click <strong>Publish All</strong>.</li>
-<li class="">Wait for setup to finish.</li>
-<li class="">Confirm the menu cache and Canvas items are created.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Publish All" src="/assets/images/S11-313967fa526d982b40d336af77993d72.png" width="2782" height="1368" class="img_ev3q"></p>
-<p><em>Figure S11. Publish All after saving Deliverect settings.</em></p>
-<p><strong>What happens after Publish All:</strong></p>
-<ul>
-<li class="">Newo creates the connection <code>deliverect_connector</code>.</li>
-<li class="">Newo creates a hidden setup persona used for background setup actions.</li>
-<li class="">The integration registers custom Deliverect tools.</li>
-<li class="">The integration disables generic availability, booking, and cancellation tools that do not apply to restaurant ordering.</li>
-<li class="">The integration creates incoming webhook endpoints for menu updates and order status updates.</li>
-<li class="">The integration requests a Deliverect OAuth token when needed and caches it.</li>
-<li class="">The integration pulls the Deliverect menu from the Commerce API.</li>
-<li class="">The menu is written into prompt-facing restaurant menu/RAG attributes.</li>
-<li class="">If <strong>Publish Default Canvas</strong> is on, Deliverect intents and scenarios are added to the Canvas.</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="38-verify-setup">3.8 Verify Setup<a href="#38-verify-setup" class="hash-link" aria-label="Direct link to 3.8 Verify Setup" title="Direct link to 3.8 Verify Setup" translate="no">​</a></h3>
-<p>After publishing, check:</p>
-<ul>
-<li class="">The Deliverect settings group has saved credentials and channel IDs.</li>
-<li class=""><code>deliverect_access_token_expires_at</code> is set to a future timestamp after the first API call.</li>
-<li class="">The synchronized menu appears in <code>project_attributes_restaurant_menu</code> or the RAG menu attribute.</li>
-<li class="">The Canvas contains Deliverect ordering and cancellation scenarios.</li>
-<li class=""><strong>Menu Update Webhook URL</strong> is copied into the Deliverect <strong>Menu update webhook URL</strong> field and saved.</li>
-<li class=""><strong>Order Status Webhook URL</strong> is filled in and copied into the matching Deliverect order-status webhook field.</li>
-<li class="">A test chat asking &quot;What&#x27;s on the menu?&quot; returns real items from the Deliverect menu.</li>
-</ul>
-<p><img decoding="async" loading="lazy" alt="Deliverect canvas items" src="/assets/images/S12-42b8b2bdfc1d17a3e1b625d88f974563.png" width="2880" height="1202" class="img_ev3q"></p>
-<p><em>Figure S12. Deliverect Canvas scenarios and intent types after publish.</em></p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All settings reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All settings reference" title="Direct link to All settings reference" translate="no">​</a></h2>
-<p>You can find all settings in <strong>Builder -&gt; Settings -&gt; Module - DeliverectIntegration</strong>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-connection-settings">4.1 Connection Settings<a href="#41-connection-settings" class="hash-link" aria-label="Direct link to 4.1 Connection Settings" title="Direct link to 4.1 Connection Settings" translate="no">​</a></h3>
-<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>01. Client ID</strong> (<code>deliverect_client_id</code>)</td><td>OAuth client ID from Deliverect onboarding.</td><td>Yes</td></tr><tr><td><strong>02. Client Secret</strong> (<code>deliverect_client_secret</code>)</td><td>OAuth client secret paired with Client ID.</td><td>Yes</td></tr><tr><td><strong>03. API Base URL</strong> (<code>deliverect_api_base_url</code>)</td><td>Deliverect API root. Default: <code>https://api.staging.deliverect.com</code>.</td><td>Yes</td></tr><tr><td><strong>Token Audience</strong> (<code>deliverect_token_audience</code>)</td><td>OAuth audience. Default matches staging API.</td><td>Advanced</td></tr><tr><td><strong>Token Grant Type</strong> (<code>deliverect_token_grant_type</code>)</td><td>OAuth grant type. Default: <code>token</code>.</td><td>Advanced</td></tr><tr><td><strong>Access Token</strong> (<code>deliverect_access_token</code>)</td><td>Auto-managed cached bearer token. Do not edit manually.</td><td>Auto</td></tr><tr><td><strong>Access Token Expires At</strong> (<code>deliverect_access_token_expires_at</code>)</td><td>Auto-managed token expiry timestamp.</td><td>Auto</td></tr></tbody></table>
-<p><img decoding="async" loading="lazy" alt="Connection settings" src="/assets/images/S13-a488844bc174c2d09c6188c484e6f5c4.png" width="2090" height="1028" class="img_ev3q"></p>
-<p><em>Figure S13. Deliverect connection and token settings.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-restaurant--channel-settings">4.2 Restaurant / Channel Settings<a href="#42-restaurant--channel-settings" class="hash-link" aria-label="Direct link to 4.2 Restaurant / Channel Settings" title="Direct link to 4.2 Restaurant / Channel Settings" translate="no">​</a></h3>
-<table><thead><tr><th>Setting</th><th>What it does</th><th>Required</th></tr></thead><tbody><tr><td><strong>04. Channel Name</strong> (<code>deliverect_channel_name</code>)</td><td>Channel scope used in order URLs. Usually <code>newoai</code>.</td><td>Yes</td></tr><tr><td><strong>05. Channel Link ID</strong> (<code>deliverect_channel_link_id</code>)</td><td>Location-specific channel link where orders are submitted.</td><td>Yes</td></tr><tr><td><strong>06. Account ID</strong> (<code>deliverect_account_id</code>)</td><td>Account used for Commerce API menu retrieval.</td><td>Yes</td></tr><tr><td><strong>07. Location ID</strong> (<code>deliverect_location_id</code>)</td><td>Optional store ID for menu retrieval. Blank means use Channel Link ID.</td><td>No</td></tr><tr><td><strong>08. Menu Update Webhook URL</strong> (<code>deliverect_menu_update_webhook_url</code>)</td><td>Auto-created Newo URL for Deliverect menu update webhooks.</td><td>Optional</td></tr><tr><td><strong>09. Order Status Webhook URL</strong> (<code>deliverect_order_status_webhook_url</code>)</td><td>Auto-created Newo URL to paste into Deliverect&#x27;s order-status webhook field. Required for status lookup.</td><td>Yes for status lookup</td></tr></tbody></table>
-<p><img decoding="async" loading="lazy" alt="Channel settings" src="/assets/images/S14-241e2642471f0f793dcd50c76f4f2302.png" width="2078" height="922" class="img_ev3q"></p>
-<p><em>Figure S14. Channel Link ID and Account ID fields.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-feature-onoff-switches">4.3 Feature On/Off Switches<a href="#43-feature-onoff-switches" class="hash-link" aria-label="Direct link to 4.3 Feature On/Off Switches" title="Direct link to 4.3 Feature On/Off Switches" translate="no">​</a></h3>
-<table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>Enable Order Creation</strong> (<code>deliverect_enable_ordering</code>)</td><td>On</td><td>Whether the agent can submit new Deliverect orders.</td></tr><tr><td><strong>Enable Order Status Lookup</strong> (<code>deliverect_enable_order_status</code>)</td><td>On</td><td>Whether the agent can answer status questions from saved order status updates.</td></tr><tr><td><strong>Enable Order Cancellation</strong> (<code>deliverect_enable_cancellation</code>)</td><td>On</td><td>Whether the agent can submit cancellation requests.</td></tr><tr><td><strong>Publish Default Canvas</strong> (<code>deliverect_setup_scenarios</code>)</td><td>On</td><td>Whether default Deliverect Canvas content is installed.</td></tr></tbody></table>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-menu--prompt-settings">4.4 Menu / Prompt Settings<a href="#44-menu--prompt-settings" class="hash-link" aria-label="Direct link to 4.4 Menu / Prompt Settings" title="Direct link to 4.4 Menu / Prompt Settings" translate="no">​</a></h3>
-<table><thead><tr><th>Setting</th><th>Default</th><th>What it controls</th></tr></thead><tbody><tr><td><strong>RAG Menu Max Lines</strong> (<code>deliverect_rag_max_lines</code>)</td><td><code>205</code></td><td>Maximum synced menu lines written into prompt-facing menu knowledge.</td></tr><tr><td><code>project_attributes_restaurant_menu</code></td><td>Auto</td><td>Prompt-facing restaurant menu snapshot.</td></tr><tr><td><code>project_attributes_rag_knowledge_base_append_text</code></td><td>Auto</td><td>RAG menu text used by ConvoAgent.</td></tr><tr><td><code>deliverect_menu_state</code></td><td>Auto</td><td>Structured menu cache with products, modifiers, bundles, and PLU index.</td></tr></tbody></table>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-save-and-publish">4.5 Save and Publish<a href="#45-save-and-publish" class="hash-link" aria-label="Direct link to 4.5 Save and Publish" title="Direct link to 4.5 Save and Publish" translate="no">​</a></h3>
-<p>Whenever you change credentials, channel IDs, feature switches, or production/staging URL:</p>
+<p><strong>How to verify:</strong> <strong>Channel Registration Webhook URL</strong> is populated after <strong>Publish All</strong> and <strong>Channel Registration Status</strong> is still <strong>unregistered</strong> until Deliverect calls the URL.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-hit-publish-all">4. Hit Publish All<a href="#4-hit-publish-all" class="hash-link" aria-label="Direct link to 4. Hit Publish All" title="Direct link to 4. Hit Publish All" translate="no">​</a></h3>
+<p>After the first <strong>Publish All</strong>:</p>
 <ol>
-<li class="">Save the changed setting.</li>
-<li class="">Click <strong>Publish All</strong>.</li>
-<li class="">Run at least one menu or ordering test.</li>
+<li class="">Return to <strong>Module - Deliverect</strong>.</li>
+<li class="">Copy <strong>Channel Registration Webhook URL</strong>.</li>
+<li class="">Paste that URL into the Newo channel-registration configuration in Deliverect.</li>
+<li class="">Save and activate the channel for the intended location.</li>
+<li class="">Wait for <strong>Channel Registration Status</strong> to become <strong>active</strong>.</li>
+<li class="">Click <strong>Publish All</strong> once more to refresh the menu, payment choices, and scenarios from the active registration.</li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-ai-can-do-1">What the AI can do<a href="#what-the-ai-can-do-1" class="hash-link" aria-label="Direct link to What the AI can do" title="Direct link to What the AI can do" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-answer-menu-questions">5.1 Answer Menu Questions<a href="#51-answer-menu-questions" class="hash-link" aria-label="Direct link to 5.1 Answer Menu Questions" title="Direct link to 5.1 Answer Menu Questions" translate="no">​</a></h3>
-<p>The agent answers menu questions from the synchronized Deliverect menu snapshot. The menu is pulled from:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">lookup request</span><br></span></code></pre></div></div>
-<p>The integration stores:</p>
+<p>Do not manually copy <strong>Payment Update Webhook URL</strong>, <strong>Menu Update Webhook URL</strong>, <strong>Order Status Webhook URL</strong>, <strong>Snooze / Unsnooze Webhook URL</strong>, or <strong>Busy Mode Webhook URL</strong> into Deliverect. They are returned automatically by the registration webhook.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-verify-setup">How to verify setup<a href="#how-to-verify-setup" class="hash-link" aria-label="Direct link to How to verify setup" title="Direct link to How to verify setup" translate="no">​</a></h3>
 <ul>
-<li class="">item names</li>
-<li class="">PLUs</li>
-<li class="">prices in minor currency units</li>
-<li class="">descriptions</li>
-<li class="">categories</li>
-<li class="">required and optional modifier groups</li>
-<li class="">availability flags such as hidden or snoozed</li>
-</ul>
-<p><strong>You will see in Deliverect:</strong> no order is created when the customer only asks menu questions.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-place-an-order">5.2 Place an Order<a href="#52-place-an-order" class="hash-link" aria-label="Direct link to 5.2 Place an Order" title="Direct link to 5.2 Place an Order" translate="no">​</a></h3>
-<p>The agent can submit a new order through:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">create/update request</span><br></span></code></pre></div></div>
-<p>What happens automatically:</p>
-<ul>
-<li class="">The agent extracts customer name, phone, fulfillment type, delivery address when needed, requested time, and confirmed items.</li>
-<li class="">The integration maps item names to synced menu PLUs and prices.</li>
-<li class="">The integration blocks submission if the customer selected an item that is missing, snoozed, or not in the current menu.</li>
-<li class="">The integration blocks delivery orders if the delivery address is missing.</li>
-<li class="">The integration generates a <code>channelOrderId</code> and <code>channelOrderDisplayId</code>.</li>
-<li class="">The integration submits the order with payment metadata where the order is not already paid.</li>
-<li class="">On success, the order is stored in the persona <code>deliverect_orders</code> attribute.</li>
-</ul>
-<p><strong>You will see in Deliverect:</strong> a new channel order for the configured Channel Link ID.</p>
-<p><img decoding="async" loading="lazy" alt="Order created in Deliverect" src="/assets/images/S15-daddcc8dbc5403f464754dc8052f8d2c.png" width="2250" height="1334" class="img_ev3q"></p>
-<p><em>Figure S15. New order in Deliverect after the agent submits it.</em></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-check-order-status">5.3 Check Order Status<a href="#53-check-order-status" class="hash-link" aria-label="Direct link to 5.3 Check Order Status" title="Direct link to 5.3 Check Order Status" translate="no">​</a></h3>
-<p>The agent checks order status from saved Newo order state that is updated by Deliverect order status webhooks.</p>
-<p>How it works:</p>
-<ul>
-<li class="">When the agent creates an order, Newo saves the generated order reference for that caller.</li>
-<li class="">Deliverect later sends order status updates to the Newo <strong>Order Status Webhook URL</strong>.</li>
-<li class="">Newo matches the webhook update to the saved order and stores the latest status.</li>
-<li class="">When the same caller asks about the order, the agent reads the latest saved status and explains it.</li>
-</ul>
-<p>This means status lookup depends on the webhook being configured in Deliverect. If the customer asks before Deliverect has sent a status update, the agent explains that the order was submitted and the restaurant/POS has not sent a status update yet.</p>
-<p>Common status examples include:</p>
-<ul>
-<li class="">accepted</li>
-<li class="">denied</li>
-<li class="">ready for pickup</li>
-<li class="">en route to the customer</li>
-<li class="">finalized in the POS</li>
-<li class="">canceled</li>
-<li class="">failed</li>
-</ul>
-<blockquote>
-<p><strong>Important:</strong> status lookup is not a live search by display order number across all Deliverect orders. It works for orders the agent created or has saved for the caller, then keeps those orders updated through Deliverect webhook events.</p>
-</blockquote>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-request-cancellation">5.4 Request Cancellation<a href="#54-request-cancellation" class="hash-link" aria-label="Direct link to 5.4 Request Cancellation" title="Direct link to 5.4 Request Cancellation" translate="no">​</a></h3>
-<p>The agent can request cancellation by sending a cancellation status payload to:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">create/update request</span><br></span></code></pre></div></div>
-<p>The payload includes:</p>
-<ul>
-<li class=""><code>channelOrderId</code></li>
-<li class=""><code>channelOrderDisplayId</code></li>
-<li class=""><code>status: 100</code></li>
-<li class="">cancellation reason</li>
-</ul>
-<p>The flow will not send an automatic cancellation request if the locally known Deliverect status is already <code>20</code> or higher, because the order has advanced far enough that a human or restaurant-side process should handle it.</p>
-<p><strong>You will see in Deliverect:</strong> a cancellation request. Final cancellation depends on restaurant/POS acceptance.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="55-what-the-agent-cannot-do">5.5 What the Agent Cannot Do<a href="#55-what-the-agent-cannot-do" class="hash-link" aria-label="Direct link to 5.5 What the Agent Cannot Do" title="Direct link to 5.5 What the Agent Cannot Do" translate="no">​</a></h3>
-<p>The current integration does not:</p>
-<ul>
-<li class="">edit menus in Deliverect</li>
-<li class="">create or manage appointments</li>
-<li class="">check calendar availability</li>
-<li class="">process payments inside Newo</li>
-<li class="">look up arbitrary historical Deliverect orders that were not created or saved in the caller&#x27;s Newo conversation</li>
-<li class="">support multiple Channel Link IDs in one Newo project</li>
-<li class="">guarantee cancellation after a restaurant or POS has accepted the order</li>
+<li class=""><strong>Channel Registration Status</strong> is <strong>active</strong>.</li>
+<li class="">All six webhook URL settings are populated.</li>
+<li class="">Food Order shows the expected menu and order types.</li>
+<li class="">Food Order shows pay at pickup or pay at delivery only when an offline gateway is linked.</li>
+<li class="">Food Order also shows payment link when an online Deliverect Pay gateway is linked.</li>
+<li class="">The status and cancellation scenarios appear on the canvas when <strong>Publish Status and Cancellation Canvas</strong> is enabled.</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-test-that-everything-works">How to test that everything works<a href="#how-to-test-that-everything-works" class="hash-link" aria-label="Direct link to How to test that everything works" title="Direct link to How to test that everything works" translate="no">​</a></h2>
-<p>Before going live, run through this checklist on staging or a quiet test location.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="61-after-setup">6.1 After Setup<a href="#61-after-setup" class="hash-link" aria-label="Direct link to 6.1 After Setup" title="Direct link to 6.1 After Setup" translate="no">​</a></h3>
-<p>After clicking <strong>Publish All</strong>, confirm:</p>
-<ul class="contains-task-list containsTaskList_mC6p">
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Client ID</strong> and <strong>Client Secret</strong> are filled in.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>API Base URL</strong> matches the credential environment.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Channel Name</strong>, <strong>Channel Link ID</strong>, and <strong>Account ID</strong> are filled in.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Enable Order Creation</strong>, <strong>Enable Order Status Lookup</strong>, and <strong>Enable Order Cancellation</strong> match your certification scope.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Menu Update Webhook URL</strong> is copied into the Deliverect <strong>Menu update webhook URL</strong> field and saved.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <strong>Order Status Webhook URL</strong> is copied into the Deliverect order-status webhook field.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->The Canvas contains Deliverect order, status, and cancellation scenarios.</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->The menu cache contains real Deliverect items.</li>
+<p>Use a staging location and a demo customer before enabling production traffic.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-menu-and-total">Test menu and total<a href="#test-menu-and-total" class="hash-link" aria-label="Direct link to Test menu and total" title="Direct link to Test menu and total" translate="no">​</a></h3>
+<ol>
+<li class="">Ask the agent to place an order containing a product and at least one modifier.</li>
+<li class="">Confirm the displayed product, modifier, prices, and fees match Deliverect.</li>
+<li class="">Confirm the total spoken by the agent is the same total shown before submission.</li>
+<li class="">Change a product price or availability in Deliverect and publish the menu.</li>
+<li class="">Start a new cart and confirm Food Order uses the updated catalog.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-pay-at-pickup">Test pay at pickup<a href="#test-pay-at-pickup" class="hash-link" aria-label="Direct link to Test pay at pickup" title="Direct link to Test pay at pickup" translate="no">​</a></h3>
+<ol>
+<li class="">Start a pickup order and select <strong>pay at pickup</strong>.</li>
+<li class="">Confirm the order appears in Deliverect immediately.</li>
+<li class="">Confirm it is marked unpaid and the payment amount equals the Food Order total.</li>
+<li class="">Confirm no Deliverect Pay link is sent.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-payment-link">Test payment link<a href="#test-payment-link" class="hash-link" aria-label="Direct link to Test payment link" title="Direct link to Test payment link" translate="no">​</a></h3>
+<ol>
+<li class="">Confirm an online gateway is active and linked to the staging location.</li>
+<li class="">Start an eligible order and select <strong>payment link</strong>.</li>
+<li class="">Confirm the customer receives a secure payment link and no restaurant order exists yet.</li>
+<li class="">Complete the test checkout.</li>
+<li class="">Confirm the payment becomes authorized.</li>
+<li class="">Confirm one paid order is then created in Deliverect with the same total and a note containing the <code>paymentId</code>.</li>
+<li class="">Send or replay the same update again and confirm no duplicate order appears.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-status-lookup">Test status lookup<a href="#test-status-lookup" class="hash-link" aria-label="Direct link to Test status lookup" title="Direct link to Test status lookup" translate="no">​</a></h3>
+<ol>
+<li class="">Create an order through the agent.</li>
+<li class="">Change its status in the POS or Deliverect test environment.</li>
+<li class="">Ask, “What is the status of my order?”</li>
+<li class="">The agent should use the saved order and report the latest known restaurant status without asking for an internal order ID.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-cancellation">Test cancellation<a href="#test-cancellation" class="hash-link" aria-label="Direct link to Test cancellation" title="Direct link to Test cancellation" translate="no">​</a></h3>
+<ol>
+<li class="">Ask to cancel the order that was just created.</li>
+<li class="">Confirm the agent sends the cancellation request without asking for an internal order ID.</li>
+<li class="">Confirm Deliverect receives the request.</li>
+<li class="">Confirm the first result is <strong>cancel requested</strong>, not <strong>canceled</strong>.</li>
+<li class="">Make the POS accept the cancellation and confirm Deliverect sends status <code>110</code>.</li>
+<li class="">For a payment-link order, confirm a full refund request is sent for the saved <code>paymentId</code>; for an unpaid order, confirm no refund is sent.</li>
+<li class="">Repeat with POS status <code>126</code> and confirm the agent reports cancellation failure without sending a refund.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-operational-updates">Test operational updates<a href="#test-operational-updates" class="hash-link" aria-label="Direct link to Test operational updates" title="Direct link to Test operational updates" translate="no">​</a></h3>
+<ol>
+<li class="">Snooze a product in Deliverect and confirm it can no longer be ordered.</li>
+<li class="">Unsnooze it and confirm it becomes available again.</li>
+<li class="">Turn busy mode on and off and confirm the operational state changes only for the registered location.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenarios">Scenarios<a href="#scenarios" class="hash-link" aria-label="Direct link to Scenarios" title="Direct link to Scenarios" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-gets-added-on-publish-all">What gets added on Publish All<a href="#what-gets-added-on-publish-all" class="hash-link" aria-label="Direct link to What gets added on Publish All" title="Direct link to What gets added on Publish All" translate="no">​</a></h3>
+<table><thead><tr><th>Intent</th><th>Scenario</th></tr></thead><tbody><tr><td>Food Order Status Request</td><td>Checking Food Order Status via Agent</td></tr><tr><td>Food Order Cancellation Request</td><td>Canceling Food Order via Agent</td></tr></tbody></table>
+<p>An introduction scenario routes new orders to Food Order and routes existing-order requests to these two Deliverect scenarios.</p>
+<p>These scenarios are a reference implementation. You can edit them in the Newo canvas UI. Future integration updates do not overwrite edited copies. To receive a newer shipped version, delete the edited library copy and click <strong>Publish All</strong> again.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-trigger-phrases-matter">Why trigger phrases matter<a href="#why-trigger-phrases-matter" class="hash-link" aria-label="Direct link to Why trigger phrases matter" title="Direct link to Why trigger phrases matter" translate="no">​</a></h3>
+<p>Each exact phrase below starts the related Deliverect action. You may change the surrounding conversation, but do not rewrite, split, or remove the phrase.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-11--checking-food-order-status-via-agent">Scenario 11 — Checking Food Order Status via Agent<a href="#scenario-11--checking-food-order-status-via-agent" class="hash-link" aria-label="Direct link to Scenario 11 — Checking Food Order Status via Agent" title="Direct link to Scenario 11 — Checking Food Order Status via Agent" translate="no">​</a></h3>
+<p>Runs when the customer asks for the status of an existing food order.</p>
+<ol>
+<li class="">Uses the customer&#x27;s saved current orders as the source of truth.</li>
+<li class="">Does not ask for an internal order ID or reference.</li>
+<li class="">Says <em>“Let me check your order status right now.”</em></li>
+<li class="">Waits for the latest saved restaurant state and explains it in plain language.</li>
+<li class="">If there is no usable saved order or the lookup fails, transfers to a human during working hours or relays a message outside working hours.</li>
+</ol>
+<p>Triggered by intent <strong>Food Order Status Request</strong>.</p>
+<p><strong>Trigger phrases (do not edit)</strong></p>
+<ul>
+<li class=""><em>“Let me check your order status right now.”</em></li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="62-test-menu-knowledge">6.2 Test Menu Knowledge<a href="#62-test-menu-knowledge" class="hash-link" aria-label="Direct link to 6.2 Test Menu Knowledge" title="Direct link to 6.2 Test Menu Knowledge" translate="no">​</a></h3>
+<p><strong>What the agent reads to know the result</strong></p>
+<ul>
+<li class=""><strong>Current orders panel</strong> — saved orders associated with the current customer.</li>
+<li class=""><strong>Restaurant order delivery state panel</strong> — loading, result, or error state from the latest status check.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI)</strong></p>
+<ul>
+<li class="">✅ Change how the agent introduces the status or explains a successful result.</li>
+<li class="">✅ Change the working-hours fallback wording.</li>
+<li class="">❌ Do not change the trigger phrase.</li>
+<li class="">❌ Do not tell the agent to ask customers for internal order identifiers.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scenario-12--canceling-food-order-via-agent">Scenario 12 — Canceling Food Order via Agent<a href="#scenario-12--canceling-food-order-via-agent" class="hash-link" aria-label="Direct link to Scenario 12 — Canceling Food Order via Agent" title="Direct link to Scenario 12 — Canceling Food Order via Agent" translate="no">​</a></h3>
+<p>Runs when the customer asks to cancel an existing or just-submitted order.</p>
 <ol>
-<li class="">Start a test chat or call session.</li>
-<li class="">Ask: &quot;What&#x27;s on the menu?&quot;</li>
-<li class="">Confirm the agent lists real Deliverect items.</li>
-<li class="">Ask about an item that is not in the menu.</li>
-<li class="">Confirm the agent does not invent it and offers available alternatives.</li>
+<li class="">Selects the order from the customer&#x27;s saved current orders and conversation context.</li>
+<li class="">Confirms only when the cancellation request is ambiguous.</li>
+<li class="">Says <em>“I will ask the restaurant to cancel that order right now. Please give me a moment.”</em></li>
+<li class="">Sends the cancellation request and explains its direct API result while the conversation is active. The later POS result is delivered by SMS.</li>
+<li class="">If no usable saved order exists or the request fails, transfers to a human during working hours or relays a message outside working hours.</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="63-test-order-placement">6.3 Test Order Placement<a href="#63-test-order-placement" class="hash-link" aria-label="Direct link to 6.3 Test Order Placement" title="Direct link to 6.3 Test Order Placement" translate="no">​</a></h3>
-<ol>
-<li class="">Ask: &quot;Can I place an order for pickup?&quot;</li>
-<li class="">Choose one real menu item.</li>
-<li class="">Include any required modifiers.</li>
-<li class="">Provide first name, last name if your scenario asks for it, and phone number.</li>
-<li class="">Confirm the summary.</li>
-<li class="">Confirm the agent says the order-submission trigger phrase.</li>
-<li class="">Confirm a new order appears in Deliverect under the configured Channel Link ID.</li>
-<li class="">Save the customer-facing order reference shown by the agent. You can use it in the status and cancellation tests.</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="64-test-delivery-order-guard">6.4 Test Delivery Order Guard<a href="#64-test-delivery-order-guard" class="hash-link" aria-label="Direct link to 6.4 Test Delivery Order Guard" title="Direct link to 6.4 Test Delivery Order Guard" translate="no">​</a></h3>
-<ol>
-<li class="">Ask for delivery.</li>
-<li class="">Do not provide an address at first.</li>
-<li class="">Confirm the agent asks for the missing delivery address before submitting.</li>
-<li class="">Provide the address and complete the order.</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="65-test-order-status-lookup">6.5 Test Order Status Lookup<a href="#65-test-order-status-lookup" class="hash-link" aria-label="Direct link to 6.5 Test Order Status Lookup" title="Direct link to 6.5 Test Order Status Lookup" translate="no">​</a></h3>
-<p>Before this test, confirm <strong>Order Status Webhook URL</strong> from Newo is pasted into the Deliverect order-status webhook field.</p>
-<ol>
-<li class="">Create a fresh test order through the agent.</li>
-<li class="">In Deliverect/POS, move the order into a state that sends an order status webhook, such as accepted or denied.</li>
-<li class="">Ask the same test caller: &quot;What is the status of my order?&quot;</li>
-<li class="">Confirm the agent says the status-check trigger phrase: &quot;Let me check your order status right now.&quot;</li>
-<li class="">Confirm the agent answers with the latest saved status, for example accepted, denied, ready for pickup, or canceled.</li>
-</ol>
-<p>If the agent says the order is submitted and no status update has arrived yet, the webhook has not reached Newo or could not be matched to the saved order. Check the webhook URL setup in Deliverect and then try another status update.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="66-test-cancellation">6.6 Test Cancellation<a href="#66-test-cancellation" class="hash-link" aria-label="Direct link to 6.6 Test Cancellation" title="Direct link to 6.6 Test Cancellation" translate="no">​</a></h3>
-<ol>
-<li class="">Use a fresh test order in a cancellable state.</li>
-<li class="">Ask to cancel the order.</li>
-<li class="">Confirm the agent restates the target order and asks for confirmation.</li>
-<li class="">Confirm the agent says the cancellation trigger phrase.</li>
-<li class="">Confirm Deliverect receives the cancellation request.</li>
-</ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-canvas-auto-setup">7. Canvas Auto-Setup<a href="#7-canvas-auto-setup" class="hash-link" aria-label="Direct link to 7. Canvas Auto-Setup" title="Direct link to 7. Canvas Auto-Setup" translate="no">​</a></h2>
-<p>When <strong>Publish Default Canvas</strong> is on, the integration publishes Deliverect ordering content into the Canvas.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="71-what-gets-added">7.1 What Gets Added<a href="#71-what-gets-added" class="hash-link" aria-label="Direct link to 7.1 What Gets Added" title="Direct link to 7.1 What Gets Added" translate="no">​</a></h3>
-<table><thead><tr><th>Intent</th><th>Scenario</th></tr></thead><tbody><tr><td><strong>[T] Food Order Request via Agent</strong></td><td><strong>Scenario 1: &quot;Creating Food Order via Agent&quot;</strong></td></tr><tr><td><strong>[T] Food Order Status Request</strong></td><td><strong>Scenario 2: &quot;Checking Delivery Order Status via Agent&quot;</strong></td></tr><tr><td><strong>[T] Food Order Cancellation Request</strong></td><td><strong>Scenario 3: &quot;Canceling Deliverect Order via Agent&quot;</strong></td></tr></tbody></table>
-<p>These are starting templates. Review them and adapt the wording to the restaurant, but keep the trigger phrases intact.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="72-trigger-phrases">7.2 Trigger Phrases<a href="#72-trigger-phrases" class="hash-link" aria-label="Direct link to 7.2 Trigger Phrases" title="Direct link to 7.2 Trigger Phrases" translate="no">​</a></h3>
-<p>Each scenario contains a phrase the agent must say before the matching custom tool fires.</p>
-<table><thead><tr><th>Trigger phrase</th><th>Fires</th></tr></thead><tbody><tr><td>&quot;I will submit your order to the restaurant right now. Please give me a moment, and I&#x27;ll get back to you shortly.&quot;</td><td>Order creation</td></tr><tr><td>&quot;Thanks. I&#x27;ll continue with your order now.&quot;</td><td>Order continuation after missing data</td></tr><tr><td>&quot;Let me check your order status right now.&quot;</td><td>Order status lookup</td></tr><tr><td>&quot;I will ask the restaurant to cancel that order right now. Please give me a moment.&quot;</td><td>Cancellation request</td></tr></tbody></table>
+<p>Triggered by intent <strong>Food Order Cancellation Request</strong>.</p>
+<p><strong>Trigger phrases (do not edit)</strong></p>
+<ul>
+<li class=""><em>“I will ask the restaurant to cancel that order right now. Please give me a moment.”</em></li>
+</ul>
+<p><strong>What the agent reads to know the result</strong></p>
+<ul>
+<li class=""><strong>Current orders panel</strong> — saved orders and the private references required for safe cancellation.</li>
+<li class=""><strong>Restaurant order state panel</strong> — loading, result, or error state from the cancellation request.</li>
+</ul>
+<p><strong>Safe customization (edit in the canvas UI)</strong></p>
+<ul>
+<li class="">✅ Change the confirmation wording when the request is ambiguous.</li>
+<li class="">✅ Change how the agent explains that restaurant acceptance may still be required.</li>
+<li class="">❌ Do not change the trigger phrase.</li>
+<li class="">❌ Do not cancel using only a customer-facing order number.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="trigger-phrase-reference">Trigger phrase reference<a href="#trigger-phrase-reference" class="hash-link" aria-label="Direct link to Trigger phrase reference" title="Direct link to Trigger phrase reference" translate="no">​</a></h3>
+<table><thead><tr><th>Scenario</th><th>Exact phrase</th><th style="text-align:right">Trigger count</th></tr></thead><tbody><tr><td>Checking Food Order Status via Agent</td><td>“Let me check your order status right now.”</td><td style="text-align:right">1</td></tr><tr><td>Canceling Food Order via Agent</td><td>“I will ask the restaurant to cancel that order right now. Please give me a moment.”</td><td style="text-align:right">1</td></tr></tbody></table>
+<p>Keep these phrases intact when editing the scenarios. They trigger the corresponding action.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-dialogs">Example dialogs<a href="#example-dialogs" class="hash-link" aria-label="Direct link to Example dialogs" title="Direct link to Example dialogs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-1--pay-at-pickup">Example 1 — Pay at pickup<a href="#example-1--pay-at-pickup" class="hash-link" aria-label="Direct link to Example 1 — Pay at pickup" title="Direct link to Example 1 — Pay at pickup" translate="no">​</a></h3>
 <blockquote>
-<p>Do not reword, translate, or remove trigger phrases. If a trigger phrase changes, the corresponding action may stop firing.</p>
+<p><strong>Customer:</strong> I’ll pick it up and pay there.</p>
+<p><strong>Agent:</strong> Your order has been submitted for pickup. Your total is $8.72.</p>
 </blockquote>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="73-safe-canvas-customization">7.3 Safe Canvas Customization<a href="#73-safe-canvas-customization" class="hash-link" aria-label="Direct link to 7.3 Safe Canvas Customization" title="Direct link to 7.3 Safe Canvas Customization" translate="no">​</a></h3>
-<p>Safe changes:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-2--payment-link">Example 2 — Payment link<a href="#example-2--payment-link" class="hash-link" aria-label="Direct link to Example 2 — Payment link" title="Direct link to Example 2 — Payment link" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Send me a payment link.</p>
+<p><strong>Agent:</strong> Payment is required before your order can be placed. I’ve sent you a secure payment link.</p>
+<p><strong>Customer:</strong> I paid.</p>
+<p><strong>Agent:</strong> Payment received. Your order was submitted.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-3--status">Example 3 — Status<a href="#example-3--status" class="hash-link" aria-label="Direct link to Example 3 — Status" title="Direct link to Example 3 — Status" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> What is the status of my order?</p>
+<p><strong>Agent:</strong> Let me check your order status right now.</p>
+<p><strong>Agent:</strong> The restaurant has accepted your order and is preparing it now.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-4--cancellation">Example 4 — Cancellation<a href="#example-4--cancellation" class="hash-link" aria-label="Direct link to Example 4 — Cancellation" title="Direct link to Example 4 — Cancellation" translate="no">​</a></h3>
+<blockquote>
+<p><strong>Customer:</strong> Cancel the order I just placed.</p>
+<p><strong>Agent:</strong> I will ask the restaurant to cancel that order right now. Please give me a moment.</p>
+<p><strong>Agent:</strong> The cancellation request was sent. Final cancellation may depend on the restaurant accepting it.</p>
+<p><strong>SMS:</strong> Your order was canceled.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="customizing-the-agent">Customizing the agent<a href="#customizing-the-agent" class="hash-link" aria-label="Direct link to Customizing the agent" title="Direct link to Customizing the agent" translate="no">​</a></h2>
 <ul>
-<li class="">Reword the greeting, item questions, and summary.</li>
-<li class="">Add upsell prompts before the final order summary.</li>
-<li class="">Add restaurant-specific disclaimers about cancellation windows.</li>
-<li class="">Change how the agent explains status results.</li>
+<li class="">Turn <strong>Enable Food Ordering</strong>, <strong>Enable Order Status Lookup</strong>, <strong>Enable Order Cancellation</strong>, or <strong>Enable Automatic Refunds</strong> off to disable that capability.</li>
+<li class="">Turn <strong>Publish Status and Cancellation Canvas</strong> off if your project maintains custom existing-order scenarios.</li>
+<li class="">Edit the two Deliverect scenarios on the canvas, but keep their exact trigger phrases unchanged.</li>
+<li class="">Change <strong>Payment Return URL</strong> to your branded checkout-return page.</li>
+<li class="">Change <strong>Tax Remittance Policy</strong> only after confirming the commercial and legal requirement.</li>
+<li class="">Reduce <strong>Store State Cache Window</strong> only when support needs more frequent store and fee refreshes; shorter windows increase external requests.</li>
 </ul>
-<p>Unsafe changes:</p>
-<ul>
-<li class="">Removing the menu-grounding rule.</li>
-<li class="">Letting the agent submit orders before final customer confirmation.</li>
-<li class="">Rewording trigger phrases.</li>
-<li class="">Saying cancellation is guaranteed before Deliverect confirms the result.</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-reconnecting-rotating-credentials-and-production-cutover">8. Reconnecting, Rotating Credentials, and Production Cutover<a href="#8-reconnecting-rotating-credentials-and-production-cutover" class="hash-link" aria-label="Direct link to 8. Reconnecting, Rotating Credentials, and Production Cutover" title="Direct link to 8. Reconnecting, Rotating Credentials, and Production Cutover" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="81-when-to-reconnect">8.1 When to Reconnect<a href="#81-when-to-reconnect" class="hash-link" aria-label="Direct link to 8.1 When to Reconnect" title="Direct link to 8.1 When to Reconnect" translate="no">​</a></h3>
-<p>Reconnect or republish when:</p>
-<ul>
-<li class="">Deliverect rotates the Client Secret.</li>
-<li class="">You switch from staging to production.</li>
-<li class="">The Channel Link ID changes.</li>
-<li class="">Menu questions return an empty or outdated menu.</li>
-<li class="">Order submission starts failing with authentication errors.</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="82-rotate-client-secret">8.2 Rotate Client Secret<a href="#82-rotate-client-secret" class="hash-link" aria-label="Direct link to 8.2 Rotate Client Secret" title="Direct link to 8.2 Rotate Client Secret" translate="no">​</a></h3>
-<ol>
-<li class="">Get the new Client Secret from Deliverect.</li>
-<li class="">Paste it into <strong>02. Client Secret</strong>.</li>
-<li class="">Save the setting.</li>
-<li class="">Click <strong>Publish All</strong>.</li>
-<li class="">Run a menu test and a small order test.</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="83-switch-to-production">8.3 Switch to Production<a href="#83-switch-to-production" class="hash-link" aria-label="Direct link to 8.3 Switch to Production" title="Direct link to 8.3 Switch to Production" translate="no">​</a></h3>
-<p>After Deliverect certification:</p>
-<ol>
-<li class="">Replace staging Client ID and Client Secret with production values.</li>
-<li class="">Set <strong>03. API Base URL</strong> to the production URL Deliverect provided, usually <code>https://api.deliverect.com</code>.</li>
-<li class="">Set <strong>Token Audience</strong> to the matching production audience if Deliverect requires it.</li>
-<li class="">Save each changed setting.</li>
-<li class="">Click <strong>Publish All</strong>.</li>
-<li class="">Run order placement, status, and cancellation tests.</li>
-</ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common errors and recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common errors and recovery" title="Direct link to Common errors and recovery" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-cannot-answer-menu-questions">The agent cannot answer menu questions<a href="#the-agent-cannot-answer-menu-questions" class="hash-link" aria-label="Direct link to The agent cannot answer menu questions" title="Direct link to The agent cannot answer menu questions" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> the menu cache is empty or the Account ID / store ID is wrong.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Confirm <strong>Account ID</strong> belongs to the same Deliverect account as the Channel Link ID.</li>
-<li class="">Confirm the restaurant has a published menu.</li>
-<li class="">Confirm <strong>Location ID</strong> is blank unless Deliverect gave a separate store ID.</li>
-<li class="">Click <strong>Publish All</strong> to pull the menu again.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-all-or-the-first-api-call-fails-with-authentication">Publish All or the first API call fails with authentication<a href="#publish-all-or-the-first-api-call-fails-with-authentication" class="hash-link" aria-label="Direct link to Publish All or the first API call fails with authentication" title="Direct link to Publish All or the first API call fails with authentication" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> Client ID, Client Secret, Token Audience, or API Base URL do not match.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Check for leading/trailing spaces in Client ID and Client Secret.</li>
-<li class="">Confirm staging credentials use <code>https://api.staging.deliverect.com</code>.</li>
-<li class="">Confirm production credentials use the production API base URL.</li>
-<li class="">Save and publish again.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="orders-appear-in-the-wrong-restaurant">Orders appear in the wrong restaurant<a href="#orders-appear-in-the-wrong-restaurant" class="hash-link" aria-label="Direct link to Orders appear in the wrong restaurant" title="Direct link to Orders appear in the wrong restaurant" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> <strong>Channel Link ID</strong> points to a different restaurant location.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Copy the correct Channel Link ID from Deliverect.</li>
-<li class="">Paste it into <strong>05. Channel Link ID</strong>.</li>
-<li class="">Save and publish.</li>
-<li class="">Place a small test order and verify the location in Deliverect.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-says-an-item-cannot-be-submitted">The agent says an item cannot be submitted<a href="#the-agent-says-an-item-cannot-be-submitted" class="hash-link" aria-label="Direct link to The agent says an item cannot be submitted" title="Direct link to The agent says an item cannot be submitted" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> the item is missing from <code>deliverect_menu_state</code>, has no matching PLU, or is snoozed/unavailable.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Confirm the item is available in Deliverect.</li>
-<li class="">Republish to refresh the menu snapshot.</li>
-<li class="">Ask the customer to choose from the synced menu names.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cancellation-is-not-sent-automatically">Cancellation is not sent automatically<a href="#cancellation-is-not-sent-automatically" class="hash-link" aria-label="Direct link to Cancellation is not sent automatically" title="Direct link to Cancellation is not sent automatically" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> cancellation is disabled, the order target is unclear, another cancellation is already in progress, or the latest known status is already <code>20</code> or higher.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Confirm <strong>Enable Order Cancellation</strong> is on.</li>
-<li class="">Confirm the exact order with the customer.</li>
-<li class="">If the order has advanced, hand off to the restaurant or a human team member.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="order-status-always-says-submitted-or-no-update-yet">Order status always says submitted or no update yet<a href="#order-status-always-says-submitted-or-no-update-yet" class="hash-link" aria-label="Direct link to Order status always says submitted or no update yet" title="Direct link to Order status always says submitted or no update yet" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> Deliverect has not sent an order status webhook to Newo, or the webhook was sent without the matching order reference.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Copy <strong>Order Status Webhook URL</strong> from Newo.</li>
-<li class="">Paste it into the Deliverect order-status webhook field.</li>
-<li class="">Save the Deliverect channel/link settings.</li>
-<li class="">Create a new test order through the agent.</li>
-<li class="">Move the order to a new status in Deliverect/POS and ask the same caller to check status again.</li>
-</ol>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-agent-ignores-orderingcancellation-language">The agent ignores ordering/cancellation language<a href="#the-agent-ignores-orderingcancellation-language" class="hash-link" aria-label="Direct link to The agent ignores ordering/cancellation language" title="Direct link to The agent ignores ordering/cancellation language" translate="no">​</a></h3>
-<p><strong>Likely cause:</strong> Canvas scenario trigger phrases were edited or the default Canvas was not published.</p>
-<p><strong>Fix:</strong></p>
-<ol>
-<li class="">Confirm <strong>Publish Default Canvas</strong> is on.</li>
-<li class="">Confirm the Deliverect intents and scenarios exist.</li>
-<li class="">Restore the trigger phrases from Section 7.2.</li>
-<li class="">Click <strong>Publish All</strong>.</li>
-</ol>
+<p>Always preserve <em>“Let me check your order status right now.”</em> and <em>“I will ask the restaurant to cancel that order right now. Please give me a moment.”</em></p>
+<p>Integration updates do not overwrite your edited canvas copies. To pull newer defaults, delete the edited Deliverect library items and click <strong>Publish All</strong> again.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ" translate="no">​</a></h2>
-<p><strong>Does this create real orders in Deliverect?</strong><br>
-<!-- -->Yes. Order creation submits a real channel order to the configured Channel Link ID.</p>
-<p><strong>Does the agent use a live menu on every turn?</strong><br>
-<!-- -->No. The integration pulls a menu snapshot and injects it into prompt/RAG attributes. Republish or refresh setup to pull a newer menu.</p>
-<p><strong>Can one Newo project serve multiple restaurants?</strong><br>
-<!-- -->No. One project is configured for one Channel Link ID. Use separate projects for separate restaurant locations.</p>
-<p><strong>Can the agent take payment?</strong><br>
-<!-- -->No. The integration sends order data to Deliverect. Payment remains handled by Deliverect, the POS, or the restaurant&#x27;s normal process.</p>
-<p><strong>Can the agent cancel any order?</strong><br>
-<!-- -->No. It sends cancellation requests only when the order is clearly identified and still eligible. Final cancellation depends on Deliverect/POS/restaurant acceptance.</p>
-<p><strong>What order types are supported?</strong><br>
-<!-- -->The extraction supports pickup, delivery, eat-in, and curbside. Pickup is the safest default unless the customer clearly asks for another fulfillment type.</p>
-<p><strong>Why does the agent refuse an item the customer asked for?</strong><br>
-<!-- -->The agent must use the synchronized menu. If an item is missing, snoozed, or has no matching PLU, the integration blocks submission and asks the customer to choose an available item.</p>
-<p><strong>Do I need webhook URLs for the basic flow?</strong><br>
-<!-- -->Yes for order status lookup. Menu pull, order creation, and cancellation request use API calls, but order status lookup depends on Deliverect sending status updates to the Newo <strong>Order Status Webhook URL</strong>.</p>
-<p><strong>Can the agent check status immediately after creating an order?</strong><br>
-<!-- -->It can answer that the order was submitted. More specific statuses, such as accepted or denied, appear after Deliverect sends the order status webhook.</p>
-<p><strong>Can the agent find an old Deliverect order by display ID?</strong><br>
-<!-- -->Only if that order was created or saved by this Newo agent for the caller. The integration does not search arbitrary historical Deliverect orders by display ID.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-support-handoff-notes">11. Support Handoff Notes<a href="#11-support-handoff-notes" class="hash-link" aria-label="Direct link to 11. Support Handoff Notes" title="Direct link to 11. Support Handoff Notes" translate="no">​</a></h2>
-<p>When handing off to support or an implementation partner, include:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-newo-calculate-a-second-order-total">Does Newo calculate a second order total?<a href="#does-newo-calculate-a-second-order-total" class="hash-link" aria-label="Direct link to Does Newo calculate a second order total?" title="Direct link to Does Newo calculate a second order total?" translate="no">​</a></h3>
+<p>No. Food Order supplies the final total used in the conversation, payment request, and submitted order. Deliverect calculates only the component rows required to describe the order.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-are-delivery-and-service-fees-published-with-tax-included">Why are delivery and service fees published with tax included?<a href="#why-are-delivery-and-service-fees-published-with-tax-included" class="hash-link" aria-label="Direct link to Why are delivery and service fees published with tax included?" title="Direct link to Why are delivery and service fees published with tax included?" translate="no">​</a></h3>
+<p>Food Order currently accepts one value for each fee. The integration therefore publishes the fee plus its Deliverect fee tax as one gross amount.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-a-modifier-have-a-different-tax-rate-from-its-product">Can a modifier have a different tax rate from its product?<a href="#can-a-modifier-have-a-different-tax-rate-from-its-product" class="hash-link" aria-label="Direct link to Can a modifier have a different tax rate from its product?" title="Direct link to Can a modifier have a different tax rate from its product?" translate="no">​</a></h3>
+<p>Yes. The integration publishes and submits the modifier&#x27;s own Deliverect tax rate.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-do-i-see-pay-at-pickup-when-deliverect-pay-shows-only-stripe">Why do I see pay at pickup when Deliverect Pay shows only Stripe?<a href="#why-do-i-see-pay-at-pickup-when-deliverect-pay-shows-only-stripe" class="hash-link" aria-label="Direct link to Why do I see pay at pickup when Deliverect Pay shows only Stripe?" title="Direct link to Why do I see pay at pickup when Deliverect Pay shows only Stripe?" translate="no">​</a></h3>
+<p>You should not. Stripe is an online gateway, so Food Order should offer only payment link. Pay at pickup requires a linked offline gateway. Click <strong>Publish All</strong> after changing gateway configuration.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-is-a-payment-link-order-created">When is a payment-link order created?<a href="#when-is-a-payment-link-order-created" class="hash-link" aria-label="Direct link to When is a payment-link order created?" title="Direct link to When is a payment-link order created?" translate="no">​</a></h3>
+<p>Only after Deliverect reports the payment as authorized. Before authorization, Newo stores a draft and sends the secure link.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-happens-when-connector-credentials-rotate">What happens when connector credentials rotate?<a href="#what-happens-when-connector-credentials-rotate" class="hash-link" aria-label="Direct link to What happens when connector credentials rotate?" title="Direct link to What happens when connector credentials rotate?" translate="no">​</a></h3>
+<p>The credentials are managed on the Deliverect connector, not in <strong>Module - Deliverect</strong>. Ask the integration administrator to reauthorize or update the connector, then click <strong>Publish All</strong> and run a staging menu and payment test.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-one-newo-project-serve-multiple-deliverect-locations">Can one Newo project serve multiple Deliverect locations?<a href="#can-one-newo-project-serve-multiple-deliverect-locations" class="hash-link" aria-label="Direct link to Can one Newo project serve multiple Deliverect locations?" title="Direct link to Can one Newo project serve multiple Deliverect locations?" translate="no">​</a></h3>
+<p>No. Create a separate Newo project for each registered Deliverect location.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-a-successful-cancellation-request-guarantee-cancellation">Does a successful cancellation request guarantee cancellation?<a href="#does-a-successful-cancellation-request-guarantee-cancellation" class="hash-link" aria-label="Direct link to Does a successful cancellation request guarantee cancellation?" title="Direct link to Does a successful cancellation request guarantee cancellation?" translate="no">​</a></h3>
+<p>No. The initial Channel Order response only confirms that status <code>100</code> was sent.
+Cancellation is final only after the POS returns status <code>110</code>. Status <code>126</code>
+means the POS could not cancel the order. The direct cancellation API result is
+spoken during the active conversation; the later <code>110</code> or <code>126</code> webhook result
+and any refund result are sent by SMS and do not trigger another agent reply.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-are-a-deliverect-pay-payment-and-channel-order-linked">How are a Deliverect Pay payment and Channel Order linked?<a href="#how-are-a-deliverect-pay-payment-and-channel-order-linked" class="hash-link" aria-label="Direct link to How are a Deliverect Pay payment and Channel Order linked?" title="Direct link to How are a Deliverect Pay payment and Channel Order linked?" translate="no">​</a></h3>
+<p>Newo stores both <code>paymentId</code> and <code>channelOrderId</code> in the saved order record and
+adds the payment ID to the order note. Channel Order has no structured
+<code>paymentId</code> field, so Deliverect Pay screens or the POS may not show a native
+link between the two records.</p>
+<p>Deliverect represents a cancellation as a second Channel Order with status
+<code>100</code> and replaces the displayed note with a cancellation message. Newo keeps
+the original note in its saved order and includes it in <code>cancellationReason</code>,
+so the customer comment and diagnostic <code>paymentId</code> remain visible. Legacy paid
+orders without a saved note fall back to the stored <code>paymentId</code>.</p>
+<p>Incoming callbacks use compact AgentPersona mappings instead of creating an
+actor for every order. <code>payment_{paymentId}</code> routes authorization while payment
+is pending, <code>order_{channelOrderId}</code> routes normal status updates, and
+<code>cancellation_{channelOrderId}</code> routes the final cancellation/refund lifecycle.
+Temporary payment and cancellation mappings are removed when their async work
+finishes.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-is-a-canceled-order-refunded">When is a canceled order refunded?<a href="#when-is-a-canceled-order-refunded" class="hash-link" aria-label="Direct link to When is a canceled order refunded?" title="Direct link to When is a canceled order refunded?" translate="no">​</a></h3>
+<p>Only after POS status <code>110</code>, and only when the saved order contains a
+Deliverect Pay <code>paymentId</code>. Pay-at-pickup and pay-at-delivery orders have no
+Newo-collected payment to refund. <strong>Enable Automatic Refunds</strong> must also be on.
+When it is off, Newo sends no refund request and directs the customer to support
+by SMS. Status <code>126</code> does not trigger a refund.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-happens-if-i-turn-off-automatic-refunds">What happens if I turn off automatic refunds?<a href="#what-happens-if-i-turn-off-automatic-refunds" class="hash-link" aria-label="Direct link to What happens if I turn off automatic refunds?" title="Direct link to What happens if I turn off automatic refunds?" translate="no">​</a></h3>
+<p>New payment and order creation continue normally, and customers can still ask
+to cancel an order. Newo simply stops starting new automatic refunds. For a
+paid order that is later canceled or definitively fails to reach the
+restaurant, support must locate the Deliverect Pay payment and issue the full
+refund manually. Changing the switch does not refund older payments and does
+not stop a refund already in progress.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-errors-and-recovery">Common errors and recovery<a href="#common-errors-and-recovery" class="hash-link" aria-label="Direct link to Common errors and recovery" title="Direct link to Common errors and recovery" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="first-publish-all-does-not-load-deliverect-data">First Publish All does not load Deliverect data<a href="#first-publish-all-does-not-load-deliverect-data" class="hash-link" aria-label="Direct link to First Publish All does not load Deliverect data" title="Direct link to First Publish All does not load Deliverect data" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> The Deliverect connector is not authorized, or <strong>Account ID</strong>, <strong>API Base URL</strong>, or <strong>Channel Scope</strong> is incorrect.</p>
+<p><strong>How to recover:</strong> Ask the integration administrator to verify the connector. Correct the three settings, then click <strong>Publish All</strong> again.</p>
+<p><strong>How to verify:</strong> <strong>Channel Registration Webhook URL</strong> is populated and the menu sync no longer reports an authorization error.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="channel-registration-status-stays-unregistered-or-inactive">Channel Registration Status stays unregistered or inactive<a href="#channel-registration-status-stays-unregistered-or-inactive" class="hash-link" aria-label="Direct link to Channel Registration Status stays unregistered or inactive" title="Direct link to Channel Registration Status stays unregistered or inactive" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> The registration URL was not saved in the intended Deliverect channel, Deliverect did not call it, or the channel link is inactive.</p>
+<p><strong>How to recover:</strong> Copy <strong>Channel Registration Webhook URL</strong> after <strong>Publish All</strong>, paste it into the correct Deliverect channel-registration setting, save, and activate the channel. Do not use one of the five callback URLs.</p>
+<p><strong>How to verify:</strong> <strong>Channel Registration Status</strong> becomes <strong>active</strong> and all five callback URL settings are populated.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-menu-is-empty-or-stale">The menu is empty or stale<a href="#the-menu-is-empty-or-stale" class="hash-link" aria-label="Direct link to The menu is empty or stale" title="Direct link to The menu is empty or stale" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> The wrong account or location is registered, the menu is not assigned to the location, or the last menu publication failed validation.</p>
+<p><strong>How to recover:</strong> Confirm <strong>Account ID</strong>, the registered location, channel link, and menu assignment. Publish the menu in Deliverect, then click <strong>Publish All</strong> in Newo.</p>
+<p><strong>How to verify:</strong> Food Order shows the current products, prices, modifiers, and order types. <strong>Last Menu Sync Error</strong> is empty.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="payment-link-is-missing-or-the-request-fails">Payment link is missing or the request fails<a href="#payment-link-is-missing-or-the-request-fails" class="hash-link" aria-label="Direct link to Payment link is missing or the request fails" title="Direct link to Payment link is missing or the request fails" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> No online gateway is linked to the registered location, the cached payment profile is stale, or the submitted customer and total data is incomplete.</p>
+<p><strong>How to recover:</strong> Link an active online gateway in <strong>Deliverect Pay → Configuration</strong>, click <strong>Publish All</strong>, and start a new staging cart with a customer name and a total greater than zero.</p>
+<p><strong>How to verify:</strong> Food Order offers <strong>payment link</strong>, checkout opens, and <strong>Last Payment Methods Sync Error</strong> is empty.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="payment-is-authorized-but-no-order-appears">Payment is authorized but no order appears<a href="#payment-is-authorized-but-no-order-appears" class="hash-link" aria-label="Direct link to Payment is authorized but no order appears" title="Direct link to Payment is authorized but no order appears" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> The paid order could not be submitted, the channel became inactive, or the result was uncertain.</p>
+<p><strong>How to recover:</strong> Do not ask the customer to pay again. A definitive order-creation failure triggers an automatic full refund when <strong>Enable Automatic Refunds</strong> is on. When it is off, support must handle the payment manually. If the submission result is uncertain, the integration preserves the payment and order state for support instead of refunding or resubmitting blindly.</p>
+<p><strong>How to verify:</strong> For a definitive failure, confirm the saved order attempt reaches <code>refunded</code>. For an uncertain result, support confirms whether Deliverect received the order before any manual replacement order is created.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="customer-receives-an-sms-saying-automatic-refunds-are-disabled">Customer receives an SMS saying automatic refunds are disabled<a href="#customer-receives-an-sms-saying-automatic-refunds-are-disabled" class="hash-link" aria-label="Direct link to Customer receives an SMS saying automatic refunds are disabled" title="Direct link to Customer receives an SMS saying automatic refunds are disabled" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> <strong>Enable Automatic Refunds</strong> was off when Newo reached a refund decision.</p>
+<p><strong>How to recover:</strong> Do not ask the customer to pay again. Find the saved Deliverect Pay payment and issue the full refund manually. Turn <strong>Enable Automatic Refunds</strong> on if future eligible payments should be refunded automatically.</p>
+<p><strong>How to verify:</strong> Confirm the manual refund in Deliverect Pay. Re-enabling the switch does not retroactively refund the payment that was skipped.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-scenario-says-the-trigger-phrase-but-no-action-starts">The scenario says the trigger phrase but no action starts<a href="#the-scenario-says-the-trigger-phrase-but-no-action-starts" class="hash-link" aria-label="Direct link to The scenario says the trigger phrase but no action starts" title="Direct link to The scenario says the trigger phrase but no action starts" translate="no">​</a></h3>
+<p><strong>Likely cause:</strong> The related feature switch is off, the canvas items were not published, or the exact phrase was changed.</p>
+<p><strong>How to recover:</strong> Turn on <strong>Enable Order Status Lookup</strong> or <strong>Enable Order Cancellation</strong>, restore the exact phrase from this README, and click <strong>Publish All</strong>.</p>
+<p><strong>How to verify:</strong> A staging conversation produces a loading state followed by a result or a clear error instead of continuing without action.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="known-limitations">Known limitations<a href="#known-limitations" class="hash-link" aria-label="Direct link to Known limitations" title="Direct link to Known limitations" translate="no">​</a></h2>
 <ul>
-<li class="">Deliverect environment: staging or production</li>
-<li class="">API Base URL</li>
-<li class="">Channel Name</li>
-<li class="">Channel Link ID</li>
-<li class="">Account ID</li>
-<li class="">optional Location ID</li>
-<li class="">which features are enabled</li>
-<li class="">whether default Canvas setup was used</li>
-<li class="">whether the latest menu cache contains the expected items</li>
+<li class="">One Newo project supports one registered Deliverect location.</li>
+<li class="">New orders are handled by Food Order; Deliverect publishes only the status and cancellation canvas scenarios.</li>
+<li class="">Payment links require an online Deliverect Pay gateway profile.</li>
+<li class="">Pay-at-pickup and pay-at-delivery require an offline gateway profile; payment links require an online gateway profile.</li>
+<li class="">The integration accepts only authorized or refused payment updates for the payment-link lifecycle.</li>
+<li class="">A definitive paid-order creation failure triggers a full refund only when automatic refunds are enabled; an uncertain transport result is not silently retried or refunded.</li>
+<li class="">Percentage-based service charges, taxed bag fees, and discount rows are not represented in the current order breakdown.</li>
+<li class="">Cancellation status <code>100</code> is only a request. Status <code>110</code> confirms cancellation; status <code>126</code> means cancellation failed.</li>
+<li class="">Native Deliverect Pay-to-Channel-Order linking is unavailable in the Channel API. Newo stores the association, and the order note contains the payment ID for diagnostics.</li>
+<li class="">Commerce Basket/Checkout is intentionally out of scope for this Channel API integration.</li>
+<li class="">Status lookup and cancellation work only for orders saved to the same customer persona.</li>
+<li class="">The integration does not create or edit Deliverect menus, gateways, locations, or table reservations.</li>
 </ul>
-<p>Key implementation details:</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="support-handoff-notes">Support handoff notes<a href="#support-handoff-notes" class="hash-link" aria-label="Direct link to Support handoff notes" title="Direct link to Support handoff notes" translate="no">​</a></h2>
+<p>When escalating, include:</p>
 <ul>
-<li class="">OAuth token request: handled during setup</li>
-<li class="">Menu pull: handled during menu sync</li>
-<li class="">Order creation: handled when the caller confirms an order</li>
-<li class="">Cancellation request: handled by updating the order status</li>
-<li class="">Order status lookup: saved Newo order state updated by Deliverect order status webhook</li>
-<li class="">Stored user orders: persona attribute <code>deliverect_orders</code></li>
-<li class="">Prompt menu text: <code>project_attributes_restaurant_menu</code> and <code>project_attributes_rag_knowledge_base_append_text</code></li>
-<li class="">Structured menu cache: <code>deliverect_menu_state</code></li>
+<li class="">environment: staging or production;</li>
+<li class="">Deliverect account and location names, without pasting secrets;</li>
+<li class="">approximate time and timezone;</li>
+<li class="">customer session identifier;</li>
+<li class="">whether <strong>Channel Registration Status</strong> was active;</li>
+<li class="">whether the issue concerns menu, payment, order creation, status, cancellation, snooze, or busy mode;</li>
+<li class="">payment or order reference when available;</li>
+<li class="">the sanitized value of <strong>Last Menu Sync Error</strong> or <strong>Last Payment Methods Sync Error</strong>.</li>
 </ul>
-<p>The two most common fixes are:</p>
-<ol>
-<li class="">Re-save credentials/channel IDs and click <strong>Publish All</strong>.</li>
-<li class="">Verify the Channel Link ID and Account ID belong to the same Deliverect location/account.</li>
-</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/clover"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Clover Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/dentcomm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DentComm Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-the-ai-can-do" class="table-of-contents__link toc-highlight">What the AI can do</a></li><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a><ul><li><a href="#deliverect-values-you-need" class="table-of-contents__link toc-highlight">Deliverect values you need</a></li><li><a href="#where-to-find-these-values-in-deliverect" class="table-of-contents__link toc-highlight">Where to find these values in Deliverect</a></li></ul></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#create-the-newo-project" class="table-of-contents__link toc-highlight">Create the Newo project</a></li><li><a href="#31-open-the-newo-project" class="table-of-contents__link toc-highlight">3.1 Open the Newo Project</a></li><li><a href="#32-open-deliverect-settings" class="table-of-contents__link toc-highlight">3.2 Open Deliverect Settings</a></li><li><a href="#33-paste-oauth-credentials" class="table-of-contents__link toc-highlight">3.3 Paste OAuth Credentials</a></li><li><a href="#34-paste-channel-and-account-values" class="table-of-contents__link toc-highlight">3.4 Paste Channel and Account Values</a></li><li><a href="#35-review-feature-switches" class="table-of-contents__link toc-highlight">3.5 Review Feature Switches</a></li><li><a href="#36-configure-deliverect-webhooks" class="table-of-contents__link toc-highlight">3.6 Configure Deliverect Webhooks</a></li><li><a href="#37-save-and-publish" class="table-of-contents__link toc-highlight">3.7 Save and Publish</a></li><li><a href="#38-verify-setup" class="table-of-contents__link toc-highlight">3.8 Verify Setup</a></li></ul></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All settings reference</a><ul><li><a href="#41-connection-settings" class="table-of-contents__link toc-highlight">4.1 Connection Settings</a></li><li><a href="#42-restaurant--channel-settings" class="table-of-contents__link toc-highlight">4.2 Restaurant / Channel Settings</a></li><li><a href="#43-feature-onoff-switches" class="table-of-contents__link toc-highlight">4.3 Feature On/Off Switches</a></li><li><a href="#44-menu--prompt-settings" class="table-of-contents__link toc-highlight">4.4 Menu / Prompt Settings</a></li><li><a href="#45-save-and-publish" class="table-of-contents__link toc-highlight">4.5 Save and Publish</a></li></ul></li><li><a href="#what-the-ai-can-do-1" class="table-of-contents__link toc-highlight">What the AI can do</a><ul><li><a href="#51-answer-menu-questions" class="table-of-contents__link toc-highlight">5.1 Answer Menu Questions</a></li><li><a href="#52-place-an-order" class="table-of-contents__link toc-highlight">5.2 Place an Order</a></li><li><a href="#53-check-order-status" class="table-of-contents__link toc-highlight">5.3 Check Order Status</a></li><li><a href="#54-request-cancellation" class="table-of-contents__link toc-highlight">5.4 Request Cancellation</a></li><li><a href="#55-what-the-agent-cannot-do" class="table-of-contents__link toc-highlight">5.5 What the Agent Cannot Do</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How to test that everything works</a><ul><li><a href="#61-after-setup" class="table-of-contents__link toc-highlight">6.1 After Setup</a></li><li><a href="#62-test-menu-knowledge" class="table-of-contents__link toc-highlight">6.2 Test Menu Knowledge</a></li><li><a href="#63-test-order-placement" class="table-of-contents__link toc-highlight">6.3 Test Order Placement</a></li><li><a href="#64-test-delivery-order-guard" class="table-of-contents__link toc-highlight">6.4 Test Delivery Order Guard</a></li><li><a href="#65-test-order-status-lookup" class="table-of-contents__link toc-highlight">6.5 Test Order Status Lookup</a></li><li><a href="#66-test-cancellation" class="table-of-contents__link toc-highlight">6.6 Test Cancellation</a></li></ul></li><li><a href="#7-canvas-auto-setup" class="table-of-contents__link toc-highlight">7. Canvas Auto-Setup</a><ul><li><a href="#71-what-gets-added" class="table-of-contents__link toc-highlight">7.1 What Gets Added</a></li><li><a href="#72-trigger-phrases" class="table-of-contents__link toc-highlight">7.2 Trigger Phrases</a></li><li><a href="#73-safe-canvas-customization" class="table-of-contents__link toc-highlight">7.3 Safe Canvas Customization</a></li></ul></li><li><a href="#8-reconnecting-rotating-credentials-and-production-cutover" class="table-of-contents__link toc-highlight">8. Reconnecting, Rotating Credentials, and Production Cutover</a><ul><li><a href="#81-when-to-reconnect" class="table-of-contents__link toc-highlight">8.1 When to Reconnect</a></li><li><a href="#82-rotate-client-secret" class="table-of-contents__link toc-highlight">8.2 Rotate Client Secret</a></li><li><a href="#83-switch-to-production" class="table-of-contents__link toc-highlight">8.3 Switch to Production</a></li></ul></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common errors and recovery</a><ul><li><a href="#the-agent-cannot-answer-menu-questions" class="table-of-contents__link toc-highlight">The agent cannot answer menu questions</a></li><li><a href="#publish-all-or-the-first-api-call-fails-with-authentication" class="table-of-contents__link toc-highlight">Publish All or the first API call fails with authentication</a></li><li><a href="#orders-appear-in-the-wrong-restaurant" class="table-of-contents__link toc-highlight">Orders appear in the wrong restaurant</a></li><li><a href="#the-agent-says-an-item-cannot-be-submitted" class="table-of-contents__link toc-highlight">The agent says an item cannot be submitted</a></li><li><a href="#cancellation-is-not-sent-automatically" class="table-of-contents__link toc-highlight">Cancellation is not sent automatically</a></li><li><a href="#order-status-always-says-submitted-or-no-update-yet" class="table-of-contents__link toc-highlight">Order status always says submitted or no update yet</a></li><li><a href="#the-agent-ignores-orderingcancellation-language" class="table-of-contents__link toc-highlight">The agent ignores ordering/cancellation language</a></li></ul></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a></li><li><a href="#11-support-handoff-notes" class="table-of-contents__link toc-highlight">11. Support Handoff Notes</a></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/deliverect.pdf" download="deliverect.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
+<p>Never send connector credentials, access tokens, full webhook URLs, card data, or an unredacted screenshot.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="all-settings-reference">All settings reference<a href="#all-settings-reference" class="hash-link" aria-label="Direct link to All settings reference" title="Direct link to All settings reference" translate="no">​</a></h2>
+<p>The <strong>Name</strong> column below is intended for administrators and support. Operators should use the UI labels shown in the descriptions.</p>
+<table><thead><tr><th>Name</th><th>Description</th><th>Required</th><th>Default</th><th>Hidden</th><th>Edit</th></tr></thead><tbody><tr><td><code>deliverect_api_base_url</code></td><td><strong>API Base URL</strong> — Deliverect environment used for menu, payment, and order requests</td><td>Yes</td><td><code>https://api.staging.deliverect.com</code></td><td>No</td><td>⚠️ advanced</td></tr><tr><td><code>deliverect_channel_name</code></td><td><strong>Channel Scope</strong> — lowercase channel scope assigned to Newo</td><td>Yes</td><td><code>newoai</code></td><td>No</td><td>⚠️ advanced</td></tr><tr><td><code>deliverect_account_id</code></td><td><strong>Account ID</strong> — customer account containing the registered location</td><td>Yes</td><td>Empty</td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_channel_link_id</code></td><td><strong>Registered Channel Link ID</strong> — assigned during registration</td><td>Automatic</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_location_id</code></td><td><strong>Registered Location ID</strong> — assigned during registration</td><td>Automatic</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_channel_location_id</code></td><td><strong>External Channel Location ID</strong> — optional external location reference from registration</td><td>Automatic</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_registration_status</code></td><td><strong>Channel Registration Status</strong> — unregistered, register, active, or inactive</td><td>Automatic</td><td><code>unregistered</code></td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_enable_ordering</code></td><td><strong>Enable Food Ordering</strong> — allows payment and order submission</td><td>No</td><td><code>True</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_enable_order_status</code></td><td><strong>Enable Order Status Lookup</strong> — enables the status tool and scenario</td><td>No</td><td><code>True</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_enable_cancellation</code></td><td><strong>Enable Order Cancellation</strong> — enables cancellation requests</td><td>No</td><td><code>True</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_enable_refunds</code></td><td><strong>Enable Automatic Refunds</strong> — permits new full Deliverect Pay refunds after paid order failures or POS-confirmed cancellation; disabling requires manual support handling</td><td>No</td><td><code>True</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_payment_return_url</code></td><td><strong>Payment Return URL</strong> — page shown after checkout</td><td>For payment links</td><td><code>https://newo.ai</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_tax_remitted_policy</code></td><td><strong>Tax Remittance Policy</strong> — reports no calculated tax or all calculated item tax as remitted</td><td>Yes</td><td><code>none</code></td><td>No</td><td>⚠️ advanced</td></tr><tr><td><code>deliverect_setup_scenarios</code></td><td><strong>Publish Status and Cancellation Canvas</strong> — publishes Deliverect-owned existing-order scenarios</td><td>No</td><td><code>True</code></td><td>No</td><td>✅ safe</td></tr><tr><td><code>deliverect_store_state</code></td><td><strong>Store State Cache</strong> — current currency, tax mode, timezone, fees, status, and fulfillment settings</td><td>Automatic</td><td><code>{}</code></td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_operational_state</code></td><td><strong>Webhook Operational State</strong> — current busy mode and snoozed products</td><td>Automatic</td><td><code>{}</code></td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_store_state_updated_at</code></td><td><strong>Store State Updated At</strong> — timestamp of the last store refresh</td><td>Automatic</td><td><code>0</code></td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_store_state_range_seconds</code></td><td><strong>Store State Cache Window</strong> — store and fee freshness window in seconds</td><td>No</td><td><code>60</code></td><td>Yes</td><td>⚠️ advanced</td></tr><tr><td><code>deliverect_canonical_menu_cache</code></td><td><strong>Menu Runtime Index</strong> — compact catalog used for validation and order construction</td><td>Automatic</td><td><code>{}</code></td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_canonical_menu_catalog_version</code></td><td><strong>Canonical Menu Version</strong> — revision used to keep checkout aligned with the current menu</td><td>Automatic</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_payment_gateway_profiles</code></td><td><strong>Payment Gateway Profiles</strong> — cached online and offline payment profiles for the registered channel</td><td>For payment</td><td><code>[]</code></td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_last_menu_sync_error</code></td><td><strong>Last Menu Sync Error</strong> — sanitized menu synchronization diagnostic</td><td>No</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_last_payment_methods_sync_error</code></td><td><strong>Last Payment Methods Sync Error</strong> — sanitized payment-method synchronization diagnostic</td><td>No</td><td>Empty</td><td>Yes</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_channel_registration_webhook_url</code></td><td><strong>Channel Registration Webhook URL</strong> — the only URL manually configured in Deliverect</td><td>Yes</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_payment_update_webhook_url</code></td><td><strong>Payment Update Webhook URL</strong> — generated payment callback returned during registration</td><td>Automatic</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_menu_update_webhook_url</code></td><td><strong>Menu Update Webhook URL</strong> — generated menu callback returned during registration</td><td>Automatic</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_order_status_webhook_url</code></td><td><strong>Order Status Webhook URL</strong> — generated order-status callback returned during registration</td><td>Automatic</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_snooze_webhook_url</code></td><td><strong>Snooze / Unsnooze Webhook URL</strong> — generated availability callback returned during registration</td><td>Automatic</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr><tr><td><code>deliverect_busy_mode_webhook_url</code></td><td><strong>Busy Mode Webhook URL</strong> — generated busy-mode callback returned during registration</td><td>Automatic</td><td>Empty</td><td>No</td><td>🔒 auto-managed</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unreleased">Unreleased<a href="#unreleased" class="hash-link" aria-label="Direct link to Unreleased" title="Direct link to Unreleased" translate="no">​</a></h3>
+<ul>
+<li class="">Add an operator-controlled automatic refund switch, enabled by default.</li>
+<li class="">Send asynchronous cancellation and refund outcomes by SMS without reopening the agent conversation.</li>
+<li class="">Document automatic-refund eligibility, manual handling, and non-retroactive behavior.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="206">2.0.6<a href="#206" class="hash-link" aria-label="Direct link to 2.0.6" title="Direct link to 2.0.6" translate="no">​</a></h3>
+<ul>
+<li class="">Publish pay at pickup and pay at delivery only when an offline gateway is linked to the registered location.</li>
+<li class="">Publish payment link only when an online gateway is linked.</li>
+<li class="">Disable all payment choices when gateway synchronization fails instead of assuming cash is available.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="205">2.0.5<a href="#205" class="hash-link" aria-label="Direct link to 2.0.5" title="Direct link to 2.0.5" translate="no">​</a></h3>
+<ul>
+<li class="">Republish Food Order payment choices after the Food Order catalog finishes rebuilding, preventing the menu refresh from clearing the payment map.</li>
+<li class="">Keep payment-link availability tied to the online Deliverect Pay gateway profile.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="204">2.0.4<a href="#204" class="hash-link" aria-label="Direct link to 2.0.4" title="Direct link to 2.0.4" translate="no">​</a></h3>
+<ul>
+<li class="">Accept the current Food Order total formats and use one total for speech, payment, and submitted order.</li>
+<li class="">Publish each modifier&#x27;s own Deliverect tax rate.</li>
+<li class="">Publish fulfillment-specific payment choices to Food Order.</li>
+<li class="">Publish delivery and service fees including their taxes, plus the package fee.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="203">2.0.3<a href="#203" class="hash-link" aria-label="Direct link to 2.0.3" title="Direct link to 2.0.3" translate="no">​</a></h3>
+<ul>
+<li class="">Replace manual callback configuration with one channel-registration webhook that returns all location callback URLs.</li>
+<li class="">Create pay-at-fulfillment orders immediately.</li>
+<li class="">Create payment-link orders only after payment authorization and attach the payment reference.</li>
+<li class="">Remove temporary payment mappings after successful paid-order creation.</li>
+<li class="">Add order status, cancellation, snooze, and busy-mode handling for the registered location.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/integrations/clover"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Clover Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/integrations/dentcomm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DentComm Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a></li><li><a href="#what-the-ai-can-do" class="table-of-contents__link toc-highlight">What the AI can do</a></li><li><a href="#menu-prices-taxes-and-fees" class="table-of-contents__link toc-highlight">Menu, prices, taxes, and fees</a><ul><li><a href="#when-the-menu-refreshes" class="table-of-contents__link toc-highlight">When the menu refreshes</a></li></ul></li><li><a href="#payment-and-order-lifecycle" class="table-of-contents__link toc-highlight">Payment and order lifecycle</a><ul><li><a href="#cancellation-and-refund-lifecycle" class="table-of-contents__link toc-highlight">Cancellation and refund lifecycle</a></li><li><a href="#payment-choices-published-to-food-order" class="table-of-contents__link toc-highlight">Payment choices published to Food Order</a></li></ul></li><li><a href="#one-registration-webhook" class="table-of-contents__link toc-highlight">One registration webhook</a></li><li><a href="#features-at-a-glance" class="table-of-contents__link toc-highlight">Features at a glance</a></li><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a><ul><li><a href="#1-prepare-your-deliverect-account" class="table-of-contents__link toc-highlight">1. Prepare your Deliverect account</a></li><li><a href="#2-get-your-deliverect-credentials" class="table-of-contents__link toc-highlight">2. Get your Deliverect credentials</a></li><li><a href="#3-configure-in-newo" class="table-of-contents__link toc-highlight">3. Configure in Newo</a></li><li><a href="#4-hit-publish-all" class="table-of-contents__link toc-highlight">4. Hit Publish All</a></li><li><a href="#how-to-verify-setup" class="table-of-contents__link toc-highlight">How to verify setup</a></li></ul></li><li><a href="#how-to-test-that-everything-works" class="table-of-contents__link toc-highlight">How to test that everything works</a><ul><li><a href="#test-menu-and-total" class="table-of-contents__link toc-highlight">Test menu and total</a></li><li><a href="#test-pay-at-pickup" class="table-of-contents__link toc-highlight">Test pay at pickup</a></li><li><a href="#test-payment-link" class="table-of-contents__link toc-highlight">Test payment link</a></li><li><a href="#test-status-lookup" class="table-of-contents__link toc-highlight">Test status lookup</a></li><li><a href="#test-cancellation" class="table-of-contents__link toc-highlight">Test cancellation</a></li><li><a href="#test-operational-updates" class="table-of-contents__link toc-highlight">Test operational updates</a></li></ul></li><li><a href="#scenarios" class="table-of-contents__link toc-highlight">Scenarios</a><ul><li><a href="#what-gets-added-on-publish-all" class="table-of-contents__link toc-highlight">What gets added on Publish All</a></li><li><a href="#why-trigger-phrases-matter" class="table-of-contents__link toc-highlight">Why trigger phrases matter</a></li><li><a href="#scenario-11--checking-food-order-status-via-agent" class="table-of-contents__link toc-highlight">Scenario 11 — Checking Food Order Status via Agent</a></li><li><a href="#scenario-12--canceling-food-order-via-agent" class="table-of-contents__link toc-highlight">Scenario 12 — Canceling Food Order via Agent</a></li><li><a href="#trigger-phrase-reference" class="table-of-contents__link toc-highlight">Trigger phrase reference</a></li></ul></li><li><a href="#example-dialogs" class="table-of-contents__link toc-highlight">Example dialogs</a><ul><li><a href="#example-1--pay-at-pickup" class="table-of-contents__link toc-highlight">Example 1 — Pay at pickup</a></li><li><a href="#example-2--payment-link" class="table-of-contents__link toc-highlight">Example 2 — Payment link</a></li><li><a href="#example-3--status" class="table-of-contents__link toc-highlight">Example 3 — Status</a></li><li><a href="#example-4--cancellation" class="table-of-contents__link toc-highlight">Example 4 — Cancellation</a></li></ul></li><li><a href="#customizing-the-agent" class="table-of-contents__link toc-highlight">Customizing the agent</a></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a><ul><li><a href="#does-newo-calculate-a-second-order-total" class="table-of-contents__link toc-highlight">Does Newo calculate a second order total?</a></li><li><a href="#why-are-delivery-and-service-fees-published-with-tax-included" class="table-of-contents__link toc-highlight">Why are delivery and service fees published with tax included?</a></li><li><a href="#can-a-modifier-have-a-different-tax-rate-from-its-product" class="table-of-contents__link toc-highlight">Can a modifier have a different tax rate from its product?</a></li><li><a href="#why-do-i-see-pay-at-pickup-when-deliverect-pay-shows-only-stripe" class="table-of-contents__link toc-highlight">Why do I see pay at pickup when Deliverect Pay shows only Stripe?</a></li><li><a href="#when-is-a-payment-link-order-created" class="table-of-contents__link toc-highlight">When is a payment-link order created?</a></li><li><a href="#what-happens-when-connector-credentials-rotate" class="table-of-contents__link toc-highlight">What happens when connector credentials rotate?</a></li><li><a href="#can-one-newo-project-serve-multiple-deliverect-locations" class="table-of-contents__link toc-highlight">Can one Newo project serve multiple Deliverect locations?</a></li><li><a href="#does-a-successful-cancellation-request-guarantee-cancellation" class="table-of-contents__link toc-highlight">Does a successful cancellation request guarantee cancellation?</a></li><li><a href="#how-are-a-deliverect-pay-payment-and-channel-order-linked" class="table-of-contents__link toc-highlight">How are a Deliverect Pay payment and Channel Order linked?</a></li><li><a href="#when-is-a-canceled-order-refunded" class="table-of-contents__link toc-highlight">When is a canceled order refunded?</a></li><li><a href="#what-happens-if-i-turn-off-automatic-refunds" class="table-of-contents__link toc-highlight">What happens if I turn off automatic refunds?</a></li></ul></li><li><a href="#common-errors-and-recovery" class="table-of-contents__link toc-highlight">Common errors and recovery</a><ul><li><a href="#first-publish-all-does-not-load-deliverect-data" class="table-of-contents__link toc-highlight">First Publish All does not load Deliverect data</a></li><li><a href="#channel-registration-status-stays-unregistered-or-inactive" class="table-of-contents__link toc-highlight">Channel Registration Status stays unregistered or inactive</a></li><li><a href="#the-menu-is-empty-or-stale" class="table-of-contents__link toc-highlight">The menu is empty or stale</a></li><li><a href="#payment-link-is-missing-or-the-request-fails" class="table-of-contents__link toc-highlight">Payment link is missing or the request fails</a></li><li><a href="#payment-is-authorized-but-no-order-appears" class="table-of-contents__link toc-highlight">Payment is authorized but no order appears</a></li><li><a href="#customer-receives-an-sms-saying-automatic-refunds-are-disabled" class="table-of-contents__link toc-highlight">Customer receives an SMS saying automatic refunds are disabled</a></li><li><a href="#the-scenario-says-the-trigger-phrase-but-no-action-starts" class="table-of-contents__link toc-highlight">The scenario says the trigger phrase but no action starts</a></li></ul></li><li><a href="#known-limitations" class="table-of-contents__link toc-highlight">Known limitations</a></li><li><a href="#support-handoff-notes" class="table-of-contents__link toc-highlight">Support handoff notes</a></li><li><a href="#all-settings-reference" class="table-of-contents__link toc-highlight">All settings reference</a></li><li><a href="#changelog" class="table-of-contents__link toc-highlight">Changelog</a><ul><li><a href="#unreleased" class="table-of-contents__link toc-highlight">Unreleased</a></li><li><a href="#206" class="table-of-contents__link toc-highlight">2.0.6</a></li><li><a href="#205" class="table-of-contents__link toc-highlight">2.0.5</a></li><li><a href="#204" class="table-of-contents__link toc-highlight">2.0.4</a></li><li><a href="#203" class="table-of-contents__link toc-highlight">2.0.3</a></li></ul></li></ul></div></div></div><a class="pdf-download-btn" href="/pdf/deliverect.pdf" download="deliverect.pdf" aria-label="Download this page as PDF">⬇ Download as PDF</a></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Newo.ai</div></div></div></footer></div>
 </body>
 </html>
