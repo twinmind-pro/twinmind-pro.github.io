@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Altegio Integration | Newo.ai Integrations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://twinmind-pro.github.io/docs/integrations/altegio"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Altegio Integration | Newo.ai Integrations"><meta data-rh="true" name="description" content="What the AI can do"><meta data-rh="true" property="og:description" content="What the AI can do"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://twinmind-pro.github.io/docs/integrations/altegio"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/altegio" hreflang="en"><link data-rh="true" rel="alternate" href="https://twinmind-pro.github.io/docs/integrations/altegio" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Altegio Integration","item":"https://twinmind-pro.github.io/docs/integrations/altegio"}]}</script><link rel="stylesheet" href="/assets/css/styles.a82a3393.css">
-<script src="/assets/js/runtime~main.cb9a5384.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.30580ae6.js" defer="defer"></script>
 <script src="/assets/js/main.4238d182.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -84,15 +84,52 @@
 </li>
 <li class="">In <strong>Module</strong>, select the module for this integration.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1200" height="1760" class="img_ev3q">
+<p><img decoding="async" loading="lazy" alt="Create Project form showing IDN, Title, Registry, and Module fields" src="/assets/images/newo_create_project_form-57b8e4b638eba6641be96a7f9532e378.png" width="1170" height="1846" class="img_ev3q">
 5. Leave <strong>Module version</strong> on <strong>Latest version</strong> unless support tells you to pin a specific version, then click <strong>Create</strong>.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-step-1--prepare-altegio-credentials">4.1 Step 1 — Prepare Altegio Credentials<a href="#41-step-1--prepare-altegio-credentials" class="hash-link" aria-label="Direct link to 4.1 Step 1 — Prepare Altegio Credentials" title="Direct link to 4.1 Step 1 — Prepare Altegio Credentials" translate="no">​</a></h3>
 <ol>
-<li class="">Open the Altegio developer or marketplace application settings.</li>
-<li class="">Copy the <strong>Partner Token</strong>.</li>
-<li class="">Copy the numeric <strong>Application ID</strong>. Use the number, for example <code>1856</code>, not the text application slug.</li>
-<li class="">In <strong>API Access</strong>, copy the <strong>User Token</strong> if existing appointment lookup or reschedule should be enabled.</li>
-<li class="">Confirm the application has access rights for clients and appointment records in the target location.</li>
+<li class="">
+<p><strong>Copy the Partner Token:</strong></p>
+<ul>
+<li class="">Log in to your Altegio Marketplace / Developer account (<code>https://partners.alteg.io</code> or Developer Hub).</li>
+<li class="">Navigate to <strong>Account settings</strong> -&gt; <strong>Account details</strong>.</li>
+<li class="">Copy your <strong>Partner Token</strong> (and note your <strong>Partner ID</strong>).</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Altegio Account settings - Partner Token" src="/assets/images/step1_altegio_account_settings-ee68ca7e58c25738abd6842fcb858092.png" width="1024" height="706" class="img_ev3q"></p>
+</li>
+<li class="">
+<p><strong>Retrieve the Numeric Application ID:</strong></p>
+<ul>
+<li class="">Go to <strong>My Integrations</strong> and open your application (or create a new Non-public application).</li>
+<li class="">In <strong>General information</strong>, copy the numeric <strong>Application ID</strong> (for example, <code>2708</code>). Do not use the text application slug (e.g. <code>newo_1</code>).</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Altegio Application General Information - Numeric Application ID" src="/assets/images/step2_altegio_app_general_info-cb04ff21bc57f63bb828d6c1fac15b92.png" width="1024" height="823" class="img_ev3q"></p>
+</li>
+<li class="">
+<p><strong>Configure API Access Rights &amp; Copy User Token:</strong></p>
+<ul>
+<li class="">Navigate to the <strong>API Access</strong> section of your application.</li>
+<li class="">Copy the system user&#x27;s <strong>User Token</strong>. This token is required for CRM customer searches, existing appointment lookups, and B2B appointment rescheduling (<code>PUT /api/v1/record/...</code>).</li>
+<li class="">Enable the required permission scopes for the target location:<!-- -->
+<ul>
+<li class=""><strong>Digital schedule:</strong> Change work schedule and booking time, reschedule appointments, show phone numbers.</li>
+<li class=""><strong>Booking form:</strong> Client data access, create/modify appointments, change services/comments.</li>
+<li class=""><strong>All clients:</strong> View client lists, search clients, view client history.</li>
+<li class=""><strong>Online booking:</strong> Manage processing of personal data.</li>
+</ul>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Altegio API Access - Permissions and User Token" src="/assets/images/step3_altegio_api_permissions-aab9dbe034aea74446963a94e5384281.png" width="1024" height="768" class="img_ev3q"></p>
+</li>
+<li class="">
+<p><strong>Connect Application to Target Location:</strong></p>
+<ul>
+<li class="">Sign in with an administrator account for the target clinic/salon.</li>
+<li class="">Open the application installation link: <code>https://app.alteg.io/appstore/&lt;location_id&gt;/applications/&lt;application_id&gt;/</code>.</li>
+<li class="">Click <strong>Connect</strong> (or grant permissions) so that the application&#x27;s system user receives delegated access to the location.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Altegio Location Integration Connection" src="/assets/images/step4_altegio_connect_location-6c771983240cd40f5993bfaca1351d6d.png" width="1024" height="448" class="img_ev3q"></p>
+</li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-step-2--connect-in-newo-platform">4.2 Step 2 — Connect in Newo Platform<a href="#42-step-2--connect-in-newo-platform" class="hash-link" aria-label="Direct link to 4.2 Step 2 — Connect in Newo Platform" title="Direct link to 4.2 Step 2 — Connect in Newo Platform" translate="no">​</a></h3>
 <ol>
